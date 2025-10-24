@@ -1,0 +1,417 @@
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.logo_pages {
+    width: 161px !important;
+    height: 93px !important;
+}
+.logo_page_amissfs {
+    width: 268px !important;
+    height: 112px !important;
+}
+.logo_page_amissfs-sec {
+    width: 242px !important;
+    height: 112px !important;
+}
+.logo_page_rdp {
+    width: 140px !important;
+    height: 112px !important;
+}
+.custom-space {
+    width: 1000px;
+}
+.soutenir-logo-width {
+    width: 53px;
+    height: 59px;
+}
+.bullets-quote {
+    font-family: "Euclid";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+}
+.bullets-quote-big {
+    font-family: "Euclid";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+}
+.header-pages {
+    color: #000;
+    font-family: "SangBleuBold";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px; /* 100% */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+}
+.pages-subheader {
+    color: #000;
+    font-family: "Euclid";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+}
+.white-letters {
+    color: #fff;
+    font-family: "Euclid";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.36px;
+    background-color: #e10b17;
+}
+.pages-par {
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+}
+.header-pages-underline {
+    color: #000;
+    font-family: "Euclid";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -0.6px;
+}
+.text-underline {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.red-underline {
+    text-decoration: underline 1px;
+    text-decoration-color: red;
+    text-underline-position: under;
+}
+.red-button-etudier {
+    color: #fff;
+    text-align: center;
+    font-family: "Euclid";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px; /* 156.25% */
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+    width: 290px;
+    height: 60px;
+    background-color: #e10b17;
+    text-decoration: none;
+}
+.red-button-prier {
+    color: #fff;
+    text-align: center;
+    font-family: "Euclid";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px; /* 156.25% */
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+    width: 224px;
+    height: 60px;
+    background-color: #e10b17;
+    text-decoration: none;
+}
+.civitas-form {
+    color: #000;
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    font-weight: 275;
+    line-height: 35px;
+    letter-spacing: -0.3px;
+    width: 1000px;
+    margin: auto;
+}
+.pages-form-blue {
+    color: #0600ff;
+    font-family: "Euclid";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.24px;
+}
+.form-italic-big {
+    color: #000;
+    font-family: "SuisseScreenItalic";
+    font-size: 35px;
+    font-weight: 275;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    width: 1000px;
+    margin: auto;
+}
+.form-italic-big-sec {
+    color: #000;
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    font-weight: 275;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    width: 546px;
+    margin: auto;
+}
+
+.form-italic-big-third {
+    color: #000;
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    font-weight: 275;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    width: 1006px;
+    margin: auto;
+}
+.red-bg-title-civitas {
+    font-family: "Euclid";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+.pages-bg-color {
+    background-color: #e10b17;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.header-pages-bg {
+    color: #fff;
+    font-family: "Euclid";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 30px; /* 85.714% */
+    letter-spacing: -0.525px;
+    /* margin-right: 100px;
+    margin-top: 20px; */
+}
+.margin-top {
+    margin-top: 15rem;
+}
+.pages-bg-color-black {
+    background-color: #000;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.red-button {
+    color: #fff;
+    background-color: #e10b17;
+    font-family: "Euclid";
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 25px; /* 75.758% */
+    letter-spacing: -0.495px;
+    text-transform: uppercase;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.grey-background {
+    background: #d9d9d9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.amfissfs-last-title {
+    color: #fff;
+    font-family: "Euclid";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px; /* 125% */
+    letter-spacing: -0.3px;
+}
+.amfissfs-last-par {
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+}
+.amissfs-last-button {
+    color: #fff;
+    text-align: center;
+    font-family: "Euclid";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px; /* 156.25% */
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+}
+.rdp-header-form {
+    color: #000;
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    font-weight: 275;
+    line-height: 25px;
+    letter-spacing: -0.45px;
+}
+.rdp-title-grey {
+    color: #fff;
+    font-family: "Euclid";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px; /* 100% */
+    letter-spacing: -0.45px;
+}
+.padding-100 {
+    padding: 100px;
+}
+.rdp-italic-grey {
+    color: #fff;
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    font-weight: 275;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+}
+.header-agir {
+    color: #000;
+    font-family: "SuisseScreenItalic";
+    font-size: 60px;
+    font-weight: 275;
+    line-height: 32px; /* 53.333% */
+    letter-spacing: -0.9px;
+}
+.agir-red-bg-title {
+    color: #fff;
+    font-family: "Euclid";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px; /* 62.5% */
+    letter-spacing: -0.6px;
+}
+.agir-red-bg-par {
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px; /* 150% */
+    letter-spacing: -0.3px;
+}
+.red-bg-color {
+    background-color: #e10b17;
+    /* height: 450px; */
+}
+.white-boxes {
+    width: 300px;
+    height: 271px;
+    background-color: white;
+    margin: 10px;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+.white-boxes-button {
+    position: absolute;
+    bottom: 2rem;
+}
+.grey-button {
+    background-color: #858585;
+    color: #fff;
+    font-family: "Euclid";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px; /* 156.25% */
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 224px;
+    height: 57px;
+    text-align: center;
+    padding: 10px;
+}
+.home-page-title-slider {
+    color: #fff;
+    text-align: center;
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px; /* 125% */
+    letter-spacing: -0.3px;
+}
+.home-page-subtitle-slider {
+    color: #fff;
+    text-align: center;
+    font-family: "SangBleuOGBold";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 125% */
+    letter-spacing: -0.3px;
+}
+.underline-offset {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.vertical-line {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.red-button-center-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 416px;
+    height: 85px;
+}
+.black-underline {
+    text-decoration: underline #000 2px;
+    text-underline-position: under;
+}
+u {
+    text-decoration: underline #e10b17;
+    text-underline-position: under;
+}
+.language-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "SuisseScreenRegular";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+    background-color: #ffffff7d;
+    width: 100%;
+    height: 104px;
+}
+.menu-logo-width {
+    width: 15%;
+}
+
+.submenu-width {
+    width: 70%;
+}
+.submenu-logo-width {
+    width: 15%;
+}
+.language-link {
+    font-family: "RivieraNightsBlack" !important;
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    line-height: 31.42px !important;
+    letter-spacing: -0.015em !important;
+}
+.small-logo {
+    width: 17px;
+    height: 20px;
+}

@@ -1,0 +1,1999 @@
+ nav.navbar {
+        background-color: #000;
+    }
+@media only screen and (max-width: 1200px) {
+        nav.navbar {
+        background-color: transparent !important;
+    }
+}
+@media only screen and (max-width: 991.98px) {
+ 
+    .logo-position {
+        background-color: transparent;
+    }
+
+    .navbar {
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .responsive-menu-back {
+        padding: 0 30px 0 30px;
+        height: 65px;
+        background-color: #fff;
+    }
+    .home-right-img + img{
+        height: 500px;
+    }
+     .footer-submenu,
+    .footer-title,
+    .footer-last-civitas,
+    .footer-last {
+        color: #000 !important;
+        margin: 8px 0 8px 8px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .podcast-bottom-title {
+        line-height: 40px !important;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .submenu-logo,
+    .navbar-brand {
+        width: 16%;
+        margin-right: 0;
+    }
+
+    .responsive-menu-back {
+        padding: 0 30px 0 30px;
+        height: 65px;
+        background-color: #fff;
+    }
+
+    .top-menu {
+        width: 70%;
+        flex-basis: auto;
+    }
+
+    .top-menu-empty {
+        width: 14%;
+    }
+
+    .top-menu-height {
+        height: 80px;
+    }
+
+    .logo-position {
+        background-color: #000;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1025px) {
+    .navbar-brand {
+        padding: 0;
+        width: unset;
+    }
+
+    nav.navbar {
+        background-color: transparent;
+    }
+
+    .desktop-width {
+        width: 65%;
+    }
+
+    .top-menu {
+        width: 65%;
+    }
+
+    .logo-position {
+        background-color: transparent;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .container.custom-tweak {
+        max-width: 100% !important;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+@media only screen and (max-width: 1199px) {
+    .podcast-home-grid{
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-brand {
+        padding: 0;
+        width: unset;
+    }
+
+    .navbar-collapse {
+        left: 0;
+        top: 0px;
+        position: absolute;
+        width: 100%;
+    }
+
+    .inverse-text .navbar-nav .nav-link {
+        color: #000;
+        border-bottom: 1px solid #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        padding: 0 30px 0 30px;
+        mix-blend-mode: unset;
+    }
+
+    .logo-position {
+        background-color: transparent;
+    }
+
+    /* #home {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+    } */
+
+    #participer {
+        width: 100% !important;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .podcast-home-grid{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .desktop-width {
+        width: 70%;
+        background-color: #000;
+        display: flex !important;
+        justify-content: start;
+        flex-basis: auto;
+        height: 112px;
+    }
+
+    .nav-item {
+        padding: 1rem;
+    }
+
+    .participer-height,
+    .top-menu-height {
+        justify-content: center;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+.lang-separator {
+    transform: scaleY(1.5);
+    display: inline-block;
+    color: #fff;
+    /* padding: 0 6px; */
+}
+
+.cookie-para {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #ffffff;
+}
+.cookie-para-button {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.cookie-para-button:hover,
+.cookie-para-button:focus {
+    color: #e10b17;
+}
+.cookie-btn {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 269px;
+    height: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cookie-btn:hover,
+.cookie-btn:focus {
+    color: #fff;
+    background-color: #e10b17;
+}
+.cookie-bar {
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+    width: 100%;
+    display: none;
+    z-index: 5000000;
+    background-image: url("../img/cookies-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.close-cookies {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.close-cookies i {
+    border: 1px solid;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    color: #000;
+    font-size: 15px;
+}
+
+.cookie-space {
+    padding-bottom: 45px;
+}
+.commander-input.input-error-border {
+    border: 1px solid red !important;
+    box-shadow: none !important;
+}
+
+.nav-link {
+    padding: 0 0.5rem;
+}
+
+.home-boxes-white-button-1 {
+    background-color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #000;
+    width: 201px;
+    height: 38px;
+}
+
+.home-boxes-white-button-2 {
+    background-color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #000;
+    width: 238px;
+    height: 38px;
+}
+
+.home-boxes-white-button-3 {
+    background-color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #000;
+    width: 131px;
+    height: 36px;
+}
+.home-boxes-white-button-1:hover,
+.home-boxes-white-button-1:focus,
+.home-boxes-white-button-2:hover,
+.home-boxes-white-button-2:focus,
+.home-boxes-white-button-3:hover,
+.home-boxes-white-button-3:focus {
+    color: #000;
+}
+/* .home-page-height {
+    height: 112px;
+} */
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.civitas-grey-menu {
+    height: 32px;
+    background-color: #d9d9d9;
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.grey-mobile-height {
+    height: 60px;
+}
+.civitas-responsive-header-grey {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.civitas-responsive-header-grey:hover,
+.civitas-responsive-header-grey:focus {
+    color: #000;
+}
+
+.participer-height {
+    height: 112px;
+    background-color: #000;
+}
+
+.desktop-width {
+    background-color: #000;
+}
+
+/* .logo-position {
+    height: 112px;
+} */
+.load-more-button {
+    width: 100%;
+    background: none;
+    border: none;
+}
+.pe-7 {
+    padding-right: 4rem;
+}
+
+.black-line {
+    border-bottom: 1px solid #000;
+}
+
+#participer {
+    background-color: #0b3ae1;
+    color: #fff;
+    text-align: center;
+    font-family: "SuisseIntl";
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    width: 166px;
+    height: 62px;
+}
+
+#language {
+    font-family: "RivieraNightsBlack";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+}
+
+.navbar-submenu {
+    font-family: "SuisseIntl";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.navbar-submenu:hover,
+.navbar-submenu:focus {
+    color: #000;
+}
+
+#donate {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #ffff;
+    background-color: #e10b17;
+    width: 166px;
+    height: 38px;
+    padding: 0 !important;
+}
+
+#le-vote-catholique,
+#program-politique {
+    font-family: "SuisseIntl";
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+.footer-title-omnia {
+    font-family: "SangBleuOGBold";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-subtitle-omnia {
+    font-family: "SuisseScreenLight";
+    font-size: 14px;
+    line-height: 18.16px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-title-omnia:hover,
+.footer-title-omnia:focus {
+    background: linear-gradient(to bottom, #ffd700, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: unset;
+}
+.footer-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 28px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-align: left;
+}
+
+.footer-submenu {
+    font-family: "SuisseScreenLight";
+    font-size: 28px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-align: left;
+}
+
+.footer-last {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-last-civitas {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.border-footer {
+    border-right: 1px solid #fff;
+    height: 34px;
+}
+
+.footer-last:focus,
+.footer-last:hover,
+.footer-title:focus,
+.footer-submenu:focus,
+.footer-title:hover,
+.footer-submenu:hover {
+    color: #fff;
+}
+.footer-submenu:focus,
+.footer-submenu:hover {
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 767px) {
+       .footer-submenu,
+    .footer-title,
+    .footer-last-civitas,
+    .footer-last {
+        margin: 4px 0 4px 4px;
+    }
+    .video_mobile {
+        padding: 0;
+    }
+    .video-background video {
+        height: 702px;
+        object-fit: cover;
+    }
+
+    .inverse-text .navbar-nav .nav-link {
+        color: #000;
+        border-bottom: 1px solid #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        padding: 0 30px 0 30px;
+    }
+
+    .footer-title {
+        font-size: 18px;
+        color: #000;
+    }
+
+    .footer-submenu {
+        font-size: 18px;
+        color: #000;
+    }
+
+    .footer-last {
+        font-size: 13px;
+        color: #000;
+    }
+
+    .footer-last:focus,
+    .footer-last:hover {
+        color: #000;
+    }
+
+    .footer-last-civitas {
+        font-size: 10px;
+        color: #000;
+    }
+
+    /* .navbar-collapse {
+        left: 0;
+        top: 0;
+        position: absolute;
+        position: fixed;
+        width: 100%;
+    } */
+
+    #home {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+    }
+
+    .footer-submenu:focus,
+    .footer-submenu:hover {
+        font-family: "SuisseScreenRegular";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .footer-title :focus,
+    .footer-title:hover {
+        color: #000;
+    }
+
+    .border-footer {
+        border-right: 1px solid #000;
+        height: 13px;
+    }
+
+    .navbar li {
+        padding-left: 1.5rem;
+    }
+
+    #participer {
+        width: 100%;
+        padding-left: 3rem;
+    }
+
+    .language-selection a {
+        font-family: "RivieraNightsBlack";
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 16px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .cookie-para {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .cookie-btn {
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+.space-400 {
+    height: 400px;
+}
+
+.space-500 {
+    height: 500px;
+}
+
+.space-600 {
+    height: 600px;
+}
+
+.space-700 {
+    height: 700px;
+}
+
+.space-800 {
+    height: 800px;
+}
+.space-900 {
+    height: 900px;
+}
+.space-1000 {
+    height: 1000px;
+}
+
+.space-300 {
+    height: 300px;
+}
+
+.space-200 {
+    height: 200px;
+}
+
+.space-100 {
+    height: 100px;
+}
+
+.space-75 {
+    height: 75px;
+}
+.space-50 {
+    height: 50px;
+}
+.space-25 {
+    height: 25px;
+}
+.margin-x-4 {
+    margin: 4rem 0 4rem 0;
+}
+
+.video-img-right {
+    position: absolute;
+    transform: translate(-50%, 50%);
+    right: 0;
+}
+
+.black-bg-full {
+    background-color: #000;
+    height: 41px;
+}
+
+.fair-un-don-amissfs {
+    background-color: #ff00a8;
+}
+
+.orange-light-box {
+    background-color: #ff9900;
+}
+
+.yellow-box {
+    background-color: #eac102;
+}
+
+.grey-box {
+    background-color: #939597;
+}
+
+.valider-color {
+    background-color: #00ff75;
+}
+
+.pink-box {
+    background-color: #db00ff;
+}
+
+.red-box {
+    background-color: #e10b17;
+}
+
+.red-bg-slider {
+    background-color: #e10b17;
+}
+
+.white-box-slider {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    height: 271px;
+}
+
+.white-box-slider-big {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    height: 271px;
+}
+
+@media only screen and (max-width: 767px) {
+    .white-box-slider,
+    .white-box-slider-big {
+        width: 100%;
+    }
+
+    .testimonial-carousel .one-slide {
+        height: 271px;
+    }
+}
+
+.blue-color {
+    color: #0600ff;
+}
+
+.white-border {
+    border-bottom: 1px solid #fff;
+}
+
+.green-light {
+    background-color: rgba(0, 255, 117, 1);
+}
+
+.shade-pink {
+    background-color: rgba(255, 0, 92, 1);
+}
+
+.bright-shade-cyan {
+    background-color: rgba(0, 255, 224, 1);
+}
+
+.bright-shade-orange {
+    background-color: rgba(255, 138, 0, 1);
+}
+
+.bright-insade-blue {
+    background-color: rgba(0, 87, 255, 1);
+}
+
+.bright-bold-red {
+    background-color: rgba(225, 11, 23, 1);
+}
+
+.neon-green {
+    background-color: rgba(97, 255, 0, 1);
+}
+
+.bright-sky-blue {
+    background-color: rgba(0, 163, 255, 1);
+}
+
+.cornered {
+    width: 90%;
+    height: 0px;
+    border-bottom: 136px solid #000;
+    border-left: 136px solid transparent;
+}
+
+.black-line-amissfs {
+    border-bottom: 2px solid #000;
+    padding: 5px;
+    width: 67px;
+}
+
+.black-line-amissfs-light {
+    border-bottom: 1px solid #000;
+}
+
+.footer-page-title {
+    font-family: "SangBleuOGBold";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.black-line-footer-page {
+    border-bottom: 2px solid #000;
+    padding: 5px;
+    width: 67px;
+}
+
+.impressum-montserrat {
+    font-family: "Montserrat";
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.impressum-content {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.contact-montserrat {
+    font-family: "Montserrat";
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.contact-content {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.contact-content:hover,
+.contact-content:focus {
+    color: #000bff;
+}
+.hover-black:hover {
+    color: #000;
+}
+
+.cgu-montserrat {
+    font-family: "Montserrat";
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.cgu-content-title {
+    font-family: "Montserrat";
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.cgu-content {
+    font-family: "Euclid";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.cgu-content-small {
+    font-family: "Euclid";
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.legal-title {
+    font-family: "SangBleuOGBold";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.legal-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.legal-content-bold {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.legal-content-small {
+    font-family: "SuisseScreenLight";
+    font-size: 17px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+ul.list-changes {
+    list-style-type: none;
+}
+
+ul.list-changes li:before {
+    content: "- ";
+}
+
+.legal-black-line {
+    border-bottom: 1px solid #000;
+    width: 149px;
+}
+
+.legal-plan-bold {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+ul.list-changes-sec {
+    list-style-type: upper-roman;
+}
+
+.legal-plan-ul {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.legal-list-ul-content-sec {
+    font-family: "Euclid";
+    font-size: 23px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.legal-list-ul-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 23px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.legal-list-ul-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+ul .bullets-protection {
+    list-style-type: disc;
+}
+
+.legal-link {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #0600ff;
+}
+
+.legal-link:hover {
+    color: #0600ff;
+}
+
+.slider-title-big {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.slider-title-omnia {
+    font-family: "SangBleuOGBold";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.slider-buttons {
+    font-family: "Euclid";
+    font-size: 18px;
+    line-height: 22.82px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.slider-title {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.slider-content {
+    font-family: "Euclid";
+    font-size: 14px;
+    line-height: 17.75px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.slider-content-black {
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-brand {
+        padding: 0;
+        height: 100%;
+        width: unset;
+        margin: 0;
+    }
+
+    .navbar {
+        height: 100%;
+        /* padding: 1rem 1rem 0 1rem; */
+    }
+
+    .video-img-right {
+        transform: translate(0, 100%);
+    }
+
+    .footer-page-title {
+        font-size: 24px;
+    }
+
+    #donate {
+        width: 109px;
+        height: 25px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .impressum-montserrat {
+        font-size: 15px;
+    }
+
+    .impressum-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .plus-41-ref {
+        color: #0600ff;
+    }
+
+    .hover-black {
+        color: #0b3ae1;
+    }
+
+    .plus-41-ref:hover {
+        color: #ff9900;
+    }
+
+    .contact-montserrat {
+        font-size: 15px;
+    }
+
+    .contact-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .cgu-content {
+        font-size: 16px;
+    }
+
+    .cgu-content-small {
+        font-size: 10px;
+    }
+
+    .legal-content-bold {
+        font-size: 18px;
+    }
+}
+
+/*-------------------------------------Font-Family--------------------------------------------*/
+.riviera-10 {
+    font-family: "RivieraNightsBlack";
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.riviera-20 {
+    font-family: "RivieraNightsBlack";
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+}
+
+.riviera-20-lh {
+    font-family: "RivieraNightsBlack";
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.riviera-29 {
+    font-family: "RivieraNightsBlack";
+    font-size: 29px;
+    font-weight: 900;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.riviera-30 {
+    font-family: "RivieraNightsBlack";
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.riviera-45 {
+    font-family: "RivieraNightsBlack";
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.riviera-50 {
+    font-family: "RivieraNightsBlack";
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.riviera-150 {
+    font-family: "RivieraNightsBlack";
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 65px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-italic-20 {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    font-weight: 275;
+    line-height: 25px;
+    /* 125% */
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+}
+
+.suisse-italic-25 {
+    font-family: "SuisseScreenItalic";
+    font-size: 25px;
+    font-weight: 275;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-italic-40 {
+    font-family: "SuisseScreenItalic";
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 275;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-italic-50 {
+    font-family: "SuisseScreenItalic";
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 275;
+    line-height: 65px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-light-10 {
+    font-family: "SuisseScreenLight";
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-light-14 {
+    font-family: "SuisseScreenLight";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18.16px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-light-18 {
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-light-20 {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-light-25 {
+    font-family: "SuisseScreenLight";
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 32.43px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-light-30 {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-regular-16 {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-regular-18-light {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    font-weight: 300 !important;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-regular-18 {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-regular-20-light {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-regular-20 {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-regular-20-lh {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-regular-25 {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-regular-28 {
+    font-family: "SuisseScreenRegular";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-regular-30-light {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-regular-30-lh {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-regular-30 {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-regular-35 {
+    font-family: "SuisseScreenRegular";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-regular-50 {
+    font-family: "SuisseScreenRegular";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.sang-blue-regular-20 {
+    font-family: "SangBleuRegular";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.sang-bleu-regular-40 {
+    font-family: "SangBleuRegular";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 58.76px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.sang-bleu-15 {
+    font-family: "SangBleuOGBold";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.sang-bleu-20 {
+    font-family: "SangBleuOGBold";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.sang-bleu-24 {
+    font-family: "SangBleuOGBold";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.sang-blue-30 {
+    font-family: "SangBleuOGBold";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.sang-bleu-50 {
+    font-family: "SangBleuOGBold";
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.euclid-14 {
+    font-family: "Euclid";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.75px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.euclid-16 {
+    font-family: "Euclid";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+}
+
+.euclid-18 {
+    font-family: "Euclid";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.82px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.euclid-20 {
+    font-family: "Euclid";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    /* 125% */
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+}
+
+.euclid-30 {
+    font-family: "Euclid";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.suisse-intl-20 {
+    font-family: "SuisseIntl";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.suisse-intl-35 {
+    font-family: "SuisseIntl";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.montserrat-14 {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.montserrat-15 {
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.cloister-40 {
+    font-family: "Cloister";
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.width-49 {
+    width: 49px;
+}
+
+.width-85 {
+    width: 85px;
+}
+
+.width-93 {
+    width: 93px;
+}
+
+.width-95 {
+    width: 95px;
+}
+
+.width-98 {
+    width: 98px;
+}
+
+.width-107 {
+    width: 107px;
+}
+
+.width-112 {
+    width: 112px;
+}
+
+.width-115 {
+    width: 115px;
+}
+
+.width-138 {
+    width: 138px;
+}
+
+.width-152 {
+    width: 152px;
+}
+
+.width-155 {
+    width: 155px;
+}
+
+.width-161 {
+    width: 161px;
+}
+
+.width-163 {
+    width: 163px;
+}
+
+.width-190 {
+    width: 190px;
+}
+
+.width-200 {
+    width: 200px;
+}
+
+.width-201 {
+    width: 201px;
+}
+
+.width-206 {
+    width: 206px;
+}
+
+.width-210 {
+    width: 210px;
+}
+
+.width-232 {
+    width: 232px;
+}
+
+.width-238 {
+    width: 238px;
+}
+
+.width-240 {
+    width: 240px;
+}
+
+.width-264 {
+    width: 264px;
+}
+
+.width-277 {
+    width: 277px;
+}
+
+.width-300 {
+    width: 300px;
+}
+
+.width-320 {
+    width: 320px;
+}
+
+.width-322 {
+    width: 322px;
+}
+
+.width-329 {
+    width: 329px;
+}
+
+.width-361 {
+    width: 361px;
+}
+
+.width-370 {
+    width: 370px;
+}
+
+.width-375 {
+    width: 375px;
+}
+
+.width-398 {
+    width: 398px;
+}
+
+.width-402 {
+    width: 402px;
+}
+
+.width-407 {
+    width: 407px;
+}
+
+.width-420 {
+    width: 420px;
+}
+
+.width-468 {
+    width: 468px;
+}
+
+.width-472 {
+    width: 472px;
+}
+
+.width-599 {
+    width: 599px;
+}
+
+.width-735 {
+    width: 735px;
+}
+
+.height-33 {
+    height: 33px;
+}
+
+.height-36 {
+    height: 36px;
+}
+
+.height-38 {
+    height: 38px;
+}
+
+.height-39 {
+    height: 39px;
+}
+
+.height-42 {
+    height: 42px;
+}
+
+.height-43 {
+    height: 43px;
+}
+
+.height-44 {
+    height: 44px;
+}
+
+.height-49 {
+    height: 49px;
+}
+
+.height-62 {
+    height: 62px;
+}
+
+.height-64 {
+    height: 64px;
+}
+
+.height-65 {
+    height: 65px;
+}
+
+.height-67 {
+    height: 67px;
+}
+
+.height-76 {
+    height: 76px;
+}
+
+.height-83 {
+    height: 83px;
+}
+
+.height-142 {
+    height: 142px;
+}
+
+.height-193 {
+    height: 193px;
+}
+
+.height-270 {
+    height: 270px;
+}
+
+.height-283 {
+    height: 283px;
+}
+
+.height-330 {
+    height: 330px;
+}
+
+.height-374 {
+    height: 374px;
+}
+
+.height-407 {
+    height: 407px;
+}
+
+.height-466 {
+    height: 466px;
+}
+
+.language-title-bg {
+    height: 104px;
+    background-color: #ffffff7d;
+    width: 100%;
+}
+
+.language-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 50px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.language-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.home-left-img-title {
+    font-family: "SangBleuRegular";
+    font-size: 40px;
+    line-height: 58.76px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.home-left-img-content {
+    font-family: "SuisseScreenLight";
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.home-right-image-box {
+    width: 190px;
+    height: 83px;
+    background-color: #fff;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.home-right-image-big-box {
+    width: 407px;
+    height: 83px;
+    background-color: #fff;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+#custom-amount {
+    width: 310px;
+}
+.home-right-image-big-box-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 25px !important;
+    line-height: 25px !important;
+    letter-spacing: -0.015em;
+    color: #000 !important;
+    border: none !important;
+    height: unset !important;
+    padding: 0 5px !important;
+}
+.home-right-image-box:focus,
+.home-right-image-big-box:focus,
+.home-right-image-big-box-italic:focus,
+.home-right-image-box:hover,
+.home-right-image-big-box:hover,
+.home-right-image-big-box-italic:hover {
+    color: #0b3ae1 !important;
+}
+
+.home-right-image-grey-box {
+    width: 407px;
+    height: 83px;
+    background-color: #939597;
+    text-decoration: none;
+}
+
+.home-right-image-grey-box-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 35px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.active-box-soutenir {
+    color: #0b3ae1 !important;
+}
+.home-right-image-big-box.active-box-soutenir input {
+    color: #0b3ae1 !important;
+}
+
+.logo-absolute {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.podcast-red-bg {
+    min-height: 142px;
+    height: auto !important;
+    padding: 20px;
+}
+@media only screen and (max-width: 767px) {
+    .podcast-home-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .home-right-image-grey-box-content {
+        font-size: 24px;
+    }
+    .logo-absolute {
+        position: unset;
+        top: 1rem;
+        transform: unset;
+    }
+    .language-title-bg {
+        height: 18px;
+        width: 346px;
+    }
+
+    .language-title {
+        font-family: "SuisseScreenLight";
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .language-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .home-left-img-title {
+        font-size: 25px;
+        line-height: 36.72px;
+    }
+
+    .home-left-img {
+        background-color: unset !important;
+        transform: none !important;
+    }
+
+    .home-left-img-content {
+        font-size: 14px;
+        line-height: 18.16px;
+        max-width: 358px;
+    }
+
+    .home-right-image-box {
+        width: 151px;
+        height: 66px;
+        font-size: 24px;
+    }
+
+    .home-right-image-big-box {
+        width: 323px;
+        height: 66px;
+        font-size: 19px;
+    }
+    .home-right-image-big-box-italic {
+        font-size: 19px !important;
+    }
+
+    .home-right-image-grey-box {
+        width: 323px;
+        height: 66px;
+        font-size: 24px;
+    }
+
+    /* .home-right-img {
+        top: 3.8rem !important;
+    } */
+}
+
+/*------------------------------------------ABSOLUTE--------------------------------------------*/
+.home-left-img {
+    position: absolute;
+    background-color: rgba(147, 149, 151, 0.7);
+    transform: translate(0%, 15%);
+}
+.home-left-img + img,
+.home-right-img + img{
+    object-fit: cover;
+}
+
+.home-right-img {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.hover-blue:hover {
+    background-color: #0b3ae1;
+    color: #fff;
+}
+
+.hover-blue-white:hover {
+    background-color: #0b3ae1 !important;
+    color: #fff !important;
+}
+
+.absolute-top-right {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(-0%, -50%);
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

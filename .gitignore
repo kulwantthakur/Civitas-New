@@ -1,0 +1,29 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+/vendor
+/public/site/*
+/public/*.mp4
+/public/img/**/*.mp4
+
+# macOS
+.DS_Store
+
+# Laravel storage
+/storage/*.key
+/storage/app/*
+/storage/framework/*
+/storage/logs/*
+!storage/app/public/
+

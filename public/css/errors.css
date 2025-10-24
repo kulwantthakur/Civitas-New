@@ -1,0 +1,42 @@
+.error {
+    font-family: "RivieraNightsBlack";
+    font-size: 96px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+.error-message {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+.error-message-link {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #000;
+}
+.error-message-link:hover,
+.error-message-link:focus {
+    color: #0b3ae1;
+}
+
+@media only screen and (max-width: 767px) {
+    .error {
+        font-size: 50px;
+    }
+    .error-message {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .error-message-link {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}

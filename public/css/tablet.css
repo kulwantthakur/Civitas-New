@@ -1,0 +1,34 @@
+/* Tablet portrait (iPad, Android ~768px wide) */
+@media (min-width: 768px) and (max-width: 1279.98px) {
+    .navbar {
+        height: auto;
+    }
+    .navbar-brand {
+        margin: 0;
+    }
+    .border-footer {
+        border-right: 1px solid #000;
+        height: 25px;
+    }
+    .video_mobile {
+        padding-top: 0;
+    }
+    .logo-absolute,
+    .absolute-logo-rdp {
+        position: unset;
+        transform: unset;
+    }
+}
+
+/* Tablet landscape / bigger Android tablets */
+/* @media (min-width: 1024px) and (max-width: 1279.98px) and (orientation: landscape) {
+    .navbar {
+        height: auto;
+    }
+    .navbar-brand {
+        margin: 0;
+    }
+    .logo-absolute {
+        position: unset;
+    }
+} */

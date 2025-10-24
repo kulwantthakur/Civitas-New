@@ -1,0 +1,6994 @@
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    z-index: 1000;
+    max-height: 18rem;
+}
+
+.dropdown-list {
+    list-style: none;
+    margin: 0;
+}
+
+.menu-item:hover .dropdown-menu {
+    display: block;
+    min-width: 1000px;
+    border: 1px solid #000000;
+    height: 350px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.menu-item:nth-last-child(-n + 2) .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.menu-item:nth-child(3) .dropdown-menu,
+.menu-item:nth-child(4) .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+}
+
+.civitas-submenu {
+    font-family: "SuisseIntl";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    height: 66px;
+}
+.civitas-submenu:hover,
+.civitas-submenu:focus {
+    color: #000;
+}
+.btn-info {
+    color: #fff !important;
+}
+
+/* .btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+    color: inherit !important;
+    background-color: inherit !important;
+} */
+
+.tooltip-inner {
+    background-color: #343a40 !important;
+    color: #fff !important;
+    font-family: "SuisseScreenLight";
+    font-size: 14px;
+}
+
+.modal-title {
+    font-family: "SuisseScreenRegualar";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.form-label {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.form-label-small {
+    font-family: "SuisseScreenLight";
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.custom-form {
+    font-family: "SuisseScreenLight";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+#imagePreview {
+    width: 100px;
+    height: auto;
+}
+.bg-image-slider {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.bg-image-slider:hover,
+.bg-image-slider:focus {
+    background-image: url("../img/home/slider_hover_bg.png");
+    background-size: cover;
+    background-position: center;
+}
+.circle-arrow {
+    position: absolute;
+    bottom: 5rem;
+    right: 1rem;
+    width: 51px;
+    height: 51px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-image-slider-content {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-family: "SuisseScreenRegular";
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.sengager-title {
+    font-family: "SangBleuBold";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.sengager-subtitle {
+    font-family: "Euclid";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.sengager-subtitle-red {
+    font-family: "Euclid";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    background-color: #e10b17;
+}
+
+.sengager-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.sengager-content-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.sengager-title-red-underline {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.sengager-last-title-red-underline {
+    font-family: "Euclid";
+    font-size: 35px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.sengager-width {
+    max-width: 1008px;
+}
+
+.sengager-first-quote {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.sengager-first-quote-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.sengager-first-quote-blue {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.sengager-red-bg-dots {
+    font-family: "Euclid";
+    font-size: 35px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.sengager-red-bg-title {
+    font-family: "Euclid";
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.red-rounded-box {
+    background-color: #e10b17;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 196px;
+    width: 100%;
+}
+
+.slider-logo-width {
+    width: 15%;
+}
+
+.sengager-red-bg {
+    background-color: #e10b17;
+    height: 459px;
+}
+
+.sengager-red-bg-left {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.sengager-red-bg-right-dots {
+    font-family: "Euclid";
+    font-size: 35px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.sengager-red-bg-right {
+    font-family: "Euclid";
+    font-size: 35px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.sengager-bottom-left {
+    width: 30%;
+}
+
+.sengager-bottom-right {
+    width: 30%;
+    margin-bottom: 4rem;
+}
+
+.etudier-title-red-underline {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.etudier-content {
+    font-family: "SuisseScreenLight";
+    font-size: 19px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etudier-content-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 19px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etudier-grey-background {
+    background-color: #d9d9d9;
+    height: 685px;
+}
+
+.black-rounded-box {
+    background-color: #000;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    height: 264px;
+    width: 85%;
+}
+
+.black-rounded-box-width {
+    width: 1033px;
+    height: 100%;
+}
+
+.etudier-quote-width-80 {
+    width: 85%;
+}
+
+.etudier-quote-width {
+    width: 1033px;
+}
+
+.etudier-content-black-bg {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.etudier-content-black-bg-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.etudier-first-quote-dot {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etudier-first-quote {
+    font-family: "SuisseScreenItalic";
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etudier-first-quote-small {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etudier-first-quote-small-blue {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.etudier-podcast-button {
+    font-family: "Euclid";
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e10b17;
+    width: 416px;
+    height: 85px;
+}
+
+.etudier-podcast-button:hover {
+    color: #fff;
+}
+
+.etudier-absolute-img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -55%);
+    width: 775px;
+    height: 589px;
+}
+
+.etudier-width {
+    width: 1008px;
+}
+
+.etudier-dark-grey-box {
+    background-color: rgba(0, 0, 0, 0.48);
+    height: 379px;
+}
+
+.etudier-last-left-title {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.etudier-last-left-content {
+    font-family: "SuisseScreenLight";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.etudier-last-right-title {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.etudier-last-right-content {
+    font-family: "SuisseScreenLight";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.etudier-red-underline-last-right {
+    width: 121px;
+    border-bottom: 3px solid #e10b17;
+}
+
+.etudier-last-right-content-button {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #e10b17;
+    width: 290px;
+    height: 57px;
+}
+
+.etudier-last-right-content-button:hover,
+.etudier-last-right-content-button:focus {
+    color: #fff;
+}
+
+.etudier-last-right-content-button:hover,
+.etudier-last-right-content-button:focus {
+    color: #0a58ca;
+    transition: none;
+}
+
+.etudier-border-last {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    height: 70%;
+    margin: auto;
+}
+
+.prier-title-red-underline {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.prier-content {
+    font-family: "SuisseScreenLight";
+    font-size: 19px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-width {
+    width: 1004px;
+}
+
+.prier-first-quote-dot {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-first-quote {
+    font-family: "SuisseScreenItalic";
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-first-quote-small {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-first-quote-small-blue {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.prier-sec-quote {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-third-quote {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-width-sec {
+    width: 546px;
+}
+
+.prier-video-button {
+    background-color: #e10b17;
+    width: 415px;
+    height: 85px;
+    font-family: "Euclid";
+    font-size: 33px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.prier-video-button:hover {
+    color: #fff;
+}
+
+.prier-grey-bg {
+    background-color: #d9d9d9;
+    height: 284px;
+}
+
+.prier-dark-grey-box {
+    /* height: 379px; */
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+.prier-title-grey-left-box {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.prier-title-grey-left-box-dash {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-title-grey-left-box-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-title-grey-left-box-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-grey-box-quote-dot {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-grey-box-quote-dot-big {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-grey-box-quote-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-grey-box-quote-small-blue {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.prier-grey-box-quote-small {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-red-button-grey-box {
+    background-color: #e10b17;
+    width: 224px;
+    height: 57px;
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.prier-red-button-grey-box:hover {
+    color: #fff;
+}
+
+.prier-content-last-dot {
+    font-family: "SuisseScreenLight";
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-content-last-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-content-last-dot-big {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-content-last-small-blue {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.prier-content-last-small {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.prier-red-bg-last {
+    background-color: #e10d19;
+    height: 475px;
+}
+
+.prier-content-red-last-dot {
+    font-family: "SuisseScreenLight";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-content-red-last-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-content-red-last-small-blue {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.prier-content-red-last-small {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-content-red-last-dot-big {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.prier-last-button {
+    background-color: #858585;
+    width: 224px;
+    height: 57px;
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.prier-last-button:hover {
+    color: #fff;
+}
+
+.agir-title-red-underline {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.agir-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.agir-width {
+    width: 1004px;
+}
+
+.agir-quote-dot {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 40px;
+    color: #000;
+}
+
+.agir-quote {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.agir-quote-small-blue {
+    font-family: "SuisseScreenLight";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.agir-quote-small {
+    font-family: "SuisseScreenLight";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.agir-content-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.agir-title-big {
+    font-family: "SuisseScreenItalic";
+    font-size: 60px;
+    line-height: 32px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-align: center;
+}
+
+.agir-red-bg {
+    background-color: #e10d19;
+    height: 660px;
+}
+
+.agir-title-red-bg {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: underline 1px;
+    text-decoration-color: #000;
+    text-underline-offset: 10px;
+}
+
+.agir-conent-red-bg {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.agir-conent-red-bg-bold {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.agir-absolute {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+.img-zoom {
+    display: inline-block;
+}
+
+.img-zoom img {
+    transition: transform 0.4s ease;
+}
+
+.img-zoom:hover img {
+    transform: scale(1.1);
+}
+
+.party-img-zoom {
+    overflow: hidden;
+    display: block; /* make sure it wraps properly */
+}
+
+.party-img-zoom img {
+    transition: transform 0.4s ease;
+}
+
+.party-img-zoom:hover img {
+    transform: scale(1.15); /* zoom in */
+}
+.civitas-home-article-opacity {
+    background-color: rgba(0, 0, 0, 0.66);
+    height: 74px;
+}
+
+.civitas-home-article-opacity-content {
+    font-family: "SuisseScreenItalic";
+    font-size: 32px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.civitas-home-article-button {
+    width: 87px;
+    height: 50px;
+    background-color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #000;
+}
+
+.civitas-home-article-button:hover {
+    color: #000;
+}
+.title-article-small {
+    font-family: "SuisseScreenLight";
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.title-article {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.description-article {
+    font-family: "SuisseScreenRegular";
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.articles-button {
+    background-color: #939597;
+    width: 287px;
+    height: 54px;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.articles-button:hover {
+    color: #fff;
+}
+
+.civitas-grey-line-articles {
+    border-bottom: 1px solid #939597;
+    width: 100%;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.civitas-home-bg {
+    background: url("../img/civitas/civitas_home_4.png");
+    height: 995px;
+    background-color: #000;
+    background-size: cover;
+}
+
+.civitas-title-big-bg {
+    font-family: "SangBleuBold";
+    font-size: 50px;
+    line-height: 73.45px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.civitas-home-pdf {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25.94px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.civitas-home-pdf:hover {
+    color: #fff;
+}
+
+.civitas-absolute-center {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.civitas-title-black-bg {
+    font-family: "SuisseScreenRegular";
+    font-size: 35px;
+    line-height: 45.4px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.civitas-home-grey-box {
+    width: 369px;
+    height: 142px;
+    background-color: #939597;
+}
+
+.civitas-home-red-box {
+    width: 369px;
+    height: 142px;
+    background-color: #e10b17;
+}
+
+.civitas-home-content-box {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.civitas-home-grey-box-button {
+    width: 238px;
+    height: 38px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.civitas-home-red-box-button {
+    width: 238px;
+    height: 38px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.civitas-home-grey-box-button-2 {
+    width: 201px;
+    height: 38px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.civitas-home-grey-box-button:hover,
+.civitas-home-red-box-button:hover,
+.civitas-home-grey-box-button-2:hover {
+    color: #000;
+}
+
+.civitas-home-big-red-button {
+    width: 369px;
+    height: 36px;
+    background-color: #e10b17;
+    color: #fff;
+    text-decoration: none;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.civitas-home-big-white-button {
+    width: 369px;
+    height: 36px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.civitas-home-big-red-button:hover {
+    color: #fff;
+}
+
+.civitas-home-big-white-button:hover {
+    color: #000;
+}
+
+.civitas-slider-opacity {
+    position: relative;
+}
+
+.civitas-slider-opacity:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.civitas-home-new-gradient {
+    background: linear-gradient(90deg, #666666 27%, #000000 54.5%);
+    height: 260px;
+}
+.civitas-marquee-new {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.civitas-home-new-content {
+    font-family: "SuisseScreenItalic";
+    font-size: 50px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.civitas-slider-first {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.civitas-slider-sec {
+    font-family: "Euclid";
+    font-size: 45px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.civitas-slider-third {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.civitas-slider-first:hover,
+.civitas-slider-sec:hover,
+.civitas-slider-third:hover {
+    color: #fff;
+}
+
+.civitas-home-red-button-last {
+    background-color: #e10b17;
+    width: 582px;
+    height: 76px;
+    font-family: "SuisseScreenRegular";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.civitas-home-red-button-last:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.border-button {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.civitas-title-page {
+    font-family: "SangBleuOGBold";
+    font-size: 30px;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.black-line-civitas {
+    border-bottom: 2px solid #000;
+    padding: 5px;
+    width: 60px;
+}
+
+.civitas-newsletter-salut {
+    font-family: "SuisseScreenLight";
+    font-size: 23px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    margin-left: 0.5rem;
+}
+
+.civitas-newsletter-salut-width {
+    width: 570px;
+    height: 50px;
+}
+.form-select-canton {
+    border: none;
+    background-image: url("../img/amissfs/canton.png");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    font-family: "SuisseScreenLight";
+    font-size: 23px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    width: 65%;
+}
+
+/* .civitas-newsletter-country {
+    font-family: "SuisseScreenLight";
+    font-size: 23px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+} */
+
+#civitas-email-newsletter,
+#civitas-first-name-newsletter,
+#civitas-name-newsletter {
+    width: 570px;
+    height: 76px;
+    border: 1px solid #000;
+    border-radius: 0%;
+    padding: 0 50px;
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.civitas-newsletter-first {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.civitas-red-underline {
+    border-bottom: 1px solid #e10b17;
+    padding-bottom: 5px;
+}
+
+.civitas-newsletter-grey {
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+.civitas-newsletter-grey-box-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.civitas-newsletter-red-box {
+    background-color: #e10b17;
+    width: 730px;
+}
+
+.civitas-newsletter-red-box-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+
+.civitas-newsletter-red-box-content {
+    font-family: "SuisseScreenLight";
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+
+.civitas-newsletter-valider-box {
+    background-color: #00ff75;
+    width: 253px;
+    height: 96px;
+}
+
+.civitas-newsletter-valider {
+    font-family: "RivieraNightsBlack";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: unset;
+}
+
+.civitas-newsletter-valider:hover,
+.civitas-newsletter-purple-box-content:hover {
+    color: #fff;
+}
+
+.civitas-newsletter-last {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.civitas-newsletter-purple-box {
+    background-color: #db00ff;
+    width: 383px;
+    height: 96px;
+}
+
+.civitas-newsletter-purple-box-content {
+    font-family: "RivieraNightsBlack";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.civitas-black-marquee {
+    background-color: #000;
+    height: 63px;
+}
+
+.civitas-marquee {
+    font-family: "SangBleuRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.civitas-news-subtitle {
+    font-family: "SangBleuRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+.civitas-news-category-small {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: none;
+}
+.civitas-news-category-small-op {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+.civitas-news-title {
+    font-family: "SuisseScreenLight";
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    text-decoration: none;
+}
+.article-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    text-decoration: none;
+}
+.civitas-news-title:hover {
+    color: #000;
+    font-weight: bolder;
+}
+
+.civitas-news-title-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.civitas-news-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.civitas-grey-line-news {
+    border-bottom: 1px solid #939597;
+}
+
+.civitas-news-more {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: rgba(0, 0, 0, 0.54);
+    text-align: center;
+    text-decoration: none;
+}
+
+.civitas-border-read-more {
+    border: 1px solid rgba(0, 0, 0, 0.54);
+    border-radius: 0;
+}
+
+.civitas-news-page-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.civitas-red-line-news-content {
+    border-bottom: 1px solid #e10b17;
+    width: 30%;
+}
+
+/* .civitas-news-page-content-sec {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+} */
+
+.border-bottom-news-content {
+    border-bottom: 1px solid #000;
+}
+
+.civitas-news-subtitle-content {
+    font-family: "SangBleuOGBold";
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.civitas-vote-first {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.civitas-vote-title-form {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 25px;
+    text-align: center;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+    margin: 3rem 0 3rem 0;
+}
+
+.civitas-vote-content-form {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+    max-width: 1036px;
+}
+
+.civitas-vote-content-form-sec {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+    width: 645px;
+}
+
+.pdf-download {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    text-decoration: underline;
+}
+
+.pdf-download:hover,
+.pdf-download:focus {
+    color: #000;
+    text-decoration: underline;
+}
+
+.vote-catholic-red-box {
+    background-color: #e10b17;
+    width: 369px;
+    height: 188px;
+}
+
+.civitas-grey-line-vote {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    width: 30%;
+    margin: auto;
+}
+
+.vote-catholic-red-box-content {
+    font-family: "Euclid";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.vote-catholic-button {
+    background-color: #fff;
+    width: 238px;
+    height: 27px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.vote-catholic-button:hover {
+    color: #000;
+}
+
+.civitas-political-program-first {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.civitas-red-bg {
+    background-color: #e10b17;
+}
+
+.civitas-political-red-title {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.civitas-political-red-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.civitas-political-program-title-form {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-align: center;
+}
+
+.civitas-political-programm-title-underline {
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.themes-title-home {
+    font-family: "Euclid";
+    font-size: 45px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: start;
+    color: #000;
+}
+
+.themes-title-home-underline {
+    border-bottom: 2px solid #000;
+    width: 75%;
+}
+
+.themes-width {
+    width: 50%;
+}
+
+.theme-border-bottom {
+    border-bottom: 2px solid #e10b17;
+    width: 40%;
+}
+
+.civitas-theme-border {
+    border: 1px solid #000;
+    border-radius: 0;
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.civitas-political-red-button {
+    background-color: #e10b17;
+    width: 324px;
+    height: 71px;
+}
+
+.civitas-political-red-button-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.civitas-political-red-button-content:hover {
+    color: #fff;
+}
+
+.civitas-politiac-grey-box {
+    background-color: #808183;
+    width: 369px;
+}
+
+.civitas-politiac-grey-box-content {
+    font-family: "Euclid";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.civitas-politiac-grey-box-button {
+    background-color: #fff;
+    width: 236px;
+    height: 58px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.civitas-politiac-grey-box-button:hover {
+    color: #000;
+}
+
+.civitas-restoration-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.civitas-restoration-red-box {
+    background-color: #e10b17;
+    width: 234px;
+    height: 71px;
+}
+
+.civitas-restoration-red-box-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.civitas-restoration-red-box:hover {
+    background-color: #000;
+}
+
+.civitas-restoration-red-box-content:hover {
+    color: #fff;
+}
+
+.civitas-themes-content {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+    width: 210px;
+}
+
+.red-bg-themes {
+    background-color: #e10b17;
+    height: 229px;
+     width: 100%;
+    max-width: 369px;
+    margin: auto;
+}
+
+.grey-bg-themes {
+    background-color: #808183;
+    height: 229px;
+    width: 100%;
+    max-width: 369px;
+    margin: auto;
+}
+
+.civitas-themes-button {
+    background-color: #fff;
+    width: 238px;
+    height: 70px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.civitas-themes-button:hover {
+    color: #000;
+}
+
+.civitas-theme-red-button {
+    background-color: #e10b17;
+    width: 324px;
+    height: 68px;
+    font-family: "SangBleuOGBold";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.civitas-theme-red-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.become-member-header {
+    font-family: "SangBleuOGBold";
+    font-size: 40px;
+    line-height: 45px;
+    text-align: center;
+    color: #000;
+}
+
+.become-member-black-line {
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    width: 100px;
+}
+
+.become-member-black-bg {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.become-member-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.become-member-button {
+    background-color: #e10b17;
+    width: 354px;
+    height: 60px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.become-member-button:hover {
+    color: #fff;
+}
+
+.become-meber-first-img-content {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.become-member-image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.become-member-image-overlay-group {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+.become-meber-first-img-content-button {
+    background-color: #000;
+    width: 493px;
+    height: 51px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.become-meber-first-img-content-button:hover {
+    color: #fff;
+}
+
+.become-meber-sec-img-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.become-meber-sec-img-content-button {
+    background-color: #fff;
+    width: 493px;
+    height: 51px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.become-meber-sec-img-content-button:hover {
+    color: #000;
+}
+
+.agenda-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: none;
+}
+
+.agenda-title:hover {
+    color: #000;
+}
+
+.agenda-month {
+    background-color: #d9d9d9;
+    height: 36px;
+    font-family: "SuisseScreenRegular";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.agenda-day {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.agenda-number {
+    font-family: "SuisseScreenRegular";
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.agenda-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.participer-black-bg {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.participer-pdf-download {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.participer-pdf-download:hover {
+    color: #fff;
+}
+
+.participer-bg-img-right {
+    background-image: url("../img/civitas/participate-bg.png");
+    background-position: right 5px;
+    background-repeat: no-repeat;
+}
+
+.participer-cornered {
+    width: 75%;
+    height: 0px;
+    border-bottom: 66px solid #e10b17;
+    border-left: 66px solid transparent;
+}
+
+.cornered-content {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.participer-home-button {
+    background-color: #fff;
+    width: 241px;
+    height: 109px;
+    color: #000;
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.participer-home-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.participate-img-button {
+    width: 322px;
+    height: 42px;
+    background-color: #fff;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.participate-img-button:hover {
+    color: #000;
+}
+
+.participer-img-content-absolute {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0);
+}
+
+.participer-img-content-sec {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.participer-img-content {
+    font-family: "Euclid";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.participate-big-button-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.join-civitas-title {
+    font-family: "Euclid";
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+    text-decoration: underline 2px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 20px;
+}
+
+.join-civitas-button {
+    background-color: #fff;
+    width: 230px;
+    height: 47px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.join-position-center {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.join-civitas-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.join-title {
+    font-family: "SangBleuOGBold";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+    z-index: 1;
+}
+
+.question-list {
+    list-style-type: "+";
+}
+
+.question-answer::marker {
+    font-family: "SuisseScreenRegular";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.question-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.question-answer {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #878585;
+    padding-left: 2rem;
+}
+
+.question-line {
+    border-bottom: 1px solid #000;
+    width: 95%;
+    margin: 1rem auto 3rem auto;
+}
+
+.question-last-button {
+    background-color: #e10b17;
+    width: 324px;
+    height: 68px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.question-box-pdf {
+    background-color: #d9d9d9;
+    width: 225px;
+    height: 43px;
+}
+
+.question-last-button:hover {
+    color: #fff;
+}
+
+.social-red-box {
+    background-color: #e10b17;
+    width: 369px;
+    height: 188px;
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translate(-50%, 100%);
+}
+
+.social-red-box-content {
+    font-family: "Euclid";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-align: center;
+}
+
+.social-red-box-button {
+    background-color: #fff;
+    width: 238px;
+    height: 27px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social-red-box-button:hover {
+    color: #000;
+}
+
+.social-media-absolute-title {
+    position: absolute;
+    top: 0;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+.social-media-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.socials-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.socials-titles-overlay {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+    width: 50%;
+}
+
+.get-inform-par {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.get-inform-black {
+    font-family: "RivieraNightsBlack";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.get-inform-black-next {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.get-inform-title {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.get-info-first-button {
+    background-color: #e10b17;
+    width: 246px;
+    height: 46px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.get-info-sec-button {
+    background-color: #e10b17;
+    width: 246px;
+    height: 46px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.get-info-first-button:hover,
+.get-info-sec-button:hover {
+    color: #fff;
+}
+
+.get-inform-position-img {
+    position: absolute;
+    left: 50%;
+    bottom: 63%;
+    transform: translate(-50%, 0);
+}
+.party-heritage-width-sec {
+    width: 731px;
+    margin: auto;
+}
+.party-home-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 60px;
+    line-height: 1;
+    color: #000;
+}
+
+.party-home-title-big {
+    font-family: "SuisseScreenRegular";
+    font-size: 80px;
+    line-height: 45px;
+    color: #000;
+}
+
+.party-first-button {
+    background-color: #e10b17;
+    width: 324px;
+    height: 68px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.party-first-button:hover {
+    color: #fff;
+}
+
+.party-width {
+    width: 100%;
+    max-width: 1004px;
+}
+
+.party-quote-dot {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.party-content-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.party-content-small-blue {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.party-content-small {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.party-img-overlay-absolute {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 122px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.party-img-overlay {
+    font-family: "SuisseScreenItalic";
+    font-size: 40px;
+    line-height: 45px;
+    text-align: right;
+    color: #fff;
+}
+
+.party-img-overlay-sec-absolute {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 122px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.party-width-sec {
+    width: 948px;
+}
+
+.party-cornered {
+    width: 30%;
+    height: 0px;
+    border-bottom: 150px solid #e10b17;
+    border-left: 150px solid transparent;
+}
+
+.party-cornered-button {
+    font-family: "SuisseScreenItalic";
+    font-size: 38px;
+    line-height: 45px;
+    text-align: right;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.party-cornered-button:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.party-width-third {
+    width: 735px;
+}
+
+.party-quote-dot-sec {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.party-grey-button {
+    background-color: #808183;
+    width: 369px;
+    height: 108px;
+    color: #fff;
+    font-family: "Euclid";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.center-link {
+    display: flex;
+    align-items: center;
+    height: 152px;
+    margin-right: 3rem;
+}
+
+.red-box-absolute {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.party-grey-button:hover {
+    color: #fff;
+}
+
+.party-img-overlay-last-absolute {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 127px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.img-overlay-party {
+    font-family: "SuisseScreenItalic";
+    font-size: 60px;
+    line-height: 60px;
+    text-align: right;
+    color: #000;
+}
+
+.party-heritage-width {
+    width: 1047px;
+}
+
+.party-heritage-title {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.party-heritage-title-underline {
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.party-heritage-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.party-heritage-content-big {
+    font-family: "SuisseScreenItalic";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.party-heritage-name {
+    font-family: "SuisseScreenLight";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.party-heritage-white-box {
+    background-color: #fff;
+    width: 369px;
+    height: 178px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+}
+
+.party-heritage-white-box:hover {
+    background-color: #000;
+    box-shadow: none;
+}
+
+.party-heritage-button-title {
+    font-family: "Euclid";
+    font-size: 38px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.party-heritage-white-box:hover .party-heritage-button-title {
+    color: #fff;
+}
+
+.party-heritage-button {
+    width: 76px;
+    height: 26px;
+    background-color: #000;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.party-heritage-white-box:hover .party-heritage-button {
+    background-color: #fff;
+    color: #000;
+}
+
+.diocesains-content {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.diocesains-title-form {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.diocesains-title-form-underline {
+    border-bottom: 1px solid #e10b17;
+    width: 30%;
+    margin: auto;
+}
+
+.diocesains-content-form {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.diocesains-width {
+    width: 568px;
+}
+
+.diocesains-width-sec {
+    width: 100%;
+    max-width: 755px;
+}
+
+.black-bg-map {
+    background-color: #000;
+   padding: 42px 0px;
+}
+
+#regions_div {
+    width: 618px;
+    height: 348px;
+}
+
+#regions_div svg {
+    border-radius: 40px;
+}
+.map-bg {
+background-color: #fff;
+    width: 100%;
+    max-width: 618px;
+    height: auto;
+    border-radius: 50px;
+    position: relative;
+    margin: auto;
+}
+.map-bg svg{
+    width: 100%;
+}
+.position-first {
+    position: absolute;
+    left: 2.9rem;
+    bottom: 1rem;
+    transform: translateY(-31%);
+}
+.position-sec {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-51%, -43%);
+}
+.position-third {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-89%, 9%);
+}
+.position-fourth {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translate(15%, 2%);
+    z-index: 1;
+}
+.position-fifth {
+    position: absolute;
+    top: 0rem;
+    left: 3.4rem;
+    transform: translate(83%, 12%);
+}
+.position-sixth {
+    position: absolute;
+    top: 0rem;
+    right: 4.5rem;
+    transform: translate(-86%, 58%);
+}
+.position-seventh {
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    transform: translate(13%, 14%);
+}
+.position-lake-bale {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translate(54%, -66%);
+}
+.position-lake-saint {
+    position: absolute;
+    transform: translate(32%, -13%);
+    right: 50%;
+    top: 50%;
+}
+.position-lake-coire {
+    position: absolute;
+    top: 0rem;
+    right: 5rem;
+    transform: translate(-81%, 15%);
+}
+.region-title {
+    font-family: "RivieraNightsBlack";
+    font-size: 9px;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.region-box-title {
+    font-family: "SangBleuOGBold";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.region-box-title-select {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.select-canton::after {
+    content: "V";
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.canton-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.canton-description {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+}
+.canton-description:hover,
+.canton-description:focus {
+    color: #fff;
+}
+#cantons {
+    background-color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    padding: 0.5rem !important;
+    border: none;
+}
+.group-specific-width {
+    width: 360px;
+}
+.absolute-name {
+    position: absolute;
+    top: 3rem;
+    right: 0rem;
+    transform: translate(-50%, -50%);
+}
+
+.party-status-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #000;
+    width: 350px;
+}
+
+.director-button-grey {
+    background-color: #d9d9d9;
+    width: 462px;
+    height: 89px;
+    color: #000;
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.director-button-grey:hover {
+    color: #000;
+}
+
+.status-page-title {
+    font-family: "SuisseScreenLight";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.status-page-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.status-page-content-blue {
+    font-family: "SuisseScreenRegular";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #0500ff;
+}
+
+.party-hover {
+    color: #0500ff;
+    text-decoration: none;
+}
+
+.party-hover:hover {
+    color: #0500ff;
+    text-decoration: none;
+}
+
+.party-status-content-page {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.contruction-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.initiatives-content {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.initiatives-content-bold {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.initiatives-title {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+}
+
+.initiative-width {
+    width: 647px;
+}
+
+.initiatives-cornered {
+    width: 70%;
+    height: 0;
+    border-bottom: 66px solid #8585851f;
+    border-left: 66px solid transparent;
+}
+
+.initiatives-cornered::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20%;
+    height: 1px;
+    background-color: #e10b17;
+    transform: translateY(50%);
+}
+
+.initiative-logo-absolute {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.pdf-download-white {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.pdf-download-white:hover,
+.pdf-download-white:focus {
+    color: #fff;
+}
+
+.referendum-black-title {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-align: center;
+}
+
+.referendum-black-subtitle {
+    font-family: "Euclid";
+    font-size: 50px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.referendum-cornered {
+    width: 75%;
+    height: 0;
+    border-bottom: 66px solid rgba(133, 133, 133, 0.99);
+    border-left: 66px solid transparent;
+}
+
+.referendum-cornered::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20%;
+    height: 1px;
+    background-color: #e10b17;
+    transform: translateY(50%);
+}
+
+.referendum-grey-content {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 25px;
+    color: #000;
+}
+
+.initiatives-red-button {
+    background-color: #e10b17;
+    width: 369px;
+    height: 36px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.initiatives-red-button:hover {
+    color: #fff;
+}
+
+.initiatives-link {
+    font-family: "SuisseScreenItalic";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    width: 369px;
+}
+
+.initiatives-link:hover {
+    color: #000;
+}
+
+.initiative-red-box {
+    background-color: #e10b17;
+    width: 369px;
+    height: 188px;
+}
+
+.inititative-red-box-content {
+    font-family: "Euclid";
+    font-size: 38px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.inititative-red-box-button {
+    background-color: #fff;
+    width: 76px;
+    height: 26px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.inititative-red-box-button:hover {
+    color: #000;
+}
+
+.initiative-grey-box {
+    background-color: #808183;
+    width: 369px;
+    height: 188px;
+}
+
+.inititative-grey-box-content {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.inititative-grey-box-button {
+    background-color: #fff;
+    width: 238px;
+    height: 27px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.inititative-red-box-button:hover,
+.inititative-grey-box-button:hover {
+    color: #000;
+}
+
+.goal-support-cornered {
+    width: 45%;
+    height: 0;
+    border-bottom: 142px solid #e10b17;
+    border-left: 142px solid transparent;
+}
+
+.goal-support-absolute {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.title-height {
+    height: 142px;
+}
+
+.goal-support-title {
+    font-family: "Euclid";
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.goal-support-content-underline {
+    font-family: "SuisseScreenLight";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.goal-support-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: none;
+}
+
+.goal-support-content:hover {
+    color: #000;
+}
+
+.goal-support-sec-content-underline {
+    font-family: "Euclid";
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.goal-support-content-bold {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.goal-support-content-bold-italic {
+    font-style: italic;
+}
+.goal-support-red-button {
+    background-color: #e10b17;
+    width: 369px;
+    height: 36px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.goal-support-red-button:hover {
+    color: #fff;
+}
+
+.goal-support-soutenir {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.support-title-absolute {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+
+.support-red-box-absolute {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.support-title {
+    font-family: "SangBleuOGBold";
+    font-size: 80px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+}
+
+.support-title-underline {
+    border-bottom: 4px solid #fff;
+    width: 20%;
+    margin: auto;
+}
+
+.support-red-box {
+    background-color: rgba(223, 9, 21, 0.7);
+    width: 784px;
+    height: 276px;
+}
+
+.support-red-box-content {
+    font-family: "Euclid";
+    font-size: 70px;
+    line-height: 70px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.support-grey-box {
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+.support-boxes {
+    background-color: #e10b17;
+    width: 190px;
+    height: 82px;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.support-boxes-big {
+    background-color: #e10b17;
+    width: 407px;
+    height: 82px;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+.support-boxes:hover,
+.support-boxes:focus,
+.support-boxes-big:hover,
+.support-boxes-big:focus,
+.support-boxes-big-italic:hover,
+.support-boxes-big-italic:focus {
+    color: #0b3ae1;
+}
+
+.support-boxes-big-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    border: none !important;
+    height: unset !important;
+    padding: 0 5px !important;
+}
+
+.support-border {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    height: 100%;
+    margin: auto;
+}
+
+.support-grey-right {
+    font-family: "SuisseScreenLight";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.support-white-soutenir {
+    background-color: #fff;
+    text-decoration: none;
+    width: 407px;
+    height: 83px;
+}
+
+.support-grey-right-button {
+    background-color: #e10b17;
+    width: 242px;
+    height: 82px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 28px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.support-grey-right-button:hover {
+    color: #fff;
+}
+
+.support-title-sec-absolute {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.support-title-sec {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.support-title-sec-underline {
+    border-bottom: 2px solid #fff;
+    width: 20%;
+    margin: auto;
+}
+
+.support-absolute-sec {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.53);
+    width: 100%;
+    height: 232px;
+}
+
+.support-title-third {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.support-title-third-underline {
+    border-bottom: 2px solid #000;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.support-absolute-boxes-first {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transform: translate(-10%, -50%);
+}
+
+.support-absolute-boxes-sec {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.support-absolute-boxes-third {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: translate(10%, -50%);
+}
+
+.support-red-box-button {
+    background-color: #e10b17;
+    width: 369px;
+    height: 188px;
+}
+
+.support-grey-box-button {
+    background-color: #808183;
+    width: 369px;
+    height: 188px;
+}
+
+.support-boxes-title {
+    font-family: "Euclid";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.support-boxes-button {
+    background-color: #fff;
+    width: 238px;
+    height: 27px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.support-boxes-button:hover {
+    color: #000;
+}
+
+.support-last-red-box {
+    background-color: #e10b17;
+    width: 369px;
+    height: 188px;
+}
+
+.support-last-red-box-title {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.support-last-red-box-button {
+    background-color: #fff;
+    width: 238px;
+    height: 27xp;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.support-last-red-box-button:hover {
+    color: #000;
+}
+
+.info-title-pages {
+    font-family: "SuisseScreenLight";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: none;
+}
+
+.info-title-pages:hover {
+    color: #000;
+    font-weight: bolder;
+}
+
+.etude-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etude-content-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.etude-content-dot {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etude-content-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etude-content-small-blue {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.etude-content-small {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.etude-grey-bg {
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+.etude-grey-title {
+    font-family: "Euclid";
+    font-size: 35px;
+    line-height: 25px;
+    color: #fff;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.etude-grey-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.general-info-border {
+    border: 1px solid rgba(102, 102, 102, 1);
+    height: 100%;
+    margin: auto;
+}
+
+.faith-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.faith-width {
+    width: 658px;
+}
+
+.faith-title {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 25px;
+    text-align: center;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.faith-content-small {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.faith-italic-width {
+    width: 1004px;
+}
+
+.faith-dot {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.faith-content-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.faith-content-blue {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.faith-content-last {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.faith-content-last-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.action-politique-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.action-politique-width {
+    width: 568px;
+}
+
+.action-politique-title {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 25px;
+    text-align: center;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.action-politique-content-center {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.action-politique-width_sec {
+    width: 645px;
+}
+
+.action-politique-title-black {
+    font-family: "Euclid";
+    font-size: 24px;
+    line-height: 25px;
+    color: #fff;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.action-politique-content-black {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.action-politique-black-content-white {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.action-politique-white-border {
+    border: 1px solid #fff;
+    height: 100%;
+    margin: auto;
+}
+
+.table-height {
+    height: 350px;
+}
+
+.horizontal-line-table {
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.red-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #e10b17;
+    border-radius: 20px;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.table-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000;
+    margin-left: 1.5rem;
+    text-decoration: underline;
+}
+
+td {
+    height: 41px;
+    border: 1px solid #000;
+    text-align: left;
+}
+
+td input {
+    margin-left: 1rem;
+}
+
+.chf {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline;
+}
+
+.chf:hover,
+.chf:focus {
+    color: #000;
+}
+
+#salutation,
+#country {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline;
+    border: none;
+}
+
+.dropdown::after {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.select-salutation::after,
+.select-country::after {
+    content: "IV";
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+}
+
+#name,
+#surname,
+#e-mail {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    border: none;
+    margin: 0;
+    height: 41px;
+    width: 100%;
+}
+
+#notes {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    border: none;
+    margin: 0;
+}
+
+#name::placeholder,
+#surname::placeholder,
+#e-mail::placeholder,
+#notes::placeholder {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    text-decoration: underline;
+    color: #848282;
+    opacity: 1;
+}
+
+#street,
+#number,
+#complement,
+#zipcode,
+#city {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    border: none;
+    margin: 0;
+    height: 41px;
+    width: 100%;
+}
+
+#street::placeholder,
+#number::placeholder,
+#complement::placeholder,
+#zipcode::placeholder,
+#city::placeholder {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    text-decoration: underline;
+    color: #848282;
+    opacity: 1;
+}
+
+.send-donate {
+    font-family: "SangBleuOGBold";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-decoration: underline;
+    color: #000;
+    background-color: #d9d9d9;
+    padding: 0.5rem;
+    border: none;
+}
+.send-donate:focus,
+.send-donate:hover {
+    color: #000;
+    background-color: #e10b17;
+}
+.send-donate:hover .donate-img {
+    content: url("../img/home/soutenir_hover.png");
+}
+.soutenir-title-card {
+    font-family: "SangBleuOGBold";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.soutenir-banking {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.soutenir-question {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: #000;
+}
+
+.soutenir-small-line {
+    border: 1px solid #000;
+    width: 50px;
+    margin: auto;
+}
+
+.soutenir-before-email {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-align: center;
+}
+
+.soutenir-email {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.soutenir-email:hover {
+    color: #0600ff;
+}
+
+.soutenir-black-bg-marquee {
+    background-color: #000;
+    height: 30px;
+}
+
+.soutenir-marquee {
+    font-family: "SangBleuRegular";
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.soutenir-grey-bg {
+    background-color: #858585;
+}
+
+.soutenir-red-box {
+    background-color: #e10b17;
+    width: 757px;
+    height: 411px;
+}
+
+.soutenir-black-box {
+    background-color: #000;
+    width: 394px;
+    height: 411px;
+}
+
+.soutenir-red-box-content {
+    font-family: "Euclid";
+    font-size: 50px;
+    line-height: 70px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.soutenir-black-line {
+    border: 2px solid #000;
+    width: 10%;
+    margin: auto;
+}
+
+.soutenir-last-line {
+    border: 1px solid #0000004d;
+    height: 90%;
+    margin: auto;
+}
+
+.soutenir-red-box-content-black {
+    font-family: "Euclid";
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.soutenir-black-box-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.events-position {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.events-past-content-form p {
+    margin-bottom: 0 !important;
+}
+.red-line-position {
+    position: absolute;
+    right: 0;
+    bottom: 30%;
+    transform: translate(0, -50%);
+    border: 1px solid #e10b17;
+    width: 30%;
+}
+
+.events-red-box {
+    background-color: #e10b17;
+    width: 460px;
+}
+
+.events-black-box {
+    background-color: #000;
+    width: 460px;
+}
+.next-event-height {
+    height: 1400px;
+}
+.events-red-box-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.events-red-box-button {
+    background-color: #fff;
+    width: 297px;
+    height: 48px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.events-red-box-button:hover {
+    color: #000;
+}
+
+.events-black-box-content {
+    font-family: "SuisseScreenItalic";
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.events-black-box-content:hover {
+    color: #fff;
+}
+
+.events-red-box-button-newsletter {
+    background-color: #e10b17;
+    width: 460px;
+    height: 45px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.events-red-box-button-newsletter:hover,
+.events-red-box-button-agenda:hover {
+    color: #fff;
+}
+
+.civitas-events-title {
+    font-family: "SangBleuOGBold";
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #000;
+}
+
+.events-red-box-button-agenda {
+    background-color: #e10b17;
+    width: 460px;
+    height: 45px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.events-next-position {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.next-event-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.events-next-position-sec {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.grey-box-events {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 662px;
+}
+.register-event-height {
+    height: 1855px;
+}
+.events-next-position-grey {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.next-event-red-button {
+    background-color: #e10b17;
+    width: 369px;
+    height: 36px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.next-event-red-button:hover {
+    color: #fff;
+}
+
+.next-event-box-grey {
+    background-color: #939597;
+    width: 369px;
+    height: 141px;
+}
+
+.next-event-box-grey-title,
+.next-event-box-red-title {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.next-event-grey-button {
+    background-color: #fff;
+    width: 201px;
+    height: 38px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.next-event-grey-button:hover {
+    color: #000;
+}
+
+.next-event-box-red {
+    background-color: #e10b17;
+    width: 369px;
+    height: 141px;
+}
+
+.next-event-box-red-button {
+    background-color: #fff;
+    width: 238px;
+    height: 38px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.next-event-box-red-button:hover {
+    color: #000;
+}
+
+.events-register-position {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.events-register-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.events-register-width {
+    width: 15%;
+}
+
+.events-register-line {
+    border-bottom: 1px solid #fff;
+    margin: auto;
+    width: 100%;
+}
+
+.events-register-content-white {
+    font-family: "RivieraNightsBlack";
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+
+.events-register-content-white-small {
+    font-family: "SuisseScreenLight";
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+
+.events-register-content-black {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.events-register-white-form {
+    background: linear-gradient(180deg, #ffffff 0%, #999999 100%);
+    border-radius: 11px;
+}
+
+.events-register-radio {
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    margin-left: 0.5rem;
+}
+
+#email-register,
+#name-register,
+#name-1-register {
+    border: 1px solid #000;
+    border-radius: 0%;
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    background: inherit;
+}
+
+#email-register::placeholder,
+#name-register::placeholder,
+#name-1-register::placeholder {
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    background: inherit;
+}
+
+.events-register-black-button {
+    background-color: #000;
+    width: 142px;
+    height: 36px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.events-register-black-button:hover {
+    color: #fff;
+}
+
+.events-register-agree {
+    font-family: "SuisseScreenLight";
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.events-register-marquee {
+    font-family: "SangBleuRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.events-register-marquee-position {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.events-register-bottom-position {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.past-events-title {
+    font-family: "SangBleuOGBold";
+    font-size: 30px;
+    line-height: 25px;
+    text-align: center;
+    color: #000;
+}
+
+.past-events-width {
+    width: 377px;
+}
+
+.events-past-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+
+.events-past-white-line {
+    border-bottom: 1px solid #fff;
+    margin: auto;
+}
+
+.events-past-cotnent {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+
+.events-past-title-form {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.events-past-content-form {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.events-past-black-line {
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+
+.events-past-content-italic-small {
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.events-past-content-form-bold {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.events-past-content-form-small {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.past-events-red-button {
+    background-color: #e10b17;
+    width: 369px;
+    height: 36px;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.past-events-red-button:hover {
+    color: #fff;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.default-image {
+    display: block;
+}
+
+.hover-image {
+    display: none;
+}
+
+.image-container.active .default-image {
+    display: none;
+}
+.image-container.active .hover-image {
+    display: block;
+}
+
+.image-container:hover .default-image {
+    display: none;
+}
+
+.image-container:hover .hover-image {
+    display: block;
+    margin: auto;
+}
+
+.image-container-star:hover .default-image {
+    display: none;
+}
+
+.hover-star {
+    display: none;
+}
+
+.image-container-star:hover .hover-star {
+    display: block;
+}
+
+.events-register-cornered {
+    width: 20%;
+    height: 0;
+    border-bottom: 247px solid #e10b17;
+    border-left: 247px solid transparent;
+}
+
+.membership-title {
+    font-family: "SangBleuOGBold";
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+}
+
+.membership-title-red-bg {
+    background-color: #e10b17;
+}
+
+.membership-payment {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.absolute-stars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    width: 100%;
+}
+
+.white-box-membership {
+    background-color: #fff;
+    width: 270px;
+    height: 47px;
+}
+
+.membership-top-right {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+}
+
+.membership-top-right-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.membership-star-content {
+    background-color: #e5e5e5;
+    height: 214px;
+    width: 95%;
+    margin: auto;
+}
+
+.membership-checkbox {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    text-decoration: underline;
+}
+
+.membership-checkbox-small {
+    font-family: "SuisseScreenRegular";
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    text-decoration: underline;
+}
+
+.agree-membership-width {
+    width: 361px;
+}
+
+#agree-membership {
+    width: 28px;
+    height: 28px;
+    border-radius: 0;
+}
+
+.membership-last-box-grey {
+    background-color: #939597;
+    width: 369px;
+    height: 141px;
+}
+
+.membership-last-box-red {
+    background-color: #e10b17;
+    width: 369px;
+    height: 141px;
+}
+
+.membership-last-content {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.membership-last-box-grey-button {
+    background-color: #fff;
+    width: 201px;
+    height: 38px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.membership-last-box-red-button {
+    background-color: #fff;
+    width: 238px;
+    height: 38px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.membership-last-box-grey-button:hover,
+.membership-last-box-red-button:hover {
+    color: #000;
+}
+
+.member-star {
+    width: 43px;
+    height: 42px;
+}
+
+.advantages-red-cornered-position {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translate(0%, -50%);
+    width: 90%;
+}
+
+.advantages-red-cornered {
+    height: 0;
+    border-bottom: 66px solid #e10b17;
+    border-left: 66px solid transparent;
+}
+
+.advantages-back-bg {
+    background-image: url("../img/civitas/advantages-black.png");
+    background-repeat: no-repeat;
+    background-position: right 5px;
+    height: 100%;
+}
+
+.advantages-black-box-star {
+    position: absolute;
+    top: 5rem;
+    left: 4rem;
+}
+
+.advantages-stars-content {
+    font-family: "SuisseScreenLight";
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+    width: 825px;
+}
+
+.white-logo-height {
+    height: 66px;
+}
+
+.last-img-position {
+    position: absolute;
+    left: 50%;
+    bottom: 5rem;
+    transform: translate(-50%, 0);
+}
+
+.advantages-buttons-position {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.advantages-last-button-black {
+    width: 460px;
+    height: 84px;
+    background-color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.advantages-last-button-black:hover {
+    color: #fff;
+}
+
+.advantages-last-button-white {
+    width: 322px;
+    height: 33px;
+    background-color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.advantages-last-button-white:hover {
+    color: #000;
+}
+.civitas-absolute-center-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 5%);
+}
+.red-cornered {
+    height: 0;
+    width: 1100px;
+    border-bottom: 142px solid #e10b17;
+    border-left: 142px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform: translate(0, -50%);
+}
+
+.red-cornered-content {
+    font-family: "Euclid";
+    font-size: 25px;
+    line-height: 55px;
+    letter-spacing: -0.015em;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(30%, -50%);
+    text-transform: uppercase;
+}
+
+.new-page-title {
+    font-family: "SangBleuBold";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.new-page-title-small {
+    font-family: "SangBleuRegular";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.new-page-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.new-page-content:hover {
+    color: #000;
+}
+
+.new-page-content-sec {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.new-page-line {
+    border-bottom: 1px solid #000;
+    width: 40%;
+}
+
+.new-page-content-sec-big {
+    font-family: "SuisseScreenRegular";
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.grey-box-full {
+    background-color: #d9d9d9;
+    height: 479px;
+}
+
+.soutenir-payment-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.soutenir-payment-title-blue {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #0600ff;
+    margin-bottom: 0;
+}
+
+.soutenir-payment-title-blue:hover,
+.soutenir-payment-title-blue:focus {
+    color: #0600ff;
+}
+
+.payment-grey-bg {
+    background-color: rgba(217, 217, 217, 0.2);
+    width: 100%;
+}
+
+.red-box-radious {
+    background-color: #e10b17;
+    border-radius: 15px;
+    width: 377px;
+    height: 91px;
+}
+
+.blue-box-radious {
+    background-color: #000bff;
+    border-radius: 15px;
+    width: 377px;
+    height: 170px;
+}
+
+.red-box-radient-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.red-box-radient-content:hover,
+.red-box-radient-content:focus {
+    color: #fff;
+}
+
+.blue-box-radient-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.medium-grey-new-page {
+    background-color: #707070;
+    width: 55%;
+    padding: 4rem 2rem 1rem 2rem;
+}
+
+.medium-grey-new-page-sec {
+    background-color: #707070;
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    transform: translate(-60%, 0%);
+    width: 55%;
+    height: 60%;
+}
+
+.new-page-absolute-img {
+    top: 0;
+    transform: translate(0, -75%);
+}
+.new-page-absolute-img-top {
+    position: absolute;
+    right: 0;
+    transform: translateY(-10%);
+}
+.new-page-absolute-sec {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translate(-100%, -100%);
+}
+
+.medium-grey-content-light {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.medium-grey-content-bold {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.new-page-border {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    width: 30%;
+}
+
+.new-page-lecture-title {
+    font-family: "Euclid";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000;
+    text-decoration: underline 1px;
+    text-decoration-color: #e10b17;
+    text-underline-offset: 10px;
+}
+
+.medium-grey-content-sec-big {
+    font-family: "SuisseScreenLight";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.medium-grey-content-sec-light {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.medium-grey-content-sec-light:hover,
+.medium-grey-content-sec-light:focus {
+    color: #fff;
+}
+.new-page-sec-title {
+    font-family: "SangBleuOGBold";
+    font-size: 40px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.black-content-box {
+    background-color: #000;
+    width: 100%;
+    height: 100px;
+}
+
+.black-content-new {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.new-page-dot {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.new-page-italic {
+    font-family: "SuisseScreenItalic";
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.new-page-italic-blue-content {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.new-page-content-blue {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.new-page-content-bold {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.new-page-red-bg {
+    height: 519px;
+    background-color: #e10b17;
+}
+
+.new-page-red-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    width: 828px;
+}
+
+.new-page-absolute-bottom-left {
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    transform: translate(0, -10%);
+}
+.new-page-specific-height {
+    height: 225px;
+    opacity: 0.3;
+}
+.new-page-absolute-bottom-center {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(0%, -15%);
+}
+
+.new-page-absolute-bottom-right {
+    position: absolute;
+    right: 3rem;
+    top: 0;
+    transform: translate(0, -50%);
+}
+
+.new-page-under-last-img {
+    font-family: "SuisseScreenLight";
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+.party-status-contact-title {
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.status-page-pdf {
+    width: 420px;
+    margin: auto;
+    border: 1px solid #000;
+}
+.status-page-pdf-title {
+    font-family: "SuisseIntl";
+    font-size: 36px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.party-status-contact-content {
+    font-family: "SuisseIntl";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.party-status-contact-content-email {
+    font-family: "SuisseIntl";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #0600ff;
+}
+
+.party-status-horizontal-line {
+    border-bottom: 1px solid #000;
+    width: 70%;
+}
+.table-theme-title {
+    font-family: "Euclid";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-transform: uppercase;
+}
+.civitas-political-red-title::marker {
+    font-size: 20px;
+}
+.party-status-title p {
+    margin-bottom: 0;
+}
+.share-border-news {
+    border-bottom: 1px solid #e10b17;
+    padding-bottom: 10px;
+    width: 210px;
+}
+.news-submit-comment {
+    background-color: #000bff;
+    color: #fff;
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.comment-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.comment-body {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.news-form-width {
+    width: 60%;
+}
+/* .map-bg .image-container svg path[fill="#D9D9D9"]:hover,
+.map-bg .image-container svg path[fill="#D9D9D9"]:hover ~ path,
+.hovered-svg path {
+    color: red;
+    fill: red;
+} */
+body.fribourg .fribourg:not(.text),
+body.bale .bale:not(.text),
+body.geneve .geneve:not(.text),
+body.saint-gall .saint-gall:not(.text),
+body.lugano .lugano:not(.text),
+body.coire .coire:not(.text),
+body.sion .sion:not(.text) {
+    fill: red;
+}
+.map-bg svg path{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+.referendum-cornered {
+    width: 85%;
+}
+}
+@media only screen and (max-width: 991px) {
+.status-page-content-blue {
+    font-size: 30px;
+    line-height: 30px;
+}
+.party-cornered {
+    width: 50%;
+}
+.goal-support-content-underline {
+    text-underline-offset: 4px;
+}
+.goal-support-cornered {
+    width: 95%;
+    border-bottom: 118px solid #e10b17;
+    border-left: 118px solid transparent;
+}
+.red-bg-themes {
+    max-width: 100%;
+}
+
+.grey-bg-themes {
+    max-width: 100%;
+}
+.themes-width {
+    width: 100%;
+}
+.referendum-black-subtitle {
+    color: #000;
+    font-size: 40px;
+}
+.referendum-black-title {
+    color: #000;
+    font-size: 26px;
+    text-align: left;
+}
+.civitas-vote-title-form {
+    line-height: 0.99;
+    text-underline-offset: 3px;
+}
+.civitas-news-title-content {
+    font-size: 25px;
+    line-height: 1;
+}
+.map-outer {
+overflow-x: auto;
+}
+.join-title {
+    margin-bottom: 1rem;
+}
+.civitas-news-title {
+        font-size: 30px;
+        line-height: 1;
+    }
+}
+@media only screen and (max-width: 767px) {
+.region-box-title {
+     color: #000;
+}
+    .news-form-width {
+        width: 100%;
+    }
+    .news-comment-title {
+        font-family: "SangBleuOGBold";
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+    .responsive-menu-back {
+        padding: 0 30px 0 30px;
+        background-color: #fff;
+        height: 65px;
+    }
+    .black-bg-map {
+        background-color: unset;
+        height: unset;
+    }
+    #regions_div {
+        width: 100%;
+        height: 100%;
+    }
+    .canton-title,
+    .canton-description {
+        color: #000;
+    }
+    #cantons {
+        background-color: #fff;
+        color: #000;
+    }
+    .select-canton::after {
+        color: #000;
+    }
+    .group-specific-width {
+        width: 100%;
+    }
+    .grey-box-full {
+        width: 40%;
+        margin-left: auto;
+        height: 669px;
+    }
+    .new-page-responsive-black {
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        transform: translateY(50%);
+        width: 100%;
+    }
+    .medium-grey-new-page-sec {
+        bottom: 50%;
+        left: 0;
+        transform: translateY(50%);
+        width: 100%;
+        height: 616px;
+    }
+    .medium-grey-new-page {
+        width: 100%;
+        height: 616px;
+        padding: 4rem 1rem 0rem 1rem;
+    }
+    .red-box-radious {
+        width: 216px;
+        height: 52px;
+    }
+    .red-box-radient-content {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .medium-grey-content-sec-big {
+        line-height: 45px;
+    }
+    .new-page-absolute-sec {
+        top: 0;
+        left: 50%;
+        transform: translate(-90%, -50%);
+    }
+    .blue-box-radious {
+        width: 216px;
+        height: 97px;
+    }
+    .blue-box-radient-content {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .new-page-border {
+        width: 80%;
+    }
+    .red-cornered {
+        width: 100%;
+        border-bottom: 47px solid #e10b17;
+        border-left: 47px solid transparent;
+        transform: translate(0, -20%);
+    }
+    .red-cornered-content {
+        font-size: 10px;
+        line-height: 12px;
+        transform: translate(15%, -50%);
+    }
+    .new-page-title {
+        line-height: 45px;
+    }
+    .new-page-title-small {
+        font-size: 36px;
+        line-height: 10px;
+    }
+    .black-content-box {
+        height: 160px;
+    }
+    .new-page-sec-title {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .new-page-bg-specific {
+        background-color: #e10b17;
+        height: 200px;
+    }
+    .new-page-bg-specific-last {
+        background-color: #e10b17;
+        height: 780px;
+    }
+    .new-page-red-content {
+        width: 100%;
+    }
+    .new-page-absolute-last-responsive {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -35%);
+        width: 100%;
+    }
+    .new-page-specific-height {
+        opacity: unset;
+        height: 135px;
+    }
+    .white-content-responsive {
+        color: #fff !important;
+    }
+    .specific-bold-responsive {
+        font-weight: bold;
+    }
+    .new-page-red-underline-resp {
+        border-bottom: 1px solid #e10b17;
+        width: 30%;
+        margin: 1rem auto 3rem auto;
+    }
+    .black-content-new {
+        font-size: 35px;
+    }
+    .new-page-content-sec {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .initiatives-cornered {
+        width: 100%;
+        border-bottom: 33px solid #8585851f;
+        border-left: 33px solid transparent;
+    }
+    .initiative-logo-absolute {
+        bottom: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .initiatives-cornered::after {
+        width: 50%;
+    }
+    .new-page-small-size {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .new-page-line {
+        border: 1px solid #e10b17;
+        width: 80%;
+    }
+    .new-page-content-sec-big {
+        font-size: 28px;
+    }
+    .theme-border-bottom {
+        border-bottom: 2px solid #000;
+        width: 20%;
+    }
+    .table-theme-title {
+        font-size: 16px;
+    }
+    .remove-justify {
+        justify-content: center;
+    }
+
+    .submenu {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin: auto;
+        list-style: none;
+    }
+
+    .sengager-title {
+        font-size: 25px;
+    }
+
+    .sengager-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .sengager-content-italic {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .sengager-subtitle {
+        margin-bottom: 0;
+    }
+    .sengager-title-red-underline {
+        font-size: 20px;
+        line-height: 25px;
+        text-decoration: none;
+    }
+
+    .sengager-red-underline-responsive {
+        width: 70px;
+        border-bottom: 3px solid #e10b17;
+    }
+
+    .sengager-width {
+        width: 100%;
+    }
+
+    .sengager-first-quote-blue,
+    .sengager-first-quote {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .sengager-first-quote-italic {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .sengager-big-italic-responsive {
+        font-size: 20px !important;
+        line-height: 20px !important;
+    }
+
+    .sengager-red-bg-responsive {
+        background-color: #e10b17;
+        height: 56px;
+    }
+
+    .sengager-red-bg-responsive-omnia {
+        font-family: "Euclid";
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        color: #fff;
+    }
+
+    .sengager-red-bg-title,
+    .sengager-red-bg-dots {
+        font-size: 25px;
+        line-height: 30px;
+        color: #000;
+    }
+
+    .sengager-last-title-red-underline {
+        font-size: 20px;
+        line-height: 25px;
+        text-decoration: none;
+    }
+
+    .etudier-title-red-underline {
+        font-size: 20px;
+        line-height: 25px;
+        text-decoration: none;
+    }
+
+    .etudier-red-underline-responsive {
+        width: 70px;
+        border-bottom: 3px solid #e10b17;
+    }
+
+    .etudier-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .etudier-content-italic {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .etudier-content-black-bg {
+        font-size: 16px;
+        line-height: 25px;
+        color: #000;
+    }
+
+    .etudier-content-black-bg-italic {
+        font-size: 16px;
+        line-height: 25px;
+        color: #000;
+    }
+
+    .etudier-quote-width {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .etudier-first-quote {
+        font-size: 16px;
+        line-height: 25px;
+        white-space: nowrap;
+    }
+
+    .etudier-podcast-button {
+        width: 210px;
+        height: 38px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .become-member-image-overlay-group {
+        top: 2rem;
+    }
+    .etudier-bg-logo-responsive {
+        position: absolute;
+        right: 0;
+        bottom: 10rem;
+        transform: translate(0, 100%);
+    }
+
+    .etudier-width {
+        width: 100%;
+    }
+
+    .etudier-bg-logo-responsive-sec {
+        position: absolute;
+        right: 0;
+        bottom: 8rem;
+        transform: translate(0, 100%);
+    }
+
+    .etudier-last-left-title {
+        color: #000;
+    }
+
+    .etudier-last-left-content {
+        color: #000;
+    }
+
+    .etudier-black-bg-responsive {
+        background-color: #000;
+    }
+
+    .etudier-last-right-content-button {
+        width: 239px;
+        height: 57px;
+    }
+
+    .prier-title-red-underline {
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .prier-red-underline-responsive {
+        width: 70px;
+        border-bottom: 3px solid #e10b17;
+    }
+
+    .prier-content {
+        font-size: 16px;
+    }
+
+    .prier-width,
+    .prier-width-sec {
+        width: 100%;
+    }
+
+    .prier-first-quote,
+    .prier-sec-quote,
+    .prier-third-quote {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .prier-third-quote {
+        white-space: nowrap;
+    }
+    .prier-video-button {
+        width: 210px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .prier-content-last-dot,
+    .prier-content-last-dot-big,
+    .prier-content-red-last-dot,
+    .prier-content-red-last-dot-big {
+        font-size: 20px;
+        line-height: 20px;
+        color: #000;
+    }
+
+    .prier-content-last-italic,
+    .prier-content-red-last-italic {
+        font-size: 20px;
+        line-height: 25px;
+        color: #000;
+        white-space: nowrap;
+    }
+
+    .prier-content-last-small-blue,
+    .prier-content-last-small {
+        line-height: 20px;
+    }
+
+    .prier-last-button {
+        background-color: #e10b17;
+        width: 224px;
+        height: 57px;
+    }
+
+    .grey-bg-responsive {
+        background-color: #939597;
+    }
+
+    .prier-title-grey-left-box {
+        font-size: 24px;
+        line-height: 24px;
+        text-decoration: none;
+    }
+
+    .prier-title-grey-left-box-dash {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .party-heritage-width-sec {
+        width: 100%;
+    }
+    .prier-title-grey-left-box-italic {
+        font-family: "SuisseScreenRegular";
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+
+    .prier-title-grey-left-box-content {
+        line-height: 20px;
+    }
+
+    .prier-grey-box-quote-italic {
+        line-height: 25px;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    .prier-grey-box-quote-dot,
+    .prier-grey-box-quote-dot-big {
+        line-height: 20px;
+    }
+
+    .dark-symbol-responsive {
+        color: #000 !important;
+    }
+
+    .agir-red-underline-responsive {
+        width: 70px;
+        border-bottom: 3px solid #e10b17;
+    }
+
+    .agir-width {
+        width: 100%;
+    }
+
+    .agir-title-red-underline {
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .agir-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .agir-quote-dot {
+        line-height: 25px;
+    }
+
+    .agir-quote-responsive {
+        font-family: "SuisseScreenLight" !important;
+        font-size: 16px;
+        line-height: 25px;
+        white-space: nowrap;
+    }
+
+    .agir-quote-small-blue,
+    .agir-quote-small {
+        line-height: 25px;
+    }
+
+    .agir-content-italic {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .agir-quote {
+        font-size: 16px;
+        line-height: 25px;
+        white-space: nowrap;
+    }
+
+    .agir-title-big {
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .agir-title-red-bg {
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .agir-conent-red-bg,
+    .agir-conent-red-bg-bold {
+        font-size: 16px;
+        line-height: 25px;
+        color: #000;
+    }
+
+    .civitas-home-article-button {
+        width: 65px;
+        height: 38px;
+    }
+
+    .civitas-article-absolute-bottom {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .civitas-home-grey-box,
+    .civitas-home-red-box {
+        width: 100%;
+    }
+
+    .civitas-home-bg {
+        background: url("../img/civitas/responsive/civitas_home_4.png");
+        height: 686px;
+        background-color: #000;
+        background-size: cover;
+    }
+
+    .civitas-title-big-bg {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .civitas-title-black-bg {
+        font-size: 24px;
+        line-height: 31.13px;
+    }
+
+    .civitas-home-big-red-button {
+        width: 100%;
+    }
+    .civitas-home-big-white-button {
+        width: 100%;
+    }
+    .slick-track {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .civitas-home-red-button-last {
+        width: 326px;
+        height: 44px;
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .civitas-title-page {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .civitas-newsletter-salut-width {
+        width: 100%;
+    }
+    .party-status-title {
+        font-size: 18px;
+        line-height: 25px;
+        width: 200px;
+    }
+    #civitas-email-newsletter,
+    #civitas-first-name-newsletter,
+    #civitas-name-newsletter {
+        width: 100%;
+        height: 49px;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .civitas-newsletter-salut {
+        font-size: 18px;
+    }
+
+    .civitas-newsletter-country {
+        font-size: 18px;
+    }
+
+    .civitas-newsletter-first {
+        font-family: "SuisseScreenRegular";
+        font-size: 15px;
+    }
+
+    .civitas-responsive-underline-none {
+        border: 0 !important;
+    }
+
+    .civitas-newsletter-grey-box-content {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .civitas-newsletter-purple-box {
+        width: 246px;
+        height: 62px;
+    }
+
+    .civitas-newsletter-purple-box-content {
+        font-size: 20px;
+    }
+
+    .civitas-newsletter-red-box {
+        width: 100%;
+    }
+
+    .civitas-newsletter-red-box-title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .civitas-newsletter-red-box-content {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .civitas-newsletter-valider-box {
+        width: 163px;
+        height: 62px;
+    }
+
+    .civitas-newsletter-valider {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .civitas-newsletter-red-box-content-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #fff;
+    }
+
+    .civitas-black-marquee {
+        height: 41px;
+    }
+
+    .civitas-marquee {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .title-article-small {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .description-article {
+        font-size: 8px;
+        line-height: 15px;
+    }
+    .title-article {
+        font-size: 15px;
+    }
+    .civitas-news-title {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .civitas-news-title-content {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .civitas-news-content {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .civitas-news-more {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .line-with-dot {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        width: 90%;
+    }
+
+    .red-dot {
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        border-radius: 50%;
+    }
+
+    .red-line {
+        flex-grow: 1;
+        height: 2px;
+        background-color: red;
+    }
+    .article-title {
+        font-size: 17px;
+        line-height: 1;
+    }
+    .civitas-news-category-small {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .civitas-news-category-small-op {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .civitas-news-subtitle-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .civitas-news-page-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .smaller-font-responsive {
+        font-size: 16px !important;
+    }
+
+    .civitas-vote-first {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .civitas-title-responsive {
+        font-family: "Euclid";
+        font-size: 24px;
+        line-height: 25px;
+        text-align: center;
+        color: #000;
+    }
+
+    .border-bottom-red-responsive {
+        border-bottom: 1px solid #e10b17;
+    }
+
+    .civitas-vote-content-form-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .civitas-vote-gradient-responsive {
+        height: 113px;
+        background: linear-gradient(179.92deg, #000000 0.07%, #666666 118.93%);
+    }
+
+    .civitas-vote-gradient-content {
+        font-family: "SuisseScreenItalic";
+        font-size: 35px;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #fff;
+    }
+
+    .civitas-vote-title-form {
+        text-align: start;
+        margin: 2rem 0 1.5rem 0;
+    }
+
+    .civitas-vote-content-form {
+        width: 100%;
+        text-align: start;
+    }
+
+    .civitas-vote-responsive-title {
+        font-size: 24px !important;
+        text-decoration: none;
+    }
+
+    .civitas-vote-content-form-sec {
+        width: 100%;
+        text-align: start;
+        margin: 2rem 0 1.5rem 0;
+    }
+
+    .civitas-vote-black-box {
+        width: 324px;
+        height: 67px;
+        background-color: #000;
+    }
+
+    .civitas-black-box-vote-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        color: #fff;
+        text-decoration: none;
+    }
+    .initiatives-link {
+        width: 100%;
+        text-align: center;
+    }
+    .civitas-black-box-vote-responsive:hover {
+        color: #fff;
+    }
+
+    .civitas-political-program-first {
+        font-size: 16px;
+    }
+
+    .civitas-political-red-title {
+        font-size: 19px;
+    }
+
+    .civitas-political-red-content {
+        font-family: "SuisseScreenRegular";
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .themes-title-home {
+        font-size: 30px;
+    }
+
+    .civitas-theme-border {
+        font-size: 16px;
+    }
+
+    .civitas-politiac-grey-box {
+        width: 100%;
+    }
+
+    .smaller-font-size {
+        font-size: 22px !important;
+    }
+
+    .civitas-restoration-content {
+        font-size: 16px;
+    }
+
+    .become-member-header {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .become-member-black-bg {
+        font-size: 16px;
+        line-height: 25px;
+        text-align: start;
+        margin: 0 1rem;
+    }
+
+    .become-member-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .become-member-button {
+        width: 179px;
+        height: 30px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .become-meber-first-img-content-title-resp {
+        font-size: 22px !important;
+    }
+
+    .become-meber-first-img-content {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .become-meber-first-img-content-button {
+        width: 322px;
+        height: 33px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .become-meber-sec-img-content-title-resp {
+        font-size: 18px !important;
+    }
+
+    .become-meber-sec-img-content {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .become-meber-sec-img-content-button {
+        width: 322px;
+        height: 33px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .agenda-title {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .agenda-resp {
+        font-size: 16px !important;
+    }
+
+    .agenda-month {
+        height: 26px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .participer-black-bg {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 0 1rem;
+    }
+
+    .participer-big-font-resp {
+        font-size: 20px !important;
+    }
+
+    .participer-cornered {
+        width: 40%;
+    }
+
+    .participate-big-button-top {
+        z-index: -1;
+    }
+
+    .join-civitas-title {
+        font-size: 40px;
+        line-height: 50px;
+        text-decoration: none;
+    }
+
+    .join-position-center {
+        transform: translate(-50%, 0);
+        width: 100%;
+    }
+
+    .join-title {
+        font-size: 20px;
+        line-height: 25px;
+        z-index: 1;
+    }
+
+    .question-title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .question-answer {
+        font-size: 16px;
+        line-height: 25px;
+        padding-left: 1rem;
+    }
+
+    .question-line {
+        margin: 1rem auto 1rem auto;
+    }
+
+    .socials-title {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .socials-titles-overlay {
+        font-size: 16px;
+        line-height: 25px;
+        width: 100%;
+    }
+
+    .social-media-absolute {
+        top: 5rem;
+        transform: translate(-50%, 0);
+    }
+
+    .social-red-box {
+        top: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    .get-inform-par {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .get-inform-black {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .get-inform-black-next {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .get-info-first-button {
+        width: 238px;
+        height: 27px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .get-inform-title {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .get-info-sec-button {
+        width: 214px;
+        height: 24px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .party-home-title {
+        font-size: 35px;
+    }
+
+    .party-home-title-big {
+        font-size: 40px;
+    }
+
+    .party-first-button {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .party-width {
+        width: 100%;
+    }
+
+    .party-content-italic {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .party-img-overlay {
+        font-size: 32px;
+    }
+
+    .party-img-overlay-last-absolute {
+        height: 108px;
+    }
+
+    .img-overlay-party {
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .party-width-third {
+        width: 100%;
+    }
+
+    .center-link {
+        height: 115px;
+        justify-content: center;
+    }
+
+    .party-cornered-button {
+        font-size: 32px;
+    }
+
+    .red-box-absolute {
+        transform: translate(0, -50%);
+    }
+
+    .party-cornered {
+        border-bottom: 115px solid #e10b17;
+        border-left: 115px solid transparent;
+        width: 70%;
+    }
+
+    .party-heritage-width {
+        width: 100%;
+    }
+
+    .party-heritage-title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .party-heritage-title-underline {
+        text-decoration: none;
+    }
+
+    .party-heritage-content {
+        font-size: 16px;
+    }
+
+    .party-heritage-content-big {
+        font-size: 23px;
+    }
+
+    .diocesains-content {
+        font-size: 16px;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .diocesains-width,
+    .diocesains-width-sec {
+        width: 100%;
+    }
+
+    .diocesains-title-form {
+        font-size: 16px;
+    }
+
+    .diocesains-title-form-underline {
+        border: none;
+    }
+
+    .diocesains-content-form {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .director-button-grey {
+        width: 311px;
+        height: 60px;
+        font-size: 25px;
+        line-height: 25px;
+        z-index: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    .status-page-title {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .status-page-pdf {
+        width: 80%;
+    }
+    .status-page-pdf-title {
+        font-size: 24px;
+        line-height: 25px;
+    }
+    .status-page-content {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .status-line-red {
+        border-bottom: 1px solid #e10b17;
+        width: 80%;
+        position: absolute;
+        right: 0;
+    }
+    .status-page-content-blue {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .party-status-content-page {
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .initiatives-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .initiatives-content-bold {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .initiatives-title {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .referendum-black-title {
+        color: #000;
+        font-size: 22px;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .referendum-black-subtitle {
+        color: #000;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .referendum-grey-content {
+        font-size: 25px;
+    }
+
+    .initiative-grey-box,
+    .initiative-red-box,
+    .initiatives-red-button {
+        width: 100%;
+    }
+
+    .title-height {
+        height: 118px;
+    }
+
+    .goal-support-absolute {
+        top: 3rem;
+        transform: translate(0, 0);
+    }
+
+    .goal-support-title {
+        font-size: 35px;
+        line-height: 35px;
+        margin-right: 1rem;
+    }
+
+    .goal-support-soutenir {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .goal-support-content {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .goal-support-content-underline {
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .goal-support-grey-bg {
+        background-color: #878585;
+    }
+
+    .goal-support-sec-content-underline {
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .goal-support-content-bold {
+        font-size: 16px;
+    }
+
+    .support-title {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .support-red-box {
+        width: 275px;
+        height: 97px;
+    }
+
+    .support-red-box-content {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .support-title-underline {
+        border-bottom: 2px solid #fff;
+    }
+
+    .support-red-box-absolute {
+        bottom: 2rem;
+    }
+
+    .support-title-absolute {
+        top: 1.5rem;
+    }
+
+    .support-boxes {
+        width: 150px;
+        font-size: 24px;
+    }
+
+    .support-boxes-big {
+        width: 100%;
+        font-size: 19px;
+        line-height: 19px;
+        color: #fff;
+    }
+
+    .support-boxes-big-italic {
+        font-size: 19px !important;
+        line-height: 19px !important;
+        color: #fff !important;
+    }
+
+    .support-white-soutenir {
+        width: 100%;
+        background-color: #939597;
+    }
+
+    .support-grey-right {
+        color: #000;
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .support-grey-right-button {
+        width: 324px;
+        height: 36px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .support-title-third {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .support-red-box-button {
+        width: 100%;
+    }
+
+    .support-title-sec {
+        color: #000;
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .support-absolute-position-responsive {
+        position: absolute;
+        top: 5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .width-reset {
+        width: 369px;
+    }
+
+    .support-absolute-position-sec-responsive {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .civitas-slider-opacity {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .civitas-slider-first {
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .civitas-slider-sec {
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .civitas-slider-third {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .info-title-pages {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .etude-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .etude-content-title {
+        font-size: 24px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .etude-content-title-underline-resp {
+        border-bottom: 1px solid #e10b17;
+    }
+
+    .etude-content-italic {
+        font-size: 16px;
+    }
+
+    .etude-content-small-blue,
+    .etude-content-small {
+        font-size: 16px;
+    }
+
+    .etude-grey-title {
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
+
+    .general-info-border {
+        width: 80%;
+    }
+
+    .faith-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .faith-title {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .faith-width,
+    .faith-italic-width {
+        width: 100%;
+    }
+
+    .faith-content-small {
+        font-size: 16px;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .faith-dot {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .faith-content-italic {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .faith-content-blue {
+        line-height: 25px;
+    }
+
+    .faith-content-last,
+    .faith-content-last-italic {
+        line-height: 25px;
+    }
+
+    .action-politique-content {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .action-politique-width,
+    .action-politique-width_sec {
+        width: 100%;
+    }
+
+    .action-politique-content-center {
+        font-size: 16px;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .action-politique-title {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .action-politique-title-black {
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .action-politique-content-black {
+        font-size: 16px;
+    }
+
+    .table-height {
+        height: 100%;
+    }
+
+    .soutenir-question {
+        font-family: "SuisseScreenItalic";
+    }
+
+    .soutenir-red-box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .soutenir-red-box-content-black {
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .soutenir-red-box-content {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .soutenir-black-line {
+        border: 1px solid #000;
+        width: 20%;
+    }
+
+    .soutenir-black-box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .soutenir-black-box-content {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .events-red-box,
+    .events-black-box {
+        width: 100%;
+        background-color: #e10b17;
+    }
+
+    .events-red-box-content {
+        font-size: 20px;
+    }
+
+    .events-red-box-button {
+        width: 238px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .events-black-box-content {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .responsive-width {
+        width: 100%;
+    }
+
+    .events-red-box-button-newsletter,
+    .events-red-box-button-agenda {
+        width: 100%;
+        height: 36px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .civitas-events-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .next-event-red-button {
+        width: 100%;
+    }
+
+    .events-next-marquee {
+        font-family: "SangBleuBold";
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #fff;
+    }
+
+    .events-next-black-bg-full {
+        background-color: #000;
+        height: 41px;
+    }
+
+    .next-event-box-grey,
+    .next-event-box-red {
+        width: 100%;
+    }
+
+    .events-register-title-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .events-register-content-white {
+        font-size: 18px;
+        color: #000;
+        line-height: 25px;
+    }
+
+    .events-register-content-white-small {
+        font-size: 18px;
+        color: #000;
+        line-height: 25px;
+    }
+
+    .events-register-bg-opacity-position {
+        position: absolute;
+        bottom: 0;
+        height: 50%;
+        width: 100%;
+    }
+
+    .events-register-top-position {
+        position: absolute;
+        top: 1rem;
+        width: 100%;
+    }
+
+    .events-register-bg-opacity {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height: 100%;
+    }
+
+    .events-register-content-black {
+        font-size: 18px;
+    }
+
+    .events-register-black-button {
+        background-color: #e10b17;
+    }
+
+    .events-past-content-italic-small {
+        font-size: 20px;
+    }
+
+    .past-events-title {
+        font-size: 24px;
+    }
+
+    .membership-title {
+        font-size: 24px;
+        line-height: 35px;
+        width: 100%;
+    }
+
+    .white-box-membership {
+        width: 155px;
+        height: 30px;
+    }
+
+    .membership-payment {
+        font-size: 14px;
+    }
+
+    .membership-star-content {
+        height: 138px;
+    }
+
+    .soutenir-question-responsive {
+        font-family: "SangBleuOGBold";
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        color: #000;
+    }
+
+    .membership-content-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .membership-content-responsive:hover,
+    .membership-content-responsive:focus {
+        color: #000;
+    }
+
+    .member-star {
+        width: 28px;
+        height: 27px;
+    }
+
+    .advantages-stars-content-resp {
+        font-family: "SuisseScreenRegular";
+        font-size: 22px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .advantages-stars-content-small-resp {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .advantages-buttons-position {
+        transform: translate(-50%, -100%);
+        width: 100%;
+        bottom: 6rem;
+    }
+
+    .advantages-last-button-black {
+        width: 100%;
+    }
+
+    .advantages-cornered-responsive {
+        height: 0;
+        border-bottom: 66px solid #e10b17;
+        border-left: 66px solid transparent;
+        position: absolute;
+        width: 30%;
+        right: 0;
+        bottom: 1rem;
+    }
+
+    .soutenir-payment-title,
+    .soutenir-payment-title-blue {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 0.5rem;
+    }
+}

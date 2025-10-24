@@ -1,0 +1,5163 @@
+@media only screen and (max-width: 767px) {
+    .navbar-header {
+        background-color: #fff;
+    }
+
+    .menu-logo-width {
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .language-selection a {
+        font-family: "RivieraNightsBlack";
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 16px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .submenu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0 !important;
+        margin: auto;
+    }
+
+    .menu-responsive {
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+
+    .navbar-header {
+        background-color: transparent;
+    }
+
+    #home {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+    }
+
+    li a i {
+        display: block !important;
+    }
+
+    .responsive-menu-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .video_mobile {
+        padding: 0;
+    }
+
+    .civitas-submenu-fair {
+        width: 109px;
+        height: 25px;
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .responsive-menu-back {
+        padding: 10px 30px 10px 30px;
+        font-size: 24px;
+        color: #000;
+    }
+
+    .navbar .navbar-header {
+        align-items: center;
+    }
+
+
+    .responsive-none {
+        display: none;
+    }
+
+    .desktop-block {
+        display: none;
+    }
+
+    .grey-menu {
+        width: 100%;
+        height: 32px;
+        background-color: #d9d9d9;
+    }
+
+    .header-grey {
+        font-family: "Euclid";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .image-video-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        /* transform: translate(100%, -50%); */
+        transform: translate(100%, 0);
+    }
+
+
+
+    .text-box-left-title {
+        font-family: "SangBleuBold";
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 37px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .position-red-bg {
+        width: 369px;
+        height: 844px;
+    }
+
+    .text-box-left {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .red-underline-responsive {
+        width: 100px;
+        background-color: #e10b17;
+        height: 5px;
+    }
+
+    .image-boxes {
+        width: 151px;
+        height: 66px;
+        font-family: "SuisseScreenRegular";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .image-boxes-big {
+        width: 323px;
+        height: 66px;
+        font-family: "SuisseScreenRegular";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .submit-home {
+        width: 323px;
+        height: 66px;
+        background-color: #939597;
+        font-family: "SuisseScreenRegular";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .image-boxes-big input::placeholder {
+        font-size: 16px;
+        color: #000;
+        font-family: "SuisseScreenItalic";
+    }
+
+    .home-page-overlay {
+        top: 7rem;
+    }
+
+    .home-page-overlay-second {
+        top: 5rem;
+    }
+
+    .footer-title {
+        font-family: "SangBleuBold";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+    }
+
+    .footer-subtitle {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+    }
+
+    .footer-menu {
+        font-family: "SuisseScreenRegular";
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        margin: 5px 0 5px 0;
+    }
+
+    .footer-menu:hover,
+    .footer-menu:focus {
+        color: #000;
+        font-size: 18px;
+    }
+
+    .footer {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .border-right {
+        border-right: 1px solid #000;
+        height: 20px;
+    }
+
+    .title-podcast {
+        color: #000;
+        font-family: "RivieraNightsBlack";
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-title {
+        font-family: "RivieraNightsBlack";
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 12px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #fff;
+        padding: 10px;
+    }
+
+    .responsive-podcast {
+        margin: 0 10px 0 10px;
+    }
+
+    .red-bg-title-podcast {
+        font-family: "SuisseScreenItalic";
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .red-bg-button-podcast {
+        color: #000;
+        background-color: #fff;
+        text-align: center;
+        font-family: "SuisseScreenRegular";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        margin-bottom: 30px;
+        width: 201px;
+        height: 38px;
+        text-decoration: none;
+    }
+
+    .grid-container-subcategory {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .author-title {
+        font-family: "RivieraNightsBlack";
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 12px;
+        letter-spacing: -0.015em;
+        transform: translate(0, -100%);
+        left: 50%;
+        bottom: 0;
+    }
+
+    .podcast-title {
+        font-family: "RivieraNightsBlack";
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .podcast-author {
+        font-family: "RivieraNightsBlack";
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 12px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .podcast-description-title {
+        font-family: "Euclid";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .podcast-description {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .grid-container-podcast {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-podcast {
+        padding: 1rem !important;
+    }
+
+    .play-button {
+        transform: translate(-50%, 0);
+        bottom: 0;
+        right: unset;
+    }
+
+    .responive-red-bg {
+        height: 57px;
+        background-color: #e10b17;
+    }
+
+    .responsive-header {
+        font-family: "Euclid";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #fff;
+    }
+
+    .responsive-civitas-title {
+        font-family: "Euclid";
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .header-pages-underline {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .pages-par {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .civitas-form {
+        font-size: 20px;
+        width: unset;
+        font-weight: 275;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+    }
+
+    .header-pages {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .pages-subheader {
+        font-size: 20px;
+    }
+
+    .white-letters {
+        font-size: 20px;
+    }
+
+    .header-pages-bg {
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        margin: unset !important;
+    }
+
+    .red-button {
+        width: 210px;
+        height: 38px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .button-height {
+        position: unset;
+        transform: unset;
+        width: unset;
+    }
+
+    .amfissfs-last-title {
+        color: #000;
+    }
+
+    .amfissfs-last-par {
+        color: #000;
+    }
+
+    .black-bg-responsive {
+        background-color: #000;
+    }
+
+    .red-button-etudier {
+        width: 239px;
+        height: 57px;
+    }
+
+    .prier-bg-img {
+        background-image: url("/assets/img/responsive/bg-responive-etudier.png");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+    }
+
+    .bg-image-etudier-responisve {
+        background-image: url("../img/responsive/etudier-responsive.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: auto 300px;
+    }
+
+    .agir-bg {
+        background-image: url("../img/responsive/civitas-bg-agir.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .width-membership {
+        width: 400px;
+    }
+
+    .star-advantages:hover {
+        content: url("../img/responsive/Frame 51.png");
+    }
+
+    .agir-red-bg-title {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .width-responsive {
+        width: 100%;
+    }
+
+    .agir-red-bg-par {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .prier-bg-img-position {
+        background-position: right top;
+    }
+
+    .header-pages-big {
+        font-family: "Euclid";
+        font-size: 27px;
+        font-weight: 400;
+        line-height: 34px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .header-agir {
+        font-size: 25px;
+        font-weight: 275;
+        line-height: 32px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .contact-civitas-title {
+        font-size: 24px;
+    }
+
+    .rdp-title-grey {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-italic-grey {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+    }
+
+    .grid-container-positions {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .themes-table {
+        width: 390px;
+        height: 41px;
+    }
+
+    .position-home-par {
+        font-size: 16px;
+    }
+
+    .themes-title-home {
+        width: 390px;
+        font-size: 30px;
+    }
+
+    .donate-title {
+        top: 5rem;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0em;
+    }
+
+    .title-button {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 275px;
+        height: 97px;
+    }
+
+    .donate-boxes {
+        width: 151px;
+        height: 66px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .donate-boxes-big {
+        width: 323px;
+        height: 66px;
+        color: #fff !important;
+    }
+
+    .soutenir-dotane-button {
+        color: #fff !important;
+    }
+
+    .header-bg-fair {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        color: #000;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+    .red-button-donate {
+        width: 324px;
+        height: 36px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .donate-title-second {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+    }
+
+    .horizontal-line-white {
+        background-color: #000;
+    }
+
+    .horizontal-line-black {
+        height: 1px;
+        background-color: #000;
+        width: 200px;
+    }
+
+    .horizontal-line-white-big {
+        width: 50px;
+    }
+
+    .top-responsive-box {
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        top: 5rem;
+    }
+
+    .bottom-center-box {
+        position: absolute;
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 50%;
+    }
+
+    .bottom-last-center-box {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 7rem;
+    }
+
+    .donate-boxes-big input::placeholder {
+        color: #fff;
+    }
+
+    .table-height {
+        height: unset;
+    }
+
+    .black-bg-soutenir {
+        height: 41px;
+        background-color: #000;
+        font-family: "SangBleuRegular";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .soutenir-address {
+        text-align: center !important;
+    }
+
+    .soutenir-left-content {
+        width: 394px;
+        height: 214px;
+    }
+
+    .soutenir-left-bottom-black {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .soutenir-left-bottom {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .soutenir-right-content {
+        height: 137px;
+    }
+
+    .info-title-pages {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .responsive-block {
+        display: block;
+    }
+
+    .etude-tilte-grey {
+        font-size: 24px;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .etude-par-grey {
+        text-align: center;
+    }
+
+    .margin-responsive {
+        margin: 0 0 2rem 0 !important;
+    }
+
+    .action-politique-par {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .action-politique-form-header {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-decoration: none;
+    }
+
+    .action-politique-form-par {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: unset;
+        text-align: left;
+    }
+
+    .action-politique-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .faith-form {
+        font-size: 16px;
+        width: unset;
+    }
+
+    .vote-catholic-balck-box {
+        background-color: #000;
+        width: 324px;
+        height: 69px;
+    }
+
+    .vote-catholic-content-responsive {
+        font-family: "SangBleuRegular";
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .position-home-titles {
+        font-family: "Euclid";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .red-underline {
+        text-decoration: none;
+    }
+
+    .horizontal-small-line {
+        margin-top: 5px;
+        width: 90px;
+    }
+
+    .position-home-title-red {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .position-home-par-red {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .responsive-info-grey {
+        background-color: #878585;
+        padding: 10px;
+    }
+
+    .info-title-responsive {
+        font-family: "Euclid";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+        text-align: center;
+    }
+
+    .info-par-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #fff;
+    }
+
+    .info-title-img {
+        font-family: "Euclid";
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 8rem;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .soutenir-info {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 3rem;
+        width: 323px;
+        height: 66px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .slider-img {
+        width: 389px !important;
+        height: 248px !important;
+    }
+
+    /* .civitas-article {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    } */
+    .civitas-article-button {
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .height-img-responsive {
+        height: 686px;
+    }
+
+    .article-logo-responsive {
+        width: 127px;
+    }
+
+    .articles-button {
+        width: 201px;
+        height: 37.81px;
+    }
+
+    .border-top-bottom {
+        border: unset;
+    }
+
+    .civitas-submenu-button {
+        width: 322px;
+        height: 42px;
+        margin-top: 5rem;
+    }
+
+    .civitas-title-white-bg {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: -0.015em;
+    }
+
+    .civitas-title-black-bg {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        margin: 0;
+    }
+
+    .responsive-civitas-home-bottom {
+        position: absolute;
+        transform: translate(-50%, 100%);
+        left: 50%;
+        bottom: 3rem;
+        width: 100%;
+    }
+
+    .article-position {
+        transform: translate(-50%, 100%);
+        left: 50%;
+        bottom: 14rem;
+        width: 100%;
+    }
+
+    .img-absolute {
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        top: 5rem;
+    }
+
+    .responsive-civitas-home-top {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 2rem;
+        width: 100%;
+    }
+
+    .party-home-title {
+        font-size: 39px;
+        font-weight: 400;
+        line-height: 45px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .party-home-title-big {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 45px;
+        letter-spacing: 0em;
+    }
+
+    .party-first-button {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-form {
+        font-size: 16px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-form-blue {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-img-overlay {
+        font-size: 32px;
+        font-weight: 275;
+        line-height: 45px;
+        letter-spacing: 0em;
+        color: #000;
+        text-align: end;
+        margin-right: 1.5rem;
+        width: 300px;
+    }
+
+    .hallebarder-responsive {
+        transform: translate(50%, -100%);
+        position: absolute;
+        right: 7rem;
+        bottom: 11rem;
+        font-family: "SuisseScreenItalic";
+        font-size: 32px;
+        font-weight: 275;
+        line-height: 45px;
+        letter-spacing: 0em;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .img-overlay-party {
+        font-size: 32px;
+        font-weight: 275;
+        line-height: 45px;
+        letter-spacing: 0em;
+    }
+
+    .director-button-grey {
+        width: 311px;
+        height: 60px;
+        z-index: 1;
+        font-size: 25px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 0rem;
+    }
+
+    .party-director-title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-director-first-par {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-director-first-header {
+        font-size: 23px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .question-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .info-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .member-image-overlay {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 9rem;
+    }
+
+    .member-button-overlay {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 323px;
+        height: 34.61px;
+    }
+
+    .initiaves-pdf {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.015em;
+    }
+
+    .title-question {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .question-answer {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        padding: 10px;
+    }
+
+    .question-title-responsive {
+        font-size: 18px;
+    }
+
+    .status-page-title {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-status-title {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-status-par {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-status-par-blue {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .initiatives-page {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .newsletter-grey {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .red-box-newsletter {
+        width: unset;
+        height: unset;
+    }
+
+    .last-button-newsletter {
+        width: 246px;
+        height: 62px;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .newsletter-footer {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .margin-top-big-social {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .socials-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .socials-titles-overlay {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 300px;
+    }
+
+    .symbol-width {
+        margin-top: 5px;
+        width: 33px;
+        height: 33;
+    }
+
+    .socials-twitter {
+        top: 10rem;
+    }
+
+    .socials-insta {
+        top: 20rem;
+    }
+
+    .socials-youtube {
+        top: 30rem;
+    }
+
+    .socials-telegram {
+        top: 40rem;
+    }
+
+    .social-box {
+        width: 369px;
+        height: 188px;
+    }
+
+    .initiatives-responsive {
+        font-size: 16px;
+    }
+
+    .initiatives-title-responsive {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .initiaves-pdf-responsive {
+        font-size: 20px;
+    }
+
+    .initiatives-title-sec-responsive {
+        font-family: "Euclid";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+    }
+
+    .slider-pages-title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+    }
+
+    .slider-pages-par {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0em;
+    }
+
+    .initiatives-box-responive {
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    #email-newsletter,
+    #name-newsletter,
+    #name-1-newsletter {
+        width: 100%;
+    }
+
+    .radio-newsletter {
+        justify-content: start !important;
+    }
+
+    .newsletter-pays,
+    #madame,
+    #monsieur {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+
+    .get-inform-black {
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .get-inform-black-next {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .get-inform-title {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .get-info-button {
+        width: 238px;
+        height: 27px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .get-info-button-responsive {
+        width: 214.2px;
+        height: 24px;
+    }
+
+    .status-contant {
+        font-family: "SuisseIntl";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .join-civitas-title {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.015em;
+        bottom: 0;
+    }
+
+    .join-civitas-button {
+        bottom: 0;
+    }
+
+    .advantages-text {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .advantages-text-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .advantages-responsive {
+        position: absolute;
+        transform: translate(0, 50%);
+        right: 0;
+        bottom: 10rem;
+        z-index: 1;
+    }
+
+    .title-responsive {
+        font-size: 20px;
+    }
+
+    .advantages-last {
+        bottom: 5rem;
+    }
+
+    .advantages-last-button {
+        bottom: 0;
+    }
+
+    .membership-tile {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0em;
+        bottom: 4rem;
+        width: 100%;
+    }
+
+    .agenda-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .agenda-pdf {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .member-overlay {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 350px;
+        text-align: left;
+    }
+
+    .member-first {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .member-button {
+        width: 179px;
+        height: 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .member-image-overlay-second {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 9rem;
+    }
+
+    .member-button-overlay-second {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 323px;
+        height: 34.61px;
+    }
+
+    .events-red {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .donate-button-box {
+        width: 238px;
+        height: 38px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .events-black {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .civitas-events-button {
+        width: 369px;
+        height: 36px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .civitas-events-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+    }
+
+    .header-content {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .new-events-responsive-absolute {
+        position: absolute;
+    }
+
+    .date-content {
+        font-family: "RivieraNightsBlack";
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .date-hour {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .address-events {
+        position: unset;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+        z-index: 1;
+    }
+
+    .next-event-box-grey,
+    .next-event-box-red {
+        width: 369px;
+        height: 142px;
+    }
+
+    .header-content-next-1 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .past-title-form,
+    .past-par-form {
+        width: unset;
+    }
+
+    .past-events-italic-small {
+        font-family: "SuisseScreenRegular";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .max-widt-events {
+        width: 100%;
+    }
+
+    .become-member-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0em;
+    }
+
+    .member-overlay-big {
+        font-family: "SuisseScreenRegular";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .participate-button {
+        width: 241px;
+        height: 109px;
+    }
+
+    .bg-img {
+        background-image: url("../img/responsive/responsive-member.png");
+        background-size: 100%;
+    }
+
+    .news-header {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .news-subtitle {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .title-news {
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .title-description {
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .news-more {
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .text-pages {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .news-red-line {
+        display: none;
+    }
+
+    /*--------------------------------------------RDP------------------------*/
+    .title-home-rdp {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        position: unset;
+        transform: unset;
+    }
+
+    .rdp-home-hamburger .hamburger::after {
+        background-color: #fff;
+    }
+
+    .rdp-home-hamburger .hamburger::before {
+        background-color: #fff;
+    }
+
+    .rdp-home-hamburger .hamburger span {
+        background-color: #fff;
+    }
+
+    .subtitle-home-rdp {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-home-black-bg {
+        height: 61px;
+    }
+
+    .rdp-par {
+        font-family: "SuisseIntl";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .bottom-left-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .bottom-right-button {
+        width: 65px;
+        height: 25px;
+        font-size: 20px;
+    }
+
+    .catechisme-title-rdp {
+        font-size: 30px;
+        top: 12rem;
+    }
+
+    .rdp-button-orange {
+        width: 340px;
+        height: 68px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-orange-sec {
+        width: 340px;
+        height: 68px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-orange-third {
+        width: 340px;
+        height: 68px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-grey-absolute {
+        bottom: 2rem;
+    }
+
+    .rdp-button-grey {
+        width: 340px;
+        height: 93px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-grey-sec {
+        width: 340px;
+        height: 93px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-grey-third {
+        width: 340px;
+        height: 93px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        top: 10rem;
+    }
+
+    .rdp-par-second {
+        font-family: "SuisseIntl";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .grey-reactagle {
+        position: unset;
+        height: 59px;
+        width: unset;
+        transform: unset;
+    }
+
+    .polygon-letters {
+        color: #000;
+        width: unset;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .audio-title-reactangle {
+        font-size: 9px;
+        font-weight: 900;
+        line-height: 10px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .rdp-par-small {
+        font-family: "SuisseIntl";
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .dark-bg-white-letters {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.015em;
+        margin-left: 2rem;
+    }
+
+    .lerosaire-title {
+        position: unset;
+        background-color: #000;
+        height: 210px;
+        width: 100%;
+    }
+
+    .rdp-title {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .notre-dame {
+        font-family: "SuisseIntl";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .change-font {
+        font-size: 12px;
+    }
+
+    .june-image {
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    .notre-dame-sec-responsive {
+        font-family: "SuisseIntl";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .les-apparitions-rdp {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .fatima-title {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .fatima-title-text {
+        bottom: 0;
+    }
+
+    .notredame-bullets {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lescapulaire-title {
+        font-family: "SuisseIntl";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .lescapulaire-subtitle {
+        font-family: "SuisseIntl";
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .lescapulaire-par {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lescapulaire-italic {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lescapulaire-under-img {
+        font-family: "SuisseIntl";
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .lescapulaire-title-black-bg {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lescapulaire-par-questions {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .lersamedis-title {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.015em;
+    }
+
+    .lersamedis-title-text {
+        top: 0;
+        height: 330px;
+    }
+
+    .lersamedis-quote {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lersamedis-polygon-responsive {
+        font-family: "EuclidMono";
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .dark-bg-white-letters-responsive {
+        font-family: "EuclidMono";
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .prier-lerosaire-par {
+        font-family: "Suisse Intl";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .prier-lerosaire-par-blue {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .rdp-form {
+        color: #000;
+        width: unset;
+    }
+
+    .comment-prier-lerosaire-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        width: unset;
+    }
+
+    .comment-prier-lerosaire-par {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        width: unset;
+    }
+
+    .comment-prier-lerosaire-par-sec {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        width: unset;
+    }
+
+    .comment-prier-lerosaire-par-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        width: unset;
+    }
+
+    .lerosaire-prier-bg-responsive {
+        background-image: url("/assets/img/responsive/rosaire-commant-bg.png");
+        background-position: right top;
+        background-repeat: no-repeat;
+    }
+
+    .comment-title-par {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .black-bg-height {
+        height: 80px;
+    }
+
+    .blue-box-title {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .rdp-aout-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-months-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .blue-box-months {
+        width: 100%;
+    }
+
+    .rdp-may-title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-italic {
+        font-size: 12px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-par-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-par-big {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-absolute-responsive {
+        position: absolute;
+        top: 6rem;
+    }
+
+    .may-absolute-responsive-sec {
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    .may-absolute-responsive-third {
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    .rdp-juillet-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-juilet-title-sec {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-par-italic {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .last-image-paper {
+        bottom: 0;
+    }
+
+    .rdp-july-par-small {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-aout-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-aout-par-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .aout-image-paper {
+        top: 2rem;
+        width: 250px;
+    }
+
+    .october-img-last-3 {
+        top: unset;
+        bottom: 4rem;
+        transform: translate(-50%, 50%);
+    }
+
+    .september-title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-october-title {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .black-title-october {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .october-par-last {
+        font-family: "SuisseIntl";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .october-par-last-font {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .october-last-big {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-octomber-title-sec {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .october-img-last-1 {
+        width: 300px;
+    }
+
+    /*----------------------------------------------AMISFFS---------------------------------------------*/
+    .white-box-amissfs {
+        width: 285px;
+        height: 95px;
+        bottom: 2rem;
+    }
+
+    .amissfs-home-hamburger .hamburger::after {
+        background-color: #fff;
+    }
+
+    .amissfs-home-hamburger .hamburger::before {
+        background-color: #fff;
+    }
+
+    .amissfs-home-hamburger .hamburger span {
+        background-color: #fff;
+    }
+
+    .amissfs-buttons {
+        font-size: 35px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .amissfs-button-small {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .amissfs-bg {
+        background-image: url("/../assets/img/responsive/amissfs-home-responsive.png");
+        height: 631px;
+    }
+
+    .association-bg {
+        background-image: url("/../assets/img/responsive/association-responsive.png");
+        height: 784px;
+    }
+
+    .amissfs-overlay-association-absolute {
+        transform: translate(-50%, -100%);
+        bottom: 10rem;
+    }
+
+    .amissfs-overlay-home-absolute {
+        width: 100%;
+    }
+
+    .black-row-association {
+        position: relative;
+        background-color: #000;
+        width: 100%;
+        height: 95px;
+    }
+
+    .amissfs-box-button-red-responsive {
+        background-color: #e10b17;
+        color: #fff;
+        width: 201px;
+        height: 36.26px;
+        font-family: "SuisseScreenRegular";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .associate-responsive-title-last {
+        font-family: "SuisseScreenItalic";
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        color: #fff;
+        width: 100%;
+    }
+
+    .amissfs-overlay-association {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .amissfs-black-bg-association {
+        background: linear-gradient(180.45deg,
+                rgba(0, 0, 0, 0.5) 42.87%,
+                rgba(0, 0, 0, 0) 100%);
+    }
+
+    .amissfs-overlay-home-absolute-bottom {
+        left: 1rem;
+        bottom: 1rem;
+    }
+
+    .amissfs-black-bg-home {
+        height: 122px;
+    }
+
+    .amissfs-overlay-home {
+        font-size: 45px;
+        font-weight: 900;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .amissfs-overlay-home-bottom {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .amissfs-overlay-home-italic {
+        font-size: 18px;
+        font-weight: 275;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .under-construction-amissfs {
+        font-size: 25px;
+    }
+
+    .amissfs-par {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .red-bg-color-amissfs {
+        width: unset;
+    }
+
+    .amissfs-footer {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .header-amissfs {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .june-par-big {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .june-par-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .june-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .june-italic {
+        font-size: 12px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #fff;
+    }
+
+    .june-video {
+        position: absolute;
+        transform: translate(-50%, 100%);
+        left: 50%;
+        bottom: 7rem;
+        z-index: 10;
+    }
+
+    .white-bg-june {
+        position: absolute;
+        transform: translateY(50%);
+        height: unset;
+        top: 5rem;
+        z-index: 9;
+    }
+
+    .june-blue {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .black-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .june-blue-big {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-months-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-september-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    /*------------------------------FOOTER---------------------------------------*/
+    .list-changes .protection-data-par {
+        padding-left: 0;
+    }
+
+    .list-changes-sec li {
+        padding-left: 0;
+    }
+
+    .contact-civitas-form {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .navbar-header {
+        background-color: #fff;
+    }
+
+    .language-selection a {
+        font-family: "RivieraNightsBlack";
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 16px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .submenu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0 !important;
+        margin: auto;
+    }
+
+    .menu-responsive {
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+
+    .navbar-header {
+        background-color: transparent;
+    }
+
+    #home {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+    }
+
+    li a i {
+        display: block !important;
+    }
+
+    .responsive-menu-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .video_mobile {
+        padding: 0;
+    }
+
+    .civitas-submenu-fair {
+        width: 109px;
+        height: 25px;
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .responsive-menu-back {
+        padding: 10px 30px 10px 30px;
+        font-size: 24px;
+        color: #000;
+    }
+
+    .navbar .navbar-header {
+        align-items: center;
+    }
+
+    .inverse-text .navbar-nav .nav-link {
+        color: #000;
+        text-align: left;
+        border-bottom: 1px solid #000;
+    }
+
+    .responsive-none {
+        display: none;
+    }
+
+    .desktop-block {
+        display: none;
+    }
+
+    .grey-menu {
+        width: 100%;
+        height: 32px;
+        background-color: #d9d9d9;
+    }
+
+    .header-grey {
+        font-family: "Euclid";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .image-video-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        transform: translate(100%, -50%);
+    }
+
+    .slick-track {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .text-box-left-title {
+        font-family: "SangBleuBold";
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 37px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .text-box-left {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .red-underline-responsive {
+        width: 100px;
+        background-color: #e10b17;
+        height: 5px;
+    }
+
+    .image-boxes {
+        width: 151px;
+        height: 66px;
+        font-family: "SuisseScreenRegular";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .image-boxes-big {
+        width: 323px;
+        height: 66px;
+        font-family: "SuisseScreenRegular";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .submit-home {
+        width: 323px;
+        height: 66px;
+        background-color: #939597;
+        font-family: "SuisseScreenRegular";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .image-boxes-big input::placeholder {
+        font-size: 16px;
+        color: #000;
+        font-family: "SuisseScreenItalic";
+    }
+
+    .home-page-overlay {
+        top: 7rem;
+    }
+
+    .home-page-overlay-second {
+        top: 5rem;
+    }
+
+    .footer-title {
+        font-family: "SangBleuBold";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+    }
+
+    .footer-subtitle {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+    }
+
+    .footer-menu {
+        font-family: "SuisseScreenRegular";
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        margin: 5px 0 5px 0;
+    }
+
+    .footer-menu:hover,
+    .footer-menu:focus {
+        color: #000;
+        font-size: 18px;
+    }
+
+    .footer {
+        font-family: "SuisseScreenRegular";
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .border-right {
+        border-right: 1px solid #000;
+    }
+
+    .title-podcast {
+        color: #000;
+        font-family: "RivieraNightsBlack";
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-title {
+        font-family: "RivieraNightsBlack";
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 12px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #fff;
+        padding: 10px;
+    }
+
+    .responsive-podcast {
+        margin: 0 10px 0 10px;
+    }
+
+    .red-bg-title-podcast {
+        font-family: "SuisseScreenItalic";
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .red-bg-button-podcast {
+        color: #000;
+        background-color: #fff;
+        text-align: center;
+        font-family: "SuisseScreenRegular";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        margin-bottom: 30px;
+        width: 201px;
+        height: 38px;
+        text-decoration: none;
+    }
+
+    .grid-container-subcategory {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .author-title {
+        font-family: "RivieraNightsBlack";
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 12px;
+        letter-spacing: -0.015em;
+        transform: translate(0, -100%);
+        left: 50%;
+        bottom: 0;
+    }
+
+    .podcast-title {
+        font-family: "RivieraNightsBlack";
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .podcast-author {
+        font-family: "RivieraNightsBlack";
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 12px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .podcast-description-title {
+        font-family: "Euclid";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .podcast-description {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .grid-container-podcast {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-podcast {
+        padding: 1rem !important;
+    }
+
+    .play-button {
+        transform: translate(-50%, 0);
+        bottom: 0;
+        right: unset;
+    }
+
+    .responive-red-bg {
+        height: 57px;
+        background-color: #e10b17;
+    }
+
+    .responsive-header {
+        font-family: "Euclid";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #fff;
+    }
+
+    .responsive-civitas-title {
+        font-family: "Euclid";
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .header-pages-underline {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .pages-par {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .civitas-form {
+        font-size: 20px;
+        width: unset;
+        font-weight: 275;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+    }
+
+    .header-pages {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .pages-subheader {
+        font-size: 20px;
+    }
+
+    .white-letters {
+        font-size: 20px;
+    }
+
+    .red-button {
+        width: 210px;
+        height: 38px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .button-height {
+        position: unset;
+        transform: unset;
+        width: unset;
+    }
+
+    .amfissfs-last-title {
+        color: #000;
+    }
+
+    .amfissfs-last-par {
+        color: #000;
+    }
+
+    .black-bg-responsive {
+        background-color: #000;
+    }
+
+    .red-button-etudier {
+        width: 239px;
+        height: 57px;
+    }
+
+    .prier-bg-img {
+        background-image: url("/assets/img/responsive/bg-responive-etudier.png");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+    }
+
+    .bg-image-etudier-responisve {
+        background-image: url("../img/responsive/etudier-responsive.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: auto 300px;
+    }
+
+    .agir-bg {
+        background-image: url("../img/responsive/civitas-bg-agir.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .width-membership {
+        width: 400px;
+    }
+
+    .star-advantages:hover {
+        content: url("../img/responsive/Frame 51.png");
+    }
+
+    .agir-red-bg-title {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .width-responsive {
+        width: 100%;
+    }
+
+    .agir-red-bg-par {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .prier-bg-img-position {
+        background-position: right top;
+    }
+
+    .header-pages-big {
+        font-family: "Euclid";
+        font-size: 27px;
+        font-weight: 400;
+        line-height: 34px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .header-agir {
+        font-size: 25px;
+        font-weight: 275;
+        line-height: 32px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .contact-civitas-title {
+        font-size: 24px;
+    }
+
+    .rdp-title-grey {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-italic-grey {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+    }
+
+    .grid-container-positions {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .themes-table {
+        width: 390px;
+        height: 41px;
+    }
+
+    .position-home-par {
+        font-size: 16px;
+    }
+
+    .themes-title-home {
+        width: 390px;
+        font-size: 30px;
+    }
+
+    .donate-title {
+        top: 5rem;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0em;
+    }
+
+    .title-button {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 275px;
+        height: 97px;
+    }
+
+    .donate-boxes {
+        width: 151px;
+        height: 66px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .donate-boxes-big {
+        width: 323px;
+        height: 66px;
+        color: #fff !important;
+    }
+
+    .soutenir-dotane-button {
+        color: #fff !important;
+    }
+
+    .header-bg-fair {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        color: #000;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+    .red-button-donate {
+        width: 324px;
+        height: 36px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .donate-title-second {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #000;
+    }
+
+    .horizontal-line-white {
+        background-color: #000;
+    }
+
+    .horizontal-line-black {
+        height: 1px;
+        background-color: #000;
+        width: 200px;
+    }
+
+    .horizontal-line-white-big {
+        width: 50px;
+    }
+
+    .top-responsive-box {
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        top: 5rem;
+    }
+
+    .bottom-center-box {
+        position: absolute;
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 50%;
+    }
+
+    .bottom-last-center-box {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 7rem;
+    }
+
+    .donate-boxes-big input::placeholder {
+        color: #fff;
+    }
+
+    .table-height {
+        height: unset;
+    }
+
+    .black-bg-soutenir {
+        height: 41px;
+        background-color: #000;
+        font-family: "SangBleuRegular";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .soutenir-address {
+        text-align: center !important;
+    }
+
+    .soutenir-left-content {
+        width: 394px;
+        height: 214px;
+    }
+
+    .soutenir-left-bottom-black {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .soutenir-left-bottom {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .soutenir-right-content {
+        height: 137px;
+    }
+
+    .info-title-pages {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .responsive-block {
+        display: block;
+    }
+
+    .etude-tilte-grey {
+        font-size: 24px;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .etude-par-grey {
+        text-align: center;
+    }
+
+    .margin-responsive {
+        margin: 0 0 2rem 0 !important;
+    }
+
+    .action-politique-par {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .action-politique-form-header {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-decoration: none;
+    }
+
+    .action-politique-form-par {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: unset;
+        text-align: left;
+    }
+
+    .action-politique-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .faith-form {
+        font-size: 16px;
+        width: unset;
+    }
+
+    .vote-catholic-balck-box {
+        background-color: #000;
+        width: 324px;
+        height: 69px;
+    }
+
+    .vote-catholic-content-responsive {
+        font-family: "SangBleuRegular";
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .position-home-titles {
+        font-family: "Euclid";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .red-underline {
+        text-decoration: none;
+    }
+
+    .horizontal-small-line {
+        margin-top: 5px;
+        width: 90px;
+    }
+
+    .position-home-title-red {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .position-home-par-red {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .responsive-info-grey {
+        background-color: #878585;
+        padding: 10px;
+    }
+
+    .info-title-responsive {
+        font-family: "Euclid";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+        text-align: center;
+    }
+
+    .info-par-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #fff;
+    }
+
+    .info-title-img {
+        font-family: "Euclid";
+
+        font-weight: 400;
+
+        letter-spacing: -0.015em;
+        text-align: center;
+        transform: translate(-50%, -100%);
+        left: 50%;
+        bottom: 9rem;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .soutenir-info {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 3rem;
+        width: 323px;
+        height: 66px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .slider-img {
+        width: 389px !important;
+        height: 248px !important;
+    }
+
+    /* .civitas-article {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    } */
+    .civitas-article-button {
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .height-img-responsive {
+        height: 686px;
+    }
+
+    .article-logo-responsive {
+        width: 127px;
+    }
+
+    .articles-button {
+        width: 201px;
+        height: 37.81px;
+    }
+
+    .border-top-bottom {
+        border: unset;
+    }
+
+    .civitas-submenu-button {
+        width: 322px;
+        height: 42px;
+        margin-top: 5rem;
+    }
+
+    .civitas-title-white-bg {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: -0.015em;
+    }
+
+    .civitas-title-black-bg {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        margin: 0;
+    }
+
+    .responsive-civitas-home-bottom {
+        position: absolute;
+        transform: translate(-50%, 100%);
+        left: 50%;
+        bottom: 3rem;
+        width: 100%;
+    }
+
+    .article-position {
+        transform: translate(-50%, 100%);
+        left: 50%;
+        bottom: 14rem;
+        width: 100%;
+    }
+
+    .img-absolute {
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        top: 5rem;
+    }
+
+    .responsive-civitas-home-top {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 2rem;
+        width: 100%;
+    }
+
+    .party-home-title {
+        font-size: 39px;
+        font-weight: 400;
+        line-height: 45px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .party-home-title-big {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 45px;
+        letter-spacing: 0em;
+    }
+
+    .party-first-button {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-form {
+        font-size: 16px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-form-blue {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-img-overlay {
+        font-size: 32px;
+        font-style: italic;
+        font-weight: 275;
+        line-height: 45px;
+        letter-spacing: 0em;
+        color: #000;
+    }
+
+    .party-img-overlay-left {
+        left: 13rem !important;
+    }
+
+    .hallebarder-responsive {
+        transform: translate(50%, -100%);
+        position: absolute;
+        right: 7rem;
+        bottom: 11rem;
+        font-family: "SuisseScreenItalic";
+        font-size: 32px;
+        font-weight: 275;
+        line-height: 45px;
+        letter-spacing: 0em;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .img-overlay-party {
+        font-size: 32px;
+        font-weight: 275;
+        line-height: 45px;
+        letter-spacing: 0em;
+    }
+
+    .director-button-grey {
+        width: 311px;
+        height: 60px;
+        z-index: 1;
+        font-size: 25px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 0rem;
+    }
+
+    .party-director-title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-director-first-par {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-director-first-header {
+        font-size: 23px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .question-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .info-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .member-image-overlay {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 9rem;
+    }
+
+    .member-button-overlay {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 323px;
+        height: 34.61px;
+    }
+
+    .initiaves-pdf {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.015em;
+    }
+
+    .title-question {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .question-answer {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        padding: 10px;
+    }
+
+    .question-title-responsive {
+        font-size: 18px;
+    }
+
+    .status-page-title {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-status-title {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-status-par {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .party-status-par-blue {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .initiatives-page {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .newsletter-grey {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .red-box-newsletter {
+        width: unset;
+        height: unset;
+    }
+
+    .last-button-newsletter {
+        width: 246px;
+        height: 62px;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .newsletter-footer {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .margin-top-big-social {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .socials-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .socials-titles-overlay {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 300px;
+    }
+
+    .symbol-width {
+        margin-top: 5px;
+        width: 33px;
+        height: 33;
+    }
+
+    .socials-twitter {
+        top: 10rem;
+    }
+
+    .socials-insta {
+        top: 20rem;
+    }
+
+    .socials-youtube {
+        top: 30rem;
+    }
+
+    .socials-telegram {
+        top: 40rem;
+    }
+
+    .social-box {
+        width: 369px;
+        height: 188px;
+    }
+
+    .initiatives-responsive {
+        font-size: 16px;
+    }
+
+    .initiatives-title-responsive {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .initiaves-pdf-responsive {
+        font-size: 20px;
+    }
+
+    .initiatives-title-sec-responsive {
+        font-family: "Euclid";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+    }
+
+    .slider-pages-title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+    }
+
+    .slider-pages-par {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0em;
+    }
+
+    .initiatives-box-responive {
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    #email-newsletter,
+    #name-newsletter,
+    #name-1-newsletter {
+        width: 100%;
+    }
+
+    .radio-newsletter {
+        justify-content: start !important;
+    }
+
+    .newsletter-pays,
+    #madame,
+    #monsieur {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+
+    .get-inform-black {
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .get-inform-black-next {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .get-inform-title {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .get-info-button {
+        width: 238px;
+        height: 27px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .get-info-button-responsive {
+        width: 214.2px;
+        height: 24px;
+    }
+
+    .status-contant {
+        font-family: "SuisseIntl";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .join-civitas-title {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.015em;
+        bottom: 0;
+    }
+
+    .join-civitas-button {
+        bottom: 0;
+    }
+
+    .advantages-text {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .advantages-text-responsive {
+        font-family: "SuisseScreenRegular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .advantages-responsive {
+        position: absolute;
+        transform: translate(0, 50%);
+        right: 0;
+        bottom: 10rem;
+        z-index: 1;
+    }
+
+    .title-responsive {
+        font-size: 20px;
+    }
+
+    .advantages-last {
+        bottom: 5rem;
+    }
+
+    .advantages-last-button {
+        bottom: 0;
+    }
+
+    .membership-tile {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0em;
+        bottom: 4rem;
+        width: 100%;
+    }
+
+    .agenda-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .agenda-pdf {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .member-overlay {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 350px;
+        text-align: left;
+    }
+
+    .member-first {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .member-button {
+        width: 179px;
+        height: 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .member-image-overlay-second {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 9rem;
+    }
+
+    .member-button-overlay-second {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        width: 323px;
+        height: 34.61px;
+    }
+
+    .events-red {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .donate-button-box {
+        width: 238px;
+        height: 38px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .events-black {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .civitas-events-button {
+        width: 369px;
+        height: 36px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .civitas-events-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+    }
+
+    .header-content {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .new-events-responsive-absolute {
+        position: absolute;
+    }
+
+    .date-content {
+        font-family: "RivieraNightsBlack";
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .date-hour {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .address-events {
+        position: unset;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+        z-index: 1;
+    }
+
+    .next-event-box-grey,
+    .next-event-box-red {
+        width: 369px;
+        height: 142px;
+    }
+
+    .header-content-next-1 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .past-title-form,
+    .past-par-form {
+        width: unset;
+    }
+
+    .past-events-italic-small {
+        font-family: "SuisseScreenRegular";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .max-widt-events {
+        width: 100%;
+    }
+
+    .become-member-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0em;
+    }
+
+    .member-overlay-big {
+        font-family: "SuisseScreenRegular";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .participate-button {
+        width: 241px;
+        height: 109px;
+    }
+
+    .bg-img {
+        background-image: url("../img/responsive/responsive-member.png");
+        background-size: 100%;
+    }
+
+    .news-header {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .news-subtitle {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .title-news {
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .title-description {
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .news-more {
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .text-pages {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .news-red-line {
+        display: none;
+    }
+
+    /*--------------------------------------------RDP------------------------*/
+    .title-home-rdp {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        position: unset;
+        transform: unset;
+    }
+
+    .rdp-home-hamburger .hamburger::after {
+        background-color: #fff;
+    }
+
+    .rdp-home-hamburger .hamburger::before {
+        background-color: #fff;
+    }
+
+    .rdp-home-hamburger .hamburger span {
+        background-color: #fff;
+    }
+
+    .subtitle-home-rdp {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-home-black-bg {
+        height: 61px;
+    }
+
+    .rdp-par {
+        font-family: "SuisseIntl";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .bottom-left-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .bottom-right-button {
+        width: 65px;
+        height: 25px;
+        font-size: 20px;
+    }
+
+    .catechisme-title-rdp {
+        font-size: 30px;
+        top: 12rem;
+    }
+
+    .rdp-button-orange {
+        width: 340px;
+        height: 68px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-orange-sec {
+        width: 340px;
+        height: 68px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-orange-third {
+        width: 340px;
+        height: 68px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-grey-absolute {
+        bottom: 2rem;
+    }
+
+    .rdp-button-grey {
+        width: 340px;
+        height: 93px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-grey-sec {
+        width: 340px;
+        height: 93px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-button-grey-third {
+        width: 340px;
+        height: 93px;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        top: 10rem;
+    }
+
+    .rdp-par-second {
+        font-family: "SuisseIntl";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .grey-reactagle {
+        position: unset;
+        height: 59px;
+        width: unset;
+        transform: unset;
+    }
+
+    .polygon-letters {
+        color: #000;
+        width: unset;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .audio-title-reactangle {
+        font-size: 9px;
+        font-weight: 900;
+        line-height: 10px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .rdp-par-small {
+        font-family: "SuisseIntl";
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .dark-bg-white-letters {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.015em;
+        margin-left: 2rem;
+    }
+
+    .lerosaire-title {
+        position: unset;
+        background-color: #000;
+        height: 210px;
+        width: 100%;
+    }
+
+    .rdp-title {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .notre-dame {
+        font-family: "SuisseIntl";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .change-font {
+        font-size: 12px;
+    }
+
+    .june-image {
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    .notre-dame-sec-responsive {
+        font-family: "SuisseIntl";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .les-apparitions-rdp {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .fatima-title {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .fatima-title-text {
+        bottom: 0;
+    }
+
+    .notredame-bullets {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lescapulaire-title {
+        font-family: "SuisseIntl";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .lescapulaire-subtitle {
+        font-family: "SuisseIntl";
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .lescapulaire-par {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lescapulaire-italic {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lescapulaire-under-img {
+        font-family: "SuisseIntl";
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .lescapulaire-title-black-bg {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lescapulaire-par-questions {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .lersamedis-title {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.015em;
+    }
+
+    .lersamedis-title-text {
+        top: 0;
+        height: 330px;
+    }
+
+    .lersamedis-quote {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .lersamedis-polygon-responsive {
+        font-family: "EuclidMono";
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .dark-bg-white-letters-responsive {
+        font-family: "EuclidMono";
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+    }
+
+    .prier-lerosaire-par {
+        font-family: "Suisse Intl";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .prier-lerosaire-par-blue {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .rdp-form {
+        color: #000;
+        width: unset;
+    }
+
+    .comment-prier-lerosaire-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        width: unset;
+    }
+
+    .comment-prier-lerosaire-par {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        width: unset;
+    }
+
+    .comment-prier-lerosaire-par-sec {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        width: unset;
+    }
+
+    .comment-prier-lerosaire-par-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+        color: #000;
+        width: unset;
+    }
+
+    .lerosaire-prier-bg-responsive {
+        background-image: url("/assets/img/responsive/rosaire-commant-bg.png");
+        background-position: right top;
+        background-repeat: no-repeat;
+    }
+
+    .comment-title-par {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .black-bg-height {
+        height: 80px;
+    }
+
+    .blue-box-title {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .rdp-aout-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-months-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .blue-box-months {
+        width: 100%;
+    }
+
+    .rdp-may-title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-italic {
+        font-size: 12px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-par-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-par-big {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .may-absolute-responsive {
+        position: absolute;
+        top: 6rem;
+    }
+
+    .may-absolute-responsive-sec {
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    .may-absolute-responsive-third {
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    .rdp-juillet-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-juilet-title-sec {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-par-italic {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .last-image-paper {
+        bottom: 0;
+    }
+
+    .rdp-july-par-small {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-aout-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-aout-par-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .aout-image-paper {
+        top: 2rem;
+        width: 250px;
+    }
+
+    .october-img-last-3 {
+        top: unset;
+        bottom: 4rem;
+        transform: translate(-50%, 50%);
+    }
+
+    .september-title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-october-title {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .black-title-october {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.015em;
+    }
+
+    .october-par-last {
+        font-family: "SuisseIntl";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .october-par-last-font {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .october-last-big {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-octomber-title-sec {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .october-img-last-1 {
+        width: 300px;
+    }
+
+    /*----------------------------------------------AMISFFS---------------------------------------------*/
+    .white-box-amissfs {
+        width: 285px;
+        height: 95px;
+        bottom: 2rem;
+    }
+
+    .amissfs-home-hamburger .hamburger::after {
+        background-color: #fff;
+    }
+
+    .amissfs-home-hamburger .hamburger::before {
+        background-color: #fff;
+    }
+
+    .amissfs-home-hamburger .hamburger span {
+        background-color: #fff;
+    }
+
+    .amissfs-buttons {
+        font-size: 35px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .amissfs-button-small {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .amissfs-bg {
+        background-image: url("/../assets/img/responsive/amissfs-home-responsive.png");
+        height: 631px;
+    }
+
+    .association-bg {
+        background-image: url("/../assets/img/responsive/association-responsive.png");
+        height: 784px;
+    }
+
+    .amissfs-overlay-association-absolute {
+        transform: translate(-50%, -100%);
+        bottom: 10rem;
+    }
+
+    .amissfs-overlay-home-absolute {
+        width: 100%;
+    }
+
+    .black-row-association {
+        position: relative;
+        background-color: #000;
+        width: 100%;
+        height: 95px;
+    }
+
+    .amissfs-box-button-red-responsive {
+        background-color: #e10b17;
+        color: #fff;
+        width: 201px;
+        height: 36.26px;
+        font-family: "SuisseScreenRegular";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .associate-responsive-title-last {
+        font-family: "SuisseScreenItalic";
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        color: #fff;
+        width: 100%;
+    }
+
+    .amissfs-overlay-association {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .amissfs-black-bg-association {
+        background: linear-gradient(180.45deg,
+                rgba(0, 0, 0, 0.5) 42.87%,
+                rgba(0, 0, 0, 0) 100%);
+    }
+
+    .amissfs-overlay-home-absolute-bottom {
+        left: 1rem;
+        bottom: 1rem;
+    }
+
+    .amissfs-black-bg-home {
+        height: 122px;
+    }
+
+    .amissfs-overlay-home {
+        font-size: 45px;
+        font-weight: 900;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .amissfs-overlay-home-bottom {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .amissfs-overlay-home-italic {
+        font-size: 18px;
+        font-weight: 275;
+        line-height: 30px;
+        letter-spacing: -0.015em;
+    }
+
+    .under-construction-amissfs {
+        font-size: 25px;
+    }
+
+    .amissfs-par {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .red-bg-color-amissfs {
+        width: unset;
+    }
+
+    .amissfs-footer {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .header-amissfs {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .june-par-big {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .june-par-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .june-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .june-italic {
+        font-size: 12px;
+        font-weight: 275;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #fff;
+    }
+
+    .june-video {
+        position: absolute;
+        transform: translate(-50%, 100%);
+        left: 50%;
+        bottom: 7rem;
+        z-index: 10;
+    }
+
+    .white-bg-june {
+        position: absolute;
+        transform: translateY(50%);
+        height: unset;
+        top: 5rem;
+        z-index: 9;
+    }
+
+    .june-blue {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .black-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+    }
+
+    .june-blue-big {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-months-small {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    .rdp-september-par {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+    }
+
+    /*------------------------------FOOTER---------------------------------------*/
+    .list-changes .protection-data-par {
+        padding-left: 0;
+    }
+
+    .list-changes-sec li {
+        padding-left: 0;
+    }
+
+    .contact-civitas-form {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: left;
+    }
+
+    .inner {
+        width: 550px;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+    .inner {
+        width: 100%;
+    }
+
+    .footer-menu {
+        color: #fff;
+        font-family: "SuisseScreenRegular";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 25px;
+        /* 89.286% */
+        letter-spacing: -0.42px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .footer {
+        padding: 10px;
+        color: #fff;
+        font-family: "RivieraNightsBold";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: -0.3px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .border-right {
+        border-right: 1px solid white;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid white;
+    }
+
+    .home-page-overlay-second {
+        top: 50%;
+    }
+
+    .inverse-text .navbar-nav .nav-link {
+        color: #fff;
+        text-align: center;
+        border: none;
+        font-size: 20px;
+    }
+
+    .header-participer {
+        font-size: 20px;
+    }
+
+    .responsive-block {
+        display: none;
+    }
+
+    .desktop-block {
+        display: block;
+    }
+
+    .menu-responsive {
+        position: unset;
+    }
+
+    .navbar-nav li {
+        margin: 0;
+    }
+
+    li a i {
+        display: none !important;
+    }
+
+    #home {
+        position: unset;
+    }
+
+    .article-position {
+        bottom: unset;
+        transform: translate(-50%, -50%);
+    }
+
+    .civitas-title-black-bg {
+        margin: 80px;
+    }
+
+    .navbar-submenu {
+        font-size: 18px;
+    }
+
+    .civitas-submenu-fair {
+        font-size: 14px;
+        width: 110px;
+        height: 40px;
+        line-height: 14px;
+    }
+
+    .table-height {
+        height: 350px;
+    }
+
+    .black-bg-soutenir {
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media only screen and (min-width: 1025px) {
+    .responsive-block {
+        display: none;
+    }
+}

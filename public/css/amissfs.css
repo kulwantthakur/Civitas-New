@@ -1,0 +1,1780 @@
+.navbar-submenu-ammisfs {
+    font-family: "SuisseIntl";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.navbar .navbar-brand {
+    height: 112px;
+}
+
+.hamburger.animate.white-hamburger::before,
+.hamburger.animate.white-hamburger::after {
+    background: #fff;
+}
+
+.hamburger.animate.white-hamburger span {
+    background: #fff;
+}
+
+.navbar-submenu-ammisfs:hover {
+    color: #000;
+}
+
+.change-color {
+    color: #fff;
+}
+
+.change-color-border {
+    background-color: #fff;
+}
+
+.change-color:hover,
+.change-color:focus {
+    color: #fff;
+}
+
+.position-top-img {
+    position: absolute;
+    top: 0;
+    /* width: 100%; */
+    z-index: -1;
+    width: 75%;
+}
+
+.amissfs-home-image {
+    /* width: 100%;
+    height: 1790px; */
+    height: 1099px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.amissfs-img-height {
+    height: 950px;
+}
+
+.association-image-height {
+    height: 536px;
+}
+
+.grey-box-association {
+    width: 370px;
+    height: 142px;
+    background-color: #939597;
+}
+
+.red-box-association {
+    width: 370px;
+    height: 142px;
+    background-color: #e10b17;
+}
+
+.grey-box-amissfs-home {
+    background-color: #939597;
+    width: 369px;
+    height: 141px;
+}
+
+.red-box-amissfs-home {
+    background-color: #e10b17;
+    width: 369px;
+    height: 141px;
+}
+
+.grey-box-amissfs-home-content {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+
+.amissfs-home-first-button {
+    background-color: #fff;
+    width: 201px;
+    height: 38px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.amissfs-home-first-button:hover,
+.amissfs-home-first-button:focus {
+    background-color: #0600ff;
+    color: #fff;
+}
+
+.amissfs-home-sec-button {
+    background-color: #fff;
+    width: 201px;
+    height: 38px;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.amissfs-home-sec-button:hover,
+.amissfs-home-sec-button:focus {
+    color: #000;
+}
+
+.amissfs-association-height {
+    height: 440px;
+}
+
+.amissfs-association-height-img {
+    height: 536px;
+}
+
+.amissfs-logo-title {
+    font-family: "RivieraNightsBlack";
+    font-size: 50px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.amissfs-home-title {
+    font-family: "RivieraNightsBlack";
+    font-size: 150px;
+    line-height: 65px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.amissfs-home-subtitle {
+    font-family: "SuisseScreenItalic";
+    font-size: 50px;
+    line-height: 65px;
+    letter-spacing: -0.015em;
+    text-align: start;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+.amissfs-home-new-subtitle{
+    font-family: "SangBleuBold";
+    font-size: 50px;
+    line-height: 65px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.amissfs-home-depuis {
+    font-family: "RivieraNightsBlack";
+    font-size: 45px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.amissfs-title-black-opacity {
+    /* position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0%); */
+    width: 735px;
+    height: 100%;
+}
+
+.amissfs-home-left-title {
+    font-family: "RivieraNightsBlack";
+    font-size: 50px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.amissfs-home-left-subtitle {
+    font-family: "SuisseIntl";
+    font-size: 35px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.white-box-amissfs-home {
+    width: 402px;
+    height: 193px;
+    background-color: #fff;
+    right: 0;
+    bottom: 2.5rem;
+}
+
+.white-box-amissfs-home-2 {
+    width: 366px;
+    height: 175px;
+    background-color: #fff;
+    right: 0;
+    bottom: 3.5rem;
+}
+.amissfs-box-podcast{
+    width: 152px;
+    height: 67px;
+}
+
+.amissfs-newsletter-title {
+    font-family: "SangBleuOGBold";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.salutation-specific {
+    width: 370px;
+}
+.canton-specific {
+    width: 370px;
+}
+
+.amissfs-title-responsive {
+    font-family: "SangBleuOGBold";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.amissfs-newsletter-red-box-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.amissfs-newsletter-red-box {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.amissfs-newsletter-valider {
+    font-family: "RivieraNightsBlack";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+    background-color: unset;
+}
+
+.amissfs-newsletter-valider:hover,
+.amissfs-newsletter-valider:focus {
+    color: #fff;
+}
+
+.newsletter-light-30 {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.association-title {
+    font-family: "SangBleuOGBold";
+    font-size: 50px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.association-subtitle-regular {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.association-subtitle-light {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+.amissfs-association-image {
+    height: 636px;
+    width: 100%;
+}
+
+.association-transp-bg {
+    background-image: url("/../img/amissfs/association.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 600px;
+    overflow: hidden;
+}
+
+.association-last-image {
+    background-image: url("/../img/amissfs/association-last.png");
+    background-size: cover;
+    height: 900px;
+}
+
+.association-last-image:hover {
+    background-image: url("/../img/amissfs/association-last-hover.png");
+}
+
+.association-hover:hover {
+    content: url("/../img/amissfs/association-last-hover.png");
+    height: 900px;
+}
+
+.association-italic-black {
+    font-family: "SuisseScreenItalic";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.amissfs-black-op {
+    width: 100%;
+    position: absolute;
+    bottom: 2rem;
+}
+.dons-red-button{
+    width: 201px;
+    height: 36px;
+    background-color: #E10B17;
+}
+.dons-red-button-content{
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+}
+.dons-red-button-content:hover,
+.dons-red-button-content:focus{
+    color: #fff;
+}
+.amissfs-depuis {
+    bottom: 0rem;
+    right: 0rem;
+}
+
+.grey-color-op {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.amissfs-association-page {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.assosiation-page-box-title {
+    font-family: "RivieraNightsBlack";
+    font-size: 30px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+
+.assosiation-page-box-content {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+
+.assosiation-page-box-content-blue {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #0600ff;
+}
+
+.assosiation-page-box-content-blue:hover,
+.assosiation-page-box-content-blue:focus {
+    color: #0600ff;
+}
+
+.edition-content {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.edition-content-underline {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25.94px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline;
+}
+
+.edition-content-underline:hover {
+    color: #000;
+}
+
+.amissfs-edition-white-box {
+    background-color: #fff;
+    right: 0;
+    bottom: 0;
+    transform: translate(0, -50%);
+    width: 232px;
+    height: 65px;
+}
+
+.edition-title-box {
+    font-family: "RivieraNightsBlack";
+    font-size: 29px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.edition-subtitle-box {
+    font-family: "SuisseIntl";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.edition-button-right {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    width: 322px;
+    height: 42px;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.edition-button-right:hover {
+    color: #000;
+}
+
+.amissfs-home-title-podcast {
+    font-family: "RivieraNightsBlack";
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #fff;
+}
+.podcast-back-button {
+    font-family: "RivieraNightsBlack";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: none;
+}
+.podcast-back-button:hover,
+.podcast-back-button:focus {
+    color: #000;
+}
+.podcast-name {
+    font-family: "RivieraNightsBlack";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+}
+.podcast-author {
+    font-family: "RivieraNightsBlack";
+    font-size: 20px;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.box-dimension {
+    height: 272px;
+}
+.podcast-absolute-grid {
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    transform: translate(0, 100%);
+}
+.podcast-title-specific {
+    font-family: "RivieraNightsBlack";
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.podcast-location-specific{
+    font-family: "SuisseScreenItalic";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.podcast-author-specific {
+    font-family: "RivieraNightsBlack";
+    font-size: 24px;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.podcast-description-title {
+    font-family: "Euclid";
+    font-size: 36px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.podcast-description {
+    font-family: "SuisseScreenLight";
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.amissfs-podcast {
+    background-color: #e10b17;
+    width: 210px;
+    height: 38px;
+    color: #fff;
+    font-family: "Euclid";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.amissfs-podcast:hover,
+.amissfs-podcast:focus {
+    color: #fff;
+}
+.play-podcast {
+    width: 100px;
+    height: 100px;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+}
+.play-button,
+.play-button-sec {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.border-podcast {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+.podcast-container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.multi-audio-title {
+    font-family: "Euclid";
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #fff;
+}
+.multi-audio-title-index {
+    font-family: "SuisseScreenLight";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.absolute-play-podcast {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translate(25%, -50%);
+}
+.amissfs-voir {
+    background-color: rgba(189, 0, 255, 1);
+    width: 155px;
+    height: 67px;
+    color: #fff;
+    font-family: "RivieraNightsBlack";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.amissfs-voir:hover,
+.amissfs-voir:focus {
+    color: #fff;
+}
+
+.amissfs-black-bg-home {
+    background-color: #000;
+    height: 470px;
+}
+
+.amissfs-podcast-boxes {
+    width: 152px;
+    height: 67px;
+}
+
+.amissfs-grid-home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.amissfs-absolute-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.amissfs-newsletter-salut {
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    margin-left: 0.5rem;
+}
+
+.amissfs-newsletter-country {
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    border: 0;
+    padding: 0;
+}
+
+.custom-select-canton {
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    border: 0;
+    padding: 0;
+}
+
+#email-newsletter,
+#name-newsletter,
+#name-1-newsletter {
+    border: 1px solid #000;
+    border-radius: 0%;
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    width: 370px;
+    height: 49px;
+}
+
+#email-newsletter::placeholder,
+#name-newsletter::placeholder,
+#name-1-newsletter::placeholder {
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+    opacity: 0.7;
+}
+
+.newsletter-box {
+    width: 468px;
+}
+
+.amissfs-contact {
+    font-family: "Euclid";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.custom-bullet-list {
+    list-style: none;
+}
+
+.custom-bullet-list li {
+    display: flex;
+}
+
+.custom-bullet-list li::before {
+    content: "";
+    width: 14px;
+    height: 17px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.black-box-gradient-1 {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8) 33.18%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    width: 599px;
+    height: 466px;
+    margin: auto;
+}
+
+.black-box-gradient-2 {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8) 33.18%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    width: 599px;
+    height: 374px;
+    margin: auto;
+}
+
+.black-box-gradient-3 {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8) 33.18%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    width: 599px;
+    height: 330px;
+    margin: auto;
+}
+
+.red-bg-gradient {
+    background: rgba(139, 0, 0, 0.8);
+}
+
+.blue-color:hover {
+    color: #0600ff;
+}
+
+.grey-box-bulletin {
+    width: 370px;
+    height: 142px;
+    background-color: #939597;
+}
+
+.red-box-bulletin {
+    width: 370px;
+    height: 142px;
+    background-color: #e10b17;
+}
+
+.amissfs-bulletin-specific-height {
+    height: 100px;
+}
+.numero-position-absolute {
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translate(50%, 100%);
+}
+
+.bulletin-content {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.bulletin-download-title {
+    font-family: "SuisseScreenRegular";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.bulletin-download-content {
+    font-family: "SuisseScreenLight";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.bulletin-download-content-bullets {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.rom-kurier-title-cloister {
+    font-family: "Cloister";
+    font-size: 40px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-align: center;
+}
+
+.pdf-download {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    /* line-height: 25.94px; */
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.bullet-commander {
+    font-family: "SuisseScreenLight";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+
+.amissfs-construction {
+    font-family: "SuisseScreenRegular";
+    font-size: 50px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #fff;
+}
+.commander-label {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000;
+}
+.commander-input {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px !important;
+    line-height: 16px !important;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #000 !important;
+    width: 206px;
+    height: 33px !important;
+    border-radius: 0% !important;
+    border: 1px solid #d9d9d9 !important;
+}
+
+.bulletin-comander-width {
+    width: 370px;
+}
+
+.commander-valider,
+.commander-fair {
+    font-family: "RivieraNightsBlack";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+    background-color: unset;
+}
+
+.box-italic-20 {
+    font-family: "SuisseScreenItalic";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.bullet-commander-bold {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.der-rom-width {
+    width: 398px;
+}
+
+#titre {
+    width: 276px;
+    height: 33px;
+    border-radius: 0%;
+    border: 1px solid #d9d9d9;
+}
+
+#fname-amissfs,
+#lname-amissfs,
+#address-amissfs,
+#post-code-amissfs,
+#canton-province,
+#pays-amissfs,
+#email-amissfs,
+#articles-amissfs,
+#reference-amissfs,
+#titre-amissfs,
+#quantity-amissfs,
+#prix-amissfs {
+    width: 206px;
+    height: 33px;
+    border-radius: 0%;
+    border: 1px solid #d9d9d9;
+}
+
+.annee,
+.afficher,
+.filter-amissfs {
+    border: 1px solid #000 !important;
+    border-radius: 6px !important;
+}
+
+.archive-absolute-bottom {
+    position: absolute;
+    bottom: 10px;
+    transform: translate(0, 50%);
+}
+
+.archive-amissfs-bg {
+    background-image: url("../img/amissfs/archive.png");
+    width: 100%;
+    height: 453px;
+    background-repeat: no-repeat;
+}
+
+.archive-title {
+    font-family: "SangBleuOGBold";
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.amissfs-title-archive-blue {
+    font-family: "SuisseScreenLight";
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #0600ff;
+}
+
+.bulletin-title-bold {
+    font-family: "SangBleuOGBold";
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.bulletin-label {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+.bulletin-input {
+    font-family: "SuisseScreenRegular";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.archive-bulletin-page {
+    font-family: "SuisseScreenRegular";
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #878585;
+    text-decoration: none;
+}
+
+.archive-bulletin-page-img {
+    background: url("../../img/amissfs/archive-arrows.png") no-repeat center
+        right 10px;
+}
+
+.archive-bulletin-page:hover {
+    color: #878585;
+}
+
+.archive-plus {
+    font-family: "SuisseScreenRegular";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.archive-bulletin {
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+}
+
+.archive-fair:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.podcast-title {
+    font-family: "SangBleuOGBold";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000;
+}
+
+.podcast-search {
+    font-family: "SuisseIntl";
+    font-size: 16px !important;
+    line-height: 25px !important;
+    letter-spacing: -0.015em !important;
+    color: rgba(0, 0, 0, 0.47) !important;
+    width: 629px !important;
+    height: 32px !important;
+    border: 1px solid #000 !important;
+    border-radius: 0 !important;
+    padding: 0 30px !important;
+}
+
+.search-button {
+    position: absolute;
+    left: 0;
+    margin: 0 5px 0 5px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.podcast-history {
+    font-family: "SuisseIntl";
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: #000;
+}
+
+.podcast-history:hover {
+    color: #000;
+}
+
+.podcast-home-category {
+    font-family: "RivieraNightsBlack";
+    font-size: 32px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+
+.podcast-home-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    background-color: #000;
+}
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 5;
+    margin-top: 1rem;
+}
+.load-more-btn {
+    background-color: #fff;
+    color: #000;
+    font-family: "SuisseScreenRegular";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    border: none;
+    width: 282px;
+    height: 44px;
+    padding: 0;
+}
+.podcast-grid-title {
+    font-family: "RivieraNightsBlack";
+    font-size: 16px;
+    line-height: 18.75px;
+    color: #fff;
+    width: 50px;
+}
+.no-file {
+    font-family: "SuisseScreenRegular";
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-align: center;
+}
+.podcast-red-bg {
+    background-color: #e10b17;
+    height: 142px;
+}
+
+.podcast-bottom-title {
+    font-family: "SuisseScreenItalic";
+    font-size: 36px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+.podcast-bottom-button {
+    font-family: "SuisseScreenRegular";
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    width: 282px;
+    height: 44px;
+}
+
+.podcast-bottom-button:hover {
+    color: #000;
+}
+
+.ts-control{
+    padding: 0 15px !important;
+}
+@media only screen and (max-width: 2600px) {
+ .position-top-img {
+    width: 75.4%;
+}
+}
+@media only screen and (max-width: 2500px) {
+ .position-top-img {
+       width: 75%;
+}
+}
+@media only screen and (max-width: 2400px) {
+ .position-top-img {
+       width: 74.7%;
+}
+}
+@media only screen and (max-width: 2300px) {
+ .position-top-img {
+    width: 74.2%;
+}
+}
+@media only screen and (max-width: 2200px) {
+ .position-top-img {
+        width: 73.8%;
+}
+}
+@media only screen and (max-width: 2100px) {
+ .position-top-img {
+        width: 73.3%;
+        }
+        .left-img {
+    left: -30% !important;
+}
+}
+@media only screen and (max-width: 2000px) {
+ .position-top-img {
+        width: 72.7%;
+}
+}
+@media only screen and (max-width: 1900px) {
+ .position-top-img {
+        width: 72.1%;
+}
+}
+
+@media only screen and (max-width: 1800px) {
+ .position-top-img {
+        width: 71.5%;
+}
+.left-img {
+     left: -35% !important;
+}
+}
+@media only screen and (max-width: 1700px) {
+ .position-top-img {
+        width: 70.7%;
+        }
+}
+@media only screen and (max-width: 1600px) {
+ .position-top-img {
+        width: 69.9%;
+        }
+}
+@media only screen and (max-width: 1500px) {
+ .position-top-img {
+       width: 68.7%;
+        }
+    .left-img {
+        left: -40% !important;
+    }
+}
+@media only screen and (max-width: 1380px) {
+    .left-img {
+        left: -45% !important;
+    }
+.left-img img{
+    max-width: 80%;
+}
+}
+@media only screen and (max-width: 1200px) {
+.amissfs-logo-title {
+    color: #000000;
+}
+.amissfs-depuis {
+    right: auto;
+    left: 64px;
+}
+.amissfs-home-depuis {
+    font-size: 35px;
+}
+}
+
+@media only screen and (max-width: 991px) {
+.amissfs-title-logo-responsive {
+    font-family: "SangBleuOGBold";
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #000;
+}
+.amissfs-construction {
+    line-height: 1;
+}
+.amissfs-depuis {
+    left: 1rem;
+    bottom: 1rem;
+}
+.amissfs-home-depuis {
+    font-size: 20px;
+    color: #fff;
+}
+.amissfs-home-new-subtitle{
+    font-size: 14px;
+    line-height: 20px;  
+    color: #000;
+    text-align: center;
+}
+.amissfs-home-sec-subtitle{
+    font-family: "SuisseScreenItalic";
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    text-align: center;
+}
+ .amissfs-black-op {
+        background-color: rgba(255, 255, 255, 0.57);
+        height: fit-content;
+        top: 55%;
+        bottom: 0;
+    }
+.w-100-tab{
+    width: 100%;
+}
+ .amissfs-home-specific-height {
+        height: 900px;
+        object-fit: cover;
+}
+.amissfs-img-height {
+    height: 800px;
+}
+.position-top-img {
+    width: 100%;
+}
+.amissfs-logo-title {
+        font-size: 20px;
+        line-height: 25px;
+        color: #fff;
+}
+}
+@media only screen and (max-width: 767px) {
+    .navbar .navbar-brand {
+        height: 100%;
+    }
+    .amissfs-history {
+        font-family: "RivieraNightsBlack";
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+        text-decoration: none;
+    }
+    .load-more-btn{
+        font-size: 18px;
+        width: 200px;
+        height: 38px;
+    }
+    .amissfs-home-specific-height {
+        height: 631px;
+    }
+    .no-file {
+        font-size: 7px;
+        line-height: 10px;
+    }
+    .amissfs-association-height {
+        height: 570px;
+    }
+
+    .grey-box-amissfs-home,
+    .red-box-amissfs-home {
+        width: 100%;
+    }
+
+    .amissfs-home-title {
+        font-family: "RivieraNightsBlack";
+        font-size: 45px;
+        line-height: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    .amissfs-home-subtitle {
+        font-family: "SuisseScreenItalic";
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .amissfs-title-black-opacity {
+        width: 368px;
+    }
+
+    .amissfs-home-left-title {
+        font-size: 35px;
+        line-height: 25px;
+    }
+
+    .amissfs-home-left-subtitle {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .white-box-amissfs-home {
+        width: 285px;
+        height: 95px;
+        bottom: 2rem;
+    }
+
+    .white-box-amissfs-home-2 {
+        width: 273px;
+        height: 99px;
+        bottom: 2rem;
+    }
+
+    .amissfs-voir {
+        bottom: 0;
+    }
+
+    #email-newsletter,
+    #name-newsletter,
+    #name-1-newsletter {
+        width: 100%;
+    }
+
+    .salutation-specific,
+    .canton-specific {
+        width: 100%;
+    }
+
+    .amissfs-newsletter-title {
+        font-size: 24px;
+    }
+
+    .amissfs-title-responsive {
+        font-size: 24px;
+    }
+
+    .newsletter-light-30 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .amissfs-contact {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .grey-box-association {
+        width: 100%;
+    }
+
+    .red-box-association {
+        width: 100%;
+    }
+
+    .association-subtitle-regular,
+    .association-subtitle-light {
+        font-family: "SuisseScreenRegular";
+        font-size: 20px;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .amissfs-association-bg-img {
+        background-image: url("/../img/amissfs/responsive/association-amissfs.png");
+        background-size: cover;
+        height: 799px;
+        overflow: hidden;
+    }
+
+    .association-bg-gradient {
+        background: linear-gradient(
+            180.45deg,
+            rgba(0, 0, 0, 0.5) 42.87%,
+            rgba(0, 0, 0, 0) 50.03%
+        );
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 20px;
+    }
+
+    .association-title {
+        font-family: "SangBleuOGBold";
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .association-responsive-img {
+        background-size: cover;
+        background-image: url("/../img/amissfs/responsive/association-responsive.png");
+        height: 336px;
+    }
+
+    .association-responsive-img:hover {
+        background-image: url("/../img/amissfs/responsive/association-responsive-hover.png");
+    }
+
+    .association-black-bg {
+        background-color: #000;
+        height: 95px;
+    }
+
+    .association-italic-black {
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .association-home-button {
+        font-family: "SuisseScreenRegular";
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: #fff;
+    }
+
+    .amissfs-association-page {
+        font-family: "SuisseScreenRegular";
+        font-size: 20px;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .assosiation-page-box-title {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .assosiation-page-box-content {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+    }
+
+    .assosiation-page-box-content-blue {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+    }
+
+    .black-box-gradient-1 {
+        width: 100%;
+        height: 407px;
+    }
+
+    .black-box-gradient-2 {
+        width: 100%;
+        height: 341px;
+    }
+
+    .black-box-gradient-3 {
+        width: 100%;
+        height: 289px;
+    }
+
+    .association-page-title-responsive {
+        font-family: "Euclid";
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        color: #fff;
+    }
+
+    .absolute-top-responsive {
+        position: absolute;
+        top: 2rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .edition-content {
+        font-size: 16px;
+        line-height: 25px;
+        color: #000;
+    }
+
+    .edition-button-right {
+        width: 100%;
+    }
+
+    .edition-content-par {
+        font-size: 18px !important;
+    }
+
+    .edition-title-box {
+        font-size: 35px;
+    }
+
+    .edition-subtitle-box {
+        font-size: 25px;
+    }
+
+    .amissfs-edition-white-box {
+        width: 273px;
+        height: 99px;
+    }
+
+    .amissfs-construction {
+        font-size: 20px;
+    }
+
+    .grey-box-bulletin,
+    .red-box-bulletin {
+        width: 100%;
+    }
+
+    .amissfs-bulletin-absolute-top-responsive {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .numero-position-absolute {
+        bottom: 15%;
+        transform: translate(50%, -50%);
+    }
+    .bulletin-content {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .bullet-commander {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .bullet-commander-bold {
+        font-family: "SuisseScreenLight";
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .rom-kurier-title-cloister {
+        font-size: 32px;
+    }
+
+    .der-rom-width {
+        width: 100%;
+    }
+
+    .podcast-search {
+        width: 100% !important;
+        color: #000 !important;
+    }
+    .podcast-big-font-responsive {
+        font-size: 34px !important;
+    }
+    .podcast-search::placeholder {
+        color: #000 !important;
+    }
+    .podcast-author {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .box-dimension {
+        height: 140px;
+    }
+    .podcast-name {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .podcast-back-button {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .podcast-container {
+        width: 306px;
+        height: 305px;
+    }
+    .play-podcast {
+        width: 68px;
+        height: 68px;
+    }
+    #playPauseIcon {
+        width: 31px;
+        height: 40px;
+    }
+    .podcast-title-specific {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .podcast-location-specific{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .podcast-author-specific {
+        font-size: 12px;
+        line-height: 10px;
+    }
+    .podcast-description-title {
+        font-size: 20px;
+    }
+    .podcast-description {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .multi-audio-title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .multi-audio-title-index {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .play-button-sec {
+        width: 11px;
+        height: 14px;
+    }
+    .podcast-history-responsive-title {
+        font-family: "RivieraNightsBlack";
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+
+    .podcast-history {
+        font-size: 10px;
+    }
+
+    .podcast-home-category {
+        font-size: 14px;
+    }
+
+    .bulletin-comander-width {
+        width: 100%;
+    }
+
+    .podcast-bottom-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .podcast-bottom-button {
+        width: 201px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .podcast-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .podcast-grid-title {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .amissfs-img-height {
+        height: 600px;
+    }
+
+    .amissfs-title-logo-responsive {
+        font-family: "SangBleuOGBold";
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+    .scale-podcast{
+            transform: scale(0.7);
+    }
+    .specific-height {
+        height: 785px;
+    }
+}
