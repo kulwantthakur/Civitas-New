@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/owl-carousel-theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/flatpickr.min.css') }}">
-     <link rel="stylesheet" type="text/css" href="{{ asset('css/tablet.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/tablet.css') }}">
 </head>
 
 <body>
@@ -454,26 +454,60 @@
         $(document).on("keyup", ".podcast-search", function(e) {
             const query = $(this).val();
             if (query.length > 0) {
-                $.ajax({
-                    url: "{{ route('podcast-search') }}",
-                    method: 'GET',
-                    data: {
-                        query: query
-                    },
-                    success: function(response) {
-                        $('.searchResult').html(response.html);
-                        $('.podcast-red-bg div').text('Rejoignez Civitas !');
-                        $('.podcast-red-bg a').attr('href', '/adhesion');
-                        $('.podcast-red-bg a').text('EN SAVOIR PLUS');
-                    },
-                    error: function(error) {
-                        console.error('Error:', error);
-                    }
-                });
+                fetchSearchResults(query, 1, false);
             } else {
                 $('.searchResult').html(html_data);
             }
         });
+
+        // Handle Load More button
+        $(document).on("click", ".load-more-btn", function(e) {
+            e.preventDefault();
+
+            const query = $(".podcast-search").val();
+            const nextPage = $(this).data("next-page");
+
+            if(nextPage){
+                $(this).text("Chargement...").prop("disabled", true);
+            }
+
+            fetchSearchResults(query, nextPage, true);
+        });
+
+        // Reusable AJAX fetch function
+        function fetchSearchResults(query, page = 1, append = false) {
+            $.ajax({
+                url: "{{ route('podcast-search') }}",
+                method: "GET",
+                data: {
+                    query,
+                    page
+                },
+                success: function(response) {
+                    if (append) {
+                        const newPodcasts = $(response.html).find(".podcast-list").html();
+                        const loadMoreBtn = $(response.html).find(".load-more-container").html();
+
+                        $(".podcast-list").append(newPodcasts);
+
+                        if (loadMoreBtn && loadMoreBtn.trim()) {
+                            $(".load-more-container").html(loadMoreBtn);
+                        } else {
+                            $(".load-more-container").remove();
+                        }
+                    } else {
+                        $(".searchResult").html(response.html);
+                    }
+
+                    $(".podcast-red-bg div").text("Rejoignez Civitas !");
+                    $(".podcast-red-bg a").attr("href", "/adhesion");
+                    $(".podcast-red-bg a").text("EN SAVOIR PLUS");
+                },
+                error: function(err) {
+                    console.error("Error:", err);
+                }
+            });
+        }
     </script>
     @yield('scripts')
 </body>

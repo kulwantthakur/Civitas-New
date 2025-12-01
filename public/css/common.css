@@ -6493,19 +6493,7 @@ footer.inverse-text p {
     background-clip: text;
 }
 .footer-omnia:hover {
-    background: linear-gradient(
-        to right,
-        #f7d916 0%,
-        #fddf11 10%,
-        #c7aa07 17%,
-        #e3c827 18%,
-        #bfa240 22%,
-        #fdd11c 46%,
-        #fee122 64%,
-        #ac9815 76%,
-        #d8b810 83%,
-        #d8b810 89%
-    );
+    background: linear-gradient(to bottom, #FBD737 42%, #FCE201 22%, #694B01 64%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent; /* fallback */

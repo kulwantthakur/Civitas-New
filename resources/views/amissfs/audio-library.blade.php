@@ -278,7 +278,7 @@
                             <div class="my-4 podcast-author-specific text-uppercase">{{ $podcast->author }}</div>
                             <a href="javascript:void(0);" class="download-podcast" data-podcast-id="{{ $podcast->id }}"
                                 data-title="{{ e($podcast->title) }}">
-                                <img src="{{ asset('img/download-responsive.png') }}" class="" alt="download logo"/>
+                                <img src="{{ asset('img/download-responsive.png') }}" class="" alt="download logo" />
                             </a>
                         </div>
                         <div class="mb-3 podcast-description-title">Descriptif</div>
@@ -307,7 +307,7 @@
             </div>
             <div class="container">
                 <div class="my-3 boder-podcast"></div>
-                <div class="mb-3 multi-audio-title px-0 px-md-4" >Duo même auteur</div>
+                <div class="mb-3 multi-audio-title px-0 px-md-4">Duo même auteur</div>
                 <div class="podcast-home-grid px-0 px-md-4">
                     @foreach($podcastsByAuthor as $podcastAuthor)
                     <div class="mb-4 position-relative">
@@ -608,48 +608,15 @@
 </script>
 @if($page == 1)
 <script>
-    $('.download-podcast').on('click', function() {
-        const $btn = $(this);
-        $btn.prop('disabled', true);
+    $(document).ready(function() {
+        $('.download-podcast').click(function() {
+            let podcastId = $(this).data('podcast-id');
 
-        const podcastId = $btn.data('podcast-id');
-        const audioFiles = {!! json_encode($podcastDetails['audio_files']) !!};
-        let podcastTitle = $btn.data('title') || 'podcast';
+            let url = "{{ route('download-zip', ['podcastId' => ':id']) }}";
+            url = url.replace(':id', podcastId);
 
-        if (!audioFiles.length) {
-            toastr.error('No audio files available for download.');
-            $btn.prop('disabled', false);
-            return;
-        }
-
-        podcastTitle = podcastTitle.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-
-        const zip = new JSZip();
-        let filesProcessed = 0;
-
-        audioFiles.forEach(function(audio, index) {
-            const fileName = audio.file_path.split('/').pop();
-            const filePath = "{{ asset('') }}" + audio.file_path;
-
-            fetch(filePath)
-                .then(response => response.blob())
-                .then(blob => {
-                    zip.file(fileName, blob);
-                    filesProcessed++;
-                    if (filesProcessed === audioFiles.length) {
-                        zip.generateAsync({
-                                type: 'blob'
-                            })
-                            .then(function(content) {
-                                saveAs(content, podcastTitle + '.zip');
-                                $btn.prop('disabled', false); // re-enable
-                            });
-                    }
-                })
-                .catch(function(error) {
-                    toastr.error('Error downloading file: ' + fileName);
-                    $btn.prop('disabled', false);
-                });
+            // Directly navigate to the URL — browser handles download
+            window.location.href = url;
         });
     });
 </script>

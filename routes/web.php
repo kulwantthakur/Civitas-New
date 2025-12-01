@@ -28,7 +28,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 
 // ---------- Auth ----------
-Auth::routes(['login' => false]);
+Auth::routes(['login' => true]);
 Route::get('/ap-login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/ap-login', [LoginController::class, 'login']);
 Route::group(['middleware' => ['auth']], function () {
@@ -51,6 +51,7 @@ Route::get('/optimize', function () {
     }
     abort(403, 'Unauthorized');
 });
+
 
 
 // ---------- Catch-all: redirect any URL without locale to a localized URL ----------
@@ -278,6 +279,8 @@ Route::group(
             // Contact
             Route::get('/amis-s-f-s/contact', 'amissfsContact')->name('amissfs-contact');
 
+
+            Route::get('/amissfs/podcasts/download-zip/{podcastId}', 'downloadZip')->name('download-zip');
             // Podcast
             Route::get('/amis-s-f-s/audiothèque/', 'podcasts')->name('podcasts');
             Route::get('/amissfs/podcasts/{url}', 'getCategoryPodcast')->name('podcast-subcategory');
@@ -287,6 +290,7 @@ Route::group(
             Route::get('/podcast-search', 'search')->name('podcast-search');
         });
 
+        
         // -------- RDP --------
         Route::controller(RdpController::class)->group(function () {
             Route::get('/rdp/accueil', 'home')->name('rdp.home');

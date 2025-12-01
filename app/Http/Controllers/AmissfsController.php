@@ -12,6 +12,8 @@ use App\Models\PodcastHistory;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use ZipArchive;
 
 class AmissfsController extends Controller
 {
@@ -309,40 +311,155 @@ class AmissfsController extends Controller
         return view('amissfs.history', compact('history'));
     }
 
+    public function downloadZip($podcastId)
+    {
+        // 1. Retrieve podcast with related audio files
+        $podcast = $this->modelPodcast->with('audioFiles')->find($podcastId);
+
+        if (!$podcast) {
+            return response()->json(['error' => 'Podcast not found'], 404);
+        }
+
+        // 2. Get all active and non-deleted audio files
+        $audioFiles = $podcast->audioFiles()
+            ->where('is_active', 1)
+            ->where('is_deleted', 0)
+            ->get();
+
+        if ($audioFiles->isEmpty()) {
+            return response()->json(['error' => 'No active audio files found for this podcast'], 404);
+        }
+
+        // 3. Prepare file and folder paths
+        $folderName = $podcast->url;
+        $zipFileName = $folderName . '.zip';
+        $publicDir = public_path('downloads');
+
+        if (!File::exists($publicDir)) {
+            File::makeDirectory($publicDir, 0777, true);
+        }
+
+        $zipPath = $publicDir . '/' . $zipFileName;
+
+        // 4. Generate media.txt content
+        $txtContent =
+            "Titre: " . ($podcast->title ?? '') . "\n\n" .
+            "----\n\n" .
+            "Author: " . ($podcast->author ?? '') . "\n\n" .
+            "----\n\n" .
+            "Date: " . (
+                $podcast->start_date && $podcast->end_date
+                ? "{$podcast->start_date} - {$podcast->end_date}"
+                : ($podcast->start_date ?? '')
+            ) . "\n\n" .
+            "----\n\n" .
+            "Place: " . ($podcast->location ?? '') . "\n\n" .
+            "----\n\n" .
+            "Record-type: audio\n\n" .
+            "----\n\n" .
+            "Quantity: " . $audioFiles->count() . "\n\n" .
+            "----\n\n" .
+            "Description: " . ($podcast->description ?? '') . "\n\n" .
+            "----\n\n" .
+            "Themes: \n\n" .
+            "----\n\n" .
+            "Files:\n";
+
+        // Add all file names dynamically
+        foreach ($audioFiles as $file) {
+            $txtContent .= "- " . basename($file->file_path) . "\n";
+        }
+
+        // 5. Create temporary media.txt
+        $txtFilePath = $publicDir . '/media.txt';
+        File::put($txtFilePath, $txtContent);
+
+        // 6. Create ZIP file
+        $zip = new ZipArchive();
+        if ($zip->open($zipPath, ZipArchive::CREATE | ZipArchive::OVERWRITE) === TRUE) {
+            // Add media.txt
+            $zip->addFile($txtFilePath, 'media.txt');
+
+            // Add all audio files
+            $addedFiles = [];
+
+            foreach ($audioFiles as $file) {
+                $filePath = public_path($file->file_path);
+                if (!File::exists($filePath)) continue;
+
+                $baseName = basename($file->file_path);
+                $uniqueName = $baseName;
+
+                // If name already exists, append index number
+                $i = 1;
+                while (in_array($uniqueName, $addedFiles)) {
+                    $uniqueName = pathinfo($baseName, PATHINFO_FILENAME) . "_{$i}." . pathinfo($baseName, PATHINFO_EXTENSION);
+                    $i++;
+                }
+
+                $zip->addFile($filePath, $uniqueName);
+                $addedFiles[] = $uniqueName;
+            }
+
+            $zip->close();
+        } else {
+            return response()->json(['error' => 'Could not create zip file'], 500);
+        }
+
+        // 7. Delete temporary txt file
+        File::delete($txtFilePath);
+
+        // 8. Return download + auto-delete ZIP
+        if (File::exists($zipPath)) {
+            return response()->download($zipPath, $zipFileName)->deleteFileAfterSend(true);
+        } else {
+            return response()->json(['error' => 'Zip file was not created'], 500);
+        }
+    }
+
     public function search(Request $request)
     {
         $query = $request->input('query');
+        $page = $request->input('page', 1); // for pagination
 
-        $categories = $this->modelPodcastCategory::where(function ($q) use ($query) {
-            $q->where('name', 'LIKE', "%{$query}%")
-                ->orWhereHas('keywords', function ($q) use ($query) {
-                    $q->where('keyword', 'LIKE', "%{$query}%")
-                        ->where('podcast_keywords.is_active', '1')
-                        ->where('podcast_keywords.is_deleted', '0');
-                });
-        })
-            ->where('is_active', 1)
-            ->where('is_deleted', 0)
-            ->with('keywords')
-            ->get();
+        // Load categories only on the first page (to avoid repetition when loading more)
+        $categories = collect();
+        if ($page == 1) {
+            $categories = $this->modelPodcastCategory::where(function ($q) use ($query) {
+                $q->where('name', 'LIKE', "%{$query}%")
+                    ->orWhereHas('keywords', function ($q) use ($query) {
+                        $q->where('keyword', 'LIKE', "%{$query}%")
+                            ->where('podcast_keywords.is_active', 1)
+                            ->where('podcast_keywords.is_deleted', 0);
+                    });
+            })
+                ->where('is_active', 1)
+                ->where('is_deleted', 0)
+                ->with('keywords')
+                ->get();
+        }
 
+        // Fetch podcasts (paginated)
         $podcasts = $this->modelPodcast::where(function ($queryBuilder) use ($query) {
             $queryBuilder->where('title', 'LIKE', "%{$query}%")
                 ->orWhere('author', 'LIKE', "%{$query}%")
                 ->orWhereHas('keywords', function ($q) use ($query) {
                     $q->where('keyword', 'LIKE', "%{$query}%")
-                        ->where('podcast_keywords.is_active', '1')
-                        ->where('podcast_keywords.is_deleted', '0');
+                        ->where('podcast_keywords.is_active', 1)
+                        ->where('podcast_keywords.is_deleted', 0);
                 });
         })
             ->where('is_active', 1)
             ->where('is_deleted', 0)
-            ->with('keywords')
-            ->get();
+            ->with(['keywords', 'category'])
+            ->paginate(10);
 
+        // Render only the part needed (Blade partial)
         $html = view('amissfs.ajax-search-podcast', compact('categories', 'podcasts'))->render();
 
-        return response()->json(['html' => $html]);
+        return response()->json([
+            'html' => $html
+        ]);
     }
 
     public function filterResults(Request $request, $sectionId)
