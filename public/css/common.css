@@ -178,7 +178,7 @@ body {
     font-family: "RivieraNightsBlack";
     font-size: 16px;
     background: #fff;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .font-body {

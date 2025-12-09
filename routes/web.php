@@ -40,6 +40,10 @@ Route::get('/', function () {
     return redirect(LaravelLocalization::localizeURL('/accueil'));
 });
 
+Route::get('/test-2-dec', function () {
+    return view('test-2-dec');
+});
+
 // ---------- Payrexx Webhook (OUTSIDE localization group) ----------
 Route::post('/webhook/payrexx', [SubscriptionController::class, 'handleWebhook']);
 
@@ -90,7 +94,7 @@ Route::group(
             Route::get('/account', 'account')->name('account');
             Route::post('/updatePassword', 'updatePassword')->name('updatePassword');
         });
-        
+
         // -------- Admin (Import Pages) --------
         // Import Pages Interface
         Route::get('/import/pages', [ImportController::class, 'index'])->name('admin.import.pages');
@@ -105,8 +109,6 @@ Route::group(
         Route::post('/import/podcasts/import', [AdminPodcastController::class, 'import'])->name('admin.import.podcasts.import');
         Route::post('/import/podcasts/check-directory', [AdminPodcastController::class, 'checkDirectory'])->name('admin.import.podcasts.check-directory');
 
-
-        
         // -------- Donation --------
         Route::post('/donation-store', [DonationController::class, 'storeDonation'])->name('donation-store');
 
@@ -290,7 +292,6 @@ Route::group(
             Route::get('/podcast-search', 'search')->name('podcast-search');
         });
 
-        
         // -------- RDP --------
         Route::controller(RdpController::class)->group(function () {
             Route::get('/rdp/accueil', 'home')->name('rdp.home');

@@ -15,6 +15,7 @@
                 </div>
                 <div class="my-3"></div>
                 <div class="d-flex justify-content-around align-items-center w-100">
+                    @include('modal.cookieModal')
                     <a href="javascript:void(0);" class="cookies-close cookie-btn">{!! trans('words.cookies_no') !!}</a>
                     <a href="javascript:(0);" class="cookies-accept cookie-btn">OK</a>
                 </div>
