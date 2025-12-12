@@ -326,7 +326,7 @@
                 “Le moment est venu où Dieu demande au Saint-Père de faire, en union avec tous les évêques du monde, la
                 consécration de la Russie à mon Cœur Immaculé, promettant de la sauver par ce moyen. Elles sont si
                 nombreuses, les âmes que la justice de Dieu <strong>condamne pour des péchés commis contre moi, que je
-                    viens demander réparation. Sacrifie-toi à cette intention et prie.</strong> ”
+                    viens demander réparation. Sacrifie-toi à cette intention et prie.</strong> ”
                 <br>
                 <br>
                 Ne faisant nous pas les 5 premiers samedis pour réparer ? Si oui, les faisant nous avec l’intention et
@@ -409,11 +409,11 @@
     <div class="protection-ses">
         <div class="container">
             <div class="text-center">
-                <div class="Envoyer-la">
+                <button class="Envoyer-la">
                     <img src="http://127.0.0.1:8000/img/blue-army/Logo-Civitas-bluesmall.png" class=""
                         alt="">
                     <span>Envoyer la demande d’adhésion</span>
-                </div>
+                </button>
             </div>
         </div>
         <div class="d-flex align-items-center black-bg full-bg-bar-sec">
@@ -442,6 +442,7 @@
             <div class="h-100px"></div>
         </div>
     </div>
+    @include('cookie-bar')
     <footer class="dark-wrapper d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" style="background: #000 !important;">
         <div class="sub-footer">
             <div class="py-4 text-center inner footer-width">

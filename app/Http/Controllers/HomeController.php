@@ -48,4 +48,8 @@ class HomeController extends Controller
     {
         return view('footer')->with('page', 3);
     }
+    public function armee_bleue_du_coeur()
+    {
+        return view('armee_bleue_du_coeur');
+    }
 }

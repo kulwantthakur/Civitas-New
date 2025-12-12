@@ -99,7 +99,7 @@
     content: '';
     background-color: #000;
     position: absolute;
-    right: -100vh;
+    right: calc(-100vh - -1px);
     height: 100%;
     width: 100vh;
     top: 0px;
@@ -301,6 +301,7 @@ img.transparent-bg {
     align-items: center;
     gap: 15px;
     margin-bottom: 46px;
+    border: none;
 }
 .Envoyer-la span {
     font-family: "SangBleuOGBold";
@@ -637,8 +638,8 @@ a {
     justify-content: center;
     align-items: center;
 }
-.cookie-btn:hover,
-.cookie-btn:focus {
+.cookie-btn:hover{
+/* .cookie-btn:focus { */
     color: #fff;
     background-color: #e10b17;
 }

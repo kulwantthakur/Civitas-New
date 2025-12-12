@@ -40,10 +40,6 @@ Route::get('/', function () {
     return redirect(LaravelLocalization::localizeURL('/accueil'));
 });
 
-Route::get('/test-2-dec', function () {
-    return view('test-2-dec');
-});
-
 // ---------- Payrexx Webhook (OUTSIDE localization group) ----------
 Route::post('/webhook/payrexx', [SubscriptionController::class, 'handleWebhook']);
 
@@ -143,6 +139,8 @@ Route::group(
         // -------- Home --------
         Route::controller(HomeController::class)->group(function () {
             Route::get('/accueil', 'home')->name('home');
+
+            Route::get('/armee-bleue-du-coeur', 'armee_bleue_du_coeur')->name('armee-bleue-du-coeur');
 
             // -------- Language (allowed in non-FR locales) --------
             Route::get('/language', 'language')->name('language');

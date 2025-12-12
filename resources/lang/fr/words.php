@@ -24,7 +24,7 @@ return [
     'cookies' => 'Nous utilisons <a class="cookie-para-button" href=":cookiesUrl">:cookiesText</a> pour assurer certaines fonctionnalités, obtenir des statistiques et ainsi vous offrir la meilleure navigation possible sur notre site. En continuant la navigation, vous acceptez leurs utilisations. Vous pouvez <a class="cookie-para-button" href=":settingsUrl">:settingsText</a> afin de les activer ou les désactiver.',
     'cookies_text' => 'des cookies',
     'settings_text' => 'modifier les réglages',
-    'cookies_no' => 'refuser',
+    'cookies_no' => 'TOUT REFUSER',
     ////////////////////////////////////////////////////////////////
     'error_401_page' => '
         <div class="error">401</div>
@@ -508,7 +508,7 @@ return [
     ',
     'civitas_newsletter_before_red' =>
     '<p class="civitas-newsletter-last">On vous rassure, vous ne serez pas bombardés : nous limitons les envois à un tous les quinze
-    jours, en moyenne.</p> 
+    jours, en moyenne.</p>
     <p class="civitas-newsletter-last">Inscrivez-vous, vous ne le regretterez pas !</p>
     ',
     'civitas_last_newsletter' =>

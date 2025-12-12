@@ -11,98 +11,96 @@
             <div class="height-60px red-bg-slider">
 
             </div>
-            <div class="modal-body p-0">
-                <div class="popup-heading">RéSEAUX SOCIAUX </div>
-                <div class="px-3 py-2 px-md-4 py-md-3">
-                    <h3 class="mb-2 mb-md-3 ">x</h3>
-                    <div class="">
-                        <div
-                            class="option-outer d-flex flex-column flex-md-column flex-lg-row justify-content-between gap-2 gap-md-4">
-                            <div class="">Autorisé – Ce service n’a déposé aucun cookie.<br>En savoir plus ->
-                            </div>
-                            <div class="d-flex gap-4 radio-btn-cls">
-                                <div>
-                                    <input class="cursor-pointer" type="radio" name="autoriser_interdire"
-                                        id="autoriser" value="autoriser">
-                                    <label class="cursor-pointer" for="autoriser">Autoriser </label>
-                                </div>
-                                <div> <input type="radio" name="autoriser_interdire" id="interdire" value="interdire">
-                                    <label for="interdire">Interdire</label>
-                                </div>
-                            </div>
-                        </div>
+<div class="modal-body p-0">
 
+    <!-- SOCIAL MEDIA -->
+    <div class="popup-heading">RéSEAUX SOCIAUX </div>
+
+    <!-- X -->
+    <div class="px-3 py-2 px-md-4 py-md-3">
+        <h3 class="mb-2 mb-md-3">X</h3>
+        <div class="">
+            <div class="option-outer d-flex flex-column flex-md-column flex-lg-row justify-content-between gap-2 gap-md-4">
+                <div class="">Autorisé – Ce service n’a déposé aucun cookie.<br>En savoir plus -></div>
+                <div class="d-flex gap-4 radio-btn-cls">
+                    <div>
+                        <input class="cursor-pointer" type="radio" name="autoriser_interdire_x" id="autoriser_x" value="autoriser">
+                        <label class="cursor-pointer" for="autoriser_x">Autoriser</label>
                     </div>
-
-                </div>
-                <div class="px-3 py-2 px-md-4 py-md-3">
-                    <h3 class="mb-2 mb-md-3 ">Instagram</h3>
-                    <div class="">
-                        <div
-                            class="option-outer d-flex flex-column flex-md-column flex-lg-row justify-content-between gap-2 gap-md-4">
-                            <div class="">Autorisé – Ce service n’a déposé aucun cookie.<br>En savoir plus ->
-                            </div>
-                            <div class="d-flex gap-4 radio-btn-cls">
-                                <div>
-                                    <input class="cursor-pointer" type="radio" name="autoriser_interdire"
-                                        id="autoriser" value="autoriser">
-                                    <label class="cursor-pointer" for="autoriser">Autoriser </label>
-                                </div>
-                                <div> <input type="radio" name="autoriser_interdire" id="interdire" value="interdire">
-                                    <label for="interdire">Interdire</label>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div>
+                        <input type="radio" name="autoriser_interdire_x" id="interdire_x" value="interdire">
+                        <label for="interdire_x">Interdire</label>
                     </div>
-
-                </div>
-                <div class="px-3 py-2 px-md-4 py-md-3">
-                    <h3 class="mb-2 mb-md-3 ">Telegram</h3>
-                    <div class="">
-                        <div
-                            class="option-outer d-flex flex-column flex-md-column flex-lg-row justify-content-between gap-2 gap-md-4">
-                            <div class="">Autorisé – Ce service n’a déposé aucun cookie.<br>En savoir plus ->
-                            </div>
-                            <div class="d-flex gap-4 radio-btn-cls">
-                                <div>
-                                    <input class="cursor-pointer" type="radio" name="autoriser_interdire"
-                                        id="autoriser" value="autoriser">
-                                    <label class="cursor-pointer" for="autoriser">Autoriser </label>
-                                </div>
-                                <div> <input type="radio" name="autoriser_interdire" id="interdire" value="interdire">
-                                    <label for="interdire">Interdire</label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="popup-heading">VIDéOS </div>
-                <div class="px-3 py-2 px-md-4 py-md-3">
-                    <h3 class="mb-2 mb-md-3 ">Youtube</h3>
-                    <div class="">
-                        <div
-                            class="option-outer d-flex flex-column flex-md-column flex-lg-row justify-content-between gap-2 gap-md-4">
-                            <div class="">Autorisé – Ce service n’a déposé aucun cookie.<br>En savoir plus ->
-                            </div>
-                            <div class="d-flex gap-4 radio-btn-cls">
-                                <div>
-                                    <input class="cursor-pointer" type="radio" name="autoriser_interdire"
-                                        id="autoriser" value="autoriser">
-                                    <label class="cursor-pointer" for="autoriser">Autoriser </label>
-                                </div>
-                                <div> <input type="radio" name="autoriser_interdire" id="interdire" value="interdire">
-                                    <label for="interdire">Interdire</label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- INSTAGRAM -->
+    <div class="px-3 py-2 px-md-4 py-md-3">
+        <h3 class="mb-2 mb-md-3">Instagram</h3>
+        <div class="">
+            <div class="option-outer d-flex flex-column flex-md-column flex-lg-row justify-content-between gap-2 gap-md-4">
+                <div class="">Autorisé – Ce service n’a déposé aucun cookie.<br>En savoir plus -></div>
+                <div class="d-flex gap-4 radio-btn-cls">
+                    <div>
+                        <input class="cursor-pointer" type="radio" name="autoriser_interdire_instagram" id="autoriser_instagram" value="autoriser">
+                        <label class="cursor-pointer" for="autoriser_instagram">Autoriser</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="autoriser_interdire_instagram" id="interdire_instagram" value="interdire">
+                        <label for="interdire_instagram">Interdire</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TELEGRAM -->
+    <div class="px-3 py-2 px-md-4 py-md-3">
+        <h3 class="mb-2 mb-md-3">Telegram</h3>
+        <div class="">
+            <div class="option-outer d-flex flex-column flex-md-column flex-lg-row justify-content-between gap-2 gap-md-4">
+                <div class="">Autorisé – Ce service n’a déposé aucun cookie.<br>En savoir plus -></div>
+                <div class="d-flex gap-4 radio-btn-cls">
+                    <div>
+                        <input class="cursor-pointer" type="radio" name="autoriser_interdire_telegram" id="autoriser_telegram" value="autoriser">
+                        <label class="cursor-pointer" for="autoriser_telegram">Autoriser</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="autoriser_interdire_telegram" id="interdire_telegram" value="interdire">
+                        <label for="interdire_telegram">Interdire</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEOS SECTION -->
+    <div class="popup-heading">VIDéOS</div>
+
+    <!-- YOUTUBE -->
+    <div class="px-3 py-2 px-md-4 py-md-3">
+        <h3 class="mb-2 mb-md-3">YouTube</h3>
+        <div class="">
+            <div class="option-outer d-flex flex-column flex-md-column flex-lg-row justify-content-between gap-2 gap-md-4">
+                <div class="">Autorisé – Ce service n’a déposé aucun cookie.<br>En savoir plus -></div>
+                <div class="d-flex gap-4 radio-btn-cls">
+                    <div>
+                        <input class="cursor-pointer" type="radio" name="autoriser_interdire_youtube" id="autoriser_youtube" value="autoriser">
+                        <label class="cursor-pointer" for="autoriser_youtube">Autoriser</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="autoriser_interdire_youtube" id="interdire_youtube" value="interdire">
+                        <label for="interdire_youtube">Interdire</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
         </div>
     </div>
 </div>
@@ -182,6 +180,11 @@
 
     .radio-btn-cls>div {
         display: flex;
+        align-items: center;
+    }
+    .cookie-btn.active {
+        color: #fff;
+        background-color: #E10B17;
     }
 
     @media only screen and (max-width:991px) {
@@ -203,3 +206,22 @@
         }
     }
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const cookieButton = document.querySelector('.cookie-btn');
+    const modal = document.getElementById('cookieModal');
+    const modalCloseButton = document.querySelector('.btnclose');
+    // Add active class when the button is clicked
+    cookieButton.addEventListener('click', function() {
+        cookieButton.classList.add('active');
+    });
+    // Remove active class when the modal is closed
+    modal.addEventListener('hidden.bs.modal', function () {
+        cookieButton.classList.remove('active');
+    });
+    // Also remove active class if the modal close button is clicked
+    modalCloseButton.addEventListener('click', function () {
+        cookieButton.classList.remove('active');
+    });
+});
+</script>
