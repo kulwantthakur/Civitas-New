@@ -26,12 +26,19 @@ class DonationConfirmation extends Mailable implements ShouldQueue
             $pdf = Pdf::loadView('pdf-template.versement_liquide', [
                 'donation' => $this->donation
             ]);
-        } elseif($this->donation->payment_method === 'bank'){
+        }
+        if($this->donation->payment_method === 'bank'){
             $pdf = Pdf::loadView('pdf-template.virement_bancaire', [
                 'donation' => $this->donation
             ]);
-        } else{
+        }
+        if($this->donation->payment_method === 'bulletin'){
             $pdf = Pdf::loadView('pdf-template.dons_sans_frais', [
+                'donation' => $this->donation
+            ]);
+        }
+        if($this->donation->payment_method === 'crypto'){
+            $pdf = Pdf::loadView('pdf-template.dons_en_cryptomonnaie', [
                 'donation' => $this->donation
             ]);
         }
