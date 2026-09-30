@@ -7,13 +7,13 @@
         <div class="position-top-img end-0">
             <img src="{{ asset('/img/amissfs/amissfs-home-1.png') }}" class="amissfs-home-image" alt="logo" />
             <div class="amissfs-black-op ms-4">
-                <div class="amissfs-home-new-subtitle mb-5">Les Amis de Saint François de Sales<br>et de Notre Dame de Fatima</div>
-                <div class="amissfs-home-sec-subtitle">Une association de laïques qui œuvrent dans le prolongement de l’apostolat<br>sacerdotal.</div>
+                <div class="amissfs-home-new-subtitle mb-5">{!! __('words.amissfs_title') !!}</div>
+                <div class="amissfs-home-sec-subtitle">{!! __('words.amissfs_subtitle') !!}</div>
             </div>
-            <div class="position-absolute left-img" style="left: -25%; bottom: 2rem;">
+            <div class="position-absolute" style="left: -50%; bottom: 2rem;">
                 <img src="{{ asset('/img/amissfs/amissfs-home-2.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
                 <div class="position-absolute amissfs-depuis">
-                    <div class="amissfs-home-depuis">Depuis 1988.</div>
+                    <div class="amissfs-home-depuis">{!! __('words.amissfs_since_1988') !!}</div>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="position-top-img">
             <img src="{{ asset('/img/amissfs/responsive/amissfs-home.png') }}" class="w-100 amissfs-home-specific-height" alt="logo">
             <div class="position-absolute amissfs-depuis">
-                <div class="amissfs-home-depuis">Depuis 1988.</div>
+                <div class="amissfs-home-depuis">{!! __('words.amissfs_since_1988') !!}</div>
             </div>
             <div class="amissfs-black-op">
                 <div class="d-flex justify-content-center align-items-center flex-row">
@@ -43,7 +43,8 @@
 @section('logo')
 <div class="navbar-brand d-flex justify-content-center align-items-center">
     <a href="{{ route('amissfs.home') }}" class="text-decoration-none">
-        <div class="amissfs-logo-title">AMISSFS</div>
+        <img src="{{ asset('/img/amissfs/amissfs-logo-new.svg') }}" class="w-100 d-none d-lg-block" alt="logo" />
+        <div class="amissfs-logo-title d-block d-lg-none">AMIS S.F.S.</div>
     </a>
 </div>
 @endsection
@@ -54,22 +55,18 @@
     color: #ffffff;
     mix-blend-mode: difference;
 }
-.hide-on-accueil-home {
-    mix-blend-mode: color;
-}
-
     </style>
 <div class="amissfs-img-height"></div>
 <div class="container">
     <div class="d-flex justify-content-center align-items-center flex-column flex-md-row">
         <div class="grey-box-amissfs-home d-flex justify-content-center align-items-center flex-column">
-            <div class="grey-box-amissfs-home-content">LE BULLETIN DES AMIS DE SAINT FRANÇOIS DE SALES</div>
-            <a href="{{ route('bulletin') }}" class="mt-3 amissfs-home-first-button d-flex justify-content-center align-items-center">CONSULTER</a>
+            <div class="grey-box-amissfs-home-content">{!! __('words.amissfs_bulletin_title') !!}</div>
+            <a href="{{ route('bulletin') }}" class="mt-3 amissfs-home-first-button d-flex justify-content-center align-items-center">{!! __('words.common_consult') !!}</a>
         </div>
         <div class="mx-0 mx-lg-5"></div>
         <div class="red-box-amissfs-home d-flex justify-content-center align-items-center flex-column">
-            <div class="mb-3 grey-box-amissfs-home-content">DER ROM-KURIER</div>
-            <a href="{{ route('rom-kurier') }}" class="mt-3 amissfs-home-first-button d-flex justify-content-center align-items-center">LESEN</a>
+            <div class="mb-3 grey-box-amissfs-home-content">{!! __('words.amissfs_rom_kurier') !!}</div>
+            <a href="{{ route('rom-kurier') }}" class="mt-3 amissfs-home-first-button d-flex justify-content-center align-items-center">{!! __('words.common_read_de') !!}</a>
         </div>
     </div>
 </div>
@@ -85,8 +82,8 @@
                     <a href="{{ route('editions') }}">
                         <div class="white-box-amissfs-home position-absolute d-flex justify-content-center flex-column">
                             <div class="d-flex justify-content-center align-items-end flex-column me-4 me-sm-4 me-md-4 me-lg-5 me-xl-5 me-xxl-5">
-                                <div class="amissfs-home-left-title">LES ÉDITIONS</div>
-                                <div class="amissfs-home-left-subtitle grey-color-op">VOIR</div>
+                                <div class="amissfs-home-left-title">LES EDITIONS</div>
+                                <div class="amissfs-home-left-subtitle grey-color-op">{!! __('words.common_see') !!}</div>
                             </div>
                         </div>
                     </a>
@@ -101,8 +98,8 @@
                     <a href="{{ route('bookStore') }}">
                         <div class="white-box-amissfs-home-2 position-absolute d-flex justify-content-center flex-column">
                             <div class="d-flex justify-content-center align-items-end flex-column me-4 me-sm-4 me-md-4 me-lg-5 me-xl-5 me-xxl-5">
-                                <div class="amissfs-home-left-title">LA LIBRAIRIE</div>
-                                <div class="amissfs-home-left-subtitle grey-color-op">COMMANDER</div>
+                                <div class="amissfs-home-left-title">{!! __('words.amissfs_bookstore') !!}</div>
+                                <div class="amissfs-home-left-subtitle grey-color-op">{!! __('words.common_order') !!}</div>
                             </div>
                         </div>
                     </a>
@@ -114,8 +111,8 @@
     <div class="mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
     <div class="d-flex justify-content-center">
         <div class="grey-box-amissfs-home d-flex justify-content-center align-items-center flex-column">
-            <div class="grey-box-amissfs-home-content">RECEVEZ LA NEWSLETTER DES AMIS<br>DE SAINT FRANÇOIS DE SALES</div>
-            <a href="{{ route('amissfs-newsletter') }}" class="mt-3 amissfs-home-sec-button d-flex justify-content-center align-items-center">S’INSCRIRE</a>
+            <div class="grey-box-amissfs-home-content">{!! __('words.amissfs_newsletter_cta') !!}</div>
+            <a href="{{ route('amissfs-newsletter') }}" class="mt-3 amissfs-home-sec-button d-flex justify-content-center align-items-center">{!! __('words.common_subscribe') !!}</a>
         </div>
     </div>
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
@@ -171,10 +168,10 @@
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="position-relative">
         <div class="top-0 position-absolute start-50 translate-middle">
-            <a href="{{ route('podcasts') }}" class="amissfs-podcast d-flex justify-content-center align-items-center">ACCÉDER AUX AUDIOS</a>
+            <a href="{{ route('podcasts') }}" class="amissfs-podcast d-flex justify-content-center align-items-center">{!! __('words.amissfs_access_audios') !!}</a>
         </div>
         <div class="position-absolute top-100 start-50 translate-middle">
-            <a href="{{ route('podcasts') }}" class="amissfs-voir d-flex justify-content-center align-items-center">VOIR PLUS</a>
+            <a href="{{ route('podcasts') }}" class="amissfs-voir d-flex justify-content-center align-items-center">{!! __('words.common_see_more') !!}</a>
         </div>
         <div class="amissfs-black-bg-home d-flex justify-content-center align-items-center">
             <div class="amissfs-grid-home">

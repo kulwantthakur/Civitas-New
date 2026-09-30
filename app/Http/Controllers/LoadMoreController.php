@@ -26,7 +26,6 @@ class LoadMoreController extends Controller
         $posts = $this->modelPage
             ->where('section_id', $sectionId)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->paginate($limit);
 
         $hasMore = $posts->hasMorePages();
@@ -47,7 +46,6 @@ class LoadMoreController extends Controller
             ->where('section_id', $sectionId)
             ->where('category', $category)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->paginate($limit);
 
         $hasMore = $categoryPost->hasMorePages();

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -27,7 +27,7 @@
 
 <body>
     <div class="parent-body">
-        <nav class="top-0 navbar inverse-text">
+        <nav class="top-0 navbar inverse-text nav-pos-responsive" style="background-color: #000;">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="navbar-brand d-flex justify-content-center align-items-center logo-position flex-column home-page-height">
                     <a href="{{ route('home') }}">
@@ -40,24 +40,24 @@
                 <div class="collapse navbar-collapse desktop-height desktop-width justify-content-center">
                     <ul class="nav navbar-nav">
                         <li class="nav-item ps-0 d-block d-sm-block d-md-block d-lg-block d-xl-none d-xxl-none">
-                            <a class="nav-link" href="{{ route('civitas.participer')}}" id="participer">PARTICIPER</a>
+                            <a class="nav-link" href="{{ route('civitas.participer')}}" id="participer">{!! __('words.nav_participer') !!}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('podcasts') }}" id="podcast">PODCASTS <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('podcasts') }}" id="podcast">{!! __('words.nav_podcasts') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('amissfs.home') }}" id="amissfs">AMIS S.F.S. <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('amissfs.home') }}" id="amissfs">{!! __('words.nav_amis_sfs') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
-                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">REFUGE DES PÉCHEURS <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">{!! __('words.nav_refuge_des_pecheurs') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">RDP <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">{!! __('words.nav_rdp') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('civitas.home') }}" id="civitas-suisse">CIVITAS SUISSE <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></i></a>
+                            <a class="nav-link" href="{{ route('civitas.home') }}" id="civitas-suisse">{!! __('words.nav_civitas_suisse') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></i></a>
                         </li>
-                        <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block">
+                        <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block lang-item">
                             <div class="nav-item d-flex gap-2 align-items-center" id="language">
                                 <span class="nav-link">
                                     <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('fr', route('language', [], false)) }}" id="language">FR</a>
@@ -70,22 +70,28 @@
                                 <span class="nav-link">
                                     <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}" id="language">IT</a>
                                 </span>
+                                <span class="lang-separator" id="language">|</span>
+                                <span class="nav-link">
+                                    <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}" id="language">EN</a>
+                                </span>
                             </div>
                         </div>
-                        <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+                        <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none lang-item" style="background-color: #d9d9d9;">
                             <div class="d-flex align-items-center" style="padding: 0 30px;">
                                 <a class="nav-link mobile-menu-new fw-bolder" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('fr', route('language', [], false)) }}">FR</a>
                                 <span class="mx-2">-</span>
                                 <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('de', route('language', [], false)) }}">DE</a>
                                 <span class="mx-2">-</span>
                                 <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}">IT</a>
+                                <span class="mx-2">-</span>
+                                <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}">EN</a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block flex-grow-1 top-menu-empty">
                     <div class="d-flex align-items-center participer-height">
-                        <a class="nav-link d-flex align-items-center justify-content-center" href="{{ route('civitas.member') }}" id="participer">PARTICIPER</a>
+                        <a class="nav-link d-flex align-items-center justify-content-center" href="{{ route('civitas.member') }}" id="participer">{!! __('words.nav_participer') !!}</a>
                     </div>
                 </div>
             </div>
@@ -109,25 +115,26 @@
         </div>
     </section>
     <div class="space-50"></div>
+    <div class="space-700 d-block d-md-none"></div>
     <!-- <div class="mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 mt-xxl-0"></div> -->
     <div class="container custom-tweak">
         <div class="row justify-content-center">
-            <div class="text-center col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 mb-lg-0">
+            <div class="text-center col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-md-4 mb-lg-0">
                 <div class="grey-box width-370 height-142 d-flex justify-content-center align-items-center flex-column">
-                    <div class="p-2 text-white suisse-italic-20">PARTICIPER à DES CONFéRENCES<br>ET DES ATELIERS</div>
-                    <a href="{{ route('civitas.events') }}" class="home-boxes-white-button-1 d-flex justify-content-center align-items-center text-decoration-none">VOIR LE CALENDRIER</a>
+                    <div class="p-2 text-white suisse-italic-20">{!! __('words.home_participate_conferences') !!}</div>
+                    <a href="{{ route('civitas.events') }}" class="home-boxes-white-button-1 d-flex justify-content-center align-items-center text-decoration-none">{!! __('words.home_view_calendar') !!}</a>
                 </div>
             </div>
-            <div class="text-center col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 mb-lg-0">
+            <div class="text-center col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-md-4 mb-lg-0">
                 <div class="red-box width-370 height-142 d-flex justify-content-center align-items-center flex-column">
-                    <div class="p-2 text-white suisse-italic-20">DES CENTAINES DE CONFéRENCES<br>ET DE SERMONS</div>
-                    <a href="{{ route('podcasts') }}" class="home-boxes-white-button-2 d-flex justify-content-center align-items-center text-decoration-none">ACCÉDER AUX PODCASTS</a>
+                    <div class="p-2 text-white suisse-italic-20">{!! __('words.home_hundreds_conferences') !!}</div>
+                    <a href="{{ route('podcasts') }}" class="home-boxes-white-button-2 d-flex justify-content-center align-items-center text-decoration-none">{!! __('words.home_access_podcasts') !!}</a>
                 </div>
             </div>
-            <div class="text-center col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 mb-lg-0">
+            <div class="text-center col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-md-4 mb-lg-0">
                 <div class="grey-box width-370 height-142 d-flex justify-content-center align-items-center flex-column">
-                    <div class="p-2 text-white suisse-italic-20">SUIVRE DES COURS <br>DE CATéCHISME EN LIGNE </div>
-                    <a href="{{ route('catechisme') }}" class="bg-white suisse-regular-18 width-138 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">SE FORMER</a>
+                    <div class="p-2 text-white suisse-italic-20">{!! __('words.home_online_catechism') !!}</div>
+                    <a href="{{ route('catechisme') }}" class="bg-white suisse-regular-18 width-138 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">{!! __('words.home_get_training') !!}</a>
                 </div>
             </div>
         </div>
@@ -149,19 +156,19 @@
                 <div class="white-border d-flex mb-5">
                     <img src="{{ asset('img/home/footer-logo.svg') }}" class="mb-4 me-4" alt="logo" />
                     <div class="d-flex flex-column justify-content-center align-items-center">
-                        <a href="{{ route('home') }}" class="footer-omnia text-decoration-none">OMNIA INSTAURARE IN CHRISTO</a>
-                        <p class="text-white suisse-light-14">UN MOUVEMENT INTERNATIONAL</p>
+                        <a href="{{ route('home') }}" class="footer-omnia text-decoration-none">{!! __('words.home_omnia_instaurare') !!}</a>
+                        <p class="text-white suisse-light-14">{!! __('words.home_international_movement') !!}</p>
                     </div>
                 </div>
                 <div class="my-4 row ms-3">
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">CIVITAS SUISSE</a>
+                        <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_civitas_suisse') !!}</a>
                     </div>
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">AMIS S.F.S.</a>
+                        <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_amis_sfs') !!}</a>
                     </div>
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">REFUGE DES PÉCHEURS</a>
+                        <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_refuge_des_pecheurs') !!}</a>
                     </div>
                 </div>
 
@@ -215,16 +222,16 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="d-flex align-items-center">
-                                <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">IMPRESSUM</a>
+                                <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">{!! __('words.footer_impressum') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">PROTECTION DES DONNÉES</a>
+                                <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">{!! __('words.footer_data_protection') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">CONTACT</a>
+                                <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">{!! __('words.footer_contact') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">CGU</a>
+                                <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">{!! __('words.footer_cgu') !!}</a>
                             </div>
                         </div>
                         <div class="col-4">
@@ -258,8 +265,8 @@
                     </div>
                 </div>
                 <div class="mx-2 black-line"></div>
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="tablet-footer-menu">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
                             <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">CIVITAS SUISSE</a>
                             <a href="{{ route('political-programs') }}" class="footer-submenu text-decoration-none">POSITIONS</a>
@@ -268,7 +275,7 @@
                             <a href="{{ route('civitas.news') }}" class="footer-submenu text-decoration-none">ACTUALITÉS</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
                             <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">AMIS S.F.S.</a>
                             <a href="{{ route('podcasts') }}" class="footer-submenu text-decoration-none">AUDIOTHÈQUE</a>
@@ -276,7 +283,7 @@
                             <a href="{{ route('bulletin') }}" class="footer-submenu text-decoration-none">BULLETIN</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
                             <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">REFUGE DES PÉCHEURS</a>
                             <a href="{{ route('notredame') }}" class="footer-submenu text-decoration-none">NOTRE DAME DE FATIMA</a>

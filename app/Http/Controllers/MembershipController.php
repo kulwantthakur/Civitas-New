@@ -4,18 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Membership;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use Carbon\Carbon;
-use Dompdf\Dompdf;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 
 
 class MembershipController extends Controller
 {
+    /** @var Membership */
     protected $modelMembership;
 
     public function __construct(Membership $MembershipM)
@@ -23,6 +18,12 @@ class MembershipController extends Controller
         $this->modelMembership = $MembershipM;
     }
 
+    /**
+     * Store a new membership.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function storeMembership(Request $request)
     {
         if ($this->modelMembership->isMembershipValid($request->all())) {

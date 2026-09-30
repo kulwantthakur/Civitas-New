@@ -1,0 +1,121 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddPerformanceIndexes extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        // Pages table indexes
+        Schema::table('pages', function (Blueprint $table) {
+            $table->index(['section_id', 'is_active', 'is_deleted'], 'pages_section_active_idx');
+            $table->index(['category', 'is_active', 'is_deleted'], 'pages_category_active_idx');
+            $table->index('created_at', 'pages_created_at_idx');
+        });
+
+        // Podcasts table indexes
+        Schema::table('podcasts', function (Blueprint $table) {
+            $table->index(['category_id', 'is_active', 'is_deleted'], 'podcasts_category_active_idx');
+            $table->index('created_at', 'podcasts_created_at_idx');
+        });
+
+        // Podcast categories indexes
+        Schema::table('podcast_categories', function (Blueprint $table) {
+            $table->index(['is_active', 'is_deleted'], 'podcast_categories_active_idx');
+        });
+
+        // Audio files indexes
+        Schema::table('audio_files', function (Blueprint $table) {
+            $table->index(['podcast_id', 'is_active', 'is_deleted'], 'audio_files_podcast_active_idx');
+        });
+
+        // Donations indexes
+        Schema::table('donations', function (Blueprint $table) {
+            $table->index(['is_active', 'is_deleted'], 'donations_active_idx');
+            $table->index('email', 'donations_email_idx');
+            $table->index('created_at', 'donations_created_at_idx');
+        });
+
+        // Memberships indexes
+        Schema::table('memberships', function (Blueprint $table) {
+            $table->index(['is_active', 'is_deleted'], 'memberships_active_idx');
+            $table->index('email', 'memberships_email_idx');
+        });
+
+        // Form submissions indexes
+        Schema::table('form_submissions', function (Blueprint $table) {
+            $table->index(['is_active', 'is_deleted'], 'form_submissions_active_idx');
+            $table->index('email', 'form_submissions_email_idx');
+            $table->index('created_at', 'form_submissions_created_at_idx');
+        });
+
+        // Subscriptions indexes
+        Schema::table('subscriptions', function (Blueprint $table) {
+            $table->index('payrexx_id', 'subscriptions_payrexx_idx');
+        });
+
+        // Sections indexes
+        Schema::table('sections', function (Blueprint $table) {
+            $table->index(['is_active', 'is_deleted'], 'sections_active_idx');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('pages', function (Blueprint $table) {
+            $table->dropIndex('pages_section_active_idx');
+            $table->dropIndex('pages_category_active_idx');
+            $table->dropIndex('pages_created_at_idx');
+        });
+
+        Schema::table('podcasts', function (Blueprint $table) {
+            $table->dropIndex('podcasts_category_active_idx');
+            $table->dropIndex('podcasts_created_at_idx');
+        });
+
+        Schema::table('podcast_categories', function (Blueprint $table) {
+            $table->dropIndex('podcast_categories_active_idx');
+        });
+
+        Schema::table('audio_files', function (Blueprint $table) {
+            $table->dropIndex('audio_files_podcast_active_idx');
+        });
+
+        Schema::table('donations', function (Blueprint $table) {
+            $table->dropIndex('donations_active_idx');
+            $table->dropIndex('donations_email_idx');
+            $table->dropIndex('donations_created_at_idx');
+        });
+
+        Schema::table('memberships', function (Blueprint $table) {
+            $table->dropIndex('memberships_active_idx');
+            $table->dropIndex('memberships_email_idx');
+        });
+
+        Schema::table('form_submissions', function (Blueprint $table) {
+            $table->dropIndex('form_submissions_active_idx');
+            $table->dropIndex('form_submissions_email_idx');
+            $table->dropIndex('form_submissions_created_at_idx');
+        });
+
+        Schema::table('subscriptions', function (Blueprint $table) {
+            $table->dropIndex('subscriptions_payrexx_idx');
+        });
+
+        Schema::table('sections', function (Blueprint $table) {
+            $table->dropIndex('sections_active_idx');
+        });
+    }
+}

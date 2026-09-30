@@ -30,10 +30,4 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    'payrexx' => [
-        'api_key' => env('PAYREXX_API_KEY'),
-        'instance' => env('PAYREXX_INSTANCE'),
-    ],
-
-
 ];

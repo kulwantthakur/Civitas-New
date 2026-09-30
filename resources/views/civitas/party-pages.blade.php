@@ -1,12 +1,16 @@
-@extends('civitas.app')
+﻿@extends('civitas.app')
 
 @section('top-content')
 @if($page != 5)
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
+            @if($page == 2)
+            <a href="{{ route('political-action') }}" class="civitas-responsive-header-grey">{!! __('words.nav_actions') !!}</a>
+            @else
             <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">POSITIONS</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
+            @endif
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
             <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
         </div>
     </div>
@@ -199,23 +203,9 @@
                 <div class="row gap-xl-0 gap-4 gap-md-5">
                     <div class="col-12 col-sm-12 col-md-12 col-xl-6 col-xl-6 col-xxl-6">
                         <div class="map-outer">
-                        <div class="map-bg">
-                            @include('civitas.map-svg.svg-image')
-                            <!-- <div class="position-seventh">
-                                <div class="image-container">
-                                    <img src="{{ asset('img/civitas/map/bale-sec.svg') }}" class="default-image" alt="logo" />
-                                    <img src="{{ asset('img/civitas/map/bale-sec-hover.svg') }}" class="hover-image" alt="logo" />
-                                </div>
-                                <div>
-                                    <div class="position-lake-bale">
-                                        <img src="{{ asset('img/civitas/map/lake-bale.svg') }}" class="" alt="logo" />
-                                    </div>
-                                </div>
-                                <div class="position-absolute top-50 start-50 translate-middle">
-                                    <div class="region-title">diocésan de<br>bâle</div>
-                                </div>
-                            </div> -->
-                        </div>
+                            <div class="map-bg">
+                                @include('civitas.map-svg.svg-image')
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-xl-6 col-xl-6 col-xxl-6">
@@ -316,7 +306,7 @@
     <div class="space-100"></div>
     <div class="position-relative">
         <div class="d-flex justify-content-center align-items-center">
-            <a href="{{ route('civitas.status') }}" class="director-button-grey d-flex justify-content-center align-items-center">LES STATUS DU PARTI</a>
+            <a href="{{ route('civitas.status') }}" class="director-button-grey d-flex justify-content-center align-items-center">LES STATUS DU MOUVEMENT</a>
             <div class="position-absolute end-0 bottom-0">
                 <img src="{{ asset('img/civitas/questions.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
             </div>
@@ -338,7 +328,7 @@
     <div class="space-100"></div>
     <div class="position-relative">
         <div class="d-flex justify-content-center align-items-center">
-            <a href="{{ route('civitas.status') }}" class="director-button-grey d-flex justify-content-center align-items-center">LES STATUS DU PARTI</a>
+            <a href="{{ route('civitas.status') }}" class="director-button-grey d-flex justify-content-center align-items-center">LES STATUS DU MOUVEMENT</a>
             <div class="position-absolute end-0 bottom-0">
                 <img src="{{ asset('img/civitas/responsive/director-red.png') }}" class="" alt="logo" />
             </div>
@@ -390,7 +380,7 @@
     {!! trans('words.civitas_party_status') !!}
 </div>
 <div class="space-50"></div>
-<div class="elements-container">
+<div class="elements-container" id="communiques">
     @foreach($lateststatus as $status)
     <div class="position-relative">
         <div class="container">
@@ -448,7 +438,7 @@
     <div class="d-flex flex-column align-items-center text-center">
         <img src="{{ asset('/img/civitas/civitas_logo_pages.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/civitas/responsive/civitas_logo_pages.png') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
-        <div class="civitas-title-page mt-3">LA VIE DU PARTI</div>
+        <div class="civitas-title-page mt-3">LA VIE DU MOUVEMENT</div>
         <div class="black-line-civitas"></div>
     </div>
     <div class="space-100"></div>
@@ -588,7 +578,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="d-none toggle-content">
+                    <div class="d-none toggle-content-director">
                         <div class="row">
                             <div class="my-3"></div>
                             <div class="col-md-12">
@@ -772,63 +762,97 @@
 @section('scripts')
 @if(isset($has_more))
 <script>
-    let hasMore = {
-        !!json_encode($has_more) !!
-    };
+    let hasMore = {!! json_encode($has_more) !!};
     const sectionId = "{{ $section_id }}";
     const category = "{{ $category ?? '' }}";
 </script>
 <script src="{{ asset('js/main.js') }}"></script>
 @endif
 <script>
-    $('#cantons').on('change', function() {
-        const selectedCanton = $(this).val();
-        $('.image-container').removeClass('active');
-        $('.image-container').each(function() {
-            const cantonData = $(this).data('canton');
-            if (typeof cantonData === 'string') {
-                const cantons = cantonData.split(' ');
-                if (cantons.includes(selectedCanton)) {
-                    $(this).addClass('active');
-                }
-            }
-        });
-    });
-    $('.group-specific-width').on('mouseleave', function() {
-        $('.image-container').removeClass('active');
-    });
-</script>
-<script>
-    $('#cantons').on('change', function() {
-        var canton = $(this).val();
-        if (canton) {
-            $('#loading-indicator').show();
+  const cantonToBodyClass = {
+    geneve: 'geneve',
+    fribourg: 'geneve',
+    vaud: 'geneve',
+    neuchatel: 'geneve',
+    'bale-ville': 'bale',
+    'bale-campagne': 'bale',
+    berne: 'bale',
+    lucerne: 'bale',
+    soleure: 'bale',
+    zug: 'bale',
+    schaffhouse: 'bale',
+    argovie: 'bale',
+    thurgovie: 'bale',
+    jura: 'bale',
+    valais: 'sion',
+    tessin: 'lugano',
+    grisons: 'coire',
+    glaris: 'coire',
+    zurich: 'coire',
+    uri: 'coire',
+    schwytz: 'coire',
+    nidwald: 'coire',
+    obwald: 'coire',
+    'saint-gall': 'saint-gall',
+    'appenzell-r.h.-ext': 'saint-gall',
+    'appenzell-r.h.-int': 'saint-gall'
+  };
 
-            $.ajax({
-                url: "{{ route('getCantonResults') }}",
-                type: 'GET',
-                data: {
-                    canton: canton,
-                },
-                success: function(response) {
-                    $('#loading-indicator').hide();
-                    if (response.success) {
-                        $('#canton-title').html(response.data.title);
-                        $('#canton-content').html(response.data.content);
-                    } else {
-                        $('#canton-title').html("{!! trans('words.message_error') !!}");
-                        $('#canton-content').html("{!! trans('words.unexpected_error') !!}");
-                    }
-                },
-                error: function(xhr, status, error) {
-                    $('#loading-indicator').hide();
-                    $('#canton-title').html("{!! trans('words.message_error') !!}");
-                    $('#canton-content').html("{!! trans('words.unexpected_error') !!}");
-                },
-            });
+  const ALL_BODY_CLASSES = [...new Set(Object.values(cantonToBodyClass))];
+
+  // single timer so new selections restart the countdown
+  let hoverClearTimer = null;
+  function scheduleClearHover(ms = 15000) {
+    if (hoverClearTimer) clearTimeout(hoverClearTimer);
+    hoverClearTimer = setTimeout(() => {
+      document.body.classList.remove(...ALL_BODY_CLASSES);
+      hoverClearTimer = null;
+    }, ms);
+  }
+
+  $('#cantons').on('change', function () {
+    const val = $(this).val();
+
+    // apply highlight class
+    document.body.classList.remove(...ALL_BODY_CLASSES);
+    const cls = cantonToBodyClass[val];
+    if (cls) document.body.classList.add(cls);
+
+    // nothing selected -> cancel any pending clear and stop
+    if (!val) {
+      if (hoverClearTimer) clearTimeout(hoverClearTimer);
+      hoverClearTimer = null;
+      return;
+    }
+
+    // schedule auto-clear of highlight after 15s
+    scheduleClearHover(7000);
+
+    // fetch content
+    $('#loading-indicator').show();
+    $.get("{{ route('getCantonResults') }}", { canton: val })
+      .done(r => {
+        if (r && r.success) {
+          $('#canton-title').html(r.data.title);
+          $('#canton-content').html(r.data.content);
+        } else {
+          $('#canton-title').html("{!! trans('words.message_error') !!}");
+          $('#canton-content').html("{!! trans('words.unexpected_error') !!}");
         }
-    });
+      })
+      .fail(() => {
+        $('#canton-title').html("{!! trans('words.message_error') !!}");
+        $('#canton-content').html("{!! trans('words.unexpected_error') !!}");
+      })
+      .always(() => $('#loading-indicator').hide());
+  });
+
+  // Remove immediate clear behaviors:
+  // $('.group-specific-width').off('mouseleave');
+  // $('#cantons').off('blur');
+  // $('.group-specific-width').off('touchend pointerleave');
 </script>
+
 @if(Auth::user() && ($page == 2))
 <script>
     $('#contentSelectDiocesan').on('change', function() {
@@ -947,16 +971,14 @@
         });
     });
 </script>
-@if(isset($director))
+@if(isset($directors))
 <script>
     $('#contentSelect').on('change', function() {
         var selectedOption = $('option:selected', this);
         var page_id = selectedOption.data('id');
         var content = selectedOption.data('content');
         var image = selectedOption.data('image');
-        var content_page = {
-            !!json_encode($director - > content) !!
-        };
+        var content_page = {!! json_encode($director->content) !!};
 
         $('input[name="id"]').val(page_id);
 
@@ -979,9 +1001,9 @@
         }
 
         if (this.value) {
-            $('.toggle-content').removeClass('d-none');
+            $('.toggle-content-director').removeClass('d-none');
         } else {
-            $('.toggle-content').addClass('d-none');
+            $('.toggle-content-director').addClass('d-none');
         }
     });
 
@@ -1129,9 +1151,7 @@
         placeholder: 'Write your content here...',
         toolbar: toolbarConfig
     });
-    var content_page = {
-        !!json_encode($status - > content) !!
-    };
+    var content_page = {!! json_encode($status->content) !!};
     $(document).on("shown.bs.modal", "#editModal", function(e) {
         if (content_page != '') {
             $('#summernote-status-edit').summernote('code', content_page);
@@ -1215,25 +1235,25 @@
 
 
 <script>
-// Select all paths inside your SVG
-const paths = document.querySelectorAll('svg path');
+    // Select all paths inside your SVG
+    const paths = document.querySelectorAll('svg path');
 
-paths.forEach(path => {
-  path.addEventListener('mouseenter', () => {
-    // Agar path ke paas class hai
-    if(path.classList.length > 0){
-      // Body me wahi class add karo
-      document.body.classList.add(...path.classList);
-    }
-  });
+    paths.forEach(path => {
+        path.addEventListener('mouseenter', () => {
+            // Agar path ke paas class hai
+            if (path.classList.length > 0) {
+                // Body me wahi class add karo
+                document.body.classList.add(...path.classList);
+            }
+        });
 
-  path.addEventListener('mouseleave', () => {
-    // Agar path ke paas class hai
-    if(path.classList.length > 0){
-      // Body se class remove karo
-      document.body.classList.remove(...path.classList);
-    }
-  });
-});
+        path.addEventListener('mouseleave', () => {
+            // Agar path ke paas class hai
+            if (path.classList.length > 0) {
+                // Body se class remove karo
+                document.body.classList.remove(...path.classList);
+            }
+        });
+    });
 </script>
 @endsection

@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Validator;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Validator;
 
 class Donation extends Model
 {
+    use SoftDeletes;
+
     public $timestamps = true;
     /**
      * The database table used by the model.
@@ -15,6 +18,44 @@ class Donation extends Model
      */
     protected $table = 'donations';
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+
+    /**
+     * The attributes that are mass assignable.
+     */
+    protected $fillable = [
+        'firstname',
+        'lastname',
+        'email',
+        'amount',
+        'payment_method',
+        'country',
+        'gender',
+        'amount_type',
+        'billing_cycle',
+        'notes',
+        'street',
+        'number',
+        'complement',
+        'zipcode',
+        'city',
+        'status',
+    ];
+
+    /**
+     * Scope for active records.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
 
     public $editRules = [];
     public $errors;
@@ -24,6 +65,7 @@ class Donation extends Model
         $rules = [
             'amount_type'   => 'required|in:25,50,120,500,custom',
             'amount'        => 'required_if:amount_type,custom|nullable|numeric|min:0.01',
+            'billing_cycle'  => 'required|in:monthly,annual',
             'payment_method' => 'required|in:cash,online,crypto,bank,bulletin',
             'email'         => 'required|email|max:255',
             'gender'        => 'nullable|in:mr,mrs',

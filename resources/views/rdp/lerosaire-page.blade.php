@@ -14,7 +14,7 @@
 <div class="mt-5 mt-sm-5 mt-md-5 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
 @if($page == 0)
 <div class="black-bg-prier d-flex align-items-center justify-content-end">
-    <div class="p-4 prier-title me-0 me-lg-5 me-xl-5 me-xxl-5 p-sm-4 p-md-4 p-lg-0">Prier le Rosaire ?</div>
+    <div class="p-4 prier-title me-0 me-lg-5 me-xl-5 me-xxl-5 p-sm-4 p-md-4 p-lg-0">{!! __('words.rdp_pray_rosary_question') !!}</div>
 </div>
 <div class="position-relative">
     <img src="{{ asset('img/rdp/prier_lerosaire.png') }}" class="w-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
@@ -45,8 +45,8 @@
             <div class="position-relative">
                 <img src="{{ asset('img/rdp/prier-lerosaire-second.png') }}" class="" alt="logo" />
                 <div class="position-absolute prier-absolute-center-bottom">
-                    <a href="{{ route('comment-lerosaire') }}" class="p-2 mb-5 rdp-prier-button-grey d-flex justify-content-center align-items-center">Comment Prier le Rosaire</a>
-                    <a href="{{ route('notredame') }}" class="p-2 rdp-prier-button-orange d-flex justify-content-center align-items-center">Notre-Dame de Fatima</a>
+                    <a href="{{ route('comment-lerosaire') }}" class="p-2 mb-5 rdp-prier-button-grey d-flex justify-content-center align-items-center">{!! __('words.rdp_how_pray_rosary') !!}</a>
+                    <a href="{{ route('notredame') }}" class="p-2 rdp-prier-button-orange d-flex justify-content-center align-items-center">{!! __('words.rdp_our_lady_fatima') !!}</a>
                 </div>
             </div>
         </div>
@@ -65,8 +65,8 @@
         <div class="position-relative">
             <img src="{{ asset('img/rdp/responsive/prier_lerosaire_2.png') }}" class="" alt="logo" />
             <div class="position-absolute prier-absolute-center-bottom">
-                <a href="{{ route('comment-lerosaire') }}" class="p-2 mb-5 rdp-prier-button-grey d-flex justify-content-center align-items-center">Comment Prier le Rosaire</a>
-                <a href="{{ route('notredame') }}" class="p-2 rdp-prier-button-orange d-flex justify-content-center align-items-center">Notre-Dame de Fatima</a>
+                <a href="{{ route('comment-lerosaire') }}" class="p-2 mb-5 rdp-prier-button-grey d-flex justify-content-center align-items-center">{!! __('words.rdp_how_pray_rosary') !!}</a>
+                <a href="{{ route('notredame') }}" class="p-2 rdp-prier-button-orange d-flex justify-content-center align-items-center">{!! __('words.rdp_our_lady_fatima') !!}</a>
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
 @elseif($page == 1)
 <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
     <div class="black-bg-prier d-flex align-items-center justify-content-end">
-        <div class="prier-title me-5">Comment Prier le Rosaire ?</div>
+        <div class="prier-title me-5">{!! __('words.rdp_how_pray_rosary_question') !!}</div>
     </div>
     <div class="position-relative">
         <img src="{{ asset('img/rdp/comment-lerosaire.png') }}" class="w-100" height="1090" alt="logo" />
@@ -118,10 +118,10 @@
         <div class="d-flex justify-content-between align-items-center">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/NOLnMvhZjwE?si=dM5LVKb9626Uj9jU" frameborder="0" allowfullscreen></iframe>
             <div class="d-flex justify-content-center align-items-center comment-black-box">
-                <a href="{{ route ('lerosaire') }}" class="comment-box-content d-flex align-items-center justify-content-center">Plus d’infos sur le Rosaire</a>
+                <a href="{{ route ('lerosaire') }}" class="comment-box-content d-flex align-items-center justify-content-center">{!! __('words.rdp_more_info_rosary') !!}</a>
             </div>
             <div class="d-flex justify-content-center align-items-center comment-orange-box">
-                <a href="{{ route ('notredame') }}" class="comment-box-content d-flex align-items-center justify-content-center">Notre-Dame de Fatima</a>
+                <a href="{{ route ('notredame') }}" class="comment-box-content d-flex align-items-center justify-content-center">{!! __('words.rdp_our_lady_fatima') !!}</a>
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center">
                 <div class="p-3 d-flex flex-column comment-grey-opacity">
-                    <div class="my-4 comment-grey-title">Mystères joyeux<br>(médités lundi et jeudi)</div>
+                    <div class="my-4 comment-grey-title">{!! __('words.rdp_joyful_mysteries') !!}<br>{!! __('words.rdp_joyful_mysteries_days') !!}</div>
                     <div class="">
                         <div class="grey-opacity-height">
                             <img src="{{ asset('img/rdp/comment-prier1.png') }}" class="logo" alt="logo" />
@@ -165,7 +165,7 @@
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center">
                 <div class="p-3 d-flex flex-column comment-grey-opacity">
-                    <div class="my-4 comment-grey-title">Mystères douloureux<br>(médités mardi et vendredi)</div>
+                    <div class="my-4 comment-grey-title">{!! __('words.rdp_sorrowful_mysteries') !!}<br>{!! __('words.rdp_sorrowful_mysteries_days') !!}</div>
                     <div class="grey-opacity-height">
                         <img src="{{ asset('img/rdp/comment-prier2-1.png') }}" class="logo" alt="logo" />
                         <div class="p-4 comment-grey-content"><span class="comment-grey-content-l">L’</span>agonie de Jésus au Jardin des oliviers. Fruit du mystère, la contrition des péchés.</div>
@@ -190,7 +190,7 @@
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center">
                 <div class="p-3 d-flex flex-column comment-grey-opacity">
-                    <div class="my-4 comment-grey-title">Mystères glorieux<br><span class="comment-grey-title-small">(médités mercredi, samedi et dimanche)</span></div>
+                    <div class="my-4 comment-grey-title">{!! __('words.rdp_glorious_mysteries') !!}<br><span class="comment-grey-title-small">{!! __('words.rdp_glorious_mysteries_days') !!}</span></div>
                     <div class="grey-opacity-height">
                         <img src="{{ asset('img/rdp/comment-prier3-1.png') }}" class="logo" alt="logo" />
                         <div class="p-4 comment-grey-content"><span class="comment-grey-content-l">L’</span>a Résurrection de Jésus, le matin de Pâques. Fruit du mystère, la vertu théologale de Foi.</div>
@@ -219,7 +219,7 @@
 </div>
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="black-bg-prier d-flex align-items-center justify-content-end">
-        <div class="p-4 prier-title">Comment Prier le Rosaire ?</div>
+        <div class="p-4 prier-title">{!! __('words.rdp_how_pray_rosary_question') !!}</div>
     </div>
     <img src="{{ asset('img/rdp/responsive/comment-lerosaire.png') }}" class="w-100" alt="logo" />
     <div class="container custom-tweak">
@@ -243,7 +243,7 @@
     </div>
     <div class="comment-black-bg d-flex align-items-center">
         <div class="container custom-tweak">
-            <div class="comment-black-bg-title">Les mystères</div>
+            <div class="comment-black-bg-title">{!! __('words.rdp_the_mysteries') !!}</div>
         </div>
     </div>
     <div class="container custom-tweak my-3">
@@ -251,7 +251,7 @@
     </div>
     <div class="comment-grey-responsive d-flex align-items-center">
         <div class="container custom-tweak">
-            <div class="comment-grey-title">Mystères joyeux<br>(médités lundi et jeudi)</div>
+            <div class="comment-grey-title">{!! __('words.rdp_joyful_mysteries') !!}<br>{!! __('words.rdp_joyful_mysteries_days') !!}</div>
         </div>
     </div>
     <div class="my-5">
@@ -268,7 +268,7 @@
     </div>
     <div class="comment-grey-responsive d-flex align-items-center">
         <div class="container custom-tweak">
-            <div class="comment-grey-title">Mystères douloureux<br>(médités mardi et vendredi)</div>
+            <div class="comment-grey-title">{!! __('words.rdp_sorrowful_mysteries') !!}<br>{!! __('words.rdp_sorrowful_mysteries_days') !!}</div>
         </div>
     </div>
     <div class="my-5">
@@ -284,7 +284,7 @@
         <div class="p-4 comment-grey-content"><span class="comment-grey-content-l">L</span>a mort de Jésus crucifié. Fruit de ce mystère, l'amour du Saint-Sacrifice de la Messe et le don de soi-même à l'oeuvre de la Rédemption</div>
     </div>
     <div class="p-2 comment-grey-responsive d-flex align-items-center">
-        <div class="comment-grey-title">Mystères glorieux<br><span class="comment-grey-title-small">(médités mercredi, samedi et dimanche)</span></div>
+        <div class="comment-grey-title">{!! __('words.rdp_glorious_mysteries') !!}<br><span class="comment-grey-title-small">{!! __('words.rdp_glorious_mysteries_days') !!}</span></div>
     </div>
     <div class="mt-5 mb-3">
         <img src="{{ asset('img/rdp/responsive/comment-prier3-1.png') }}" class="logo" alt="logo" />
@@ -301,10 +301,10 @@
     <div class="container custom-tweak">
         <div class="d-flex flex-column align-items-center">
             <div class="d-flex justify-content-center align-items-center comment-black-box">
-                <a href="{{ route ('lerosaire') }}" class="comment-box-content d-flex align-items-center justify-content-center">Plus d’infos sur le Rosaire</a>
+                <a href="{{ route ('lerosaire') }}" class="comment-box-content d-flex align-items-center justify-content-center">{!! __('words.rdp_more_info_rosary') !!}</a>
             </div>
             <div class="mt-5 d-flex justify-content-center align-items-center comment-orange-box">
-                <a href="{{ route ('notredame') }}" class="p-3 comment-box-content d-flex align-items-center justify-content-center text-start">Notre-Dame de Fatima</a>
+                <a href="{{ route ('notredame') }}" class="p-3 comment-box-content d-flex align-items-center justify-content-center text-start">{!! __('words.rdp_our_lady_fatima') !!}</a>
             </div>
         </div>
     </div>

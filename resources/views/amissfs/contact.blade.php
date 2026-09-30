@@ -2,7 +2,7 @@
 
 @section('logo')
 <div class="navbar-brand d-flex justify-content-center align-items-center">
-    <a href="{{ route('amissfs.home') }}" class="text-decoration-none">
+    <a href="{{ route('amissfs.home') }}" class="text-decoration-none logo-absolute">
         <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/amissfs/responsive/amissfs-logo.png') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
@@ -24,7 +24,9 @@
 </div>
 <div class="space-50 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
 <div class="mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
-<div class="black-bg-full d-flex align-items-center">
-    <marquee behavior="scroll" direction="right" scrollamount="12" class="text-white sang-blue-regular-20">PROTECTION DES DONNÉES / DATENSCHUTZE</marquee>
-</div>
+<a href="{{ route('footer.protection') }}" class="text-decoration-none">
+    <div class="black-bg-full d-flex align-items-center">
+        <marquee behavior="scroll" direction="right" scrollamount="12" class="text-white sang-blue-regular-20">{!! __('words.amissfs_data_protection') !!}</marquee>
+    </div>
+</a>
 @endsection

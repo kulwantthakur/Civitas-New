@@ -3,11 +3,12 @@
 namespace App\Mail;
 
 use App\Models\Donation;
+use App\Models\EmailTemplate;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Storage;
 
 class DonationConfirmation extends Mailable implements ShouldQueue
 {
@@ -18,36 +19,66 @@ class DonationConfirmation extends Mailable implements ShouldQueue
     public function __construct(Donation $donation)
     {
         $this->donation = $donation;
+        
+        // Set sender email
+        $this->from('kyriakosdoug4@gmail.com', 'Civitas Suisse');
+        $this->replyTo('dougiakiskyr@gmail.com', 'Civitas Suisse Kyriakos');
     }
 
     public function build()
     {
-        if($this->donation->payment_method === 'cash'){
-            $pdf = Pdf::loadView('pdf-template.versement_liquide', [
-                'donation' => $this->donation
-            ]);
-        }
-        if($this->donation->payment_method === 'bank'){
-            $pdf = Pdf::loadView('pdf-template.virement_bancaire', [
-                'donation' => $this->donation
-            ]);
-        }
-        if($this->donation->payment_method === 'bulletin'){
-            $pdf = Pdf::loadView('pdf-template.dons_sans_frais', [
-                'donation' => $this->donation
-            ]);
-        }
-        if($this->donation->payment_method === 'crypto'){
-            $pdf = Pdf::loadView('pdf-template.dons_en_cryptomonnaie', [
-                'donation' => $this->donation
-            ]);
-        }
-        $pdfOutput = $pdf->output();
+        try {
+            // Get email template from database
+            $template = EmailTemplate::getByPaymentMethod($this->donation->payment_method);
+            
+            // Fallback to default if template not found
+            if (!$template) {
+                $emailView = $this->getDefaultEmailView();
+                $subject = 'Confirmation de votre don - Civitas Suisse';
+            } else {
+                $emailView = 'emails.dynamic';
+                $subject = $template->subject;
+            }
+            
+            $mail = $this->subject($subject)
+                        ->view($emailView, [
+                            'donation' => $this->donation,
+                            'html' => $template->html_content ?? ''
+                        ]);
 
-        return $this->subject('Thank you for your donation!')
-                    ->markdown('emails.confirmation')
-                    ->attachData($pdfOutput, 'donation_receipt.pdf', [
+            // Attach PDF only for bulletin
+            if ($this->donation->payment_method === 'bulletin' && $template && $template->pdf_attachment) {
+                $pdfPath = storage_path('app/public/pdfs/' . $template->pdf_attachment);
+                
+                if (file_exists($pdfPath)) {
+                    $mail->attach($pdfPath, [
+                        'as' => 'bulletin_versement.pdf',
                         'mime' => 'application/pdf',
                     ]);
+                } else {
+                    \Log::warning('Bulletin PDF file not found: ' . $pdfPath);
+                }
+            }
+
+            return $mail;
+        } catch (\Exception $e) {
+            \Log::error('Failed to build donation confirmation email: ' . $e->getMessage());
+            throw $e;
+        }
+    }
+
+    /**
+     * Get default email view as fallback
+     */
+    private function getDefaultEmailView(): string
+    {
+        $views = [
+            'cash' => 'emails.versement_liquide',
+            'bank' => 'emails.virement_bancaire',
+            'bulletin' => 'emails.dons_sans_frais',
+            'crypto' => 'emails.dons_en_cryptomonnaie',
+        ];
+
+        return $views[$this->donation->payment_method] ?? 'emails.versement_liquide';
     }
 }

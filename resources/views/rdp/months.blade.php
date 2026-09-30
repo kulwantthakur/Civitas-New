@@ -19,14 +19,14 @@
             <div class="d-flex justify-content-start">
                 <a href="{{ route('notredame') }}"><img src="{{ asset('img/rdp/responsive/back_button.png') }}" alt="logo" /></a>
             </div>
-            <div class="blue-box-title d-flex align-items-center justify-content-center">Les Apparitions de l’Ange</div>
+            <div class="blue-box-title d-flex align-items-center justify-content-center">{!! __('words.rdp_apparitions_angel') !!}</div>
         </div>
     </div>
     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div class="blue-box-months d-flex align-items-center justify-content-between">
             <a href="{{ route('notredame') }}" class="ms-4"><img src="{{ asset('img/rdp/back-button-rdp.png') }}" class="" alt="logo" /></a>
             <div class="d-flex align-items-center justify-content-center me-5">
-                <div class="blue-box-title">Les<br>Apparitions de <br>l’Ange</div>
+                <div class="blue-box-title">{!! __('words.rdp_apparitions_angel_multiline') !!}</div>
             </div>
         </div>
     </div>
@@ -70,14 +70,14 @@
             <div class="d-flex justify-content-start">
                 <a href="{{ route('notredame') }}"><img src="{{ asset('img/rdp/responsive/back_button.png') }}" alt="logo" /></a>
             </div>
-            <div class="blue-box-title d-flex align-items-center justify-content-center">Les 13 mai 1917</div>
+            <div class="blue-box-title d-flex align-items-center justify-content-center">{!! __('words.rdp_may_13_1917') !!}</div>
         </div>
     </div>
     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div class="blue-box-months d-flex align-items-center justify-content-between">
             <a href="{{ route('notredame') }}" class="ms-4"><img src="{{ asset('img/rdp/back-button-rdp.png') }}" class="" alt="logo" /></a>
             <div class="d-flex align-items-center justify-content-center me-5">
-                <div class="blue-box-title">Les 13 mai<br>1917</div>
+                <div class="blue-box-title">{!! __('words.rdp_may_13_1917_multiline') !!}</div>
             </div>
         </div>
     </div>
@@ -97,7 +97,7 @@
 <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
     <div class="container custom-tweak">
         <div class="black-bg-gradient-rounded">
-            <div class="p-5 d-flex justify-content-center align-items-center may-title-gradient">Événement historique</div>
+            <div class="p-5 d-flex justify-content-center align-items-center may-title-gradient">{!! __('words.rdp_historic_event') !!}</div>
             <div class="d-flex justify-content-center">
                 <div class="position-relative">
                     <img src="{{ asset('img/rdp/may_1.png') }}" class="logo" alt="logo" />
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center align-items-center may-small-under-img">
-                L’armée du Portugal au front en 1917
+                {!! __('words.rdp_portugal_army_1917') !!}
             </div>
             <div class="space-400"></div>
             <div class="position-relative">
@@ -147,7 +147,7 @@
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="may-blue-bg-responsive">
         <div class="position-relative">
-            <div class="p-5 d-flex justify-content-center align-items-center may-title-gradient">Événement historique</div>
+            <div class="p-5 d-flex justify-content-center align-items-center may-title-gradient">{!! __('words.rdp_historic_event') !!}</div>
             <div class="white-bg-rounded-left">
                 <div class="d-flex justify-content-center align-items-center py-4 py-lg-0">
                     {!! trans('words.rdp_may_first') !!}
@@ -182,7 +182,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-white d-flex justify-content-center align-items-center may-center-content-last-small">le 13 mai 1917, Mgr Eugenio Pacelli recevait la consécration épiscopale des mains du pape Benoît XV.</div>
+        <div class="text-white d-flex justify-content-center align-items-center may-center-content-last-small">{!! __('words.rdp_pacelli_consecration') !!}</div>
         <div class="space-50"></div>
     </div>
 </div>
@@ -194,14 +194,14 @@
             <div class="d-flex justify-content-start">
                 <a href="{{ route('notredame') }}"><img src="{{ asset('img/rdp/responsive/back_button.png') }}" alt="logo" /></a>
             </div>
-            <div class="blue-box-title d-flex align-items-center justify-content-center">Les 13 juin 1917</div>
+            <div class="blue-box-title d-flex align-items-center justify-content-center">{!! __('words.rdp_june_13_1917') !!}</div>
         </div>
     </div>
     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div class="blue-box-months d-flex align-items-center justify-content-between">
             <a href="{{ route('notredame') }}" class="ms-4"><img src="{{ asset('img/rdp/back-button-rdp.png') }}" class="" alt="logo" /></a>
             <div class="d-flex align-items-center justify-content-center me-5">
-                <div class="blue-box-title">Les 13 juin<br>1917</div>
+                <div class="blue-box-title">{!! __('words.rdp_june_13_1917_multiline') !!}</div>
             </div>
         </div>
     </div>
@@ -308,14 +308,14 @@
             <div class="d-flex justify-content-start">
                 <a href="{{ route('notredame') }}"><img src="{{ asset('img/rdp/responsive/back_button.png') }}" alt="logo" /></a>
             </div>
-            <div class="blue-box-title d-flex align-items-center justify-content-center">Le 13 juillet 1917</div>
+            <div class="blue-box-title d-flex align-items-center justify-content-center">{!! __('words.rdp_july_13_1917') !!}</div>
         </div>
     </div>
     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div class="blue-box-months d-flex align-items-center justify-content-between">
             <a href="{{ route('notredame') }}" class="ms-4"><img src="{{ asset('img/rdp/back-button-rdp.png') }}" class="" alt="logo" /></a>
             <div class="d-flex align-items-center justify-content-center me-5">
-                <div class="blue-box-title">Le 13 juillet<br>1917</div>
+                <div class="blue-box-title">{!! __('words.rdp_july_13_1917_multiline') !!}</div>
             </div>
         </div>
     </div>
@@ -336,7 +336,7 @@
     <div class="container">
         <div class="mt-5 d-flex justify-content-center align-items-center flex-column">
             <img src="{{ asset('img/rdp/july_1.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
-            <div class="mt-3 july-content-under-img">Les voyants, aussitôt après l’apparition du 13 juillet et la<br>vision de l’enfer.</div>
+            <div class="mt-3 july-content-under-img">{!! __('words.rdp_seers_after_july') !!}</div>
         </div>
         <div class="space-50"></div>
         {!! trans('words.july_second') !!}
@@ -350,7 +350,7 @@
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="mt-5 d-flex justify-content-center align-items-center flex-column">
         <img src="{{ asset('img/rdp/responsive/july_1.png') }}" class="" alt="logo" />
-        <div class="mt-3 july-content-under-img">Les voyants, aussitôt après l’apparition du 13 juillet et la vision de l’enfer.</div>
+        <div class="mt-3 july-content-under-img">{!! __('words.rdp_seers_after_july_responsive') !!}</div>
     </div>
     <div class="container">
         <div class="mt-3"></div>
@@ -364,7 +364,7 @@
     <div class="space-50"></div>
     <div class="container custom-tweak">
         <div class="p-5 pb-0 july-black-bg-gradient-rounded">
-            <div class="my-5 d-flex justify-content-center align-items-center july-title-gradient">Événement historique</div>
+            <div class="my-5 d-flex justify-content-center align-items-center july-title-gradient">{!! __('words.rdp_historic_event') !!}</div>
             <div class="mt-5 d-flex justify-content-center align-items-center flex-column">
                 <div>
                     {!! trans('words.july_first_par') !!}
@@ -395,7 +395,7 @@
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="mt-5 july-blue-bg-responsive">
         <div class="container">
-            <div class="py-5 d-flex justify-content-center align-items-center july-title-gradient">Événement historique</div>
+            <div class="py-5 d-flex justify-content-center align-items-center july-title-gradient">{!! __('words.rdp_historic_event') !!}</div>
             <div class="d-flex justify-content-center align-items-center flex-column">
                 <div>
                     {!! trans('words.july_first_par') !!}
@@ -437,14 +437,14 @@
             <div class="d-flex justify-content-start">
                 <a href="{{ route('notredame') }}"><img src="{{ asset('img/rdp/responsive/back_button.png') }}" alt="logo" /></a>
             </div>
-            <div class="blue-box-title d-flex align-items-center justify-content-center">Le 13 août 1917</div>
+            <div class="blue-box-title d-flex align-items-center justify-content-center">{!! __('words.rdp_aug_13_1917') !!}</div>
         </div>
     </div>
     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div class="blue-box-months d-flex align-items-center justify-content-between">
             <a href="{{ route('notredame') }}" class="ms-4"><img src="{{ asset('img/rdp/back-button-rdp.png') }}" class="" alt="logo" /></a>
             <div class="d-flex align-items-center justify-content-center me-5">
-                <div class="blue-box-title">Le 13 août<br>1917</div>
+                <div class="blue-box-title">{!! __('words.rdp_aug_13_1917_multiline') !!}</div>
             </div>
         </div>
     </div>
@@ -465,14 +465,14 @@
             <div class="d-flex justify-content-start">
                 <a href="{{ route('notredame') }}"><img src="{{ asset('img/rdp/responsive/back_button.png') }}" alt="logo" /></a>
             </div>
-            <div class="blue-box-title d-flex align-items-center justify-content-center">Le 19 août 1917</div>
+            <div class="blue-box-title d-flex align-items-center justify-content-center">{!! __('words.rdp_aug_19_1917') !!}</div>
         </div>
     </div>
     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div class="blue-box-months d-flex align-items-center justify-content-between">
             <a href="{{ route('notredame') }}" class="ms-4"><img src="{{ asset('img/rdp/back-button-rdp.png') }}" class="" alt="logo" /></a>
             <div class="d-flex align-items-center justify-content-center me-5">
-                <div class="blue-box-title">Le 19 août<br>1917</div>
+                <div class="blue-box-title">{!! __('words.rdp_aug_19_1917_multiline') !!}</div>
             </div>
         </div>
     </div>
@@ -517,7 +517,7 @@
         <div class="position-relative">
             <div class="absolute-august-19">
                 <img src="{{ asset('img/rdp/responsive/19august_1.png') }}" class="" alt="logo" />
-                <div class="d-flex justify-content-center align-items-center august-19-under-img-bg">La petite Jacinthe</div>
+                <div class="d-flex justify-content-center align-items-center august-19-under-img-bg">{!! __('words.rdp_little_jacinta') !!}</div>
             </div>
             <div class="space-100"></div>
             <div class="space-50"></div>
@@ -538,14 +538,14 @@
             <div class="d-flex justify-content-start">
                 <a href="{{ route('notredame') }}"><img src="{{ asset('img/rdp/responsive/back_button.png') }}" alt="logo" /></a>
             </div>
-            <div class="blue-box-title d-flex align-items-center justify-content-center me-3">Le 13 septembre<br>1917</div>
+            <div class="blue-box-title d-flex align-items-center justify-content-center me-3">{!! __('words.rdp_sept_13_1917_multiline') !!}</div>
         </div>
     </div>
     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div class="blue-box-months d-flex align-items-center justify-content-between">
             <a href="{{ route('notredame') }}" class="ms-4"><img src="{{ asset('img/rdp/back-button-rdp.png') }}" class="" alt="logo" /></a>
             <div class="d-flex align-items-center justify-content-center me-5">
-                <div class="blue-box-title">Le 13 septembre<br>1917</div>
+                <div class="blue-box-title">{!! __('words.rdp_sept_13_1917_multiline') !!}</div>
             </div>
         </div>
     </div>
@@ -629,12 +629,12 @@
             <div class="d-flex justify-content-start">
                 <a href="{{ route('notredame') }}"><img src="{{ asset('img/rdp/responsive/back_button.png') }}" alt="logo" /></a>
             </div>
-            <div class="blue-box-title d-flex align-items-center justify-content-center me-3">Le 13 octobre<br>1917</div>
+            <div class="blue-box-title d-flex align-items-center justify-content-center me-3">{!! __('words.rdp_oct_13_1917_multiline') !!}</div>
         </div>
         <div class="position-relative">
             <img src="{{ asset('img/rdp/responsive/rdp-october-top.png') }}" alt="logo" />
             <div class="absolute-responsive-october">
-                <div class="october-title-bg-img">Le miracle du<br>soleil à Fatima</div>
+                <div class="october-title-bg-img">{!! __('words.rdp_sun_miracle_fatima') !!}</div>
             </div>
         </div>
         <div class="position-absolute month-absolute-end">
@@ -646,7 +646,7 @@
             <div class="blue-box-months d-flex align-items-center justify-content-between">
                 <a href="{{ route('notredame') }}" class="ms-4"><img src="{{ asset('img/rdp/back-button-rdp.png') }}" class="" alt="logo" /></a>
                 <div class="d-flex align-items-center justify-content-center me-5">
-                    <div class="blue-box-title">Le 13 octobre<br>1917</div>
+                    <div class="blue-box-title">{!! __('words.rdp_oct_13_1917_multiline') !!}</div>
                 </div>
             </div>
             <div class="october-absolute-top">
@@ -656,7 +656,7 @@
                     </div>
                 </div>
                 <div class="position-absolute start-50 translate-middle w-100" style="bottom: 4rem;">
-                    <div class="october-title-bg-img">Le miracle du<br>soleil à Fatima</div>
+                    <div class="october-title-bg-img">{!! __('words.rdp_sun_miracle_fatima') !!}</div>
                 </div>
             </div>
         </div>
@@ -698,7 +698,7 @@
                         <div class="my-3 d-flex justify-content-center align-items-center flex-column">
                             <div class="">
                                 <img src="{{ asset('img/rdp/october_3.png') }}" class="" alt="logo" />
-                                <div class="october-grey-content-title mt-3">Article paru le 13 octobre 1917</div>
+                                <div class="october-grey-content-title mt-3">{!! __('words.rdp_article_oct_13_1917') !!}</div>
                             </div>
                         </div>
                     </div>
@@ -730,7 +730,7 @@
     <div class="container mt-5">
         {!! trans('words.october_black_third') !!}
         <div class="p-5 pb-2 october-gradient-last">
-            <div class="my-5 d-flex justify-content-center align-items-center october-title-gradient">Événement historique</div>
+            <div class="my-5 d-flex justify-content-center align-items-center october-title-gradient">{!! __('words.rdp_historic_event') !!}</div>
             <div class="space-200"></div>
             <div class="p-4 m-auto october-white-box-last">
                 <div class="position-relative">
@@ -782,7 +782,7 @@
         <div class="m-auto mb-4 october-grey-white-box">
             <div class="space-50"></div>
             <div class="p-2">
-                <div class="october-grey-content-title mb-3">Article paru le 13 octobre 1917</div>
+                <div class="october-grey-content-title mb-3">{!! __('words.rdp_article_oct_13_1917') !!}</div>
                 {!! trans('words.october_grey_second_white') !!}
             </div>
         </div>
@@ -806,7 +806,7 @@
         {!! trans('words.october_black_third') !!}
     </div>
     <div class="october-blue-bg">
-        <div class="d-flex justify-content-center align-items-center october-title-gradient pt-4 pb-5">Événement historique</div>
+        <div class="d-flex justify-content-center align-items-center october-title-gradient pt-4 pb-5">{!! __('words.rdp_historic_event') !!}</div>
         <div class="position-relative">
             <div class="october-responsive-fifth-image">
                 <img src="{{ asset('img/rdp/responsive/october_5.png') }}" class="w-100" alt="logo" />

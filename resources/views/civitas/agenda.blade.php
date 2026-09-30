@@ -1,12 +1,12 @@
-@extends('civitas.app')
+﻿@extends('civitas.app')
 
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
-            <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">AGENDA</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
-            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
+            <a href="{{ route('political-action') }}" class="civitas-responsive-header-grey">{!! __('words.nav_actions') !!}</a>
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
+            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">{!! __('words.nav_news') !!}</a>
         </div>
     </div>
 </div>
@@ -26,13 +26,9 @@
 <div class="container">
     <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
         <div class="d-flex flex-column">
-            <a href="{{ route('civitas.last-event') }}" class="agenda-title"><img src="{{ asset('img/agenda-prev-resp.png') }}" class="me-2" alt="logo" /><span>ÉVÉNEMENTS PASSÉS</span></a>
+            <a href="{{ route('civitas.last-event') }}" class="agenda-title"><img src="{{ asset('img/agenda-prev-resp.png') }}" class="me-2" alt="logo" /><span>{!! __('words.civitas_past_events') !!}</span></a>
             @if(isset($recentevent))
-            <a href="{{ route('civitas.event-detail', [
-                        'created_at' => \Carbon\Carbon::parse($recentevent->created_at)->format('d-m-Y'),
-                        'user_name' => strtolower(str_replace(' ', '-', Str::ascii($recentevent->user->name))),
-                        'title' => ($recentevent->title)
-                    ]) }}" class="agenda-title my-3 ms-3"><span>PROCHAINE RENCONTRE</span><img src="{{ asset('img/agenda-next-resp.png') }}" class="ms-2" alt="logo" /></a>
+            <a href="{{ route('civitas.event-detail', ['title' => ($recentevent->title)]) }}" class="agenda-title my-3 ms-3"><span>{!! __('words.civitas_next_meeting') !!}</span><img src="{{ asset('img/agenda-next-resp.png') }}" class="ms-2" alt="logo" /></a>
             @else
             @endif
         </div>
@@ -46,19 +42,15 @@
     <div class="d-flex flex-column my-3 my-sm-3 my-md-3 my-lg-5 my-xl-5 my-xxl-5">
         <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
             <div class="d-flex flex-column">
-                <a href="{{ route('civitas.last-event') }}" class="agenda-title"><img src="{{ asset('img/agenda-prev.png') }}" class="me-3" alt="logo" /><span>ÉVÉNEMENTS PASSÉS</span></a>
+                <a href="{{ route('civitas.last-event') }}" class="agenda-title"><img src="{{ asset('img/agenda-prev.png') }}" class="me-3" alt="logo" /><span>{!! __('words.civitas_past_events') !!}</span></a>
                 @if(isset($recentevent))
-                <a href="{{ route('civitas.event-detail', [
-                            'created_at' => \Carbon\Carbon::parse($recentevent->created_at)->format('d-m-Y'),
-                            'user_name' => strtolower(str_replace(' ', '-', Str::ascii($recentevent->user->name))),
-                           'title' => strtolower(str_replace(' ', '-', Str::ascii($recentevent->title)))
-                        ]) }}" class="agenda-title ms-3 mt-3"><span>PROCHAINE RENCONTRE</span><img src="{{ asset('img/agenda-next.png') }}" class="ms-3" alt="logo" /></a>
+                <a href="{{ route('civitas.event-detail', ['title' => strtolower(str_replace(' ', '-', Str::ascii($recentevent->title)))]) }}" class="agenda-title ms-3 mt-3"><span>{!! __('words.civitas_next_meeting') !!}</span><img src="{{ asset('img/agenda-next.png') }}" class="ms-3" alt="logo" /></a>
                 @else
                 @endif
                 <div class="space-100"></div>
             </div>
         </div>
-        <a href=" javascript:void(0);" download class="pdf-download agenda-resp">Agenda hiver 2023 (PDF)</a>
+        <a href=" javascript:void(0);" download class="pdf-download agenda-resp">{!! __('words.civitas_agenda_pdf') !!}</a>
     </div>
     @foreach ($groupedEvents as $month => $events)
     <div class="row">
@@ -70,7 +62,7 @@
         @if ($events->isEmpty())
         <div class="row">
             <div class="col-12 text-center">
-                <div class="agenda-content">AUCUN ÉVÉNEMENT POUR CE MOIS.</div>
+                <div class="agenda-content">{!! __('words.civitas_no_event_month') !!}</div>
             </div>
         </div>
         @else

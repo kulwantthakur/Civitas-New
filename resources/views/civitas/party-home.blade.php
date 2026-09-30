@@ -3,9 +3,9 @@
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
             <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">POSITIONS</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
             <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
         </div>
     </div>
@@ -65,16 +65,18 @@
         <div class="mt-5 mb-3">
             {!! trans('words.civitas_second_form') !!}
         </div>
-        <div class="position-relative">
+        <a href="{{ route('civitas.diocesains') }}" class="position-relative party-img-zoom party-card-link" aria-label="Groupes Diocésains">
             <div class="d-flex justify-content-center align-content-center">
-                <img src="{{ asset('img/civitas/party-hallebarde.png') }}" class="" alt="logo" />
+                <img src="{{ asset('img/civitas/party-hallebarde.png') }}" alt="logo" />
             </div>
+
             <div class="party-cornered red-box-absolute">
-                <div class="center-link ">
-                    <a href="{{ route('civitas.diocesains') }}" class="party-cornered-button">GROUPES DIOCÉSAINS</a>
+                <div class="center-link">
+                    <span class="party-cornered-button">GROUPES DIOCÉSAINS</span>
                 </div>
             </div>
-        </div>
+        </a>
+
         <div class="my-5">
             {!! trans('words.civitas_third_form') !!}
         </div>

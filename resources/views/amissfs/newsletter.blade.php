@@ -2,7 +2,7 @@
 
 @section('logo')
 <div class="navbar-brand d-flex justify-content-center align-items-center">
-    <a href="{{ route('amissfs.home') }}" class="text-decoration-none">
+    <a href="{{ route('amissfs.home') }}" class="text-decoration-none logo-absolute">
         <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/amissfs/responsive/amissfs-logo.png') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
@@ -25,18 +25,18 @@
         </div>
         <div class="m-auto d-flex align-items-center salutation-specific">
             <input type="radio" name="gender" value="mrs" required>
-            <label class="amissfs-newsletter-salut">Madame</label>
+            <label class="amissfs-newsletter-salut">{!! __('words.common_mrs') !!}</label>
             <div class="mx-3"></div>
             <input type="radio" name="gender" value="mr">
-            <label class="amissfs-newsletter-salut">Monsieur</label>
+            <label class="amissfs-newsletter-salut">{!! __('words.common_mr') !!}</label>
         </div>
         <div class="d-flex justify-content-center align-items-center flex-column">
-            <input class="my-2" type="email" id="email-newsletter" name="email" placeholder="Votre adresse e-mail" required>
-            <input class="my-2" type="text" id="name-newsletter" name="lname" placeholder="Prénom" required>
-            <input class="my-2" type="text" id="name-1-newsletter" name="fname" placeholder="Nom" required>
+            <input class="my-2" type="email" id="email-newsletter" name="email" placeholder="{!! __('words.common_your_email') !!}" required>
+            <input class="my-2" type="text" id="name-newsletter" name="lname" placeholder="{!! __('words.common_firstname') !!}" required>
+            <input class="my-2" type="text" id="name-1-newsletter" name="fname" placeholder="{!! __('words.common_lastname') !!}" required>
             <div class="canton-specific">
                 <select class="form-select-canton w-100" name="canton_province">
-                    <option value="" disabled selected>Canton / Pays</option>
+                    <option value="" disabled selected>{!! __('words.common_canton_country') !!}</option>
                     <option value="AR">AR Appenzell Rhodes-Extérieures</option>
                     <option value="AI">AI Appenzell Rhodes-Intérieures</option>
                     <option value="AG">AG Argovie</option>
@@ -73,49 +73,54 @@
             </div>
         </div>
         <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-            <div class="px-5 py-4 m-auto red-box newsletter-box d-flex flex-column">
-                <div class="mb-3 amissfs-newsletter-red-box-title">Vos abonnements :</div>
-                <div class="d-flex align-items-center">
-                    <input type="checkbox" class="amissfs-checkbox" name="bulletin" value="1" />
-                    <label class="amissfs-newsletter-red-box ms-2">Bulle.n AMISSFS</label>
-                </div>
-                <div class="d-flex align-items-center my-2">
-                    <input type="checkbox" class="amissfs-checkbox" name="romkurier" value="1" />
-                    <label class="amissfs-newsletter-red-box ms-2">Rom-Kurier / Sì Sì No No</label>
-                </div>
-                <div class="d-flex align-items-center">
-                    <input type="checkbox" class="amissfs-checkbox" name="events_amissfs" value="1" />
-                    <label class="amissfs-newsletter-red-box ms-2">Événements AMISSFS</label>
-                </div>
+            <div class="px-5 py-4 m-auto red-box newsletter-box d-flex flex-column" id="amissfsBox">
+                <div class="mb-3 amissfs-newsletter-red-box-title">{!! __('words.amissfs_your_subscriptions') !!}</div>
+
+                <label class="d-flex align-items-center amissfs-option py-2">
+                    <input type="radio" name="subscription" value="bulletin" class="amissfs-radio me-2">
+                    <span class="amissfs-newsletter-red-box ms-2">{!! __('words.amissfs_bulletin_amis') !!}</span>
+                </label>
+
+                <label class="d-flex align-items-center amissfs-option py-2 my-2">
+                    <input type="radio" name="subscription" value="romkurier" class="amissfs-radio me-2">
+                    <span class="amissfs-newsletter-red-box ms-2">{!! __('words.amissfs_rom_kurier_sisino') !!}</span>
+                </label>
+
+                <label class="d-flex align-items-center amissfs-option py-2">
+                    <input type="radio" name="subscription" value="events_amissfs" class="amissfs-radio me-2">
+                    <span class="amissfs-newsletter-red-box ms-2">{!! __('words.amissfs_events') !!}</span>
+                </label>
+
                 <div class="mt-3 d-flex justify-content-center align-items-center valider-color width-163 height-62 ms-3">
-                    <button type="submit" class="amissfs-newsletter-valider border-0">VALIDER</button>
+                    <button type="submit" class="amissfs-newsletter-valider border-0">{!! __('words.common_validate') !!}</button>
                 </div>
             </div>
+
             <div class="my-4 d-flex justify-content-center align-items-center">
                 {!! trans('words.amissfs_last_newsletter') !!}
             </div>
             <div class="m-auto d-flex justify-content-center align-items-center pink-box width-264 height-62">
-                <a href="javascript:void(0);" class="text-center text-white riviera-20-lh text-decoration-none">Se désabonner de la newsletter</a>
+                <a href="javascript:void(0);" class="text-center text-white riviera-20-lh text-decoration-none">{!! __('words.amissfs_unsubscribe') !!}</a>
             </div>
         </div>
     </div>
     <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
         <div class="px-2 py-4 m-auto mt-3 mb-4 red-box d-flex flex-column">
-            <div class="mb-3 amissfs-newsletter-red-box-title">Vos abonnements :</div>
+            <div class="mb-3 amissfs-newsletter-red-box-title">{!! __('words.amissfs_your_subscriptions') !!}</div>
             <div class="d-flex align-items-center">
                 <input type="checkbox" class="amissfs-checkbox" name="bulletin" value="1" />
-                <label class="amissfs-newsletter-red-box ms-2">Bulle.n AMISSFS</label>
+                <label class="amissfs-newsletter-red-box ms-2">{!! __('words.amissfs_bulletin_amis') !!}</label>
             </div>
             <div class="d-flex align-items-center">
                 <input type="checkbox" class="amissfs-checkbox" name="romkurier" value="1" />
-                <label class="amissfs-newsletter-red-box ms-2">Rom-Kurier / Sì Sì No No</label>
+                <label class="amissfs-newsletter-red-box ms-2">{!! __('words.amissfs_rom_kurier_sisino') !!}</label>
             </div>
             <div class="d-flex align-items-center">
                 <input type="checkbox" class="amissfs-checkbox" name="events_amissfs" value="1" />
-                <label class="amissfs-newsletter-red-box ms-2">Événements AMISSFS</label>
+                <label class="amissfs-newsletter-red-box ms-2">{!! __('words.amissfs_events') !!}</label>
             </div>
             <div class="mt-3 d-flex justify-content-center align-items-center valider-color width-163 height-62 ms-3">
-                <button type="submit" class="amissfs-newsletter-valider border-0">VALIDER</button>
+                <button type="submit" class="amissfs-newsletter-valider border-0">{!! __('words.common_validate') !!}</button>
             </div>
         </div>
         <div class="container">
@@ -123,16 +128,18 @@
                 {!! trans('words.amissfs_last_newsletter') !!}
             </div>
             <div class="m-auto d-flex justify-content-center align-items-center pink-box width-264 height-62">
-                <a href="javascript:void(0);" class="text-center text-white riviera-20-lh text-decoration-none">Se désabonner de la newsletter</a>
+                <a href="javascript:void(0);" class="text-center text-white riviera-20-lh text-decoration-none">{!! __('words.amissfs_unsubscribe') !!}</a>
             </div>
         </div>
     </div>
 </form>
 <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
 <div class="mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
-<div class="black-bg-full d-flex align-items-center">
-    <marquee behavior="scroll" direction="right" scrollamount="12" class="text-white sang-blue-regular-20">PROTECTION DES DONNÉES / DATENSCHUTZE</marquee>
-</div>
+<a href="{{ route('footer.protection') }}" class="text-decoration-none">
+    <div class="black-bg-full d-flex align-items-center">
+        <marquee behavior="scroll" direction="right" scrollamount="12" class="text-white sang-blue-regular-20">{!! __('words.amissfs_data_protection') !!}</marquee>
+    </div>
+</a>
 @endsection
 
 

@@ -4,9 +4,9 @@
 @if($page == 1 || $page == 2)
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
             <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">POSITIONS</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
             <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
         </div>
     </div>
@@ -14,9 +14,9 @@
 @else
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
             <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">AGENDA</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
+           <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
             <a href="j{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
         </div>
     </div>
@@ -81,7 +81,7 @@
     <a href="javascript:void(0);" download class="participer-pdf-download">Nos principes (PDF)</a>
 </div>
 <div class="d-flex justify-content-center">
-    <a href="{{ route('civitas.question') }}" class="question-last-button d-flex justify-content-center align-items-center my-5">PLUS DES QUESTIONS ? </a>
+    <a href="{{ route('civitas.question') }}" class="question-last-button d-flex justify-content-center align-items-center my-5">QUESTIONS PRATIQUES</a>
 </div>
 @elseif($page == 1 )
 <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>

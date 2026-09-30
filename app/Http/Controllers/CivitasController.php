@@ -6,8 +6,7 @@ use App\Models\Section;
 use App\Models\Page;
 use App\Models\FormSubmission;
 use App\Models\User;
-use File;
-use Intervention\Image\ImageManager;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
@@ -45,7 +44,7 @@ class CivitasController extends Controller
         $votes = $this->modelPage->where('section_id', 5)->get();
 
         $latestnews = $this->modelPage->orderBy('created_at', 'desc')->where('section_id', 6)->where('is_active', '1')
-            ->where('is_deleted', '0')->take(4)->get();
+            ->take(4)->get();
 
 
         return view('civitas.home', compact('latestnews', 'votes'));
@@ -63,11 +62,12 @@ class CivitasController extends Controller
     /////////////////////NEWS///////////////////////////////
     public function generateSlug($title)
     {
-        $title = iconv('UTF-8', 'ASCII//TRANSLIT', $title);
-        $title = preg_replace('/[^a-zA-Z0-9\s]/', '', $title);
-        $title = preg_replace('/\s+/', ' ', $title);
-
-        return strtolower(str_replace(' ', '-', trim($title)));
+        // Safe iconv with error handling
+        $converted = @iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $title);
+        $title = $converted !== false ? $converted : $title;
+        
+        // Use Laravel's Str::slug for robust slug generation
+        return Str::slug($title);
     }
     public function civitasNews()
     {
@@ -116,7 +116,6 @@ class CivitasController extends Controller
 
         $comments = FormSubmission::where('source_page', 'like', '%' . $newsItem->url . '%')
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->orderBy('created_at', 'desc')
             ->get();
 
@@ -272,13 +271,11 @@ class CivitasController extends Controller
         // --- Data queries (same logic as yours) ---
         $recentEvent = $this->modelPage->where('section_id', 7)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->where($dateCol, '>=', now())
             ->orderBy($dateCol, 'asc')
             ->first();
 
         $events = $this->modelPage->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->where('section_id', 7)
             ->whereBetween($dateCol, [$startDate, $endDate])
             ->orderBy($dateCol, 'asc')
@@ -302,7 +299,6 @@ class CivitasController extends Controller
         // Upcoming list (if needed)
         $latestEvents = $this->modelPage->where('section_id', 7)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->where($dateCol, '>=', now())
             ->orderBy($dateCol, 'asc')
             ->get();
@@ -351,7 +347,6 @@ class CivitasController extends Controller
             $result = $this->modelPage
                 ->where('category', 'LIKE', '%' . $canton . '%')
                 ->where('is_active', 1)
-                ->where('is_deleted', 0)
                 ->first();
             if ($result) {
                 return response()->json([
@@ -428,13 +423,62 @@ class CivitasController extends Controller
     {
         return view('civitas.donate')->with('page', 0);
     }
-    public function  civitasSupport()
+    // public function  civitasSupport(\Illuminate\Http\Request $request)
+    // {
+    //     if ($request->has('amount')) {
+    //         session([
+    //             'selected_value' => $request->amount,
+    //             'custom_amount'  => $request->get('custom'),
+    //             'billing_cycle'  => 'monthly',
+    //         ]);
+    //     }
+    //     return view('civitas.donate')->with('page', 1);
+    // }
+
+    public function civitasSupport(\Illuminate\Http\Request $request)
     {
+        $customAmountLimit = 2500;
+
+        if ($request->has('amount')) {
+            $selectedValue = $request->amount;
+            $customAmount  = $request->get('custom');
+
+            // Check limit only when custom amount is being used
+            if ($selectedValue == 'custom' && $customAmount !== null) {
+                // Strip any non-numeric characters (e.g. "2,500" -> "2500")
+                $numericAmount = (float) preg_replace('/[^0-9.]/', '', $customAmount);
+
+                if ($numericAmount > $customAmountLimit) {
+                    return redirect()->back()->with(
+                        'amount_limit_error',
+                        __('words.donate_limit_message', [
+                            'amount' => $customAmountLimit,
+                            'email'  => 'secretariat@civitassuisse.ch',
+                        ])
+                    );
+                }
+            }
+
+            session([
+                'selected_value' => $selectedValue,
+                'custom_amount'  => $customAmount,
+                'billing_cycle'  => 'monthly',
+            ]);
+        }
+
         return view('civitas.donate')->with('page', 1);
     }
+
     ////////////////////////////SOUTENIR/////////////////////////
-    public function  civitasSoutenir()
+    public function  civitasSoutenir(\Illuminate\Http\Request $request)
     {
+        if ($request->has('amount')) {
+            session([
+                'selected_value' => $request->amount,
+                'custom_amount'  => $request->get('custom'),
+                'billing_cycle'  => 'monthly',
+            ]);
+        }
         $selectedValue = session('selected_value');
         $selectedPrice = session('custom_amount');
         return view('civitas.soutenir', compact('selectedValue', 'selectedPrice'));
@@ -460,14 +504,12 @@ class CivitasController extends Controller
 
         $latestevent = $this->modelPage->where('section_id', $section->id)
             ->where('is_active', '1')
-            ->where('is_deleted', '0')
             ->where('created_at', '>=', Carbon::now())
             ->orderBy('created_at', 'asc')
             ->first();
 
         $secondUpcomingEvent = $this->modelPage->where('section_id', $section->id)
             ->where('is_active', '1')
-            ->where('is_deleted', '0')
             ->where('created_at', '>=', Carbon::now())
             ->orderBy('created_at', 'asc')
             ->skip(1)
@@ -475,7 +517,6 @@ class CivitasController extends Controller
 
         $allpastevents = $this->modelPage->where('section_id', $section->id)
             ->where('is_active', '1')
-            ->where('is_deleted', '0')
             ->where('created_at', '<', Carbon::now())
             ->orderBy('created_at', 'desc')
             ->get();
@@ -488,21 +529,19 @@ class CivitasController extends Controller
             'secondUpcomingEvent' => $secondUpcomingEvent,
         ]);
     }
-    public function  civitasNextEvent($created_at, $user_name, $url)
+    public function  civitasNextEvent($url)
     {
         $route = \Request::path();
         $section = $this->modelSection->getSectionByRoute($route);
-        $createdAt = \Carbon\Carbon::createFromFormat('d-m-Y', $created_at);
-        $event = $this->modelPage->where('section_id', $section->id)->whereDate('created_at', $createdAt)->first();
+        $event = $this->modelPage->where('section_id', $section->id)->first();
 
         return view('civitas.events', compact('event'))->with('page', 1);
     }
-    public function  civitasEventDetails($created_at, $user_name, $title)
+    public function  civitasEventDetails($title)
     {
         $route = \Request::path();
         $section = $this->modelSection->getSectionByRoute($route);
-        $createdAt = \Carbon\Carbon::createFromFormat('d-m-Y', $created_at);
-        $event = $this->modelPage->where('section_id', $section->id)->whereDate('created_at', $createdAt)->first();
+        $event = $this->modelPage->where('section_id', $section->id)->first();
 
         return view('civitas.events', compact('event'))->with('page', 2);
     }
@@ -513,7 +552,6 @@ class CivitasController extends Controller
 
         $allpastevents = $this->modelPage->where('section_id', $section->id)
             ->where('is_active', '1')
-            ->where('is_deleted', '0')
             ->where('created_at', '<', Carbon::now())
             ->orderBy('created_at', 'desc')
             ->get();
@@ -525,17 +563,21 @@ class CivitasController extends Controller
         ]);
     }
     //////////////////////////SOUTENIR-PAYMENT////////////////////////////////
-    public function  soutenirPaymentEbanking()
+    public function  soutenirPaymentCash()
     {
         return view('civitas.soutenir_payment')->with('page', 0);
-    }
-    public function  soutenirPaymentReceipt()
-    {
-        return view('civitas.soutenir_payment')->with('page', 1);
     }
     public function  soutenirPaymentCrypto()
     {
         return view('civitas.soutenir_payment')->with('page', 2);
+    }
+    public function  soutenirPaymentBanking()
+    {
+        return view('civitas.soutenir_payment')->with('page', 3);
+    }
+    public function  soutenirPaymentReceipt()
+    {
+        return view('civitas.soutenir_payment')->with('page', 4);
     }
     //////////////////////////MEMBERSHIP-PAYMENT////////////////////////////////
     public function  memberPaymentEbanking()

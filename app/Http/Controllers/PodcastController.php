@@ -5,17 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\Podcast;
 use App\Models\PodcastCategory;
 use App\Models\AudioFile;
-use App\Rules\MatchOldPassword;
-use File;
-use Hash;
+use Illuminate\Support\Facades\File;
 use Intervention\Image\ImageManager;
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class PodcastController extends Controller
 {
+    /** @var Podcast */
     protected $modelPodcast;
+    /** @var PodcastCategory */
     protected $modelPodcastCategory;
+    /** @var AudioFile */
     protected $modelAudioFile;
 
     public function __construct(Podcast $podcastM, PodcastCategory $podcastcatM, AudioFile $audioM)
@@ -25,6 +26,12 @@ class PodcastController extends Controller
         $this->modelAudioFile = $audioM;
     }
 
+    /**
+     * Store a new podcast.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function store(Request $request)
     {
         if ($this->modelPodcast->isPodcastValid($request->all())) {
@@ -35,8 +42,7 @@ class PodcastController extends Controller
             $newpodcast->title = $request->title;
             $newpodcast->author = $request->author;
             $newpodcast->location = $request->location;
-            $newpodcast->start_date = $request->start_date;
-            $newpodcast->end_date = $request->end_date;
+            $newpodcast->date = $request->date;
             $newpodcast->description = $request->description;
 
             $newpodcast->save();
@@ -90,6 +96,13 @@ class PodcastController extends Controller
     }
 
 
+    /**
+     * Update podcast.
+     *
+     * @param Request $request
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function update(Request $request, $id)
     {
         if ($this->modelPodcast->isEditPodcastValid($request->all())) {
@@ -102,8 +115,7 @@ class PodcastController extends Controller
             $editpodcast->title = $request->title;
             $editpodcast->author = $request->author;
             $editpodcast->location = $request->location;
-            $editpodcast->start_date = $request->start_date;
-            $editpodcast->end_date = $request->end_date;
+            $editpodcast->date = $request->date;
             $editpodcast->description = $request->description;
 
             $folderName = $editpodcast->podcast_identifier;
@@ -173,26 +185,29 @@ class PodcastController extends Controller
         }
     }
 
+    /**
+     * Delete podcast item.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function deleteItem(Request $request)
     {
         $item = $this->modelPodcast->find($request->id);
 
         if ($item) {
-            $item->is_deleted = 1;
+            $item->delete(); // Uses SoftDeletes
             $item->keywords()->detach();
-            $item->save();
 
-            if ($request->ajax()) {
-                return response()->json([
-                    'success' => true,
-                    'message' => 'Item deleted successfully.',
-                ]);
-            }
-        } else {
             return response()->json([
-                'success' => false,
-                'errors' => 'Item not found.'
+                'success' => true,
+                'message' => 'Item deleted successfully.',
             ]);
         }
+        
+        return response()->json([
+            'success' => false,
+            'errors' => 'Item not found.'
+        ], 404);
     }
 }

@@ -3,7 +3,7 @@
 @section('logo')
 <div class="navbar-brand d-flex justify-content-center align-items-center">
     <a href="{{ route('amissfs.home') }}" class="logo-absolute">
-        <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block logo-color" alt="logo" />
+        <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/logo/responsive/logo_amissfs_2.svg') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
 </div>
@@ -23,11 +23,11 @@
                     <a href="javascript:void(0);" class="search-button h-100">
                         <img src="{{ asset('img/search.png') }}" class="" alt="search" />
                     </a>
-                    <input type="search" name="search" class="form-control podcast-search" placeholder="CONFÉRENCES, SERMONS, CHANTS">
+                    <input type="search" name="search" class="form-control podcast-search" placeholder="{!! __('words.amissfs_search_placeholder') !!}">
                 </div>
                 @auth
                 <a href="{{ route('podcast-history') }}" class="podcast-history ms-5">
-                    HISTORIQUE <i class="fa-solid fa-rotate-left"></i>
+                    {!! __('words.amissfs_history') !!} <i class="fa-solid fa-rotate-left"></i>
                 </a>
                 @endauth
             </div>
@@ -42,12 +42,12 @@
             <a href="javascript:void(0);" class="search-button h-100">
                 <img src="{{ asset('img/search.png') }}" class="" alt="search" />
             </a>
-            <input type="search" name="search" class="form-control podcast-search" placeholder="CONFÉRENCES, SERMONS, CHANTS">
+            <input type="search" name="search" class="form-control podcast-search" placeholder="{!! __('words.amissfs_search_placeholder') !!}">
         </div>
         <div class="d-flex justify-content-end ">
             @auth
             <a href="{{ route('podcast-history') }}" class="podcast-history">
-                HISTORIQUE <i class="fa-solid fa-rotate-left"></i>
+                {!! __('words.amissfs_history') !!} <i class="fa-solid fa-rotate-left"></i>
             </a>
             @endauth
             @guest
@@ -62,7 +62,7 @@
 <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
     <div class="mx-5">
         <div class="searchResult">
-            <div class="mb-5 podcast-home-category">Catégories</div>
+            <div class="mb-5 podcast-home-category">{!! __('words.amissfs_categories') !!}</div>
             <div class="p-3 podcast-home-grid">
                 @foreach($categories as $category)
                 <a href="{{ route('podcast-subcategory', $category->url) }}"
@@ -81,8 +81,8 @@
     </div>
     <div class="my-5">
         <div class="podcast-red-bg d-flex flex-column justify-content-center align-items-center">
-            <div class="podcast-bottom-title">Les prochaines activités de Civitas Suisse et des Amis de Saint François de Sales</div>
-            <a href="{{ route('civitas.events') }}" class="mt-4 d-flex justify-content-center align-items-center podcast-bottom-button">LE CALENDRIER</a>
+            <div class="podcast-bottom-title">{!! __('words.amissfs_upcoming_activities') !!}</div>
+            <a href="{{ route('civitas.events') }}" class="mt-4 d-flex justify-content-center align-items-center podcast-bottom-button">{!! __('words.amissfs_calendar') !!}</a>
         </div>
     </div>
 </div>
@@ -90,7 +90,7 @@
     <div class="container">
         <div class="searchResult">
             <div class="d-flex justify-content-start">
-                <div class="mb-4 podcast-home-category">Catégories</div>
+                <div class="mb-4 podcast-home-category">{!! __('words.amissfs_categories') !!}</div>
             </div>
             <div class="p-3 podcast-home-grid">
                 @foreach($categories as $category)
@@ -107,8 +107,8 @@
         </div>
         <div class="mt-5">
             <div class="podcast-red-bg d-flex flex-column justify-content-center align-items-center">
-                <div class="podcast-bottom-title">Les prochaines activités de <br>Civitas Suisse</div>
-                <a href="javascript:void(0);" class="mt-3 d-flex justify-content-center align-items-center podcast-bottom-button">LE CALENDRIER</a>
+                <div class="podcast-bottom-title">{!! __('words.amissfs_upcoming_activities_mobile') !!}</div>
+                <a href="javascript:void(0);" class="mt-3 d-flex justify-content-center align-items-center podcast-bottom-button">{!! __('words.amissfs_calendar') !!}</a>
             </div>
         </div>
     </div>

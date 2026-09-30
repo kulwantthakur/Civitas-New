@@ -22,8 +22,7 @@
         data-author="{{ $podcast->author }}"
         data-location="{{ $podcast->location }}"
         data-keywords="{{ $podcast->keywords->pluck('keyword')->implode(',') }}"
-        data-start="{{ $podcast->start_date }}"
-        data-end="{{ $podcast->end_date }}"
+        data-date="{{ $podcast->date }}"
         data-description="{{ htmlentities($podcast->description) }}"
         data-files='@json($podcast->audioFiles)'>
         Edit
@@ -50,11 +49,11 @@
                     <a href="javascript:void(0);" class="search-button h-100">
                         <img src="{{ asset('img/search.png') }}" class="" alt="search" />
                     </a>
-                    <input type="search" name="search" class="form-control podcast-search" placeholder="CONFÉRENCES, SERMONS, CHANTS">
+                    <input type="search" name="search" class="form-control podcast-search" placeholder="{!! __('words.amissfs_search_placeholder') !!}">
                 </div>
                 @auth
                 <a href="{{ route('podcast-history') }}" class="podcast-history ms-5">
-                    HISTORIQUE <i class="fa-solid fa-rotate-left"></i>
+                    {!! __('words.amissfs_history') !!} <i class="fa-solid fa-rotate-left"></i>
                 </a>
                 @endauth
             </div>
@@ -96,8 +95,8 @@
     </div>
     <div class="my-5">
         <div class="podcast-red-bg d-flex flex-column justify-content-center align-items-center">
-            <div class="mb-4 podcast-bottom-title">Rejoignez Civitas !</div>
-            <a href="{{ route('civitas.member') }}" class="d-flex justify-content-center align-items-center podcast-bottom-button">EN SAVOIR PLUS</a>
+            <div class="mb-4 podcast-bottom-title">{!! __('words.amissfs_join_civitas') !!}</div>
+            <a href="{{ route('civitas.member') }}" class="d-flex justify-content-center align-items-center podcast-bottom-button">{!! __('words.common_learn_more') !!}</a>
         </div>
     </div>
 </div>
@@ -123,8 +122,8 @@
         </div>
         <div class="mt-5">
             <div class="podcast-red-bg d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-4 podcast-bottom-title podcast-big-font-responsive">Rejoignez Civitas !</div>
-                <a href="{{ route('civitas.member') }}" class="d-flex justify-content-center align-items-center podcast-bottom-button">EN SAVOIR PLUS</a>
+                <div class="mb-4 podcast-bottom-title podcast-big-font-responsive">{!! __('words.amissfs_join_civitas') !!}</div>
+                <a href="{{ route('civitas.member') }}" class="d-flex justify-content-center align-items-center podcast-bottom-button">{!! __('words.common_learn_more') !!}</a>
             </div>
         </div>
     </div>
@@ -167,11 +166,7 @@
                             <div class="podcast-title-specific text-uppercase">{{ $podcast->title }}</div>
                             <div class="mb-1 podcast-location-specific text-uppercase">{{ $podcast->location }}</div>
                             <div class="mb-4 podcast-location-specific text-uppercase">
-                                @if($podcast->start_date && $podcast->end_date)
-                                {{ \Carbon\Carbon::parse($podcast->start_date)->format('d.m') }} - {{ \Carbon\Carbon::parse($podcast->end_date)->format('d.m.Y') }}
-                                @elseif($podcast->start_date)
-                                {{ \Carbon\Carbon::parse($podcast->start_date)->format('d.m.Y') }}
-                                @endif
+                                {{ $podcast->date }}
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="podcast-author-specific text-uppercase">{{ $podcast->author }}</div>
@@ -181,18 +176,18 @@
                                 </a>
                             </div>
                             <div class="space-50"></div>
-                            <div class="mb-4 podcast-description-title">Descriptif</div>
-                            <div class="podcast-description">{!! $podcast->description ?? 'Description not available.' !!}</div>
+                            <div class="mb-4 podcast-description-title">{!! __('words.amissfs_description') !!}</div>
+                            <div class="podcast-description">{!! $podcast->description ?? __('words.amissfs_description_unavailable') !!}</div>
                         </div>
                     </div>
                 </div>
                 @if(isset($podcastDetails['audio_files']) && count($podcastDetails['audio_files']) > 1)
                 <div class="px-5">
-                    <div class="mb-4 multi-audio-title">Pistes</div>
+                    <div class="mb-4 multi-audio-title">{!! __('words.amissfs_tracks') !!}</div>
                     <div class="d-flex flex-column">
                         @foreach($podcastDetails['audio_files'] as $index => $audio)
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="my-2 multi-audio-title-index">Piste {{ $index + 1 }}</div>
+                            <div class="my-2 multi-audio-title-index">{!! __('words.amissfs_track') !!} {{ $index + 1 }}</div>
                             <audio id="audioPlayer-{{ $index }}" class="audio-player d-none" controls>
                                 <source src="{{ asset($audio['file_path']) }}" type="audio/mp3">
                                 Your browser does not support the audio element.
@@ -207,7 +202,7 @@
                 @endif
                 <div class="px-4">
                     <div class="px-3 my-5 border-podcast"></div>
-                    <div class="mb-4 multi-audio-title">Duo même auteur</div>
+                    <div class="mb-4 multi-audio-title">{!! __('words.amissfs_same_author') !!}</div>
                     <div class="podcast-home-grid">
                         @foreach($podcastsByAuthor as $podcast)
                         <div class="mb-5 position-relative">
@@ -230,8 +225,8 @@
     </div>
     <div class="my-5">
         <div class="podcast-red-bg d-flex flex-column justify-content-center align-items-center">
-            <div class="mb-4 podcast-bottom-title">Les prochaines activites de Civitas Suisse</div>
-            <a href="{{ route('civitas.events') }}" class="d-flex justify-content-center align-items-center podcast-bottom-button">LE CALENDRIER</a>
+            <div class="mb-4 podcast-bottom-title">{!! __('words.amissfs_upcoming_civitas') !!}</div>
+            <a href="{{ route('civitas.events') }}" class="d-flex justify-content-center align-items-center podcast-bottom-button">{!! __('words.amissfs_calendar') !!}</a>
         </div>
     </div>
 </div>
@@ -268,11 +263,7 @@
                         <div class="mt-5 podcast-title-specific text-uppercase">{{ $podcast->title }}</div>
                         <div class="my-2 podcast-location-specific text-uppercase">{{ $podcast->location }}</div>
                         <div class="podcast-location-specific text-uppercase">
-                            @if($podcast->start_date && $podcast->end_date)
-                            {{ \Carbon\Carbon::parse($podcast->start_date)->format('d.m') }} - {{ \Carbon\Carbon::parse($podcast->end_date)->format('d.m.Y') }}
-                            @elseif($podcast->start_date)
-                            {{ \Carbon\Carbon::parse($podcast->start_date)->format('d.m.Y') }}
-                            @endif
+                            {{ $podcast->date }}
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="my-4 podcast-author-specific text-uppercase">{{ $podcast->author }}</div>
@@ -281,17 +272,17 @@
                                 <img src="{{ asset('img/download-responsive.png') }}" class="" alt="download logo" />
                             </a>
                         </div>
-                        <div class="mb-3 podcast-description-title">Descriptif</div>
-                        <div class="podcast-description">{!! $podcast->description ?? 'Description not available.' !!}</div>
+                        <div class="mb-3 podcast-description-title">{!! __('words.amissfs_description') !!}</div>
+                        <div class="podcast-description">{!! $podcast->description ?? __('words.amissfs_description_unavailable') !!}</div>
                     </div>
                 </div>
                 @if(isset($podcastDetails['audio_files']) && count($podcastDetails['audio_files']) > 1)
                 <div class="my-4">
-                    <div class="mb-2 multi-audio-title">Pistes</div>
+                    <div class="mb-2 multi-audio-title">{!! __('words.amissfs_tracks') !!}</div>
                     <div class="d-flex flex-column">
                         @foreach($podcastDetails['audio_files'] as $index => $audio)
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="my-2 multi-audio-title-index">Piste {{ $index + 1 }}</div>
+                            <div class="my-2 multi-audio-title-index">{!! __('words.amissfs_track') !!} {{ $index + 1 }}</div>
                             <audio id="audioPlayer-{{ $index }}" class="audio-player d-none" controls>
                                 <source src="{{ asset($audio['file_path']) }}" type="audio/mp3">
                                 Your browser does not support the audio element.
@@ -307,7 +298,7 @@
             </div>
             <div class="container">
                 <div class="my-3 boder-podcast"></div>
-                <div class="mb-3 multi-audio-title px-0 px-md-4">Duo même auteur</div>
+                <div class="mb-3 multi-audio-title px-0 px-md-4">{!! __('words.amissfs_same_author') !!}</div>
                 <div class="podcast-home-grid px-0 px-md-4">
                     @foreach($podcastsByAuthor as $podcastAuthor)
                     <div class="mb-4 position-relative">
@@ -328,8 +319,8 @@
         </div>
         <div class="mt-3">
             <div class="podcast-red-bg d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-4 podcast-bottom-title">Les prochaines activites de<br>Civitas Suisse</div>
-                <a href="{{ route('civitas.events') }}" class="d-flex justify-content-center align-items-center podcast-bottom-button">LE CALENDRIER</a>
+                <div class="mb-4 podcast-bottom-title">{!! __('words.amissfs_upcoming_civitas_mobile') !!}</div>
+                <a href="{{ route('civitas.events') }}" class="d-flex justify-content-center align-items-center podcast-bottom-button">{!! __('words.amissfs_calendar') !!}</a>
             </div>
         </div>
     </div>
@@ -387,13 +378,9 @@
                             </select>
                         </div>
                         <div class="my-3"></div>
-                        <div class="col-md-6">
-                            <label class="form-label">Starting Date*</label>
-                            <input type="text" class="form-control custom-form" name="start_date" placeholder="DD-MM-YYYY" id="flatpickr-datetime-create-podcast-start-date" required />
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Ending Date*</label>
-                            <input type="text" class="form-control custom-form" name="end_date" placeholder="DD-MM-YYYY" id="flatpickr-datetime-create-podcast-end-date" />
+                        <div class="col-md-12">
+                            <label class="form-label">Date</label>
+                            <input type="text" class="form-control custom-form" name="date" placeholder="e.g. 15 - 20.07.1996" />
                         </div>
                         <div class="my-3"></div>
                         <div class="col-md-12">
@@ -459,13 +446,9 @@
                             </select>
                         </div>
                         <div class="my-3"></div>
-                        <div class="col-md-6">
-                            <label class="form-label">Starting Date</label>
-                            <input type="text" class="form-control custom-form" name="start_date" value="" id="flatpickr-datetime-edit-podcast-start-date">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Ending Date</label>
-                            <input type="text" class="form-control custom-form" name="end_date" value="" id="flatpickr-datetime-edit-podcast-end-date" autocomplete="off">
+                        <div class="col-md-12">
+                            <label class="form-label">Date</label>
+                            <input type="text" class="form-control custom-form" name="date" id="podcastEditDate" value="">
                         </div>
                         <div class="my-3"></div>
                         <div class="col-md-12">
@@ -734,16 +717,6 @@
         }
     });
 
-    const startDateInput = $('#flatpickr-datetime-edit-podcast-start-date').flatpickr({
-        enableTime: false,
-        dateFormat: 'd-m-Y'
-    });
-    const endDateInput = $('#flatpickr-datetime-edit-podcast-end-date').flatpickr({
-        enableTime: false,
-        dateFormat: 'd-m-Y',
-        allowInput: true,
-    });
-
     $('#summernote-description-edit').summernote({
         height: 300,
         placeholder: 'Write your content here...',
@@ -762,10 +735,7 @@
         $('input[name="author"]').val($btn.data('author') || '');
         $('input[name="location"]').val($btn.data('location') || '');
 
-        const start = $btn.data('start');
-        const end = $btn.data('end');
-        if (startDateInput) startDateInput.setDate(start, true, 'd-m-Y');
-        if (endDateInput) endDateInput.setDate(end, true, 'd-m-Y');
+        $('#podcastEditDate').val($btn.data('date') || '');
 
         selectKeywordsByText('keywordSelectEdit', $btn.data('keywords'));
 

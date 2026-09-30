@@ -189,4 +189,8 @@ class RdpController extends Controller
 
         return view('rdp.subcategory', compact('categoryTitle', 'content'))->with('page', 2);
     }
+    public function armee_bleue_du_coeur()
+    {
+        return view('rdp.armee_bleue_du_coeur');
+    }
 }

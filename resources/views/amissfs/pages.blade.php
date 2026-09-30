@@ -13,7 +13,7 @@
         <div class="amissfs-title-logo-responsive">L’ASSOCIATION</div>
     </div>
 </div>
-@elseif($page == 1 || $page == 2 || $page == 3 || $page == 5)
+@elseif($page == 1 || $page == 2 || $page == 3 || $page == 5 || $page == 8)
 <div class="navbar-brand d-flex justify-content-center align-items-center">
     <a href="{{ route('amissfs.home') }}" class="logo-absolute">
         <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
@@ -24,7 +24,7 @@
 <div class="navbar-brand d-flex justify-content-center align-items-center">
     <a href="{{ route('amissfs.home') }}" class="">
         <img src="{{ asset('/img/logo/amissfs_logo_si_si.svg') }}" class="" alt="logo" />
-        <!-- <img src="{{ asset('/img/logo/responsive/logo_amissfs_2.svg') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" /> -->
+        <img src="{{ asset('/img/logo/responsive/logo_amissfs_2.svg') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
 </div>
 @elseif($page == 6)
@@ -196,101 +196,65 @@
                     <div class="d-flex align-items-center flex-column">
                         <div class="archive-title">ARCHIVE</div>
                         <div class="mb-3 black-line-amissfs width-49"></div>
-                        <div class="mt-3 suisse-italic-25 text-dark">
-                            “Tout par amour. Rien par force“
-                        </div>
-                        <div class="amissfs-title-archive-blue">
-                            St. François de Sales
-                        </div>
+                        <div class="mt-3 suisse-italic-25 text-dark">“Tout par amour. Rien par force “</div>
+                        <div class="amissfs-title-archive-blue">St. François de Sales</div>
                     </div>
                 </div>
-
                 <div class="space-100"></div>
-
                 <div class="archive-absolute-bottom">
                     <div class="bulletin-title-bold ms-4">Le Bulletin</div>
                     <div class="d-flex flex-column">
-                        <!-- Année -->
                         <div class="mt-5 d-flex justify-content-start align-items-center">
                             <label class="bulletin-label text-start width-107 ms-4">Année:</label>
-                            <select
-                                name="annee"
-                                class="archive-bulletin-page text-dark width-115 height-38 archive-bulletin-page-img annee"
-                            >
-                                <option value="">Toutes</option>
-                                <option value="2025">2025</option>
-                                <option value="2024">2024</option>
-                                <option value="2023">2023</option>
+                            <select name="annee" class="archive-bulletin-page text-dark width-115 height-38 archive-bulletin-page-img annee">
                             </select>
                         </div>
-
-                        <!-- Afficher -->
                         <div class="mt-3 d-flex justify-content-start align-items-center">
                             <label class="bulletin-label text-start width-107 ms-4">Afficher</label>
-                            <select
-                                name="afficher"
-                                class="archive-bulletin-page text-dark width-95 height-38 archive-bulletin-page-img afficher"
-                            >
-                                <option value="15">15</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="all">TOUT</option>
+                            <select name="afficher" class="archive-bulletin-page text-dark width-95 height-38 archive-bulletin-page-img afficher">
+                                <option class="archive-bulletin-page text-dark" value="15">15</option>
+                                <option class="archive-bulletin-page text-dark" value="25">25</option>
+                                <option class="archive-bulletin-page text-dark" value="50">50</option>
+                                <option class="archive-bulletin-page text-dark" value="all">TOUT</option>
                             </select>
                         </div>
-
-                        <!-- Filtre -->
                         <div class="mt-3 d-flex justify-content-start align-items-center">
                             <label class="bulletin-label text-start width-107 ms-4">Filtre:</label>
-                            <input
-                                type="text"
-                                name="filter"
-                                placeholder="Rechercher..."
-                                class="width-200 height-38 bulletin-input filter-amissfs"
-                            />
+                            <input type="text" name="filter" class="width-200 height-38 bulletin-input filter-amissfs">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="space-100"></div>
-
         <div class="mt-5 row">
             <div class="flex-row d-flex">
                 <div class="col-12">
                     <div class="flex-row d-flex">
                         <div class="col-4 col-sm-4 col-md-4 col-lg-6 col-xl-6 col-xxl-6">
-                            <div class="archive-bulletin text-dark">Numéro</div>
+                            <div class="archive-bulletin text-dark">Numero</div>
                         </div>
                         <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
-                            <div class="archive-bulletin text-dark">Titre</div>
+                            <div class="archive-bulletin text-dark">Title</div>
                         </div>
                     </div>
-
-                    <!-- Results Area -->
-                    <div class="results-filter-amissfs" data-section-id="{{ $section_id }}"></div>
-
-                    <!-- Pagination Controls -->
-                    <div class="text-center mt-4">
-                        <button class="loadMore btn btn-primary px-4 py-2" style="display:none;">
-                            Charger plus
-                        </button>
-                        <div class="loadingSpinner mt-2" style="display:none;">
-                            <img src="{{ asset('img/loading.gif') }}" alt="Loading..." width="40" />
-                        </div>
+                    <div class="results-filter-amissfs"
+                        data-section-id="{{ $section_id }}"
+                        data-url="{{ route('filter-results', ['sectionId' => $section_id]) }}"
+                        data-exclude-latest="1">
                     </div>
                 </div>
             </div>
+            <div class="loadMore" style="display: none; text-align: center;">
+                <img src="{{ asset('img/loading.gif') }}" alt="Loading..." />
+            </div>
         </div>
-
         <div class="space-100"></div>
-
         <div class="m-auto d-flex red-box width-201 height-36 justify-content-center align-items-center">
-            <a href="{{ route('dons') }}" class="text-white archive-bulletin">FAIRE UN DON</a>
+            <a href="{{ route('dons') }}" class="text-white archive-bulletin">FAIRE UN DON </a>
         </div>
     </div>
 </div>
-
 <div class="space-100"></div>
 @elseif($page == 3)
 <div class="container">
@@ -323,24 +287,24 @@
                 <input type="text" id="fname-amissfs" class="commander-input" name="firstname"
                     value="@auth{{ auth()->user()->firstname }}@endauth"
                     @auth readonly @else data-required="true" @endauth>
-                     <span class="error-icon" style="display: none;">!</span>
+                <span class="error-icon" style="display: none;">!</span>
             </div>
             <div class="mt-3 d-flex align-items-center input-wrapper">
                 <label class="commander-label width-155">Prénom *</label>
                 <input type="text" id="lname-amissfs" class="commander-input" name="lastname"
                     value="@auth{{ auth()->user()->lastname }}@endauth"
                     @auth readonly @else data-required="true" @endauth>
-                     <span class="error-icon" style="display: none;">!</span>
+                <span class="error-icon" style="display: none;">!</span>
             </div>
             <div class="mt-3 d-flex align-items-center input-wrapper">
                 <label class="commander-label width-155">Adresse et numéro *</label>
                 <input type="text" id="address-amissfs" class="commander-input" name="address" data-required="true">
-                 <span class="error-icon" style="display: none;">!</span>
+                <span class="error-icon" style="display: none;">!</span>
             </div>
             <div class="mt-3 d-flex align-items-center input-wrapper">
                 <label class="commander-label width-155">NPA et Localité *</label>
                 <input type="text" id="post-code-amissfs" class="commander-input" name="post_code" data-required="true">
-                 <span class="error-icon" style="display: none;">!</span>
+                <span class="error-icon" style="display: none;">!</span>
             </div>
             <div class="mt-3 d-flex align-items-center">
                 <label class="commander-label width-155">Canton/Province</label>
@@ -355,7 +319,7 @@
                 <input type="email" id="email-amissfs" class="commander-input" name="email"
                     value="@auth{{ auth()->user()->email }}@endauth"
                     @auth readonly @else data-required="true" @endauth>
-                     <span class="error-icon" style="display: none;">!</span>
+                <span class="error-icon" style="display: none;">!</span>
             </div>
             <div class="mt-3 d-flex align-items-center">
                 <label class="commander-label width-155">Articles</label>
@@ -392,9 +356,11 @@
     </div>
 </div>
 <div class="space-50"></div>
-<div class="black-bg-full d-flex align-items-center">
-    <marquee behavior="scroll" direction="right" scrollamount="12" class="text-white sang-blue-regular-20">PROTECTION DES DONNÉES / DATENSCHUTZE</marquee>
-</div>
+<a href="{{ route('footer.protection') }}" class="text-decoration-none">
+    <div class="black-bg-full d-flex align-items-center">
+        <marquee behavior="scroll" direction="right" scrollamount="12" class="text-white sang-blue-regular-20">PROTECTION DES DONNÉES/DATENSCHUTZ/PROTEZIONE DEI DATI</marquee>
+    </div>
+</a>
 @elseif($page == 4)
 <div class="container">
     <div class="d-flex justify-content-center align-items-center flex-column ">
@@ -433,109 +399,69 @@
 @elseif($page == 5)
 <div class="container">
     <div class="m-auto d-flex flex-column der-rom-width">
-        <div class="position-relative">
-            <div class="archive-amissfs-bg">
-                <div class="absolute-center w-100">
-                    <div class="d-flex align-items-center flex-column">
-                        <div class="archive-title">ARCHIVE</div>
-                        <div class="mb-3 black-line-amissfs width-49"></div>
-                        <div class="mt-3 suisse-italic-25 text-dark">
-                            “ Tu es Petrus “
-                        </div>
-                        <div class="amissfs-title-archive-blue">
-                            ( Mt 16 : 18 )
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-100"></div>
-
-                <div class="archive-absolute-bottom">
-                    <div class="bulletin-title-bold ms-4">Der Rom Kurier</div>
-                    <div class="d-flex flex-column">
-                        <!-- Année -->
-                        <div class="mt-5 d-flex justify-content-start align-items-center">
-                            <label class="bulletin-label text-start width-107 ms-4">Année:</label>
-                            <select
-                                name="annee"
-                                class="archive-bulletin-page text-dark width-115 height-38 archive-bulletin-page-img annee"
-                            >
-                                <option value="">Toutes</option>
-                                <option value="2025">2025</option>
-                                <option value="2024">2024</option>
-                                <option value="2023">2023</option>
-                            </select>
-                        </div>
-
-                        <!-- Afficher -->
-                        <div class="mt-3 d-flex justify-content-start align-items-center">
-                            <label class="bulletin-label text-start width-107 ms-4">Afficher</label>
-                            <select
-                                name="afficher"
-                                class="archive-bulletin-page text-dark width-95 height-38 archive-bulletin-page-img afficher"
-                            >
-                                <option value="15">15</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="all">TOUT</option>
-                            </select>
-                        </div>
-
-                        <!-- Filtre -->
-                        <div class="mt-3 d-flex justify-content-start align-items-center">
-                            <label class="bulletin-label text-start width-107 ms-4">Filtre:</label>
-                            <input
-                                type="text"
-                                name="filter"
-                                placeholder="Rechercher..."
-                                class="width-200 height-38 bulletin-input filter-amissfs"
-                            />
-                        </div>
-                    </div>
+        <div class="archive-amissfs-bg position-relative">
+            <div class="absolute-center w-100">
+                <div class="d-flex align-items-center flex-column">
+                    <div class="archive-title">ARCHIVE</div>
+                    <div class="mb-3 black-line-amissfs width-49"></div>
+                    <div class="mt-3 suisse-italic-25 text-dark">“ Tu es Petrus “</div>
+                    <div class="amissfs-title-archive-blue">( Mt 16 : 18 )</div>
                 </div>
             </div>
+            <div class="space-100"></div>
+            <div class="archive-absolute-bottom">
+                <div class="bulletin-title-bold ms-4">Der Rom Kurier</div>
+            </div>
         </div>
-
-        <div class="space-100"></div>
-
+        <div class="d-flex flex-column">
+            <div class="mt-5 d-flex justify-content-start align-items-center">
+                <label class="bulletin-label text-start width-107 ms-4">Année:</label>
+                <select name="annee" class="archive-bulletin-page text-dark width-115 height-38 archive-bulletin-page-img annee">
+                </select>
+            </div>
+            <div class="mt-3 d-flex justify-content-start align-items-center">
+                <label class="bulletin-label text-start width-107 ms-4">Afficher</label>
+                <select name="afficher" class="archive-bulletin-page text-dark width-95 height-38 archive-bulletin-page-img afficher">
+                    <option class="archive-bulletin-page text-dark" value="15">15</option>
+                    <option class="archive-bulletin-page text-dark" value="25">25</option>
+                    <option class="archive-bulletin-page text-dark" value="50">50</option>
+                    <option class="archive-bulletin-page text-dark" value="all">TOUT</option>
+                </select>
+            </div>
+            <div class="mt-3 d-flex justify-content-start align-items-center">
+                <label class="bulletin-label text-start width-107 ms-4">Filtre:</label>
+                <input type="text" name="filter" class="width-200 height-38 bulletin-input filter-amissfs">
+            </div>
+        </div>
         <div class="mt-5 row">
             <div class="flex-row d-flex">
                 <div class="col-12">
                     <div class="flex-row d-flex">
                         <div class="col-4 col-sm-4 col-md-4 col-lg-6 col-xl-6 col-xxl-6">
-                            <div class="archive-bulletin text-dark">Numéro</div>
+                            <div class="archive-bulletin text-dark">Numero</div>
                         </div>
                         <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
-                            <div class="archive-bulletin text-dark">Titre</div>
+                            <div class="archive-bulletin text-dark">Title</div>
                         </div>
                     </div>
-
-                    <!-- Results Area -->
-                    <div class="results-filter-amissfs" data-section-id="{{ $section_id }}"></div>
-
-                    <!-- Pagination Controls -->
-                    <div class="text-center mt-4">
-                        <button class="loadMore btn btn-primary px-4 py-2" style="display:none;">
-                            Charger plus
-                        </button>
-                        <div class="loadingSpinner mt-2" style="display:none;">
-                            <img src="{{ asset('img/loading.gif') }}" alt="Loading..." width="40" />
-                        </div>
+                    <div class="results-filter-amissfs"
+                        data-section-id="{{ $section_id }}"
+                        data-url="{{ route('filter-results', ['sectionId' => $section_id]) }}"
+                        data-exclude-latest="1">
                     </div>
                 </div>
             </div>
+            <div class="loadMore" style="display: none; text-align: center;">
+                <img src="{{ asset('img/loading.gif') }}" alt="Loading..." />
+            </div>
         </div>
-
         <div class="space-100"></div>
-
         <div class="m-auto d-flex red-box width-201 height-36 justify-content-center align-items-center">
-            <a href="{{ route('dons') }}" class="text-white archive-bulletin">FAIRE UN DON</a>
+            <a href="{{ route('dons') }}" class="text-white archive-bulletin">FAIRE UN DON </a>
         </div>
     </div>
 </div>
-
 <div class="space-100"></div>
-
 @elseif($page == 6)
 <div class="container">
     <div class="mb-5 d-flex flex-column">
@@ -638,9 +564,11 @@
     </div>
 </div>
 <div class="space-50"></div>
-<div class="black-bg-full d-flex align-items-center">
-    <marquee behavior="scroll" direction="right" scrollamount="12" class="text-white sang-blue-regular-20">PROTECTION DES DONNÉES / DATENSCHUTZE</marquee>
-</div>
+<a href="{{ route('footer.protection') }}" class="text-decoration-none">
+    <div class="black-bg-full d-flex align-items-center">
+        <marquee behavior="scroll" direction="right" scrollamount="12" class="text-white sang-blue-regular-20">PROTECTION DES DONNÉES/DATENSCHUTZ/PROTEZIONE DEI DATI</marquee>
+    </div>
+</a>
 @elseif($page == 7)
 <div class="container">
     <div class="d-flex justify-content-center align-items-center flex-column ">
@@ -1382,7 +1310,7 @@
                     $("#form-romkurier")[0].reset();
                 } else {
                     var errors = response.errors;
-                   $.each(errors, function(field, messages) {
+                    $.each(errors, function(field, messages) {
                         var inputField = $('[name="' + field + '"]');
                         inputField.addClass("input-error-border");
                         inputField.closest(".input-wrapper").find(".error-icon").show();

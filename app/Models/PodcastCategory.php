@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Validator;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Validator;
 
 class PodcastCategory extends Model
 {
+    use SoftDeletes;
 
     public $timestamps = true;
     /**
@@ -23,6 +25,31 @@ class PodcastCategory extends Model
     protected $guarded = [];
     public $editRules = [];
     public $errors;
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+
+    /**
+     * Scope for active records.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
+
+    /**
+     * Relationship: A category has many podcasts.
+     */
+    public function podcasts()
+    {
+        return $this->hasMany(Podcast::class, 'category_id');
+    }
 
     public function isPodcastCategoryValid($data)
     {
@@ -46,17 +73,11 @@ class PodcastCategory extends Model
 
     public function getAllCategories()
     {
-        return $this->where('is_active', '1')
-            ->where('is_deleted', '0')->get();
-    }
-
-    public function podcasts()
-    {
-        return $this->hasMany(Podcast::class, 'category_id');
+        return $this->active()->get();
     }
 
     public function keywords()
     {
-        return $this->belongsToMany(PodcastKeyword::class, 'podcast_keyword_category', 'category_id', 'keyword_id')->withTimestamps();;
+        return $this->belongsToMany(PodcastKeyword::class, 'podcast_keyword_category', 'category_id', 'keyword_id')->withTimestamps();
     }
 }

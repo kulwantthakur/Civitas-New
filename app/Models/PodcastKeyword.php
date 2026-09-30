@@ -43,8 +43,7 @@ class PodcastKeyword extends Model
 
     public function getAllKeywords()
     {
-        return $this->where('is_active', '1')
-            ->where('is_deleted', '0')->get();
+        return $this->where('is_active', '1')->get();
     }
 
     public function podcasts()

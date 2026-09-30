@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
-        <a href="{{ route('le-bulletin-archive-past', ['number' => $result->number]) }}"
+        <a href="{{ route('le-bulletin-download', ['number' => $result->number]) }}"
             class="archive-bulletin-page">
             {{ $result->title }} {{ $result->subtitle }}
         </a>
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
-        <a href="{{ route('rom-kurier-archive-past', ['number' => $result->number]) }}"
+        <a href="{{ route('rom-kurier-download', ['number' => $result->number]) }}"
             class="archive-bulletin-page">
             {{ $result->title }} {{ $result->subtitle }}
         </a>

@@ -14,6 +14,7 @@ class Subscription extends Model
         'user_email',
         'amount',
         'currency',
+        'status',
         'payrexx_id',
         'payrexx_link',
         'payrexx_status',

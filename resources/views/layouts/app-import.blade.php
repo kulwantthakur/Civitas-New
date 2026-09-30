@@ -57,14 +57,9 @@
                 
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto">
-                        @php
-                            $isPages = request()->routeIs('admin.import.pages');
-                            $route   = $isPages ? 'admin.import.pages' : 'admin.import.podcasts';
-                            $label   = $isPages ? 'Import Pages' : 'Import Podcasts';
-                        @endphp
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route($route) }}">
-                                <i class="fas fa-file-import me-1"></i> {{ $label }}
+                            <a class="nav-link" href="{{ route('admin.import.pages') }}">
+                                <i class="fas fa-file-import me-1"></i>Import Pages
                             </a>
                         </li>
                     </ul>

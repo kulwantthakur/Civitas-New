@@ -3,9 +3,9 @@
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
             <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">POSITIONS</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
             <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
         </div>
     </div>

@@ -12,8 +12,7 @@ use App\Models\PodcastHistory;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
-use ZipArchive;
+use Illuminate\Support\Str;
 
 class AmissfsController extends Controller
 {
@@ -55,16 +54,24 @@ class AmissfsController extends Controller
         $route = \Request::path();
         $section = $this->modelSection->getSectionByRoute($route);
 
-        $latestRecord = $this->modelPage
+        $latestBulletin = $this->modelPage
             ->where('section_id', $section->id)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->orderByDesc('number')
             ->firstOrFail();
+        
+        // Also get latest rom-kurier for the other button
+        $latestRomKurier = $this->modelPage
+            ->where('section_id', 10) // rom-kurier section
+            ->where('is_active', 1)
+            ->orderByDesc('number')
+            ->first();
 
         return view('amissfs.subcategory', [
             'page'         => 2,
-            'latestRecord' => $latestRecord,
+            'latestRecord' => $latestBulletin,
+            'latestBulletin' => $latestBulletin,
+            'latestRomKurier' => $latestRomKurier,
             'section_id'   => $section->id,
         ]);
     }
@@ -73,16 +80,24 @@ class AmissfsController extends Controller
         $route = \Request::path();
         $section = $this->modelSection->getSectionByRoute($route);
 
-        $latestRecord = $this->modelPage
+        $latestRomKurier = $this->modelPage
             ->where('section_id', $section->id)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->orderByDesc('number')
             ->firstOrFail();
+        
+        // Also get latest bulletin for the other button
+        $latestBulletin = $this->modelPage
+            ->where('section_id', 9) // bulletin section
+            ->where('is_active', 1)
+            ->orderByDesc('number')
+            ->first();
 
         return view('amissfs.subcategory', [
             'page'         => 3,
-            'latestRecord' => $latestRecord,
+            'latestRecord' => $latestRomKurier,
+            'latestBulletin' => $latestBulletin,
+            'latestRomKurier' => $latestRomKurier,
             'section_id'   => $section->id,
         ]);
     }
@@ -99,24 +114,51 @@ class AmissfsController extends Controller
     {
         return view('amissfs.pages')->with('page', 0);
     }
-    public function lebulletinDownload($number)
+
+    public function lebulletinDownload(Request $request, $number)
     {
-        $route = \Request::path();
+        $route   = \Request::path();
         $section = $this->modelSection->getSectionByRoute($route);
 
-        $latestRecord = $this->modelPage
+        // Find latest once
+        $latest = $this->modelPage
             ->where('section_id', $section->id)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
-            ->where('number', $number)
+            ->orderByDesc('number')
             ->firstOrFail();
 
+        // numero-1 acts as "latest" alias → redirect to real latest number
+        if ((int)$number === 1 && (int)$latest->number !== 1) {
+            return redirect()->route('le-bulletin-download', ['number' => $latest->number]);
+        }
+
+        // Load requested record
+        $entry = $this->modelPage
+            ->where('section_id', $section->id)
+            ->where('is_active', 1)
+            ->where('number', $number)
+            ->orderByDesc('id') // tie-breaker
+            ->firstOrFail();
+
+        // Auto layout:
+        // - if the requested number IS the latest -> show "latest" layout (page 1)
+        // - otherwise show the "archive" layout (page 8)
+        if ((int)$entry->number === (int)$latest->number) {
+            return view('amissfs.pages', [
+                'page'         => 1,
+                'latestRecord' => $entry,
+                'section_id'   => $section->id,
+            ]);
+        }
+
         return view('amissfs.pages', [
-            'page' => 1,
-            'latestRecord' => $latestRecord,
-            'section_id' => $section->id
+            'page'       => 8,
+            'archive'    => $entry,
+            'section_id' => $section->id,
         ]);
     }
+
+
     public function lebulletinArchive()
     {
         $route = \Request::path();
@@ -129,46 +171,56 @@ class AmissfsController extends Controller
             'section_id' => $section->id,
         ]);
     }
-    public function lebulletinArchivePast($number)
-    {
-        $route = \Request::path();
-        $section = $this->modelSection->getSectionByRoute($route);
-        $archive = $this->modelPage
-            ->where('section_id', $section->id)
-            ->where('is_active', 1)
-            ->where('is_deleted', 0)
-            ->where('number', $number)
-            ->first();
+    // public function lebulletinArchivePast($number)
+    // {
+    //     $route = \Request::path();
+    //     $section = $this->modelSection->getSectionByRoute($route);
+    //     $archive = $this->modelPage
+    //         ->where('section_id', $section->id)
+    //         ->where('is_active', 1)
+    //         ->where('is_deleted', 0)
+    //         ->where('number', $number)
+    //         ->first();
 
-        return view('amissfs.pages', [
-            'page' => 8,
-            'archive' => $archive,
-            'section_id' => $section->id
-        ]);
-    }
+    //     return view('amissfs.pages', [
+    //         'page' => 8,
+    //         'archive' => $archive,
+    //         'section_id' => $section->id
+    //     ]);
+    // }
     public function lebulletinCommander()
     {
         return view('amissfs.pages')->with('page', 3);
     }
     public function romKurierDownload($number)
     {
-        $route = \Request::path();
+        $route   = \Request::path();
         $section = $this->modelSection->getSectionByRoute($route);
 
-        $latestRecord = $this->modelPage
+        // fetch the requested record by number
+        $record = $this->modelPage
             ->where('section_id', $section->id)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->where('number', $number)
+            ->orderByDesc('id') // tie-breaker on duplicates
             ->firstOrFail();
 
+        // find the latest number in this section
+        $latestNumber = $this->modelPage
+            ->where('section_id', $section->id)
+            ->where('is_active', 1)
+            ->max('number');
+
+        $isLatest = ((int)$number === (int)$latestNumber);
 
         return view('amissfs.pages', [
-            'page' => 4,
-            'latestRecord' => $latestRecord,
-            'section_id' => $section->id
+            'page'         => $isLatest ? 4 : 7,          // 4 -> latest template, 7 -> past template
+            'latestRecord' => $isLatest ? $record : null, // pages.blade expects these variable names
+            'archive'      => $isLatest ? null : $record,
+            'section_id'   => $section->id,
         ]);
     }
+
     public function romKurierArchive()
     {
         $route = \Request::path();
@@ -192,7 +244,6 @@ class AmissfsController extends Controller
         $archive = $this->modelPage
             ->where('section_id', $section->id)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->where('number', $number)
             ->first();
 
@@ -222,8 +273,7 @@ class AmissfsController extends Controller
 
     public function getCategoryPodcast($url)
     {
-        $category = $this->modelPodcastCategory->where('url', $url)->where('is_active', '1')
-            ->where('is_deleted', '0')->first();
+        $category = $this->modelPodcastCategory->where('url', $url)->where('is_active', '1')->first();
 
         $podcasts = $this->modelPodcast->getPodcastByCategory($category->id);
         $keywords = $this->modelPodcastKeyword->getAllKeywords();
@@ -241,13 +291,11 @@ class AmissfsController extends Controller
 
         $category = $this->modelPodcastCategory::where('url', $categoryUrl)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->firstOrFail();
 
         $podcast = $this->modelPodcast->where('url', $podcastUrl)
             ->where('category_id', $category->id)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->firstOrFail();
 
         $keywords = $this->modelPodcastKeyword->getAllKeywords();
@@ -255,7 +303,6 @@ class AmissfsController extends Controller
 
         $audioFiles = $podcast->audioFiles()
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->get();
         $audioFiles = $audioFiles->isEmpty() ? [] : $audioFiles->toArray();
 
@@ -263,7 +310,6 @@ class AmissfsController extends Controller
             ->where('author', $podcast->author)
             ->where('id', '!=', $podcast->id)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->inRandomOrder()
             ->limit(5)
             ->get();
@@ -293,18 +339,14 @@ class AmissfsController extends Controller
         $user = Auth::user();
         $history = $this->modelHistory::where('user_id', $user->user_identifier)
             ->where('is_active', '1')
-            ->where('is_deleted', '0')
             ->whereHas('podcast', function ($query) {
-                $query->where('is_active', '1')
-                    ->where('is_deleted', '0');
+                $query->where('is_active', '1');
             })
             ->orderBy('updated_at', 'desc')
             ->with(['podcast' => function ($query) {
                 $query->where('is_active', '1')
-                    ->where('is_deleted', '0')
                     ->with(['category' => function ($query) {
-                        $query->where('is_active', '1')
-                            ->where('is_deleted', '0');
+                        $query->where('is_active', '1');
                     }]);
             }])
             ->get();
@@ -320,10 +362,9 @@ class AmissfsController extends Controller
             return response()->json(['error' => 'Podcast not found'], 404);
         }
 
-        // 2. Get all active and non-deleted audio files
+        // 2. Get all active audio files
         $audioFiles = $podcast->audioFiles()
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->get();
 
         if ($audioFiles->isEmpty()) {
@@ -347,11 +388,7 @@ class AmissfsController extends Controller
             "----\n\n" .
             "Author: " . ($podcast->author ?? '') . "\n\n" .
             "----\n\n" .
-            "Date: " . (
-                $podcast->start_date && $podcast->end_date
-                ? "{$podcast->start_date} - {$podcast->end_date}"
-                : ($podcast->start_date ?? '')
-            ) . "\n\n" .
+            "Date: " . ($podcast->date ?? '') . "\n\n" .
             "----\n\n" .
             "Place: " . ($podcast->location ?? '') . "\n\n" .
             "----\n\n" .
@@ -429,12 +466,10 @@ class AmissfsController extends Controller
                 $q->where('name', 'LIKE', "%{$query}%")
                     ->orWhereHas('keywords', function ($q) use ($query) {
                         $q->where('keyword', 'LIKE', "%{$query}%")
-                            ->where('podcast_keywords.is_active', 1)
-                            ->where('podcast_keywords.is_deleted', 0);
+                            ->where('podcast_keywords.is_active', 1);
                     });
             })
                 ->where('is_active', 1)
-                ->where('is_deleted', 0)
                 ->with('keywords')
                 ->get();
         }
@@ -445,12 +480,10 @@ class AmissfsController extends Controller
                 ->orWhere('author', 'LIKE', "%{$query}%")
                 ->orWhereHas('keywords', function ($q) use ($query) {
                     $q->where('keyword', 'LIKE', "%{$query}%")
-                        ->where('podcast_keywords.is_active', 1)
-                        ->where('podcast_keywords.is_deleted', 0);
+                        ->where('podcast_keywords.is_active', 1);
                 });
         })
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->with(['keywords', 'category'])
             ->paginate(10);
 
@@ -464,41 +497,61 @@ class AmissfsController extends Controller
 
     public function filterResults(Request $request, $sectionId)
     {
-        $query = $this->modelPage->where('section_id', $sectionId)
+        $base = $this->modelPage->where('section_id', $sectionId)
             ->where('is_active', 1)
-            ->where('is_deleted', 0)
-            ->orderBy('number', 'desc');
+            // stable ordering
+            ->orderBy('number', 'desc')
+            ->orderBy('id', 'desc');
 
-        if ($request->has('year') && !empty($request->year)) {
-            $query->where('year', $request->year);
+        // year filter — ignore when it's "all" or empty
+        $year = $request->input('year');
+        if ($year && strtolower($year) !== 'all') {
+            $base->where('year', $year);
         }
 
-        if ($request->has('searchText') && !empty($request->searchText)) {
-            $searchText = $request->searchText;
-            $query->where(function ($q) use ($searchText) {
-                $q->where('title', 'like', '%' . $searchText . '%')
-                    ->orWhere('subtitle', 'like', '%' . $searchText . '%');
+        // text filter
+        if ($request->filled('searchText')) {
+            $searchText = trim($request->input('searchText', ''));
+            $base->where(function ($q) use ($searchText) {
+                $q->where('title', 'like', "%{$searchText}%")
+                    ->orWhere('subtitle', 'like', "%{$searchText}%");
             });
         }
 
-        $perPage = $request->get('perPage', 10);
-        $page = $request->get('page', 1);
+        // hide latest on archive if requested
+        if ($request->boolean('exclude_latest')) {
+            $latestNumber = (clone $this->modelPage->newQuery())
+                ->where('section_id', $sectionId)
+                ->where('is_active', 1)
+                ->max('number');
 
-        if ($perPage === 'all') {
-            $results = $query->get();
-            $hasMore = false;
-        } else {
-            $perPage = (int)$perPage;
-            $offset = ($page - 1) * $perPage;
-            $results = $query->skip($offset)->take($perPage)->get();
-            $totalCount = $query->count();
-            $hasMore = $offset + $perPage < $totalCount;
+            if (!is_null($latestNumber)) {
+                $base->where('number', '<', $latestNumber);
+            }
         }
 
-        $html = view('amissfs.amissfs-filter', ['results' => $results, 'sectionId' => $sectionId])->render();
+        $perPage = $request->input('perPage', 10);
+        $page    = max(1, (int) $request->input('page', 1));
+
+        if (strtolower((string)$perPage) === 'all') {
+            $results = (clone $base)->get();
+            $hasMore = false;
+        } else {
+            $perPage    = (int) $perPage ?: 10;
+            $offset     = ($page - 1) * $perPage;
+            $totalCount = (clone $base)->count();
+
+            $results = (clone $base)->skip($offset)->take($perPage)->get();
+            $hasMore = ($offset + $perPage) < $totalCount;
+        }
+
+        $html = view('amissfs.amissfs-filter', [
+            'results'   => $results,
+            'sectionId' => $sectionId,
+        ])->render();
 
         return response()->json([
-            'html' => $html,
+            'html'    => $html,
             'hasMore' => $hasMore,
         ]);
     }

@@ -33,64 +33,64 @@
 </head>
 
 <body>
-    @if(Auth::user())
+    @if(Auth::user() && !Route::is('admin.email-templates.index'))
     <div class="admin-bar my-4">
         <div class="d-flex justify-content-between align-items-center">
             @if(Route::is('political-program-home','civitas.participer','civitas.news','civitas.initiatives','civitas.status'))
             <div class="d-flex algin-items-center ms-3">
                 <button type="button" class="btn btn-success m-0" data-bs-toggle="modal" data-bs-target="#createModal">
-                    Create New
+                    {!! __('words.admin_create_new') !!}
                 </button>
             </div>
-            @elseif(request()->is('civitas/programme/themes/but/*','revue/*'))
+            @elseif(request()->routeIs('programs','civitas.get_inform'))
             <div class="d-flex align-items-center">
                 <button type="button" class="btn btn-info m-0 ms-3" data-bs-toggle="modal" data-bs-target="#editModal">
-                    Edit
+                    {!! __('words.admin_edit') !!}
                 </button>
                 <div class="mx-3"></div>
                 <button type="button" class="btn btn-danger m-0" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    Delete
+                    {!! __('words.admin_delete') !!}
                 </button>
             </div>
             @elseif(Route::is('civitas.director','civitas.agenda'))
             <div class="d-flex algin-items-center ms-3">
                 <button type="button" class="btn btn-success m-0" data-bs-toggle="modal" data-bs-target="#createModal">
-                    Create New
+                    {!! __('words.admin_create_new') !!}
                 </button>
                 <div class="mx-3"></div>
                 <button type="button" class="btn btn-info m-0" data-bs-toggle="modal" data-bs-target="#editModal">
-                    Edit
+                    {!! __('words.admin_edit') !!}
                 </button>
                 <div class="mx-3"></div>
                 <button type="button" class="btn btn-danger m-0" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    Delete
+                    {!! __('words.admin_delete') !!}
                 </button>
             </div>
             @elseif(Route::is('civitas.newsheadline','civitas.voting','civitas.statuspage', 'civitas.event-detail', 'civitas.last-event'))
             <div class="d-flex algin-items-center ms-3">
                 <button type="button" class="btn btn-info m-0" data-bs-toggle="modal" data-bs-target="#editModal">
-                    Edit
+                    {!! __('words.admin_edit') !!}
                 </button>
                 <div class="mx-3"></div>
                 <button type="button" class="btn btn-danger m-0" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    Delete
+                    {!! __('words.admin_delete') !!}
                 </button>
             </div>
             @elseif(Route::is('civitas.diocesains'))
             <div class="d-flex algin-items-center ms-3">
                 <button type="button" class="btn btn-info m-0" data-bs-toggle="modal" data-bs-target="#editModal">
-                    Edit
+                    {!! __('words.admin_edit') !!}
                 </button>
             </div>
             @else
             <div></div>
             @endif
             <div class="d-flex justify-content-end align-items-center">
-                <div class="admin-zone-name me-3">Hello <a href="{{ route('account')}}" class="admin-zone-name">{{ Auth::user()->name }}</a></div>
+                <div class="admin-zone-name me-3">{!! __('words.admin_hello') !!} <a href="{{ route('account')}}" class="admin-zone-name">{{ Auth::user()->name }}</a></div>
                 <div class="">
                     <a class="d-flex align-items-center admin-zone-logout me-3"
                         href="{{ route('logout') }}"
-                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa-solid fa-user me-2"></i>Logout
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa-solid fa-user me-2"></i>{!! __('words.admin_logout') !!}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
                         style="display: none;">
@@ -110,7 +110,7 @@
                     @if(Route::is('civitas.home'))
                     <div class="d-block d-sm-block d-md-block d-lg-block d-xl-none d-xxl-none">
                         <div class="d-flex align-items-center me-3">
-                            <a class="nav-link d-flex align-items-center justify-content-center" href="{{ route('civitas.support') }}" id="donate">FAIRE UN DON</a>
+                            <a class="nav-link d-flex align-items-center justify-content-center" href="{{ route('civitas.support') }}" id="donate">{!! __('words.civitas_make_donation') !!}</a>
                         </div>
                     </div>
                     @endif
@@ -122,19 +122,19 @@
                 <div class="collapse navbar-collapse desktop-height desktop-width">
                     <ul class="nav navbar-nav ms-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('podcasts') }}" id="podcast">PODCASTS <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('podcasts') }}" id="podcast">{!! __('words.nav_podcasts') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('amissfs.home') }}" id="amissfs">AMISSFS <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('amissfs.home') }}" id="amissfs">{!! __('words.nav_amis_sfs') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
-                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">REFUGE DES PÉCHEURS <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">{!! __('words.nav_refuge_des_pecheurs') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">RDP <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">{!! __('words.nav_rdp') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('civitas.home') }}" id="civitas-suisse">CIVITAS SUISSE <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('civitas.home') }}" id="civitas-suisse">{!! __('words.nav_civitas_suisse') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block">
                             <div class="nav-item d-flex gap-2 align-items-center" id="language">
@@ -149,6 +149,10 @@
                                 <span class="nav-link">
                                     <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}" id="language">IT</a>
                                 </span>
+                                <span class="lang-separator" id="language">|</span>
+                                <span class="nav-link">
+                                    <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}" id="language">EN</a>
+                                </span>
                             </div>
                         </div>
                         <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
@@ -158,13 +162,15 @@
                                 <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('de', route('language', [], false)) }}">DE</a>
                                 <span class="mx-2">-</span>
                                 <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}">IT</a>
+                                <span class="mx-2">-</span>
+                                <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}">EN</a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block flex-grow-1 top-menu-empty">
                     <div class="d-flex align-items-center participer-height">
-                        <a class=" nav-link d-flex align-items-center justify-content-center" href="{{ route('civitas.member') }}" id="participer">PARTICIPER</a>
+                        <a class=" nav-link d-flex align-items-center justify-content-center" href="{{ route('civitas.member') }}" id="participer">{!! __('words.nav_participer') !!}</a>
                     </div>
                 </div>
             </div>
@@ -177,149 +183,169 @@
                         </div>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu fw-bold" href="{{route('civitas.home')}}" id="agenda">
-                                CIVITAS SUISSE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                {!! __('words.nav_civitas_suisse') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                             </a>
                         </li>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu mobile-submenu" href="javascript:void(0);" id="participer1">
-                                PARTICIPER <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                {!! __('words.nav_participer') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                             </a>
                             <ul class="submenu d-none">
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.member') }}">
-                                        DEVENIR MEMBRE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_become_member') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.events') }}">
-                                        CONFÉRENCES <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_conferences') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu mobile-submenu" href="javascript:void(0);" id="agenda">
-                                AGENDA <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                {!! __('words.nav_agenda') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                             </a>
                             <ul class="submenu d-none">
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.agenda')}}">
-                                        AGENDA <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_agenda') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.events') }}">
-                                        CONFÉRENCES <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_conferences') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu mobile-submenu" href="javascript:void(0);" id="mouvement">
-                                MOUVEMENT <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                {!! __('words.nav_movement') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                             </a>
                             <ul class="submenu d-none">
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.diocesains') }}">
-                                        GROUPES DIOCÉSAINS <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_groupes_diocesains') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.director') }}">
-                                        COMITÉ DIRECTEUR <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_comite_directeur') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.status') }}">
-                                        STATUS <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_statuts') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.question') }}">
-                                        QUESTIONS ET RÉPONSES <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_questions_reponses') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
-                                    <a class="nav-link" href="{{ route('civitas.status') }}">
-                                        COMMUNIQUÉ DE PRESSE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                    <a class="nav-link" href="{{ route('civitas.status') }}#communiques">
+                                        {!! __('words.nav_communiques') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                    </a>
+                                </li>
+                                <li class="nav-item ps-0">
+                                    <a class="nav-link" href="{{ route('political-action') }}">
+                                        {!! __('words.nav_activites') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu mobile-submenu" href="javascript:void(0);" id="actualites">
-                                ACTUALITÉS <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                {!! __('words.nav_news_mobile') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                             </a>
                             <ul class="submenu d-none">
                                 <li class="nav-item ps-0">
-                                    <a class="nav-link" href="{{ route('civitas.news') }}">
-                                        TOUTE L’ ACTUALITÉ <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                    <a class="nav-link" href="{{ route('political-action') }}">
+                                        {!! __('words.nav_toute_actualite_mobile') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('catholic-vote') }}">
-                                        LE VOTE CATHOLIQUE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_vote_catholique') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu mobile-submenu" href="javascript:void(0);" id="catholic-vote">
-                                LE VOTE CATHOLIQUE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                {!! __('words.nav_vote_catholique') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                             </a>
                             <ul class="submenu d-none">
                                 <li class="nav-item ps-0">
+                                    <a class="nav-link" href="{{ route('civitas.legacy') }}">
+                                        {!! __('words.nav_notre_heritage') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                    </a>
+                                </li>
+                                <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.initiatives') }}">
-                                        NOTRE VOTE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_notre_vote') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.votes_overview', ['category'=>'initiatives-populaires']) }}">
-                                        INITIATIVES <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_initiatives') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('civitas.votes_overview', ['category'=>'votations']) }}">
-                                        RÉFÉRENDUMS <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_referendums') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu mobile-submenu" href="javascript:void(0);" id="actions">
-                                PROGRAMME POLITIQUE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                {!! __('words.nav_programme_politique') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                             </a>
                             <ul class="submenu d-none">
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('political-program-home') }}">
-                                        VISION GÉNÉRALE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_vision_generale') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('political-programs') }}">
-                                        PAR THÉMES <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_par_themes') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu mobile-submenu" href="javascript:void(0);" id="boutique">
-                                BOUTIQUES <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                {!! __('words.nav_boutiques') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                             </a>
                             <ul class="submenu d-none">
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="https://medias-culture-et-patrimoine.com/" target="_blank">
-                                        MÉDIAS CULTURE ET PATRIMOINE <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_medias_culture') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                                 <li class="nav-item ps-0">
                                     <a class="nav-link" href="{{ route('bookStore') }}">
-                                        ÉDITIONS AMISSFS <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                        {!! __('words.nav_editions_amis') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                    </a>
+                                </li>
+                                <li class="nav-item ps-0">
+                                    <a class="nav-link" href="https://medias-culture-et-patrimoine.com/collections/revue-caritas-format-papier" target="_blank">
+                                        {!! __('words.nav_revue_caritas') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
+                                    </a>
+                                </li>
+                                <li class="nav-item ps-0">
+                                    <a class="nav-link" href="https://civitas-international-boutique.tpopsite.com/collection/suisse?page=1" target="_blank">
+                                        {!! __('words.nav_produits_derives') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" />
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item px-2">
+                        <li class="nav-item px-2" style="background-color: #d9d9d9;">
                             <div class="d-flex align-items-center" style="padding: 0 30px;">
                                 <a class="nav-link mobile-menu-new fw-bolder" href="{{ route('language') }}">FR</a>
                                 <span class="mx-2">-</span>
@@ -339,7 +365,7 @@
                 <ul class="menu-list ms-3">
                     <li class="menu-item d-flex align-items-center">
                         <a class="nav-link navbar-submenu" href="#" id="agenda">
-                            AGENDA
+                            {!! __('words.nav_agenda') !!}
                         </a>
                         <div class="black-border"></div>
                         <div class="mega-menu dropdown-menu" aria-labelledby="agenda">
@@ -349,7 +375,7 @@
                                         <div class="p-3">
                                             <a href="{{ route('civitas.agenda') }}"
                                                 class="d-flex justify-content-between align-items-center civitas-submenu">
-                                                AGENDA
+                                                {!! __('words.nav_agenda') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="icon"
                                                     class="menu-icon" />
                                             </a>
@@ -359,7 +385,7 @@
                                         <div class="p-3">
                                             <a href="{{ route('civitas.events') }}"
                                                 class="d-flex justify-content-between align-items-center civitas-submenu">
-                                                CONFÉRENCES
+                                                {!! __('words.nav_conferences') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="icon"
                                                     class="menu-icon" />
                                             </a>
@@ -370,7 +396,7 @@
                     </li>
                     <li class="menu-item d-flex align-items-center">
                         <a class="nav-link navbar-submenu" href="#" id="parti">
-                            MOUVEMENT
+                            {!! __('words.nav_movement') !!}
                         </a>
                         <div class="black-border"></div>
                         <div class="mega-menu dropdown-menu" aria-labelledby="parti">
@@ -380,7 +406,7 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('civitas.diocesains') }}">
-                                                GROUPES DIOCÉSAINS
+                                                {!! __('words.nav_groupes_diocesains') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -390,7 +416,7 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('civitas.status') }}">
-                                                STATUS
+                                                {!! __('words.nav_statuts') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -399,8 +425,8 @@
                                     <div class="col-md-4">
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
-                                                href="{{ route('civitas.status') }}">
-                                                COMMUNIQUÉ DE PRESSE
+                                                href="{{ route('civitas.status') }}#communiques">
+                                                {!! __('words.nav_communiques') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -410,7 +436,7 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('civitas.director') }}">
-                                                COMITÉ DIRECTEUR
+                                                {!! __('words.nav_comite_directeur') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -420,20 +446,29 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('civitas.question') }}">
-                                                QUESTIONS ET RÉPONSES
+                                                {!! __('words.nav_questions_reponses') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <div class="p-3">
+                                            <a class="d-flex justify-content-between align-items-center civitas-submenu"
+                                                href="{{ route('political-action') }}">
+                                               {!! __('words.nav_activites') !!}
+                                                <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
+                                                    class="menu-icon" />
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="menu-item d-flex align-items-center">
                         <a class="nav-link navbar-submenu" href="#" id="actualites">
-                            ACTUALITÉS
+                            {!! __('words.nav_news') !!}
                         </a>
                         <div class="black-border"></div>
                         <div class="mega-menu dropdown-menu" aria-labelledby="actualites">
@@ -443,7 +478,7 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('civitas.news') }}">
-                                                TOUTE L’ ACTUALITÉ
+                                                {!! __('words.nav_toute_actualite') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -453,7 +488,7 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('catholic-vote') }}">
-                                                LE VOTE CATHOLIQUE
+                                                {!! __('words.nav_vote_catholique') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -465,7 +500,7 @@
                     </li>
                     <li class="menu-item  d-flex align-items-center">
                         <a class="nav-link navbar-submenu lh-1" href="#" id="le-vote-catholique">
-                            LE VOTE<br>CATHOLIQUE
+                            {!! __('words.nav_vote_catholique') !!}
                         </a>
                         <div class="black-border"></div>
                         <div class="mega-menu dropdown-menu" aria-labelledby="le-vote-catholique">
@@ -474,8 +509,8 @@
                                     <div class="col-md-4">
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
-                                                href="{{ route('civitas.initiatives') }}">
-                                                NOTRE VOTE
+                                                href="{{ route('civitas.legacy') }}">
+                                                {!! __('words.nav_notre_heritage') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -484,8 +519,8 @@
                                     <div class="col-md-4">
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
-                                                href="{{ route('civitas.votes_overview', ['category'=>'votations']) }}">
-                                                REFERENDUMS
+                                                href="{{ route('civitas.initiatives') }}">
+                                                {!! __('words.nav_notre_vote') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -496,7 +531,17 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('civitas.votes_overview', ['category'=>'initiatives-populaires']) }}">
-                                                INITIATIVES
+                                                {!! __('words.nav_initiatives') !!}
+                                                <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
+                                                    class="menu-icon" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3">
+                                            <a class="d-flex justify-content-between align-items-center civitas-submenu"
+                                                href="{{ route('civitas.votes_overview', ['category'=>'votations']) }}">
+                                                {!! __('words.nav_referendums') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -508,7 +553,7 @@
                     </li>
                     <li class="menu-item d-flex align-items-center">
                         <a class="nav-link navbar-submenu lh-1" href="#" id="program-politique">
-                            PROGRAMME<br>POLITIQUE
+                            {!! __('words.nav_programme_politique') !!}
                         </a>
                         <div class="black-border"></div>
                         <div class="mega-menu dropdown-menu" aria-labelledby="program-politique">
@@ -518,7 +563,7 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('political-program-home') }}">
-                                                VISION GÉNÉRALE
+                                                {!! __('words.nav_vision_generale') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -528,7 +573,7 @@
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('political-programs') }}">
-                                                PAR THÉMES
+                                                {!! __('words.nav_par_themes') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -540,26 +585,46 @@
                     </li>
                     <li class="menu-item d-flex align-items-center">
                         <a class="nav-link navbar-submenu" href="#" id="boutique">
-                            BOUTIQUE
+                            {!! __('words.nav_boutique') !!}
                         </a>
                         <div class="mega-menu dropdown-menu" aria-labelledby="boutique">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="https://medias-culture-et-patrimoine.com/" target="_blank">
-                                                MÉDIAS CULTURE ET PATRIMOINE
+                                                {!! __('words.nav_medias_culture') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="p-3">
                                             <a class="d-flex justify-content-between align-items-center civitas-submenu"
                                                 href="{{ route('bookStore') }}">
-                                                ÉDITIONS AMISSFS
+                                                {!! __('words.nav_editions_amis') !!}
+                                                <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
+                                                    class="menu-icon" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3">
+                                            <a class="d-flex justify-content-between align-items-center civitas-submenu"
+                                                href="https://medias-culture-et-patrimoine.com/collections/revue-caritas-format-papier" target="_blank">
+                                                {!! __('words.nav_revue_caritas') !!}
+                                                <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
+                                                    class="menu-icon" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3">
+                                            <a class="d-flex justify-content-between align-items-center civitas-submenu"
+                                                href="https://civitas-international-boutique.tpopsite.com/collection/suisse?page=1" target="_blank">
+                                                 {!! __('words.nav_produits_derives') !!}
                                                 <img src="{{ asset('img/desktop-submenu.png') }}" alt="logo"
                                                     class="menu-icon" />
                                             </a>
@@ -594,50 +659,50 @@
                 <div class="white-border d-flex mb-5">
                     <img src="{{ asset('img/home/footer-logo.svg') }}" class="mb-4 me-4" alt="logo" />
                     <div class="d-flex flex-column justify-content-center align-items-center">
-                        <a href="{{ route('home') }}" class="footer-omnia text-decoration-none">OMNIA INSTAURARE IN CHRISTO</a>
-                        <p class="text-white suisse-light-14">UN MOUVEMENT INTERNATIONAL</p>
+                        <a href="{{ route('home') }}" class="footer-omnia text-decoration-none">{!! __('words.home_omnia_instaurare') !!}</a>
+                        <p class="text-white suisse-light-14">{!! __('words.nav_un_mouvement') !!}</p>
                     </div>
                 </div>
                 <div class="my-4 row ms-3">
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">CIVITAS SUISSE</a>
+                        <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_civitas_suisse') !!}</a>
                     </div>
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">AMIS.S.F.S</a>
+                        <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_amis_sfs') !!}</a>
                     </div>
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">REFUGE DES PÉCHEURS</a>
-                    </div>
-                </div>
-
-                <div class="my-4 row ms-3">
-                    <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('political-programs') }}" class="footer-submenu text-decoration-none">POSITIONS</a>
-                    </div>
-                    <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('podcasts') }}" class="footer-submenu text-decoration-none">AUDIOTHÈQUE</a>
-                    </div>
-                    <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('notredame') }}" class="footer-submenu text-decoration-none">NOTRE DAME DE FATIMA</a>
+                        <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_refuge_des_pecheurs') !!}</a>
                     </div>
                 </div>
 
                 <div class="my-4 row ms-3">
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('civitas.party') }}" class="footer-submenu text-decoration-none">MOUVEMENT</a>
+                        <a href="{{ route('political-programs') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_positions') !!}</a>
                     </div>
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('editions') }}" class="footer-submenu text-decoration-none">ÉDITIONS</a>
+                        <a href="{{ route('podcasts') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_audiotheque') !!}</a>
+                    </div>
+                    <div class="col-4 d-flex align-items-center">
+                        <a href="{{ route('notredame') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_notre_dame') !!}</a>
+                    </div>
+                </div>
+
+                <div class="my-4 row ms-3">
+                    <div class="col-4 d-flex align-items-center">
+                        <a href="{{ route('civitas.party') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_movement') !!}</a>
+                    </div>
+                    <div class="col-4 d-flex align-items-center">
+                        <a href="{{ route('editions') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_editions') !!}</a>
                     </div>
                     <div class="col-4 text-end"></div>
                 </div>
 
                 <div class="my-4 row ms-3">
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('civitas.diocesains') }}" class="footer-submenu text-decoration-none">GROUPES DIOCÉSAINS</a>
+                        <a href="{{ route('civitas.diocesains') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_groupes_diocesains') !!}</a>
                     </div>
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('bulletin') }}" class="footer-submenu text-decoration-none">BULLETIN</a>
+                        <a href="{{ route('bulletin') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_bulletin') !!}</a>
                     </div>
                     <div class="col-4 text-start">
                         <a href="https://x.com/Civitas_" target="_blank"><img src="{{ asset('img/twitter.png') }}" class="me-3"></a>
@@ -650,7 +715,7 @@
 
                 <div class="my-4 row ms-3">
                     <div class="col-4 text-start">
-                        <a href="{{ route('civitas.news') }}" class="footer-submenu text-decoration-none">ACTUALITÉS</a>
+                        <a href="{{ route('civitas.news') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_news') !!}</a>
                     </div>
                     <div class="col-4"></div>
                     <div class="col-4"></div>
@@ -660,16 +725,16 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="d-flex align-items-center">
-                                <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">IMPRESSUM</a>
+                                <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">{!! __('words.footer_impressum') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">PROTECTION DES DONNÉES</a>
+                                <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">{!! __('words.footer_data_protection') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">CONTACT</a>
+                                <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">{!! __('words.footer_contact') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">CGU</a>
+                                <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">{!! __('words.footer_cgu') !!}</a>
                             </div>
                         </div>
                         <div class="col-4">
@@ -687,8 +752,8 @@
                 <div class="d-flex justify-content-center align-items-center flex-column">
                     <img src="{{ asset('img/logo/responsive/logo_civitas_footer.svg') }}" class="mb-4 logo" alt="logo" />
                     <div>
-                        <a href="{{ route('home') }}" class="sang-bleu-20 text-decoration-none text-dark">OMNIA INSTAURARE IN CHRISTO</a>
-                        <p class="suisse-light-14 text-dark">UN MOUVEMENT INTERNATIONAL</p>
+                        <a href="{{ route('home') }}" class="sang-bleu-20 text-decoration-none text-dark">{!! __('words.home_omnia_instaurare') !!}</a>
+                        <p class="suisse-light-14 text-dark">{!! __('words.nav_un_mouvement') !!}</p>
                     </div>
                 </div>
                 <div class="flex-row mx-2 mt-5 mb-4 d-flex justify-content-between">
@@ -703,43 +768,43 @@
                     </div>
                 </div>
                 <div class="mx-2 black-line"></div>
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="tablet-footer-menu">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
-                            <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">CIVITAS SUISSE</a>
-                            <a href="{{ route('political-programs') }}" class="footer-submenu text-decoration-none">POSITIONS</a>
-                            <a href="{{ route('civitas.party') }}" class="footer-submenu text-decoration-none">MOUVEMENT</a>
-                            <a href="{{ route('civitas.diocesains') }}" class="footer-submenu text-decoration-none">GROUPES DIOCÉSAINS</a>
-                            <a href="{{ route('civitas.news') }}" class="footer-submenu text-decoration-none">ACTUALITÉS</a>
+                            <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_civitas_suisse') !!}</a>
+                            <a href="{{ route('political-programs') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_positions') !!}</a>
+                            <a href="{{ route('civitas.party') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_movement') !!}</a>
+                            <a href="{{ route('civitas.diocesains') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_groupes_diocesains') !!}</a>
+                            <a href="{{ route('civitas.news') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_news') !!}</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
-                            <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">AMIS.S.F.S</a>
-                            <a href="{{ route('podcasts') }}" class="footer-submenu text-decoration-none">AUDIOTHÈQUE</a>
-                            <a href="{{ route('editions') }}" class="footer-submenu text-decoration-none">ÉDITIONS</a>
-                            <a href="{{ route('bulletin') }}" class="footer-submenu text-decoration-none">BULLETIN</a>
+                            <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_amis_sfs') !!}</a>
+                            <a href="{{ route('podcasts') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_audiotheque') !!}</a>
+                            <a href="{{ route('editions') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_editions') !!}</a>
+                            <a href="{{ route('bulletin') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_bulletin') !!}</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
-                            <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">REFUGE DES PÉCHEURS</a>
-                            <a href="{{ route('notredame') }}" class="footer-submenu text-decoration-none">NOTRE DAME DE FATIMA</a>
+                            <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_refuge_des_pecheurs') !!}</a>
+                            <a href="{{ route('notredame') }}" class="footer-submenu text-decoration-none">{!! __('words.nav_notre_dame') !!}</a>
                         </div>
                     </div>
                 </div>
                 <div class="flex-row mt-4 d-flex justify-content-center">
                     <div class="d-flex align-items-center">
-                        <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">IMPRESSUM</a>
+                        <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">{!! __('words.footer_impressum') !!}</a>
 
                         <div class="mx-1 border-footer"></div>
-                        <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">PROTECTION DES DONNÉES</a>
+                        <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">{!! __('words.footer_data_protection') !!}</a>
 
                         <div class="mx-1 border-footer"></div>
-                        <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">CONTACT</a>
+                        <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">{!! __('words.footer_contact') !!}</a>
 
                         <div class="mx-1 border-footer"></div>
-                        <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">CGU</a>
+                        <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">{!! __('words.footer_cgu') !!}</a>
 
                     </div>
                 </div>
@@ -767,6 +832,16 @@
     <script src="{{ asset('js/filepond-preview.js') }}"></script>
     <script src="{{ asset('js/moment.js') }}"></script>
 
+    @php
+    $routeName = optional(request()->route())->getName();
+    $topbarColors = [
+    'slider.sengager' => '#D4AF37',
+    'slider.etudier' => '#2563EB',
+    'slider.prier' => '#F59E0B',
+    ];
+
+    $topbarColor = $topbarColors[$routeName] ?? '#E10B17';
+    @endphp
 
     <script>
         $.ajaxSetup({
@@ -777,7 +852,7 @@
 
         topbar.config({
             barColors: {
-                0: '#E10B17'
+                0: @json($topbarColor)
             }
         });
 

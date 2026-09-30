@@ -1,12 +1,16 @@
-@extends('civitas.app')
+﻿@extends('civitas.app')
 
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
-            <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">AGENDA</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
-            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
+            @if($page == 3)
+            <a href="{{ route('political-action') }}" class="civitas-responsive-header-grey">{!! __('words.nav_actions') !!}</a>
+            @else
+            <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">{!! __('words.nav_agenda') !!}</a>
+            @endif
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
+            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">{!! __('words.nav_news') !!}</a>
         </div>
     </div>
 </div>
@@ -29,7 +33,7 @@
     <div class="space-600"></div>
     @else
     <div class="space-100"></div>
-    <div class="civitas-events-title mb-5">AUCUN ÉVÉNEMENT À VENIR.</div>
+    <div class="civitas-events-title mb-5">{!! __('words.civitas_no_upcoming_event') !!}</div>
     @endif
     <div class="position-relative">
         <img src="{{ asset('img/civitas/events-black.png') }}" class="w-100" alt="Background Image" />
@@ -46,7 +50,7 @@
         @if(isset($latestevent))
         <img src="{{ asset($latestevent->image_responsive) }}" class="w-100" alt="Event Image" />
         @else
-        <div class="civitas-events-title">AUCUN ÉVÉNEMENT À VENIR.</div>
+        <div class="civitas-events-title">{!! __('words.civitas_no_upcoming_event') !!}</div>
         @endif
     </div>
 </div>
@@ -59,43 +63,35 @@
                 @if(!empty($latestevent))
                 {{ \Carbon\Carbon::parse($latestevent->created_at)->locale('fr')->isoFormat('dddd D MMMM YYYY') }}
                 @else
-                <div>Aucun événement à venir.</div>
+                <div>{!! __('words.civitas_no_upcoming_event') !!}</div>
                 @endif
             </div>
-            <a href="{{ isset($latestevent) ? route('civitas.next-event', [
-                    'created_at' => \Carbon\Carbon::parse($latestevent->created_at)->format('d-m-Y'),
-                    'user_name' => strtolower(str_replace(' ', '-', Str::ascii($latestevent->user->name))),
-                    'title' => strtolower(str_replace(' ', '-', Str::ascii($latestevent->title)))
-                ]) : 'javascript:void(0);' }}"
+            <a href="{{ isset($latestevent) ? route('civitas.next-event', ['title' => strtolower(str_replace(' ', '-', Str::ascii($latestevent->title)))]) : 'javascript:void(0);' }}"
                 class="events-red-box-button d-flex justify-content-center align-items-center">
-                PLUS D’INFORMATIONS
+                {!! __('words.common_more_info') !!}
             </a>
         </div>
         <div class="events-black-box d-flex justify-content-center align-items-center p-3">
-            <div class="events-black-box-content">Les conférences sont ouvertes à tous, adhérents ou non. Afin de faciliter l’organisation, nous vous serions très reconnaissants de nous informer de notre présence sur : <a href="mailto:event@civitassuisse.ch" class="events-black-box-content">event<span class="text-decoration-underline">@civitassuisse.ch</span></a></div>
+            <div class="events-black-box-content">{!! __('words.civitas_conference_open_all') !!}</div>
         </div>
         <div class="mt-4 d-flex align-items-center justify-content-center responsive-width">
-            <a href="{{ route('civitas.newsletter') }}" class="events-red-box-button-newsletter d-flex justify-content-center align-items-center">S’INSCRIRE À LA NEWSLETTER</a>
+            <a href="{{ route('civitas.newsletter') }}" class="events-red-box-button-newsletter d-flex justify-content-center align-items-center">{!! __('words.civitas_subscribe_newsletter') !!}</a>
         </div>
         <div class="my-4">
-            <div class="civitas-events-title">ÉVÉNEMENT<br>SUIVANT</div>
+            <div class="civitas-events-title">{!! __('words.civitas_next_event') !!}</div>
             @if(isset($secondUpcomingEvent))
-            <a href="{{ route('civitas.next-event', [
-                'created_at' => \Carbon\Carbon::parse($secondUpcomingEvent->created_at)->format('d-m-Y'),
-                'user_name' => strtolower(str_replace(' ', '-', Str::ascii($secondUpcomingEvent->user->name))),
-               'title' => strtolower(str_replace(' ', '-', Str::ascii($secondUpcomingEvent->title)))
-                ]) }}">
+            <a href="{{ route('civitas.next-event', ['title' => strtolower(str_replace(' ', '-', Str::ascii($secondUpcomingEvent->title)))]) }}">
                 <img src="{{ asset($secondUpcomingEvent->icon) }}" width="460" class="mt-4" alt="Prochain événement" />
             </a>
             @else
-            <div class="mt-4 civitas-events-title">Aucun événement disponible</div>
+            <div class="mt-4 civitas-events-title">{!! __('words.civitas_no_event_available') !!}</div>
             @endif
         </div>
         <div class="d-flex align-items-center justify-content-center responsive-width my-5">
-            <a href="{{ route('civitas.agenda') }}" class="events-red-box-button-agenda d-flex justify-content-center align-items-center">VOIR L’AGENDA DÉTAILLÉ</a>
+            <a href="{{ route('civitas.agenda') }}" class="events-red-box-button-agenda d-flex justify-content-center align-items-center">{!! __('words.civitas_view_detailed_agenda') !!}</a>
         </div>
         <div class="my-5 ">
-            <div class="civitas-events-title">ÉVÉNEMENTS<br>PASSÉS</div>
+            <div class="civitas-events-title">{!! __('words.civitas_past_events') !!}</div>
         </div>
         <div class="d-flex justify-content-center align-items-center flex-column">
             @foreach($allpastevents as $event)
@@ -126,24 +122,20 @@
             <div class="grey-box-events">
                 <div class="d-flex justify-content-center align-items-center flex-column h-100">
                     <div class="m-auto">
-                        <a href="{{ route('civitas.event-detail', [
-                                        'created_at' => \Carbon\Carbon::parse($event->created_at)->format('d-m-Y'),
-                                        'user_name' => strtolower(str_replace(' ', '-', Str::ascii($event->user->name))),
-                                         'title' => strtolower(str_replace(' ', '-', Str::ascii($event->title)))
-                                    ]) }}" class="next-event-red-button d-flex justify-content-center align-items-center">
-                            S’INSCRIRE
+                        <a href="{{ route('civitas.event-detail', ['title' => strtolower(str_replace(' ', '-', Str::ascii($event->title)))]) }}" class="next-event-red-button d-flex justify-content-center align-items-center">
+                            {!! __('words.form_register') !!}
                         </a>
                         <div class="my-5"></div>
-                        <a href="{{ route('civitas.agenda') }}" class="next-event-red-button d-flex justify-content-center align-items-center">VOIR L’AGENDA DÉTAILLÉ</a>
+                        <a href="{{ route('civitas.agenda') }}" class="next-event-red-button d-flex justify-content-center align-items-center">{!! __('words.civitas_view_detailed_agenda') !!}</a>
                         <div class="my-5"></div>
                         <div class="next-event-box-grey d-flex justify-content-center align-items-center flex-column">
-                            <div class="next-event-box-grey-title">ADHÉRER À CIVITAS SUISSE</div>
-                            <a href="{{ route('civitas.member') }}" class="next-event-grey-button d-flex justify-content-center align-items-center mt-4">DEVENIR MEMBRE</a>
+                            <div class="next-event-box-grey-title">{!! __('words.civitas_join_civitas') !!}</div>
+                            <a href="{{ route('civitas.member') }}" class="next-event-grey-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_become_member') !!}</a>
                         </div>
                         <div class="my-5"></div>
                         <div class="next-event-box-red d-flex justify-content-center align-items-center flex-column">
-                            <div class="next-event-box-red-title">S’INSCRIRE À LA NEWSLETTER</div>
-                            <a href="{{ route('civitas.newsletter') }}" class="next-event-box-red-button d-flex justify-content-center align-items-center mt-4">RESTER INFORMÉ !</a>
+                            <div class="next-event-box-red-title">{!! __('words.civitas_subscribe_newsletter') !!}</div>
+                            <a href="{{ route('civitas.newsletter') }}" class="next-event-box-red-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_stay_informed') !!}</a>
                         </div>
                     </div>
                 </div>
@@ -154,25 +146,23 @@
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="container">
         <img src="{{ asset('img/civitas/events_dynamic.png') }}" class="w-100" alt="logo" />
-        <a href="{{ route('civitas.event-detail', [
-                'created_at' => \Carbon\Carbon::parse($event->created_at)->format('d-m-Y'),
-                'user_name' => strtolower(str_replace(' ', '-', Str::ascii($event->user->name))),
-                'title' => strtolower(str_replace(' ', '-', Str::ascii($event->title)))
-            ]) }}" class="next-event-red-button d-flex justify-content-center align-items-center my-4">S’INSCRIRE</a>
+        <a href="{{ route('civitas.event-detail', ['title' => strtolower(str_replace(' ', '-', Str::ascii($event->title)))]) }}" class="next-event-red-button d-flex justify-content-center align-items-center my-4">{!! __('words.form_register') !!}</a>
     </div>
-    <div class="events-next-black-bg-full d-flex align-items-center">
-        <marquee behavior="scroll" direction="right" scrollamount="12" class="events-next-marquee">PROTECTION DES DONNÉES / DATENSCHUTZE</marquee>
-    </div>
+    <a href="{{ route('footer.protection') }}" class="text-decoration-none d-block">
+        <div class="events-next-black-bg-full d-flex align-items-center">
+            <marquee behavior="scroll" direction="right" scrollamount="12" class="events-next-marquee">{!! __('words.civitas_data_protection') !!}</marquee>
+        </div>
+    </a>
     <div class="container my-4">
         <div class="next-event-box-grey d-flex justify-content-center align-items-center flex-column ">
-            <div class="next-event-box-grey-title">ADHÉRER À CIVITAS SUISSE</div>
-            <a href="{{ route('civitas.member') }}" class="next-event-grey-button d-flex justify-content-center align-items-center mt-4">DEVENIR MEMBRE</a>
+            <div class="next-event-box-grey-title">{!! __('words.civitas_join_civitas') !!}</div>
+            <a href="{{ route('civitas.member') }}" class="next-event-grey-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_become_member') !!}</a>
         </div>
         <div class="next-event-box-red d-flex justify-content-center align-items-center flex-column">
-            <div class="next-event-box-red-title">S’INSCRIRE À LA NEWSLETTER</div>
-            <a href="{{ route('civitas.newsletter') }}" class="next-event-box-red-button d-flex justify-content-center align-items-center mt-4">RESTER INFORMÉ !</a>
+            <div class="next-event-box-red-title">{!! __('words.civitas_subscribe_newsletter') !!}</div>
+            <a href="{{ route('civitas.newsletter') }}" class="next-event-box-red-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_stay_informed') !!}</a>
         </div>
-        <a href="{{ route('civitas.agenda') }}" class="next-event-red-button d-flex justify-content-center align-items-center mt-4">VOIR L’AGENDA DÉTAILLÉ</a>
+        <a href="{{ route('civitas.agenda') }}" class="next-event-red-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_view_detailed_agenda') !!}</a>
     </div>
 </div>
 @elseif($page == 2)
@@ -183,7 +173,7 @@
         <div class="events-register-position">
             <img src="{{ asset($event->image) }}" class="d-flex m-auto" width="470" height="685" alt="logo" />
             <div class="space-50"></div>
-            <div class="events-register-title text-uppercast">{{ $event->title }}</div>
+            <div class="events-register-title text-uppercase">{{ $event->title }}</div>
             <div class="events-register-line mt-4"></div>
         </div>
         <div class="position-absolute top-50 start-50 translate-middle">
@@ -198,42 +188,44 @@
                 <div class="events-register-white-form p-3">
                     <div class="d-flex align-items-center">
                         <input type="radio" id="madame" name="gender" value="mrs">
-                        <label class="events-register-radio">Madame</label>
+                        <label class="events-register-radio">{!! __('words.form_mrs') !!}</label>
                         <div class="mx-3"></div>
                         <input type="radio" id="monsieur" name="gender" value="mr">
-                        <label class="events-register-radio">Monsieur</label>
+                        <label class="events-register-radio">{!! __('words.form_mr') !!}</label>
                     </div>
                     <div class="d-flex flex-column">
-                        <input class="my-2" type="email" id="email-register" name="email" placeholder="Votre adresse e-mail" required>
-                        <input class="my-2" type="text" id="name-register" name="lname" placeholder="Prénom" required>
-                        <input class="my-2" type="text" id="name-1-register" name="fname" placeholder="Nom" required>
+                        <input class="my-2" type="email" id="email-register" name="email" placeholder="{!! __('words.form_your_email') !!}" required>
+                        <input class="my-2" type="text" id="name-register" name="lname" placeholder="{!! __('words.form_first_name') !!}" required>
+                        <input class="my-2" type="text" id="name-1-register" name="fname" placeholder="{!! __('words.form_last_name') !!}" required>
                     </div>
                     <div class="d-flex justify-content-center align-items-center my-3">
-                        <button type="submit" class="events-register-black-button d-flex justify-content-center align-items-center border-0">JE M’INSCRIS</button>
+                        <button type="submit" class="events-register-black-button d-flex justify-content-center align-items-center border-0">{!! __('words.form_reserve_seats') !!}</button>
                     </div>
                     <div class="d-flex align-items-start">
                         <input type="checkbox" id="agree" name="agree_terms" value="1" required />
-                        <label class="events-register-agree ms-1">* Je donne mon accord au traitement des données pour cette inscription.</label>
+                        <label class="events-register-agree ms-1">{!! __('words.form_data_consent') !!}</label>
                     </div>
                 </div>
             </form>
         </div>
         <div class="events-register-marquee-position w-100">
-            <div class="black-bg-full d-flex align-items-center">
-                <marquee behavior="scroll" direction="right" scrollamount="12" class="events-register-marquee">PROTECTION DES DONNÉES / DATENSCHUTZE</marquee>
-            </div>
+            <a href="{{ route('footer.protection') }}" class="text-decoration-none d-block">
+                <div class="black-bg-full d-flex align-items-center">
+                    <marquee behavior="scroll" direction="right" scrollamount="12" class="events-register-marquee">{!! __('words.civitas_data_protection') !!}</marquee>
+                </div>
+            </a>
         </div>
         <div class="events-register-bottom-position">
             <a href="{{ route('civitas.agenda') }}" class="next-event-red-button d-flex justify-content-center align-items-center">VOIR L’AGENDA DÉTAILLÉ</a>
             <div class="my-5"></div>
             <div class="next-event-box-grey d-flex justify-content-center align-items-center flex-column">
-                <div class="next-event-box-grey-title">ADHÉRER À CIVITAS SUISSE</div>
-                <a href="{{ route('civitas.member') }}" class="next-event-grey-button d-flex justify-content-center align-items-center mt-4">DEVENIR MEMBRE</a>
+                <div class="next-event-box-grey-title">{!! __('words.civitas_join_civitas') !!}</div>
+                <a href="{{ route('civitas.member') }}" class="next-event-grey-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_become_member') !!}</a>
             </div>
             <div class="my-5"></div>
             <div class="next-event-box-red d-flex justify-content-center align-items-center flex-column">
-                <div class="next-event-box-red-title">S’INSCRIRE À LA NEWSLETTER</div>
-                <a href="{{ route('civitas.newsletter') }}" class="next-event-box-red-button d-flex justify-content-center align-items-center mt-4">RESTER INFORMÉ !</a>
+                <div class="next-event-box-red-title">{!! __('words.civitas_subscribe_newsletter') !!}</div>
+                <a href="{{ route('civitas.newsletter') }}" class="next-event-box-red-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_stay_informed') !!}</a>
             </div>
         </div>
     </div>
@@ -250,7 +242,7 @@
                 <div class="container">
                     <div class="events-register-content-white">{{ ucwords(\Carbon\Carbon::parse($event->created_at)->locale('fr')->isoFormat('dddd D MMMM YYYY')) }}</div>
                     <div class="events-register-content-white-small">{{ \Carbon\Carbon::parse($event->created_at)->format('H:i') }}</div>
-                    <div class="events-register-content-black mt-3">Cette conférence blablabla</div>
+                    <div class="events-register-content-black mt-3">{!! $event->description ?? '' !!}</div>
                 </div>
             </div>
             <div class="events-register-bg-opacity-position">
@@ -269,53 +261,55 @@
                 <input type="hidden" class="commander-input" name="source_page">
                 <div class="d-flex align-items-center">
                     <input type="radio" id="madame" name="gender" value="mrs" required>
-                    <label class="events-register-radio">Madame</label>
+                    <label class="events-register-radio">{!! __('words.form_mrs') !!}</label>
                     <div class="mx-3"></div>
                     <input type="radio" id="monsieur" name="gender" value="mr">
-                    <label class="events-register-radio">Monsieur</label>
+                    <label class="events-register-radio">{!! __('words.form_mr') !!}</label>
                 </div>
                 <div class="d-flex flex-column">
-                    <input class="my-2" type="email" id="email-register" name="email" placeholder="Votre adresse e-mail" required>
-                    <input class="my-2" type="text" id="name-register" name="lname" placeholder="Prénom" required>
-                    <input class="my-2" type="text" id="name-1-register" name="fname" placeholder="Nom" required>
+                    <input class="my-2" type="email" id="email-register" name="email" placeholder="{!! __('words.form_your_email') !!}" required>
+                    <input class="my-2" type="text" id="name-register" name="lname" placeholder="{!! __('words.form_first_name') !!}" required>
+                    <input class="my-2" type="text" id="name-1-register" name="fname" placeholder="{!! __('words.form_last_name') !!}" required>
                 </div>
                 <div class="d-flex justify-content-center align-items-center my-3">
-                    <button type="submit" class="events-register-black-button d-flex justify-content-center align-items-center border-0 background-none">JE M’INSCRIS</button>
+                    <button type="submit" class="events-register-black-button d-flex justify-content-center align-items-center border-0 background-none">{!! __('words.form_reserve_seats') !!}</button>
                 </div>
                 <div class="d-flex align-items-start">
                     <input type="checkbox" id="agree" name="agree_terms" value="1" required />
-                    <label class="events-register-agree ms-1">* Je donne mon accord au traitement des données pour cette inscription.</label>
+                    <label class="events-register-agree ms-1">{!! __('words.form_data_consent') !!}</label>
                 </div>
             </form>
         </div>
     </div>
-    <div class="black-bg-full d-flex align-items-center mb-3">
-        <marquee behavior="scroll" direction="right" scrollamount="12" class="events-register-marquee">PROTECTION DES DONNÉES / DATENSCHUTZE</marquee>
-    </div>
+    <a href="{{ route('footer.protection') }}" class="text-decoration-none d-block">
+        <div class="black-bg-full d-flex align-items-center mb-3">
+            <marquee behavior="scroll" direction="right" scrollamount="12" class="events-register-marquee">{!! __('words.civitas_data_protection') !!}</marquee>
+        </div>
+    </a>
     <div class="container">
         <div class="next-event-box-grey d-flex justify-content-center align-items-center flex-column m-auto">
-            <div class="next-event-box-grey-title">ADHÉRER À CIVITAS SUISSE</div>
-            <a href="{{ route('civitas.member') }}" class="next-event-grey-button d-flex justify-content-center align-items-center mt-4">DEVENIR MEMBRE</a>
+            <div class="next-event-box-grey-title">{!! __('words.civitas_join_civitas') !!}</div>
+            <a href="{{ route('civitas.member') }}" class="next-event-grey-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_become_member') !!}</a>
         </div>
         <div class="next-event-box-red d-flex justify-content-center align-items-center flex-column m-auto">
-            <div class="next-event-box-red-title">S’INSCRIRE À LA NEWSLETTER</div>
-            <a href="{{ route('civitas.newsletter') }}" class="next-event-box-red-button d-flex justify-content-center align-items-center mt-4">RESTER INFORMÉ !</a>
+            <div class="next-event-box-red-title">{!! __('words.civitas_subscribe_newsletter') !!}</div>
+            <a href="{{ route('civitas.newsletter') }}" class="next-event-box-red-button d-flex justify-content-center align-items-center mt-4">{!! __('words.civitas_stay_informed') !!}</a>
         </div>
         <div class="my-3"></div>
-        <a href="{{ route('civitas.agenda') }}" class="next-event-red-button d-flex justify-content-center align-items-center m-auto">VOIR L’AGENDA DÉTAILLÉ</a>
+        <a href="{{ route('civitas.agenda') }}" class="next-event-red-button d-flex justify-content-center align-items-center m-auto">{!! __('words.civitas_view_detailed_agenda') !!}</a>
     </div>
 </div>
 @elseif($page == 3)
 <div class="d-flex flex-column align-items-center mb-2 mb-sm-2 mb-md-2 mb-lg-5 mb-xl-5 mb-xxl-5">
-    <div class="past-events-title">ÉVÉNEMENTS PASSÉS</div>
+    <div class="past-events-title">{!! __('words.civitas_past_events') !!}</div>
 </div>
 <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
     <div class="position-relative">
         <img src="{{ asset('img/civitas/past-events.png') }}" class="w-100" alt="logo" />
         <div class="position-absolute start-50 top-50 translate-middle past-events-width">
-            <div class="events-past-title">Conférence d’Alain Escada - 25 juin 2021</div>
+            <div class="events-past-title">{!! __('words.civitas_sample_conference') !!}</div>
             <div class="events-past-white-line my-3"></div>
-            <div class="events-past-cotnent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum libero sed fermentum ultricies. Morbi in tortor tellus. </div>
+            <div class="events-past-cotnent">{!! __('words.civitas_sample_description') !!}</div>
             <iframe class="w-100 mt-3" height="246" src="https://www.youtube.com/embed/kUh12GqmPNg?si=8CCpEHwmXwMcrdKT" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
@@ -323,9 +317,9 @@
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="bg-dark d-flex justify-content-center align-items-center mt-3">
         <div class="container my-3">
-            <div class="events-past-title">Conférence d’Alain Escada - 25 juin 2021</div>
+            <div class="events-past-title">{!! __('words.civitas_sample_conference') !!}</div>
             <div class="events-past-white-line my-3"></div>
-            <div class="events-past-cotnent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum libero sed fermentum ultricies. Morbi in tortor tellus. </div>
+            <div class="events-past-cotnent">{!! __('words.civitas_sample_description') !!}</div>
             <iframe class="w-100 h-100 mt-3" src="https://www.youtube.com/embed/kUh12GqmPNg?si=8CCpEHwmXwMcrdKT" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
@@ -355,7 +349,7 @@
     </div>
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
     <div class="d-flex align-items-center justify-content-center my-5">
-        <a href="{{ route('civitas.agenda') }}" class="past-events-red-button d-flex justify-content-center align-items-center">VOIR L’AGENDA DÉTAILLÉ</a>
+        <a href="{{ route('civitas.agenda') }}" class="past-events-red-button d-flex justify-content-center align-items-center">{!! __('words.civitas_view_detailed_agenda') !!}</a>
     </div>
 </div>
 @endif
@@ -493,7 +487,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="d-none toggle-content">
+                    <div class="d-none toggle-content-event">
                         <div class="row">
                             <div class="my-3"></div>
                             <div class="col-md-6">
@@ -646,7 +640,7 @@
              enableTime: true,
             dateFormat: 'd-m-Y H:i'
     });
-  
+
     $('#summernote-event-edit-next').summernote({
         height: 150,
         placeholder: 'Write your content here...',
@@ -654,7 +648,7 @@
     });
     var content_page = {!! json_encode($event->content) !!};
     var created_at = {!! json_encode($event->created_at) !!};
-    $(document).on("shown.bs.modal", "#editModal", function(e) { 
+    $(document).on("shown.bs.modal", "#editModal", function(e) {
         var formattedDate = moment(created_at).format('DD-MM-YYYY HH:mm');
         flatpickrEdit.setDate(formattedDate);
         if (content_page != '') {
@@ -672,7 +666,7 @@
         if (title && date) {
             let formattedDate = date.split(" ")[0];
             let formattedTitle = title.toLowerCase().replace(/\s+/g, '-');
-            let formattedUser = userName.toLowerCase().replace(/\s+/g, '-'); 
+            let formattedUser = userName.toLowerCase().replace(/\s+/g, '-');
 
             let finalUrl = `events/next/register/${formattedDate}/${formattedUser}/${formattedTitle}`;
             $(".urlInputEdit").val(finalUrl);
@@ -756,7 +750,7 @@
             dateFormat: 'Y-m-d H:i'
         });
     }
- 
+
     var allpastevents = {!! json_encode($allpastevents) !!};
     $('#contentSelect').on('change', function() {
         var selectedOption = $('option:selected', this);
@@ -838,9 +832,9 @@
         }
 
         if (this.value) {
-            $('.toggle-content').removeClass('d-none');
+            $('.toggle-content-event').removeClass('d-none');
         } else {
-            $('.toggle-content').addClass('d-none');
+            $('.toggle-content-event').addClass('d-none');
         }
     });
     let finalUrlPast;
@@ -852,7 +846,7 @@
         if (title && date) {
             let formattedDate = date.split(" ")[0];
             let formattedTitle = title.toLowerCase().replace(/\s+/g, '-');
-            let formattedUser = userName.toLowerCase().replace(/\s+/g, '-'); 
+            let formattedUser = userName.toLowerCase().replace(/\s+/g, '-');
 
             let finalUrlPast = `events/next/register/${formattedDate}/${formattedUser}/${formattedTitle}`;
             $(".urlInputEdit").val(finalUrlPast);
@@ -871,7 +865,7 @@
         if (selectedType === 'upload_video') {
             var pondFiles = pond.getFiles();
             if (pondFiles.length > 0) {
-                formData.append('upload_video', pondFiles[0].file); 
+                formData.append('upload_video', pondFiles[0].file);
             }
         }
         formData.append('inputType', selectedType);
@@ -934,7 +928,7 @@
             error: function(xhr, status, error) {
                 toastr.error("{!! trans('words.unexpected_error') !!}");
             },
-        });   
+        });
     });
 </script>
 @endif

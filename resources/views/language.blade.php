@@ -1,6 +1,6 @@
-@php
-$locale = app()->getLocale(); // 'fr','de','it'
-$ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT'];
+﻿@php
+$locale = app()->getLocale(); // 'fr','de','it','en'
+$ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT', 'en' => 'en_GB'];
 @endphp
 <!DOCTYPE html>
 <html lang="{{ $locale }}">
@@ -29,7 +29,7 @@ $ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT'];
 
 <body>
     <div class="parent-body">
-        <nav class="top-0 navbar inverse-text">
+        <nav class="top-0 navbar inverse-text" style="background-color: #000;">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="navbar-brand d-flex justify-content-center align-items-center logo-position flex-column home-page-height">
                     <a href="{{ route('home') }}">
@@ -59,7 +59,7 @@ $ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT'];
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('civitas.home') }}" id="civitas-suisse">CIVITAS SUISSE <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></i></a>
                         </li>
-                        <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block">
+                        <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block lang-item">
                             <div class="nav-item d-flex gap-2 align-items-center" id="language">
                                 <span class="nav-link">
                                     <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('fr', route('language', [], false)) }}" id="language">FR</a>
@@ -72,15 +72,21 @@ $ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT'];
                                 <span class="nav-link">
                                     <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}" id="language">IT</a>
                                 </span>
+                                <span class="lang-separator" id="language">|</span>
+                                <span class="nav-link">
+                                    <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}" id="language">EN</a>
+                                </span>
                             </div>
                         </div>
-                        <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+                        <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none lang-item" style="background-color: #d9d9d9;">
                             <div class="d-flex align-items-center" style="padding: 0 30px;">
                                 <a class="nav-link mobile-menu-new fw-bolder" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('fr', route('language', [], false)) }}">FR</a>
                                 <span class="mx-2">-</span>
                                 <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('de', route('language', [], false)) }}">DE</a>
                                 <span class="mx-2">-</span>
                                 <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}">IT</a>
+                                <span class="mx-2">-</span>
+                                <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}">EN</a>
                             </div>
                         </li>
                     </ul>
@@ -99,7 +105,7 @@ $ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT'];
             <img src="{{ asset('img/home/language.png') }}" class="w-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
             <img src="{{ asset('img/home/language_responsive.png') }}" class="w-100 d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
             <div class="d-flex justify-content-center align-items-center language-title language-title-bg position-absolute top-50 start-50 translate-middle">
-                {{ __('words.language_title') }}
+                {!! __('words.language_title') !!}
             </div>
         </div>
         <div class="container my-5">
@@ -184,7 +190,7 @@ $ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT'];
                                 <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">IMPRESSUM</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">PROTECTION DES DONNÉES</a>
+                                <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">{!! __('words.footer_data_protection_link') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
                                 <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">CONTACT</a>
@@ -203,8 +209,8 @@ $ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT'];
     </footer>
 
     <footer class="dark-wrapper d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" style="background: #fff !important;">
-        <div class="sub-footer d-flex justify-content-center align-items-center">
-            <div class="p-2 pb-0 text-center inner w-100">
+        <div class="sub-footer">
+            <div class="p-2 pb-0 text-center inner display-block">
                 <div class="d-flex justify-content-center align-items-center flex-column">
                     <img src="{{ asset('img/logo/responsive/logo_civitas_footer.svg') }}" class="mb-4 logo" alt="logo" />
                     <div>
@@ -224,29 +230,37 @@ $ogLocales = ['fr' => 'fr_FR', 'de' => 'de_DE', 'it' => 'it_IT'];
                     </div>
                 </div>
                 <div class="mx-2 black-line"></div>
-                <div class="mt-4 d-flex flex-column align-items-start">
-                    <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">CIVITAS SUISSE</a>
-                    <a href="{{ route('political-programs') }}" class="footer-submenu text-decoration-none">POSITIONS</a>
-                    <a href="{{ route('civitas.party') }}" class="footer-submenu text-decoration-none">MOUVEMENT</a>
-                    <a href="{{ route('civitas.diocesains') }}" class="footer-submenu text-decoration-none">GROUPES DIOCÉSAINS</a>
-                    <a href="{{ route('civitas.news') }}" class="footer-submenu text-decoration-none">ACTUALITÉS</a>
-                </div>
-                <div class="mt-4 d-flex flex-column align-items-start">
-                    <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">AMIS S.F.S.</a>
-                    <a href="{{ route('podcasts') }}" class="footer-submenu text-decoration-none">AUDIOTHÈQUE</a>
-                    <a href="{{ route('editions') }}" class="footer-submenu text-decoration-none">ÉDITIONS</a>
-                    <a href="{{ route('bulletin') }}" class="footer-submenu text-decoration-none">BULLETIN</a>
-                </div>
-                <div class="mt-4 d-flex flex-column align-items-start">
-                    <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">REFUGE DES PÉCHEURS</a>
-                    <a href="{{ route('notredame') }}" class="footer-submenu text-decoration-none">NOTRE DAME DE FATIMA</a>
+                <div class="tablet-footer-menu">
+                    <div class="">
+                        <div class="mt-4 d-flex flex-column align-items-start">
+                            <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">CIVITAS SUISSE</a>
+                            <a href="{{ route('political-programs') }}" class="footer-submenu text-decoration-none">POSITIONS</a>
+                            <a href="{{ route('civitas.party') }}" class="footer-submenu text-decoration-none">MOUVEMENT</a>
+                            <a href="{{ route('civitas.diocesains') }}" class="footer-submenu text-decoration-none">GROUPES DIOCÉSAINS</a>
+                            <a href="{{ route('civitas.news') }}" class="footer-submenu text-decoration-none">ACTUALITÉS</a>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="mt-4 d-flex flex-column align-items-start">
+                            <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">AMIS S.F.S.</a>
+                            <a href="{{ route('podcasts') }}" class="footer-submenu text-decoration-none">AUDIOTHÈQUE</a>
+                            <a href="{{ route('editions') }}" class="footer-submenu text-decoration-none">ÉDITIONS</a>
+                            <a href="{{ route('bulletin') }}" class="footer-submenu text-decoration-none">BULLETIN</a>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="mt-4 d-flex flex-column align-items-start">
+                            <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">REFUGE DES PÉCHEURS</a>
+                            <a href="{{ route('notredame') }}" class="footer-submenu text-decoration-none">NOTRE DAME DE FATIMA</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex-row mt-4 d-flex justify-content-center">
                     <div class="d-flex align-items-center">
                         <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">IMPRESSUM</a>
 
                         <div class="mx-1 border-footer"></div>
-                        <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">PROTECTION DES DONNÉES</a>
+                        <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">{!! __('words.footer_data_protection_link') !!}</a>
 
                         <div class="mx-1 border-footer"></div>
                         <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">CONTACT</a>

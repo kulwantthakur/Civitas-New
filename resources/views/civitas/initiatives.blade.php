@@ -3,9 +3,9 @@
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
             <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">POSITIONS</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
             <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
         </div>
     </div>
@@ -291,7 +291,7 @@
             </div>
         </div>
         <div class="initiative-grey-box d-flex justify-content-center align-items-center flex-column mt-5">
-            <div class="inititative-grey-box-content mb-4">NOTRE<br>NEWS LETTER</div>
+            <div class="inititative-grey-box-content mb-4">NOTRE<br>NEWSLETTER</div>
             <div class="d-flex justify-content-center">
                 <a href="{{ route('civitas.newsletter')}}" class="inititative-grey-box-button d-flex justify-content-center align-items-center">POUR NE RIEN MANQUER</a>
             </div>
@@ -346,6 +346,12 @@
                             <div class="my-3"></div>
                             <div class="col-md-6">
                                 <label class="form-label">
+                                    Link
+                                </label>
+                                <input type="text" class="form-control custom-form" name="link" placeholder="https://">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">
                                     Thumbnail*
                                     <i class="fa-solid fa-info-circle ms-1"
                                         data-bs-toggle="tooltip"
@@ -354,7 +360,6 @@
                                 </label>
                                 <input type="file" class="form-control custom-form" name="icon" accept=".png, .jpeg, .jpg" required>
                             </div>
-                            <div class="col-md-6"></div>
                             <div class="my-3"></div>
                             <div class="col-md-6">
                                 <label class="form-label">
@@ -457,7 +462,7 @@
                         <div class="col-md-6">
                             <label class="form-label">Current Slider Image</label>
                             <div class="d-flex align-items-center">
-                                <img src="{{ asset($vote->image_responsive) }}" alt="Current Image Responsive" class="img-thumbnail">
+                                <img src="{{ asset($vote->image_responsive) }}" alt="Current Slider Image" class="img-thumbnail">
                             </div>
                         </div>
                         <div class="col-md-6"></div>

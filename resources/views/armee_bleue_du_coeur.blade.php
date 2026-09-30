@@ -83,6 +83,12 @@
                                         href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}"
                                         id="language">IT</a>
                                 </span>
+                                <span class="lang-separator" id="language">|</span>
+                                <span class="nav-link">
+                                    <a class="text-white"
+                                        href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}"
+                                        id="language">EN</a>
+                                </span>
                             </div>
                         </div>
                         <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
@@ -95,6 +101,9 @@
                                 <span class="mx-2">-</span>
                                 <a class="nav-link mobile-menu-new"
                                     href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}">IT</a>
+                                <span class="mx-2">-</span>
+                                <a class="nav-link mobile-menu-new"
+                                    href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}">EN</a>
                             </div>
                         </li>
                     </ul>
@@ -144,6 +153,8 @@
                                 <a class="nav-link mobile-menu-new" href="{{ route('language') }}">DE</a>
                                 <span class="mx-2">-</span>
                                 <a class="nav-link mobile-menu-new" href="{{ route('language') }}">IT</a>
+                                <span class="mx-2">-</span>
+                                <a class="nav-link mobile-menu-new" href="{{ route('language') }}">EN</a>
                             </div>
                         </li>
                     </ul>

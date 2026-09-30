@@ -3,10 +3,10 @@
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
-            <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">POSITIONS</a>
-            <a href="{{ route ('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
-            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
+            <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">{!! __('words.nav_positions') !!}</a>
+            <a href="{{ route ('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
+            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">{!! __('words.nav_news') !!}</a>
         </div>
     </div>
 </div>
@@ -28,7 +28,7 @@
     <div class="d-flex flex-column align-items-center text-center">
         <img src="{{ asset('/img/civitas/civitas_logo_pages.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/civitas/responsive/civitas_logo_pages.png') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
-        <div class="civitas-title-page mt-3">DONS SANS FRAIS</div>
+        <div class="civitas-title-page mt-3">{!! __('words.payment_no_fees_donations') !!}</div>
         <div class="black-line-civitas"></div>
     </div>
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
@@ -54,7 +54,7 @@
     <div class="d-flex flex-column align-items-center text-center">
         <img src="{{ asset('/img/civitas/civitas_logo_pages.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/civitas/responsive/civitas_logo_pages.png') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
-        <div class="civitas-title-page mt-3">DONS SANS FRAIS</div>
+        <div class="civitas-title-page mt-3">{!! __('words.payment_no_fees_donations') !!}</div>
         <div class="black-line-civitas"></div>
     </div>
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
@@ -80,7 +80,7 @@
     <div class="d-flex flex-column align-items-center text-center">
         <img src="{{ asset('/img/civitas/civitas_logo_pages.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/civitas/responsive/civitas_logo_pages.png') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
-        <div class="civitas-title-page mt-3">DONS EN CRYPTOMONNAIE</div>
+        <div class="civitas-title-page mt-3">{!! __('words.payment_crypto_donations') !!}</div>
         <div class="black-line-civitas"></div>
     </div>
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>

@@ -3,10 +3,10 @@
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
-            <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">POSITIONS</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
-            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
+            <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">{!! __('words.nav_positions') !!}</a>
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
+            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">{!! __('words.nav_news') !!}</a>
         </div>
     </div>
 </div>
@@ -43,7 +43,7 @@
             <div class="position-relative">
                 <img src="{{ asset('img/civitas/goal-support-red.png') }}" alt="logo" />
                 <div class="goal-support-title position-absolute top-50 start-50 translate-middle text-white text-center">
-                    VOS DONS<br>FONT LA<br>DIFFÉRENCE !
+                    {!! __('words.donate_your_donations_matter') !!}
                 </div>
             </div>
         </div>
@@ -55,14 +55,14 @@
         <div class="d-flex justify-content-center align-items-center">
             <a href="{{ route('civitas.support')}}" class="d-flex align-items-center justify-content-evenly home-right-image-grey-box hover-blue">
                 <img src="{{ asset('img/home/civitas_logo.svg') }}" class="" alt="Image">
-                <div class="goal-support-soutenir">SOUTENIR</div>
+                <div class="goal-support-soutenir">{!! __('words.donate_support') !!}</div>
             </a>
         </div>
         <div class="space-100"></div>
         {!! trans('words.civitas_goal-support_2') !!}
         <div class="space-100"></div>
         <div class="d-flex justify-content-center align-items-center">
-            <a href="{{ route('civitas.status')}}" class="goal-support-red-button d-flex justify-content-center align-items-center">VOIR LES STATUTS DU PARTI</a>
+            <a href="{{ route('civitas.status')}}" class="goal-support-red-button d-flex justify-content-center align-items-center">{!! __('words.donate_view_statutes') !!}</a>
         </div>
     </div>
 </div>
@@ -74,13 +74,13 @@
         <div class="bg-dark space-300">
             <div class="goal-support-absolute goal-support-cornered">
                 <div class="d-flex justify-content-center align-items-center title-height">
-                    <div class="goal-support-title">VOS DONS<br>FONT LA DIFFÉRENCE !</div>
+                    <div class="goal-support-title">{!! __('words.donate_your_donations_matter') !!}</div>
                 </div>
             </div>
             <div class="position-absolute bottom-0 start-50 translate-middle">
                 <a href="{{ route('civitas.support')}}" class="d-flex align-items-center justify-content-evenly home-right-image-grey-box hover-blue">
                     <img src="{{ asset('img/home/soutenir-logo-responsive.png') }}" class="" alt="Image">
-                    <div class="goal-support-soutenir">SOUTENIR</div>
+                    <div class="goal-support-soutenir">{!! __('words.donate_support') !!}</div>
                 </a>
             </div>
         </div>
@@ -97,7 +97,7 @@
         {!! trans('words.civitas_goal-support_resp_2') !!}
     </div>
     <div class="d-flex justify-content-center align-items-center">
-        <a href="{{ route('civitas.status')}}" class="goal-support-red-button d-flex justify-content-center align-items-center">VOIR LES STATUTS DU PARTI</a>
+        <a href="{{ route('civitas.status')}}" class="goal-support-red-button d-flex justify-content-center align-items-center">{!! __('words.donate_view_statutes') !!}</a>
     </div>
 </div>
 @elseif($page == 1)
@@ -106,12 +106,12 @@
         <img src="{{ asset('img/civitas/support_1.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="Image">
         <img src="{{ asset('img/civitas/responsive/support_1.png') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="Image">
         <div class="support-title-absolute">
-            <div class="support-title">La Chrétienté n’est<br>pas morte !</div>
+            <div class="support-title">{!! __('words.donate_christendom_not_dead') !!}</div>
             <div class="support-title-underline"></div>
         </div>
         <div class="support-red-box-absolute">
             <div class="support-red-box d-flex justify-content-center align-items-center p-3 ps-3 p-md-3 p-lg-5 p-xl-5 p-xxl-5">
-                <div class="support-red-box-content">JE FAIS UN DON POUR LES DROITS DE LA VÉRITÉ !</div>
+                <div class="support-red-box-content">{!! __('words.donate_for_truth_rights') !!}</div>
             </div>
         </div>
     </div>
@@ -148,16 +148,16 @@
                                         name="custom_amount"
                                         id="custom-amount"
                                         class="home-right-image-big-box-italic"
-                                        placeholder="MONTANT PERSONNALISÉ"
+                                        placeholder="{!! __('words.donate_custom_amount') !!}"
                                         value="{{ session('custom_amount') ?? '' }}" />
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-12">
-                                <a href="{{ route('civitas.soutenir') }}" class="d-flex align-items-center justify-content-evenly home-right-image-grey-box hover-blue">
+                                <a href="javascript:void(0);" data-redirect="{{ route('civitas.soutenir') }}" class="d-flex align-items-center justify-content-evenly home-right-image-grey-box hover-blue soutenir-trigger">
                                     <img src="{{ asset('img/home/soutenir-logo-responsive.png') }}" class="" alt="Image">
-                                    <div class="home-right-image-grey-box-content">SOUTENIR</div>
+                                    <div class="home-right-image-grey-box-content">{!! __('words.donate_support') !!}</div>
                                 </a>
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                             {!! trans('words.civitas_support_right') !!}
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="{{ route('civitas.soutenir') }}" class="support-grey-right-button d-flex justify-content-center align-items-center">FAIR UN DON</a>
+                            <a href="javascript:void(0);" data-redirect="{{ route('civitas.soutenir') }}" class="support-grey-right-button d-flex justify-content-center align-items-center soutenir-trigger">{!! __('words.donate_make_donation') !!}</a>
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
     <div class="bg-dark">
         <div class="position-relative">
             <div class="support-title-sec-absolute">
-                <div class="support-title-sec">RENFORCER<br>NOS CONVICTIONS</div>
+                <div class="support-title-sec">{!! __('words.donate_strengthen_convictions') !!}</div>
                 <div class="support-title-sec-underline"></div>
             </div>
         </div>
@@ -196,25 +196,25 @@
                 <img src="{{ asset('img/civitas/support_2.png') }}" class="" alt="Image">
                 <div class="support-absolute-boxes-first">
                     <div class="support-red-box-button d-flex flex-column justify-content-center align-items-center">
-                        <div class="support-boxes-title">SAUVER CE QUI<br>PEUT ENCORE L’ÊTRE</div>
-                        <a href="{{ route('political-action') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">PLUS D’INFORMATIONS</a>
+                        <div class="support-boxes-title">{!! __('words.donate_save_what_can_be') !!}</div> 
+                        <a href="{{ route('political-action') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">{!! __('words.donate_more_info') !!}</a>
                     </div>
                 </div>
                 <div class="support-absolute-boxes-sec">
                     <div class="support-grey-box-button d-flex flex-column justify-content-center align-items-center">
-                        <div class="support-boxes-title">PROTÉGER<br>NOTRE FOI</div>
-                        <a href="{{ route('civitas.faith') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">SAUVER L’ESSENTIEL</a>
+                        <div class="support-boxes-title">{!! __('words.donate_protect_faith') !!}</div>
+                        <a href="{{ route('civitas.faith') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">{!! __('words.donate_save_essential') !!}</a>
                     </div>
                 </div>
                 <div class="support-absolute-boxes-third">
                     <div class="support-red-box-button d-flex flex-column justify-content-center align-items-center">
-                        <div class="support-boxes-title">À QUOI SERVENT<br>VOS DONS ?</div>
-                        <a href="{{ route('civitas.goal') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">PLUS D’INFORMATIONS</a>
+                        <div class="support-boxes-title">{!! __('words.donate_what_donations_for') !!}</div>
+                        <a href="{{ route('civitas.goal') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">{!! __('words.donate_more_info') !!}</a>
                     </div>
                 </div>
                 <div class="support-absolute-sec d-flex justify-content-center">
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                        <div class="support-title-third">VOTRE SOUTIEN EST FONDAMENTAL</div>
+                        <div class="support-title-third">{!! __('words.donate_support_fundamental') !!}</div>
                         <div class="support-title-third-underline"></div>
                     </div>
                 </div>
@@ -225,8 +225,8 @@
     <div class="position-relative">
         <div class="position-absolute top-0 start-50 translate-middle">
             <div class="support-last-red-box d-flex flex-column justify-content-center align-items-center">
-                <div class="support-last-red-box-title">NOTRE<br>NEWS LETTER</div>
-                <a href="{{ route('civitas.newsletter')}}" class="support-last-red-box-button d-flex justify-content-center align-items-center mt-3">POUR NE RIEN MANQUER</a>
+                <div class="support-last-red-box-title">{!! __('words.donate_newsletter') !!}</div>
+                <a href="{{ route('civitas.newsletter')}}" class="support-last-red-box-button d-flex justify-content-center align-items-center mt-3">{!! __('words.donate_miss_nothing') !!}</a>
             </div>
         </div>
     </div>
@@ -235,12 +235,12 @@
     <div class="container">
         <div class="my-5">
             <div class="d-flex justify-content-between align-items-center my-3">
-                <a href="javascript:void(0);" class="d-flex align-items-center justify-content-center support-boxes" data-value="25">CHF 25</a>
-                <a href="javascript:void(0);" class="d-flex align-items-center justify-content-center support-boxes" data-value="50">CHF 50</a>
+                <a href="javascript:void(0);" class="d-flex align-items-center justify-content-center support-boxes {{ session('selected_value') == 25 ? 'active-box-soutenir' : '' }}" data-value="25">CHF 25</a>
+                <a href="javascript:void(0);" class="d-flex align-items-center justify-content-center support-boxes {{ session('selected_value') == 50 ? 'active-box-soutenir' : '' }}" data-value="50">CHF 50</a>
             </div>
             <div class="d-flex justify-content-between align-items-center my-3">
-                <a href="javascript:void(0);" class="d-flex align-items-center justify-content-center support-boxes" data-value="120">CHF 120</a>
-                <a href="javascript:void(0);" class="d-flex align-items-center justify-content-center support-boxes" data-value="500">CHF 500</a>
+                <a href="javascript:void(0);" class="d-flex align-items-center justify-content-center support-boxes {{ session('selected_value') == 120 ? 'active-box-soutenir' : '' }}" data-value="120">CHF 120</a>
+                <a href="javascript:void(0);" class="d-flex align-items-center justify-content-center support-boxes {{ session('selected_value') == 500 ? 'active-box-soutenir' : '' }}" data-value="500">CHF 500</a>
             </div>
             <div class="d-flex justify-content-center my-3">
                 
@@ -250,14 +250,14 @@
                         name="custom_amount"
                         id="custom-amount"
                         class="home-right-image-big-box-italic"
-                        placeholder="MONTANT PERSONNALISÉ"
+                        placeholder="{!! __('words.donate_custom_amount') !!}"
                         value="{{ session('custom_amount') ?? '' }}" />
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-                <a href="{{ route('civitas.soutenir') }}" class="d-flex align-items-center justify-content-evenly support-white-soutenir">
+                <a href="javascript:void(0);" data-redirect="{{ route('civitas.soutenir') }}" class="d-flex align-items-center justify-content-evenly support-white-soutenir soutenir-trigger">
                     <img src="{{ asset('img/home/soutenir-logo-responsive.png') }}" class="" alt="Image">
-                    <div class="goal-support-soutenir">SOUTENIR</div>
+                    <div class="goal-support-soutenir">{!! __('words.donate_support') !!}</div>
                 </a>
             </div>
         </div>
@@ -265,18 +265,18 @@
             {!! trans('words.civitas_support_right') !!}
         </div>
         <div class="d-flex justify-content-center my-5">
-            <a href="{{ route('civitas.soutenir') }}" class="support-grey-right-button d-flex justify-content-center align-items-center">FAIR UN DON</a>
+            <a href="javascript:void(0);" data-redirect="{{ route('civitas.soutenir') }}" class="support-grey-right-button d-flex justify-content-center align-items-center soutenir-trigger">{!! __('words.donate_make_donation') !!}</a>
         </div>
         <div class="d-flex justify-content-center align-items-center flex-column my-5">
-            <div class="support-title-third">VOTRE SOUTIEN<br>EST FONDAMENTAL</div>
+            <div class="support-title-third">{!! __('words.donate_support_fundamental') !!}</div>
             <div class="support-title-third-underline mt-4"></div>
         </div>
         <div class="support-red-box-button d-flex flex-column justify-content-center align-items-center">
-            <div class="support-boxes-title">À QUOI SERVENT<br>VOS DONS ?</div>
-            <a href="{{ route('civitas.goal') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">PLUS D’INFORMATIONS</a>
+            <div class="support-boxes-title">{!! __('words.donate_what_donations_for') !!}</div>
+            <a href="{{ route('civitas.goal') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">{!! __('words.donate_more_info') !!}</a>
         </div>
         <div class="d-flex justify-content-center align-items-center flex-column my-5">
-            <div class="support-title-sec">RENFORCER<br>NOS CONVICTIONS</div>
+            <div class="support-title-sec">{!! __('words.donate_strengthen_convictions') !!}</div>
             <div class="support-title-third-underline mt-4"></div>
         </div>
     </div>
@@ -284,19 +284,19 @@
         <img src="{{ asset('img/civitas/responsive/support_2.png') }}" class="" alt="Image">
         <div class="support-absolute-position-responsive">
             <div class="support-red-box-button width-reset d-flex flex-column justify-content-center align-items-center">
-                <div class="support-boxes-title">SAUVER CE QUI<br>PEUT ENCORE L’ÊTRE</div>
-                <a href="{{ route('political-action') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">PLUS D’INFORMATIONS</a>
+                <div class="support-boxes-title">{!! __('words.donate_save_what_can_be') !!}</div>
+                <a href="{{ route('political-action') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">{!! __('words.donate_more_info') !!}</a>
             </div>
         </div>
         <div class="support-absolute-position-sec-responsive">
             <div class="support-grey-box-button d-flex flex-column justify-content-center align-items-center">
-                <div class="support-boxes-title">PROTÉGER<br>NOTRE FOI</div>
-                <a href="{{ route('civitas.faith') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">SAUVER L’ESSENTIEL</a>
+                <div class="support-boxes-title">{!! __('words.donate_protect_faith') !!}</div>
+                <a href="{{ route('civitas.faith') }}" class="support-boxes-button d-flex justify-content-center align-items-center mt-3">{!! __('words.donate_save_essential') !!}</a>
             </div>
             <div class="my-5"></div>
             <div class="support-last-red-box d-flex flex-column justify-content-center align-items-center">
-                <div class="support-last-red-box-title">NOTRE<br>NEWS LETTER</div>
-                <a href="{{ route('civitas.newsletter')}}" class="support-last-red-box-button d-flex justify-content-center align-items-center mt-3">POUR NE RIEN MANQUER</a>
+                <div class="support-last-red-box-title">{!! __('words.donate_newsletter') !!}</div>
+                <a href="{{ route('civitas.newsletter')}}" class="support-last-red-box-button d-flex justify-content-center align-items-center mt-3">{!! __('words.donate_miss_nothing') !!}</a>
             </div>
         </div>
     </div>
@@ -304,4 +304,95 @@
 @endif
 <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
 <div class="mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
+@endsection
+
+@section('scripts')
+<script>
+$(document).ready(function() {
+    // Desktop: preset amount clicks
+    $('.home-right-image-box').on('click', function(e) {
+        e.preventDefault();
+        const value = $(this).data('value');
+
+        $('.home-right-image-box').removeClass('active-box-soutenir');
+        $('.home-right-image-big-box').removeClass('active-box-soutenir');
+        $(this).addClass('active-box-soutenir');
+        $('[name="custom_amount"]').val('');
+
+        $.ajax({
+            url: '{{ route("set-donation-amount") }}',
+            method: 'POST',
+            data: {
+                _token: '{{ csrf_token() }}',
+                amount_type: value,
+                custom_amount: null,
+                billing_cycle: 'monthly'
+            }
+        });
+    });
+
+    // Mobile: preset amount clicks
+    $('.support-boxes').on('click', function(e) {
+        e.preventDefault();
+        const value = $(this).data('value');
+
+        $('.support-boxes').removeClass('active-box-soutenir');
+        $('.custom-amount-container').removeClass('active-box-soutenir');
+        $(this).addClass('active-box-soutenir');
+        $('[name="custom_amount"]').val('');
+
+        $.ajax({
+            url: '{{ route("set-donation-amount") }}',
+            method: 'POST',
+            data: {
+                _token: '{{ csrf_token() }}',
+                amount_type: value,
+                custom_amount: null,
+                billing_cycle: 'monthly'
+            }
+        });
+    });
+
+    // Custom amount input
+    $('[name="custom_amount"]').on('focus', function() {
+        $('.home-right-image-box').removeClass('active-box-soutenir');
+        $('.home-right-image-big-box').addClass('active-box-soutenir');
+        $('.support-boxes').removeClass('active-box-soutenir');
+        $('.custom-amount-container').addClass('active-box-soutenir');
+    });
+
+    $('[name="custom_amount"]').on('blur', function() {
+        const val = $(this).val();
+        if (val && parseFloat(val) > 0) {
+            $.ajax({
+                url: '{{ route("set-donation-amount") }}',
+                method: 'POST',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    amount_type: 'custom',
+                    custom_amount: val,
+                    billing_cycle: 'monthly'
+                }
+            });
+        }
+    });
+
+    $('.soutenir-trigger').on('click', function(e) {
+        e.preventDefault();
+        let url = $(this).data('redirect');
+        const $activeBox = $('.home-right-image-box.active-box-soutenir, .support-boxes.active-box-soutenir');
+        const $customActive = $('.home-right-image-big-box.active-box-soutenir, .custom-amount-container.active-box-soutenir');
+        const customValue = $('[name="custom_amount"]').val();
+
+        if ($activeBox.length) {
+            url += '?amount=' + $activeBox.first().data('value');
+        } else if ($customActive.length && customValue && parseFloat(customValue) > 0) {
+            url += '?amount=custom&custom=' + encodeURIComponent(customValue);
+        }
+
+        window.location.href = url;
+    });
+});
+</script>
+
 @endsection

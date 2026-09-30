@@ -1,11 +1,15 @@
-@extends('civitas.app')
+﻿@extends('civitas.app')
 
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="p-3 civitas-grey-menu d-flex align-items-center justify-content-between">
+        <div class="p-3 civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly">
+            @if($page == 1 || $page == 3)
+            <a href="{{ route('political-action') }}" class="civitas-responsive-header-grey">{!! __('words.nav_actions') !!}</a>
+            @else
             <a href="{{ route('political-programs') }}" class="civitas-responsive-header-grey">POSITIONS</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
+            @endif
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
             <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
         </div>
     </div>
@@ -32,6 +36,22 @@
     </div>
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
     <div class="mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
+    <div class="d-flex justify-content-center flex-column">
+        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
+            <a href="{{ route('civitas.initiatives') }}" class="info-title-pages">
+                <img src="{{ asset('img/civitas/general-info-next.png') }}" class="me-4" alt="logo" />INITIATIVES ET RÉFÉRENDUMS
+
+            </a>
+        </div>
+        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+            <a href="{{ route('civitas.initiatives') }}" class="info-title-pages fs-4">
+                <img src="{{ asset('img/civitas/responsive/general-info-next.png') }}" class="me-4" alt="logo" />INITIATIVES ET RÉFÉRENDUMS
+
+            </a>
+        </div>
+    </div>
+    <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
+    <div class="mt-5 mt-sm-5 mt-md-5 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
     {!! trans('words.civitas_vote_1') !!}
 </div>
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
@@ -76,7 +96,7 @@
     <div class="d-flex justify-content-center">
         <div class="p-3 vote-catholic-red-box d-flex justify-content-center align-items-center flex-column">
             <div class="vote-catholic-red-box-content">LES POSITIONS POLITIQUES DE CIVITAS SUISSE</div>
-            <a href="{{ route('political-program-home') }}" class="mt-5 vote-catholic-button d-flex justify-content-center align-items-center">VOIR LES THÈMES</a>
+            <a href="{{ route('political-program-home') }}" class="mt-4 vote-catholic-button d-flex justify-content-center align-items-center">VOIR LES THÈMES</a>
         </div>
     </div>
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
@@ -195,14 +215,26 @@
     <div class="mt-5 mt-sm-5 mt-md-5 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
     <div class="row gy-3 gy-lg-5">
         @foreach($positions as $item)
+        @php
+        $i = $loop->index; // 0-based
+        $row = intdiv($i, 2); // 2 columns per row on md
+        $col = $i % 2;
+        $mdAltRed = (($row + $col) % 2) === 0; // true => red, false => grey
+        @endphp
+
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-            <div class="d-flex flex-column align-items-center justify-content-between 
-            @if ($loop->odd) red-bg-themes @else grey-bg-themes @endif">
+            <div class="d-flex flex-column align-items-center justify-content-between
+            {{ $loop->odd ? 'red-bg-themes' : 'grey-bg-themes' }}
+            {{ $mdAltRed ? 'md-alt-red' : 'md-alt-grey' }}">
                 <div class="m-auto civitas-themes-content text-uppercase">{{ $item->title }}</div>
-                <a href="{{ route('programs', ['wordA' => $item->url]) }}" class="m-auto civitas-themes-button d-flex justify-content-center align-items-center">SUR CE THÈMES</a>
+                <a href="{{ route('programs', ['wordA' => $item->url]) }}"
+                    class="m-auto civitas-themes-button d-flex justify-content-center align-items-center">
+                    SUR CE THÈMES
+                </a>
             </div>
         </div>
         @endforeach
+
     </div>
 </div>
 <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
@@ -480,7 +512,7 @@
 
         var formData = new FormData(this);
         formData.append('content', $('#summernote-program-edit').summernote('code'));
-       
+
         $.ajax({
             url: "{{ route('page-store.update', $current_page->id ) }}",
             type: "POST",

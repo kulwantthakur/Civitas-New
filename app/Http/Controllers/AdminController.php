@@ -36,7 +36,45 @@ class AdminController extends Controller
     }
     public function account()
     {
-        return view('admin_page');
+        // Get donations
+        $donations = \App\Models\Donation::orderBy('created_at', 'desc')->get();
+        
+        // Get email templates
+        $templates = \App\Models\EmailTemplate::getAllIndexed();
+        $paymentMethods = ['cash', 'bank', 'bulletin', 'crypto'];
+        foreach ($paymentMethods as $method) {
+            if (!isset($templates[$method])) {
+                $templates[$method] = new \App\Models\EmailTemplate([
+                    'payment_method' => $method,
+                    'subject' => 'Confirmation de votre don - Civitas',
+                    'html_content' => '',
+                ]);
+            }
+        }
+        
+        return view('admin_page', compact('donations', 'templates'));
+    }
+
+    public function donations()
+    {
+        $donations = \App\Models\Donation::orderBy('created_at', 'desc')->get();
+        return view('admin.donations', compact('donations'));
+    }
+
+    public function updateDonationStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:completed,failed,cancelled,processing'
+        ]);
+
+        $donation = \App\Models\Donation::findOrFail($id);
+        $donation->status = $request->status;
+        $donation->save();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Donation status updated successfully'
+        ]);
     }
 
     public function updatePassword(Request $request)
@@ -360,8 +398,7 @@ class AdminController extends Controller
         $item = $this->modelPage->find($request->id);
 
         if ($item) {
-            $item->is_deleted = 1;
-            $item->save();
+            $item->delete(); // Uses SoftDeletes
 
             if ($request->ajax()) {
                 return response()->json([

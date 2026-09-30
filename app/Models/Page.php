@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Validator;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Validator;
 
 class Page extends Model
 {
+    use SoftDeletes;
+
     public $timestamps = true;
     /**
      * The database table used by the model.
@@ -15,6 +18,77 @@ class Page extends Model
      */
     protected $table = 'pages';
     public $rules = [];
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'user_id',
+        'section_id',
+        'page_identifier',
+        'category',
+        'icon',
+        'url',
+        'image',
+        'image_responsive',
+        'events_image',
+        'number',
+        'period',
+        'year',
+        'title',
+        'subtitle',
+        'content',
+        'content_sec',
+        'link',
+        'upload_video',
+        'pdf',
+        'html_source',
+        'is_active',
+        'sort_order',
+        'created_at',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'is_active' => 'boolean',
+        'sort_order' => 'integer',
+    ];
+
+    /**
+     * Scope for active records.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
+
+    /**
+     * Scope for records ordered by their display order.
+     */
+    public function scopeOrdered($query)
+    {
+        return $query->orderBy('sort_order')->orderBy('id');
+    }
+
+    /**
+     * The DB stores this legacy column under a misspelled name (html_soruce);
+     * expose it as html_source so the rest of the application stays clean.
+     */
+    public function getHtmlSourceAttribute($value)
+    {
+        return $this->attributes['html_soruce'] ?? null;
+    }
+
+    public function setHtmlSourceAttribute($value)
+    {
+        $this->attributes['html_soruce'] = $value;
+    }
 
     public $editRules = [];
     public $errors;
@@ -80,78 +154,75 @@ class Page extends Model
 
     public function getAllBySection($sectionId)
     {
-        return $this->where('section_id', $sectionId)->where('is_active', '1')
-            ->where('is_deleted', '0')->get();
+        return $this->active()->where('section_id', $sectionId)->get();
     }
     public function getAllBySectionObject($section)
     {
-        return $this->where('section_id', $section->id)->where('is_active', '1')
-            ->where('is_deleted', '0')->get();
+        return $this->active()->where('section_id', $section->id)->get();
     }
     public function getById($id)
     {
-        return $this->where('id', $id)->where('is_active', '1')
-            ->where('is_deleted', '0')->first();
+        return $this->active()->where('id', $id)->first();
     }
     public function getAllBySectionAndCategory($section, $category)
     {
-        return $this->where('section_id', $section->id)
+        return $this->active()
+            ->where('section_id', $section->id)
             ->where('category', $category)
-            ->where('is_active', '1')
-            ->where('is_deleted', '0')
             ->get();
     }
     public function getByCategoryAndUrl($category, $url)
     {
-        return $this->where('url', $url)
+        return $this->active()
+            ->where('url', $url)
             ->where('category', $category)
-            ->where('is_active', '1')
-            ->where('is_deleted', '0')
             ->first();
     }
     public function getAllByCategory($category)
     {
-        return $this->where('category', $category)->where('is_active', '1')
-            ->where('is_deleted', '0')->get();
+        return $this->active()->where('category', $category)->get();
     }
     public function getPaginatedBySection($section)
     {
-        return $this->where('section_id', $section->id)
-            ->where('is_active', '1')
-            ->where('is_deleted', '0')
+        return $this->active()
+            ->where('section_id', $section->id)
             ->paginate(5);
     }
     public function getPaginatedByUrl($url, $section_id)
     {
-        return $this->where('url', $url)
+        return $this->active()
+            ->where('url', $url)
             ->where('section_id', $section_id)
-            ->where('is_active', 1)
-            ->where('is_deleted', 0)
             ->paginate(5);
     }
     public function getByTitleAndUrl($url, $title)
     {
-        return $this->where('url', $url)
+        return $this->active()
+            ->where('url', $url)
             ->where('title', $title)
-            ->where('is_active', '1')
-            ->where('is_deleted', '0')
             ->first();
     }
     public function getByUrl($url, $section_id)
     {
-        return $this->where('url', $url)->where('section_id', $section_id)->where('is_active', '1')
-            ->where('is_deleted', '0')->first();
+        return $this->active()->where('url', $url)->where('section_id', $section_id)->first();
     }
     public function getFirstBySection($section)
     {
-        return $this->where('section_id', $section->id)->where('is_active', '1')
-            ->where('is_deleted', '0')->first();
+        return $this->active()->where('section_id', $section->id)->first();
     }
     public function getAllByUrl($url, $section_id)
     {
-        return $this->where('url', $url)->where('section_id', $section_id)->where('is_active', '1')
-            ->where('is_deleted', '0')->get();
+        return $this->active()->where('url', $url)->where('section_id', $section_id)->get();
     }
+    
+    /**
+     * Relationship: A page belongs to a section.
+     */
+    public function section()
+    {
+        return $this->belongsTo(Section::class, 'section_id');
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id', 'user_identifier');

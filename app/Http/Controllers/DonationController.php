@@ -4,21 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Donation;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use Carbon\Carbon;
-use Dompdf\Dompdf;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
-
 use Illuminate\Support\Facades\Mail;
 use App\Mail\DonationConfirmation;
 
 
 class DonationController extends Controller
 {
+    /** @var Donation */
     protected $modelDonation;
 
     public function __construct(Donation $DonationM)
@@ -26,6 +19,12 @@ class DonationController extends Controller
         $this->modelDonation = $DonationM;
     }
 
+    /**
+     * Store a new donation.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function storeDonation(Request $request)
     {
         if ($this->modelDonation->isDonationValid($request->all())) {
@@ -38,7 +37,11 @@ class DonationController extends Controller
             } else {
                 $newdonation->amount = (float) $request->amount_type;
             }
-
+            $cycle = $request->input('billing_cycle');
+            if (!in_array($cycle, ['monthly', 'annual'], true)) {
+                $cycle = 'monthly';
+            }
+            $newdonation->billing_cycle = $cycle;
             $newdonation->payment_method = $request->payment_method;
 
             if (Auth::check()) {
@@ -70,15 +73,24 @@ class DonationController extends Controller
 
             $newdonation->save();
 
-            if (!empty($newdonation->email)) {
-                Mail::to($newdonation->email)->send(new DonationConfirmation($newdonation));
+            // Get user email - either from authenticated user or from form
+            $userEmail = Auth::check() ? Auth::user()->email : $newdonation->email;
+
+            // Send confirmation email with payment instructions for all payment methods
+            if (!empty($userEmail)) {
+                try {
+                    Mail::to($userEmail)->send(new DonationConfirmation($newdonation));
+                } catch (\Exception $e) {
+                    \Log::error('Failed to send donation confirmation email: ' . $e->getMessage());
+                }
             }
 
+            // Redirect based on payment method
             if ($request->payment_method === 'cash') {
                 return response()->json([
                     'success' => true,
-                    'redirect' => route('civitas.soutenir_ebanking'),
-                    'message' => 'Donation saved, redirecting...'
+                    'redirect' => route('civitas.soutenir_cash'),
+                    'message' => 'Donation saved, redirecting to payment instructions...'
                 ], 200);
             } elseif ($newdonation->payment_method === 'online') {
                 return response()->json([
@@ -86,14 +98,25 @@ class DonationController extends Controller
                     'redirect' => route('subscription.createPayment', ['donation_id' => $newdonation->id]),
                     'message' => 'Proceeding to online payment...'
                 ]);
+            } elseif ($newdonation->payment_method === 'bank') {
+                return response()->json([
+                    'success' => true,
+                    'redirect' => route('civitas.soutenir_banking'),
+                    'message' => 'Donation saved, redirecting to payment instructions...'
+                ], 200);
             } elseif ($newdonation->payment_method === 'bulletin') {
                 return response()->json([
                     'success' => true,
                     'redirect' => route('civitas.soutenir_receipt'),
-                    'message' => 'Donation saved, redirecting...'
+                    'message' => 'Donation saved, redirecting to payment instructions...'
+                ], 200);
+            } elseif ($newdonation->payment_method === 'crypto') {
+                return response()->json([
+                    'success' => true,
+                    'redirect' => route('civitas.soutenir_crypto'),
+                    'message' => 'Donation saved, redirecting to payment instructions...'
                 ], 200);
             }
-
 
             return response()->json(['success' => true, 'message' => 'Donation saved'], 200);
         } else {

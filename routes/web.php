@@ -8,7 +8,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\ImportController;
-use App\Http\Controllers\AdminPodcastController;
 use App\Http\Controllers\AmissfsController;
 use App\Http\Controllers\CivitasController;
 use App\Http\Controllers\KeywordController;
@@ -19,16 +18,33 @@ use App\Http\Controllers\SoutenirController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MembershipController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\AdminPodcastController;
 use App\Http\Controllers\PodcastCategoryController;
+use App\Http\Controllers\EmailTemplateController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Illuminate\Support\Facades\Process;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 */
 
+Route::get('/test',function(){
+$fileName = storage_path('app/backup.sql');
+
+    Process::run(sprintf(
+        'mysqldump -h%s -u%s -p%s %s > %s',
+        'hk49.your-database.de',
+        'navigaw_1_w',
+        'cW3Jzffd9pZWWurZ',
+        'civitas',
+        $fileName
+    ));
+});
+
 // ---------- Auth ----------
-Auth::routes(['login' => true]);
+Auth::routes(['login' => false]);
 Route::get('/ap-login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/ap-login', [LoginController::class, 'login']);
 Route::group(['middleware' => ['auth']], function () {
@@ -40,8 +56,59 @@ Route::get('/', function () {
     return redirect(LaravelLocalization::localizeURL('/accueil'));
 });
 
+// ---------- Save Donation Amount + Redirect ----------
+Route::post('/save-donation-and-redirect', function(\Illuminate\Http\Request $request) {
+    session([
+        'selected_value' => $request->amount_type,
+        'custom_amount'  => $request->custom_amount,
+        'billing_cycle'  => $request->billing_cycle ?? 'monthly'
+    ]);
+    return redirect($request->redirect_to ?? '/');
+})->name('save-donation-and-redirect');
+
+// ---------- Set Donation Amount Session (AJAX) ----------
+Route::post('/set-donation-amount', function(\Illuminate\Http\Request $request) {
+    $request->validate([
+        'amount_type' => 'required',
+        'custom_amount' => 'nullable|numeric|min:1'
+    ]);
+    
+    session([
+        'selected_value' => $request->amount_type,
+        'custom_amount' => $request->custom_amount,
+        'billing_cycle' => $request->billing_cycle ?? 'monthly'
+    ]);
+    
+    return response()->json(['success' => true]);
+})->name('set-donation-amount');
+
 // ---------- Payrexx Webhook (OUTSIDE localization group) ----------
 Route::post('/webhook/payrexx', [SubscriptionController::class, 'handleWebhook']);
+
+// ---------- Admin Panel (Auth required) ----------
+Route::middleware(['auth'])->group(function () {
+    // Email templates
+    Route::post('/admin/email-templates', [EmailTemplateController::class, 'store'])->name('admin.email-templates.store');
+    Route::put('/admin/email-templates/{id}', [EmailTemplateController::class, 'update'])->name('admin.email-templates.update');
+    
+    // Donation status update
+    Route::post('/admin/donations/{id}/status', [AdminController::class, 'updateDonationStatus'])->name('admin.donations.update-status');
+    
+    // Test email
+    Route::get('/admin/test-donation-email/{method}', function($method) {
+        $donation = new \App\Models\Donation([
+            'firstname' => 'Test',
+            'lastname' => 'User',
+            'email' => \Auth::user()->email,
+            'amount' => '100.00',
+            'payment_method' => $method,
+            'country' => 'CH'
+        ]);
+        \Mail::to(\Auth::user()->email)->send(new \App\Mail\DonationConfirmation($donation));
+        return redirect()->back()->with('success', 'Test email sent to ' . \Auth::user()->email);
+    })->name('admin.test-donation-email');
+});
+
 
 // ---------- Dev helper (local only): optimize ----------
 Route::get('/optimize', function () {
@@ -52,25 +119,43 @@ Route::get('/optimize', function () {
     abort(403, 'Unauthorized');
 });
 
+// ---------- Dev helper (local only): seed testing admin ----------
+Route::get('/seed-admin', function () {
+    if (app()->environment('local')) {
+        \Artisan::call('db:seed', ['--class' => 'Database\Seeders\AdminSeeder']);
+        return '<h3>✅ Testing admin created</h3><p>' . \Artisan::output() . '</p>';
+    }
+    abort(403, 'Unauthorized');
+});
+
+// ---------- Dev helper (local only): run sort_order migration ----------
+Route::get('/run-sort-order-migration', function () {
+    if (app()->environment('local')) {
+        \Artisan::call('migrate', [
+            '--path' => 'database/migrations/2026_08_07_100000_add_sort_order_to_sections_and_pages.php',
+        ]);
+        return '<h3>✅ Migration run</h3><p>' . \Artisan::output() . '</p>';
+    }
+    abort(403, 'Unauthorized');
+});
 
 
 // ---------- Catch-all: redirect any URL without locale to a localized URL ----------
 Route::get('{any}', function ($any) {
     return redirect(LaravelLocalization::localizeURL('/' . ltrim($any, '/')));
-})->where('any', '^(?!fr($|/)|de($|/)|it($|/)|optimize$|webhook/payrexx$).*$');
+})->where('any', '^(?!fr($|/)|de($|/)|it($|/)|en($|/)|optimize$|webhook/payrexx$).*$');
 
 
 // // -------- Admin (Import Pages) --------
-// Route::prefix('admin')->middleware('auth')->group(function () {
-//     // Import Pages Interface
-//     Route::get('/import/pages', [ImportController::class, 'index'])->name('admin.import.pages');
-//     Route::post('/import/pages/preview', [ImportController::class, 'preview'])->name('admin.import.pages.preview');
-//     Route::post('/import/pages/import', [ImportController::class, 'import'])->name('admin.import.pages.import');
-//     Route::post('/import/check-directory', [ImportController::class, 'checkDirectory'])->name('admin.import.check-directory');
-// });
+Route::prefix('admin')->middleware('auth')->group(function () {
+    // Import Pages Interface
+    Route::get('/import/pages', [ImportController::class, 'index'])->name('admin.import.pages');
+    Route::post('/import/pages/preview', [ImportController::class, 'preview'])->name('admin.import.pages.preview');
+    Route::post('/import/pages/import', [ImportController::class, 'import'])->name('admin.import.pages.import');
+    Route::post('/import/check-directory', [ImportController::class, 'checkDirectory'])->name('admin.import.check-directory');
+});
 
-
-// ---------- Localized routes (/fr, /de, /it) ----------
+// ---------- Localized routes (/fr, /de, /it, /en) ----------
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
@@ -78,12 +163,11 @@ Route::group(
             'localeSessionRedirect',
             'localizationRedirect',
             'localeViewPath',
-            // Force FR for everything except an allow-list (e.g., /{locale}/language)
+            // Force FR/EN for the site, and always FR for the dashboard/settings
             'forceFrenchExceptAllowed',
         ],
     ],
     function () {
-
 
         // -------- Admin (auth) --------
         Route::middleware(['auth'])->controller(AdminController::class)->group(function () {
@@ -91,12 +175,15 @@ Route::group(
             Route::post('/updatePassword', 'updatePassword')->name('updatePassword');
         });
 
+        require __DIR__ . '/dashboard.php';
+
         // -------- Admin (Import Pages) --------
         // Import Pages Interface
         Route::get('/import/pages', [ImportController::class, 'index'])->name('admin.import.pages');
         Route::post('/import/pages/preview', [ImportController::class, 'preview'])->name('admin.import.pages.preview');
         Route::post('/import/pages/import', [ImportController::class, 'import'])->name('admin.import.pages.import');
         Route::post('/import/check-directory', [ImportController::class, 'checkDirectory'])->name('admin.import.check-directory');
+
 
         // -------- Admin (Import Podcasts) --------
         // Import Podcasts Interface
@@ -134,13 +221,11 @@ Route::group(
         Route::post('/membership-store', [MembershipController::class, 'storeMembership'])->name('membership-store');
 
         // -------- Filter (Amissfs) --------
-        Route::get('/filter-results/{sectionId}', [AmissfsController::class, 'filterResults']);
+        Route::get('/filter-results/{sectionId}', [AmissfsController::class, 'filterResults'])->name('filter-results');
 
         // -------- Home --------
         Route::controller(HomeController::class)->group(function () {
             Route::get('/accueil', 'home')->name('home');
-
-            Route::get('/armee-bleue-du-coeur', 'armee_bleue_du_coeur')->name('armee-bleue-du-coeur');
 
             // -------- Language (allowed in non-FR locales) --------
             Route::get('/language', 'language')->name('language');
@@ -189,7 +274,7 @@ Route::group(
 
             // Become member (Figma)
             Route::get('/suisse/mouvement/adhesion', 'civitasMember')->name('civitas.member');
-            Route::get('/mouvement/avantages-membres-et-amis', 'civitasAdvantages')->name('civitas.advantages');
+            Route::get('/suisse/mouvement/avantages-membres-et-amis', 'civitasAdvantages')->name('civitas.advantages');
 
             // Membership
             Route::get('/suisse/mouvement/adhesion/transfert', 'civitasMembership')->name('civitas.membership');
@@ -208,7 +293,7 @@ Route::group(
 
             Route::get('/suisse/mouvement/comite-directeur', 'partyDirector')->name('civitas.director');
             Route::get('/suisse/mouvement/statuts-et-communiques', 'partyStatus')->name('civitas.status');
-            Route::get('/suisse/communique/{url}', 'partyStatusPAGE')->name('civitas.statuspage');
+            Route::get('/suisse/statuts-et-communiques/{url}', 'partyStatusPAGE')->name('civitas.statuspage');
             Route::get('/suisse/la-vie-du-mouvement', 'partyLife')->name('civitas.life');
 
             // Initiatives
@@ -218,9 +303,9 @@ Route::group(
 
             // EVENTS
             Route::get('/suisse/conferences', 'civitasEventsOverview')->name('civitas.events');
-            Route::get('/suisse/conferences/{created_at}/{user_name}/{title}', 'civitasNextEvent')->name('civitas.next-event');
-            Route::get('/suisse/conferences/{created_at}/{user_name}/{title}/inscription', 'civitasEventDetails')->name('civitas.event-detail');
             Route::get('/suisse/conferences/evenements-passes', 'civitasPastEvents')->name('civitas.last-event');
+            Route::get('/suisse/conferences/{title}', 'civitasNextEvent')->name('civitas.next-event');
+            Route::get('/suisse/conferences/{title}/inscription', 'civitasEventDetails')->name('civitas.event-detail');
 
             // Soutenir (before)
             Route::get('/suisse/don/informations', 'goalSupport')->name('civitas.goal');
@@ -228,9 +313,11 @@ Route::group(
 
             // Soutenir (payment)
             Route::get('/suisse/don/transfert', 'civitasSoutenir')->name('civitas.soutenir');
-            Route::get('/payment/versement_e-banking', 'soutenirPaymentEbanking')->name('civitas.soutenir_ebanking');
-            Route::get('/payment/bulletin_de_versement', 'soutenirPaymentReceipt')->name('civitas.soutenir_receipt');
-            Route::get('/payment/monero', 'soutenirPaymentCrypto')->name('civitas.soutenir_crypto');
+
+            Route::get('/suisse/don/transfert/argent-liquide', 'soutenirPaymentCash')->name('civitas.soutenir_cash');
+            Route::get('/suisse/don/transfert/virement-bancaire', 'soutenirPaymentBanking')->name('civitas.soutenir_banking');
+            Route::get('/suisse/don/transfert/bulletin-de-versement ', 'soutenirPaymentReceipt')->name('civitas.soutenir_receipt');
+            Route::get('/suisse/don/transfert/cryptomonnaie', 'soutenirPaymentCrypto')->name('civitas.soutenir_crypto');
 
             // General Info (payment)
             Route::get('/suisse/etude-anti-moderniste-et-contrerevolutionnaire', 'civitasStudy')->name('civitas.study');
@@ -263,29 +350,30 @@ Route::group(
 
             // Pages of subcategories
             Route::get('/amis-s-f-s/a-propos/activites', 'associationpage')->name('association-page');
-            Route::get('/amis-s-f-s/bulletin/numero-{number}', 'lebulletinDownload')->name('le-bulletin-download');
+
+            Route::get('/amis-s-f-s/bulletin/numero-{number}', 'lebulletinDownload')
+                ->whereNumber('number')
+                ->name('le-bulletin-download');
             Route::get('/amis-s-f-s/bulletin/archives', 'lebulletinArchive')->name('le-bulletin-archive');
-            Route::get('/amis-s-f-s/bulletin/past/numero-{number}', 'lebulletinArchivePast')->name('le-bulletin-archive-past');
+            // Route::get('/amis-s-f-s/bulletin/past/numero-{number}', 'lebulletinArchivePast')->name('le-bulletin-archive-past');
             Route::get('/amis-s-f-s/bulletin/commander', 'lebulletinCommander')->name('le-bulletin-commander');
 
-            Route::get('/amis-s-f-s/rom-kurier/numero-{number}', 'romKurierDownload')->name('rom-kurier-download');
+            Route::get('/amis-s-f-s/rom-kurier/numero-{number}', 'romKurierDownload')->whereNumber('number')->name('rom-kurier-download');
             Route::get('/amis-s-f-s/rom-kurier/archives', 'romKurierArchive')->name('rom-kurier-archive');
-            Route::get('/amis-s-f-s/rom-kurier/past/numero-{number}', 'romKurierArchivePast')->name('rom-kurier-archive-past');
-            Route::get('/amis-s-f-s/rom-kurier/commander ', 'romKurierCommander')->name('rom-kurier-commander');
+            // Route::get('/amis-s-f-s/rom-kurier/past/numero-{number}', 'romKurierArchivePast')->name('rom-kurier-archive-past');
+            Route::get('/amis-s-f-s/rom-kurier/commander', 'romKurierCommander')->name('rom-kurier-commander');
 
             // Newsletter
             Route::get('/amis-s-f-s/newsletter/inscription', 'amissfsNewsletter')->name('amissfs-newsletter');
 
             // Contact
             Route::get('/amis-s-f-s/contact', 'amissfsContact')->name('amissfs-contact');
-
-
-            Route::get('/amissfs/podcasts/download-zip/{podcastId}', 'downloadZip')->name('download-zip');
+            Route::get('/amis-s-f-s/podcasts/download-zip/{podcastId}', 'downloadZip')->name('download-zip');
             // Podcast
             Route::get('/amis-s-f-s/audiothèque/', 'podcasts')->name('podcasts');
-            Route::get('/amissfs/podcasts/{url}', 'getCategoryPodcast')->name('podcast-subcategory');
-            Route::get('/amissfs/podcasts/{categoryUrl}/{podcastUrl}', 'getPodcast')->name('podcast-name');
-            Route::get('/amissfs/history', 'history')->name('podcast-history');
+            Route::get('/amis-s-f-s/podcasts/{url}', 'getCategoryPodcast')->name('podcast-subcategory');
+            Route::get('/amis-s-f-s/podcasts/{categoryUrl}/{podcastUrl}', 'getPodcast')->name('podcast-name');
+            Route::get('/amis-s-f-s/history', 'history')->name('podcast-history');
 
             Route::get('/podcast-search', 'search')->name('podcast-search');
         });
@@ -303,8 +391,8 @@ Route::group(
             Route::get('/rdp/le-secret', 'leSecret')->name('lesecret');
 
             // Comment prier le rosaire
-            Route::get('/rdp/pourquoi-prier-le-rosaire ', 'prierleRosaire')->name('prier-lerosaire');
-            Route::get('/rdp/comment-prier-le-rosaire ', 'commentleRosaire')->name('comment-lerosaire');
+            Route::get('/rdp/pourquoi-prier-le-rosaire', 'prierleRosaire')->name('prier-lerosaire');
+            Route::get('/rdp/comment-prier-le-rosaire', 'commentleRosaire')->name('comment-lerosaire');
 
             // Months
             Route::get('/rdp/13-septembre', 'rdpSeptember')->name('rdp-septembre');
@@ -315,8 +403,10 @@ Route::group(
             Route::get('/rdp/13-juin', 'rdpJune')->name('rdp-june');
             Route::get('/rdp/13-mai', 'rdpMay')->name('rdp-may');
             Route::get('/rdp/apparitions-de-l-ange', 'rdpAngel')->name('rdp-angel');
+
             Route::get('/rdp/armee-bleue-du-coeur-immacule/historique', 'historique')->name('historique');
-            Route::get('/rdp/armee-bleue-du-coeur-immacule/', 'coeurImmacule')->name('coeurImmacule');
+            Route::get('/rdp/armee-bleue-du-coeur-immacule', 'coeurImmacule')->name('coeurImmacule');
+            Route::get('/rdp/armee-bleue-du-coeur-immacule/s-engager', 'armee_bleue_du_coeur')->name('armee-bleue-du-coeur');
 
             Route::get('/rdp/{url}', 'catechismeCategories')->name('catechisme.category');
         });

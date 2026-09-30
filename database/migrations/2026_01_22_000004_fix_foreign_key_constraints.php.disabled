@@ -1,0 +1,161 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
+
+class FixForeignKeyConstraints extends Migration
+{
+    /**
+     * Foreign key configurations
+     * Format: [table => [column => [references, on, onDelete, onUpdate]]]
+     */
+    private array $foreignKeys = [
+        'pages' => [
+            'user_id' => ['user_identifier', 'users', 'SET NULL', 'CASCADE'],
+            'section_id' => ['id', 'sections', 'CASCADE', 'CASCADE'],
+        ],
+        'podcasts' => [
+            'category_id' => ['id', 'podcast_categories', 'CASCADE', 'CASCADE'],
+        ],
+        'audio_files' => [
+            'podcast_id' => ['podcast_identifier', 'podcasts', 'CASCADE', 'CASCADE'],
+        ],
+        'podcast_history' => [
+            'user_id' => ['user_identifier', 'users', 'SET NULL', 'CASCADE'],
+            'podcast_id' => ['podcast_identifier', 'podcasts', 'CASCADE', 'CASCADE'],
+        ],
+        'podcast_keyword_podcast' => [
+            'podcast_id' => ['podcast_identifier', 'podcasts', 'CASCADE', 'CASCADE'],
+            'keyword_id' => ['id', 'podcast_keywords', 'CASCADE', 'CASCADE'],
+        ],
+        'podcast_keyword_category' => [
+            'category_id' => ['id', 'podcast_categories', 'CASCADE', 'CASCADE'],
+            'keyword_id' => ['id', 'podcast_keywords', 'CASCADE', 'CASCADE'],
+        ],
+        'donations' => [
+            'user_id' => ['user_identifier', 'users', 'SET NULL', 'CASCADE'],
+        ],
+        'memberships' => [
+            'user_id' => ['user_identifier', 'users', 'SET NULL', 'CASCADE'],
+        ],
+        'form_submissions' => [
+            'user_id' => ['user_identifier', 'users', 'SET NULL', 'CASCADE'],
+        ],
+        'subscriptions' => [
+            'donation_id' => ['id', 'donations', 'CASCADE', 'CASCADE'],
+        ],
+    ];
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up(): void
+    {
+        // Disable foreign key checks temporarily
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+
+        // First, make user_id columns nullable where needed (for SET NULL on delete)
+        $nullableUserIdTables = ['pages', 'podcast_history', 'donations', 'memberships', 'form_submissions'];
+        foreach ($nullableUserIdTables as $table) {
+            if (Schema::hasTable($table) && Schema::hasColumn($table, 'user_id')) {
+                DB::statement("ALTER TABLE `{$table}` MODIFY `user_id` VARCHAR(255) NULL");
+            }
+        }
+
+        foreach ($this->foreignKeys as $table => $columns) {
+            if (!Schema::hasTable($table)) {
+                continue;
+            }
+
+            foreach ($columns as $column => $config) {
+                [$references, $onTable, $onDelete, $onUpdate] = $config;
+
+                // Get the constraint name
+                $constraintName = $this->getConstraintName($table, $column);
+                
+                if ($constraintName) {
+                    // Drop existing constraint
+                    Schema::table($table, function (Blueprint $blueprint) use ($constraintName) {
+                        $blueprint->dropForeign($constraintName);
+                    });
+                }
+
+                // Re-add with proper actions
+                Schema::table($table, function (Blueprint $blueprint) use ($column, $references, $onTable, $onDelete, $onUpdate) {
+                    $blueprint->foreign($column)
+                        ->references($references)
+                        ->on($onTable)
+                        ->onDelete($onDelete)
+                        ->onUpdate($onUpdate);
+                });
+            }
+        }
+
+        // Re-enable foreign key checks
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down(): void
+    {
+        // Drop all the modified foreign keys and recreate without actions
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+
+        foreach ($this->foreignKeys as $table => $columns) {
+            if (!Schema::hasTable($table)) {
+                continue;
+            }
+
+            foreach ($columns as $column => $config) {
+                [$references, $onTable] = $config;
+
+                $constraintName = $this->getConstraintName($table, $column);
+                
+                if ($constraintName) {
+                    Schema::table($table, function (Blueprint $blueprint) use ($constraintName) {
+                        $blueprint->dropForeign($constraintName);
+                    });
+                }
+
+                Schema::table($table, function (Blueprint $blueprint) use ($column, $references, $onTable) {
+                    $blueprint->foreign($column)
+                        ->references($references)
+                        ->on($onTable);
+                });
+            }
+        }
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+    }
+
+    /**
+     * Get the foreign key constraint name for a column
+     *
+     * @param string $table
+     * @param string $column
+     * @return string|null
+     */
+    private function getConstraintName(string $table, string $column): ?string
+    {
+        $database = config('database.connections.mysql.database');
+        
+        $result = DB::selectOne("
+            SELECT CONSTRAINT_NAME
+            FROM information_schema.KEY_COLUMN_USAGE
+            WHERE TABLE_SCHEMA = ?
+            AND TABLE_NAME = ?
+            AND COLUMN_NAME = ?
+            AND REFERENCED_TABLE_NAME IS NOT NULL
+        ", [$database, $table, $column]);
+
+        return $result ? $result->CONSTRAINT_NAME : null;
+    }
+}

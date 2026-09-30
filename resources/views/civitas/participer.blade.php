@@ -1,11 +1,11 @@
-@extends('civitas.app')
+﻿@extends('civitas.app')
 
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
-    <div class="my-3">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
-            <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">AGENDA</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
+    <div class="grey-mobile-height">
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
+            <a href="{{ route('political-action') }}" class="civitas-responsive-header-grey">{!! __('words.nav_actions') !!}</a>
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
             <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
         </div>
     </div>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="participate-big-button-top">
-            <a href="{{ route('civitas.join')}}" class="participer-home-button d-flex justify-content-center align-items-center">DEVENIR<br>MEMBRE</a>
+            <a href="{{ route('civitas.join')}}" class="participer-home-button d-flex justify-content-center align-items-center">{!! __('words.participer_join_button') !!}</a>
         </div>
     </div>
     <div class="space-100"></div>
@@ -66,7 +66,7 @@
                     <div class="position-relative my-3">
                         <img src="{{ asset('img/civitas/participate1.png') }}" class="" alt="logo" />
                         <div class="position-absolute bottom-0 start-50 translate-middle">
-                            <a href="{{ route('civitas.join')}}" class="participate-img-button d-flex justify-content-center align-items-center">FAIRE PARTIE DE CIVITAS SUISSE</a>
+                            <a href="{{ route('civitas.join')}}" class="participate-img-button d-flex justify-content-center align-items-center">DEVENIR MEMBRE</a>
                         </div>
                     </div>
                 </div>

@@ -20,8 +20,6 @@ class PodcastHistory extends Model
         'user_id',
         'podcast_id',
         'is_active',
-        'is_deleted',
-        
     ];
     public $rules = [];
 

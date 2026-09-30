@@ -55,14 +55,14 @@
 @elseif($page == 1 || $page == 2 || $page == 3 || $page == 4)
 <div class="navbar-brand d-flex justify-content-center align-items-center">
     <a href="{{ route('amissfs.home') }}" class="logo-absolute text-decoration-none">
-        <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block logo-color" alt="logo" />
+        <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/logo/responsive/logo_amissfs_2.svg') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
 </div>
 @elseif($page == 5)
 <div class="navbar-brand d-flex justify-content-center align-items-center">
     <a href="{{ route('amissfs.home') }}" class="logo-absolute text-decoration-none">
-        <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block logo-color" alt="logo" />
+        <img src="{{ asset('/img/logo/amissfs_logo_dark.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('/img/amissfs/responsive/amissfs-logo.png') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
 </div>
@@ -95,9 +95,8 @@
     </div>
     <div class="position-relative">
         <a href="{{ route('association-page') }}">
-            <div class="image-container">
-                <img src="{{ asset('img/amissfs/association-last.png') }}" class="w-100 default-image amissfs-association-height-img" alt="logo" />
-                <img src="{{ asset('img/amissfs/association-last-hover.png') }}" class="w-100 hover-image amissfs-association-height-img" alt="logo" />
+            <div class="party-img-zoom">
+                <img src="{{ asset('img/amissfs/association-last.png') }}" class="w-100" alt="logo" />
             </div>
         </a>
         <div class="absolute-top-right ">
@@ -136,7 +135,7 @@
     <div class="container">
         <div class="text-center d-flex flex-column align-items-center">
             <img src="{{ asset('/img/amissfs/amissfs-logo-page.png') }}" class="logo" alt="logo" />
-            <div class="mt-3 sang-blue-30 text-dark">NOTRE MISSION</div>
+            <div class="mt-3 sang-blue-30 text-dark">LES ÉDITIONS</div>
             <div class="black-line-amissfs"></div>
         </div>
     </div>
@@ -215,11 +214,11 @@
     <div class="d-flex justify-content-center align-items-center flex-column">
         <div class="grey-box-bulletin d-flex justify-content-center align-items-center flex-column">
             <div class="p-3 text-center text-white suisse-italic-20">LE BULLETIN DES AMIS DE SAINT FRANÇOIS DE SALES</div>
-            <a href="{{ route('le-bulletin-download', ['number' => $latestRecord->number]) }}" class="bg-white suisse-regular-18 width-201 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">TÉLÉCHARGER</a>
+            <a href="{{ route('le-bulletin-download', ['number' => $latestBulletin->number ?? 1]) }}" class="bg-white suisse-regular-18 width-201 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">TÉLÉCHARGER</a>
         </div>
         <div class="red-box-bulletin d-flex justify-content-center align-items-center flex-column">
             <div class="p-3 mb-3 text-center text-white suisse-italic-20">DER ROM-KURIER</div>
-            <a href="{{ route('rom-kurier-download',['number' => $latestRecord->number]) }}" class="bg-white suisse-regular-18 width-201 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">UNTERLADEN</a>
+            <a href="{{ route('rom-kurier-download',['number' => $latestRomKurier->number ?? 1]) }}" class="bg-white suisse-regular-18 width-201 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">UNTERLADEN</a>
         </div>
         <a href="{{ route('le-bulletin-commander') }}" class="mt-5 text-white red-box width-201 height-36 suisse-regular-18 d-flex justify-content-center align-items-center text-decoration-none">S’ABONNER</a>
     </div>
@@ -245,11 +244,11 @@
     <div class="d-flex justify-content-center align-items-center flex-column">
         <div class="grey-box-bulletin d-flex justify-content-center align-items-center flex-column">
             <div class="p-3 text-center text-white suisse-italic-20">LE BULLETIN DES AMIS DE SAINT FRANÇOIS DE SALES</div>
-            <a href="{{ route('le-bulletin-download', ['number' => $latestRecord->number]) }}" class="bg-white suisse-regular-18 width-201 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">TÉLÉCHARGER</a>
+            <a href="{{ route('le-bulletin-download', ['number' => $latestBulletin->number ?? 1]) }}" class="bg-white suisse-regular-18 width-201 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">TÉLÉCHARGER</a>
         </div>
         <div class="red-box-bulletin d-flex justify-content-center align-items-center flex-column">
             <div class="p-3 mb-3 text-center text-white suisse-italic-20">DER ROM-KURIER</div>
-            <a href="{{ route('rom-kurier-download',['number' => $latestRecord->number]) }}" class="bg-white suisse-regular-18 width-201 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">UNTERLADEN</a>
+            <a href="{{ route('rom-kurier-download',['number' => $latestRomKurier->number ?? 1]) }}" class="bg-white suisse-regular-18 width-201 height-38 text-dark d-flex justify-content-center align-items-center text-decoration-none">UNTERLADEN</a>
         </div>
         <a href="{{ route('rom-kurier-commander') }}" class="mt-5 text-white red-box width-201 height-36 suisse-regular-18 lh-base d-flex justify-content-center align-items-center text-decoration-none">S’ABONNER</a>
     </div>

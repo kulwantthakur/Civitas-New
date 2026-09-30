@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Validator;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Validator;
 
 class Membership extends Model
 {
+    use SoftDeletes;
+
     public $timestamps = true;
     /**
      * The database table used by the model.
@@ -15,6 +18,22 @@ class Membership extends Model
      */
     protected $table = 'memberships';
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+
+    /**
+     * Scope for active records.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
 
     public $editRules = [];
     public $errors;

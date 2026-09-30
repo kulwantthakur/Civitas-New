@@ -4,19 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\FormSubmission;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\FormSubmissionReceived;
 use Carbon\Carbon;
-use Dompdf\Dompdf;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Config;
 
 
 class FormsController extends Controller
 {
+    /** @var FormSubmission */
     protected $modelFormSubmission;
 
     public function __construct(FormSubmission $FormM)
@@ -24,6 +20,12 @@ class FormsController extends Controller
         $this->modelFormSubmission = $FormM;
     }
 
+    /**
+     * Store a form submission.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function storeForm(Request $request)
     {
         if ($this->modelFormSubmission->isFormValid($request->all())) {
@@ -67,8 +69,8 @@ class FormsController extends Controller
 
             $newform->save();
 
-            Mail::to('kyriakosdoug4@gmail.com')
-                ->cc('kyriakosdoug4@gmail.com')
+            Mail::to(config('mail.admin_recipient', 'admin@civitas.ch'))
+                ->cc(config('mail.admin_cc', 'admin@civitas.ch'))
                 ->send(new FormSubmissionReceived($newform));
 
 
@@ -84,6 +86,12 @@ class FormsController extends Controller
         }
     }
 
+    /**
+     * Submit a ticket form.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function submitTicket(Request $request)
     {
         $formSubmission = new FormSubmission();
@@ -115,8 +123,8 @@ class FormsController extends Controller
         $savedSubmission = $formSubmission->create($data);
 
         // Send email
-        Mail::to('kyriakosdoug4@gmail.com')
-            ->cc('kyriakosdoug4@gmail.com')
+        Mail::to(config('mail.admin_recipient', 'admin@civitas.ch'))
+            ->cc(config('mail.admin_cc', 'admin@civitas.ch'))
             ->send(new FormSubmissionReceived($savedSubmission));
 
         return response()->json([

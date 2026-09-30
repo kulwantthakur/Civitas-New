@@ -2,7 +2,7 @@
 @section('logo')
 @if($page == 0 || $page == 3)
 <div class="navbar-brand d-flex justify-content-center align-items-center flex-column">
-    <a href="{{ route('civitas.home') }}">
+    <a href="{{ route('civitas.home') }}" class="logo-absolute">
         <img src="{{ asset('img/logo/logo_civitas.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('img/logo/responsive/civitas-logo-responsive.svg') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
@@ -16,7 +16,7 @@
 </div>
 @elseif($page ==2)
 <div class="navbar-brand d-flex align-items-center flex-column slider-justify-responsive">
-    <a href="{{ route('civitas.home') }}" class="logo-absolute">
+    <a href="{{ route('coeurImmacule') }}" class="logo-absolute">
         <img src="{{ asset('img/logo/logo_rdp.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" width="140" height="122" alt="logo" />
         <img src="{{ asset('img/logo/responsive/civitas-logo-responsive.svg') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
@@ -220,7 +220,7 @@
                 <div class="d-flex flex-column m-auto" style="width: 597px;">
                     {!! trans('words.slider_etudier_last_paragraph_right') !!}
                     <div class="d-flex justify-content-center">
-                        <a href="{{ route('civitas.study') }}" class="etudier-last-right-content-button d-flex justify-content-center align-items-center">PARTICIPER AUX MERCREDIS DE FORMATION</a>
+                        <a href="{{ route('civitas.study') }}" class="etudier-last-right-content-button d-flex justify-content-center align-items-center">PARTICIPER AUX JEUDIS DE FORMATION</a>
                     </div>
                 </div>
             </div>
@@ -234,7 +234,7 @@
     <div class="etudier-black-bg-responsive my-5 p-3">
         {!! trans('words.slider_etudier_last_paragraph_right') !!}
         <div class="d-flex justify-content-center mt-3">
-            <a href="{{ route('civitas.study') }}" class="etudier-last-right-content-button d-flex justify-content-center align-items-center p-2">PARTICIPER AUX MERCREDIS DE FORMATION</a>
+            <a href="{{ route('civitas.study') }}" class="etudier-last-right-content-button d-flex justify-content-center align-items-center p-2">PARTICIPER AUX JEUDIS DE FORMATION</a>
         </div>
     </div>
 </div>
@@ -292,7 +292,9 @@
             <img src="{{ asset('img/slider/prier_4.png') }}" class="" alt="logo" />
         </div>
         <div class="space-100"></div>
-        {!! trans('words.slider_prier_fourth') !!}
+        {!! trans('words.slider_prier_fourth', [
+        'url' => route('coeurImmacule')
+        ]) !!}
     </div>
 </div>
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
@@ -301,28 +303,32 @@
     </div>
     <img src="{{ asset('img/slider/responsive/prier_4.png') }}" class="w-100" alt="logo" />
     <div class="container custom-tweak my-5">
-        {!! trans('words.slider_prier_fourth') !!}
+        {!! trans('words.slider_prier_fourth', [
+        'url' => route('coeurImmacule')
+        ]) !!}
     </div>
 </div>
 <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-    <div class="row">
-        <div class="prier-dark-grey-box d-flex flex-row justify-content-center py-3">
-            <div class="col-6">
-                <div class="d-flex flex-column p-5">
-                    {!! trans('words.slider_prier_box_paragraph_left') !!}
-                    <div class="d-flex justify-content-end">
-                        <a href="https://laportelatine.org/wp-content/uploads/2024/01/Calendrier-Retraites-2024.pdf" class="prier-red-button-grey-box d-flex justify-content-center align-items-center">AGENDA DES RETRAITES DE SAINT-IGNACE (PDF)</a>
+    <div id="exercices">
+        <div class="row">
+            <div class="prier-dark-grey-box d-flex flex-row justify-content-center py-3">
+                <div class="col-6">
+                    <div class="d-flex flex-column p-5">
+                        {!! trans('words.slider_prier_box_paragraph_left') !!}
+                        <div class="d-flex justify-content-end">
+                            <a href="https://laportelatine.org/wp-content/uploads/2024/01/Calendrier-Retraites-2024.pdf" class="prier-red-button-grey-box d-flex justify-content-center align-items-center">AGENDA DES RETRAITES DE SAINT-IGNACE (PDF)</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-1">
-                <div class="d-flex align-items-center h-100">
-                    <div class="etudier-border-last"></div>
+                <div class="col-1">
+                    <div class="d-flex align-items-center h-100">
+                        <div class="etudier-border-last"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-5">
-                <div class="d-flex flex-column p-4">
-                    {!! trans('words.slider_prier_box_paragraph_right') !!}
+                <div class="col-5">
+                    <div class="d-flex flex-column p-4">
+                        {!! trans('words.slider_prier_box_paragraph_right') !!}
+                    </div>
                 </div>
             </div>
         </div>

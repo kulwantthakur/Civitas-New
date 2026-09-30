@@ -1,12 +1,16 @@
-@extends('civitas.app')
+﻿@extends('civitas.app')
 
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
-            <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">AGENDA</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
-            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
+            @if($page == 0)
+            <a href="{{ route('political-action') }}" class="civitas-responsive-header-grey">{!! __('words.nav_actions') !!}</a>
+            @else
+            <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">{!! __('words.nav_agenda') !!}</a>
+            @endif
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
+            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">{!! __('words.nav_news') !!}</a>
         </div>
     </div>
 </div>
@@ -26,7 +30,7 @@
 @if($page == 0)
 <div class="container">
     <div class="d-flex flex-column align-items-center text-center">
-        <div class="become-member-header mt-3">DEVENIR MEMBRE DE CIVITAS SUISSE</div>
+        <div class="become-member-header mt-3">{!! __('words.member_become_member_title') !!}</div>
         <div class="become-member-black-line"></div>
     </div>
 </div>
@@ -43,10 +47,10 @@
 <div class="mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
 <div class="container">
     <div class="d-flex flex-column justify-content-center align-items-center text-center">
-        <div class="become-member-header">FAIRE PARTIE D’UN MOUVEMENT À LA FOIS<br>LOCAL ET INTERNATIONAL</div>
+        <div class="become-member-header">{!! __('words.member_movement_local_international') !!}</div>
         <div class="become-member-black-line mb-3 mb-sm-3 mb-md-3 mb-lg-5 mb-xl-5 mb-xxl-5"></div>
         {!! trans('words.civitas_member_first_par') !!}
-        <a href="{{ route('civitas.diocesains') }}" class="become-member-button d-flex justify-content-center align-items-center">six groupes diocésains !</a>
+        <a href="{{ route('civitas.diocesains') }}" class="become-member-button d-flex justify-content-center align-items-center">{!! __('words.member_five_diocesan_groups') !!}</a>
     </div>
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
     <div class="mt-3 mt-sm-3 mt-md-3 mt-lg-0 mt-xl-0 mt-xxl-0"></div>
@@ -57,7 +61,7 @@
                 {!! trans('words.civitas_member_image_overlay') !!}
             </div>
             <div class="position-absolute bottom-0 start-50 translate-middle">
-                <a href="{{ route('civitas.participer') }}" class="become-meber-first-img-content-button d-flex justify-content-center align-items-center">DEVENIR MEMBRE</a>
+                <a href="{{ route('civitas.participer') }}" class="become-meber-first-img-content-button d-flex justify-content-center align-items-center">{!! __('words.member_become_member') !!}</a>
             </div>
         </div>
     </div>
@@ -72,7 +76,7 @@
                 {!! trans('words.civitas_member_image_overlay-second') !!}
             </div>
             <div class="position-absolute bottom-0 start-50 translate-middle">
-                <a href="{{ route('civitas.soutenir') }}" class="become-meber-sec-img-content-button d-flex justify-content-center align-items-center">FAIRE UN DON</a>
+                <a href="{{ route('civitas.soutenir') }}" class="become-meber-sec-img-content-button d-flex justify-content-center align-items-center">{!! __('words.donate_make_donation') !!}</a>
             </div>
         </div>
     </div>
@@ -85,7 +89,7 @@
                 {!! trans('words.civitas_member_image_overlay-second') !!}
             </div>
             <div class="position-absolute bottom-0 start-50 translate-middle">
-                <a href="{{ route('civitas.soutenir') }}" class="become-meber-sec-img-content-button d-flex justify-content-center align-items-center">FAIRE UN DON</a>
+                <a href="{{ route('civitas.soutenir') }}" class="become-meber-sec-img-content-button d-flex justify-content-center align-items-center">{!! __('words.donate_make_donation') !!}</a>
             </div>
         </div>
     </div>
@@ -93,7 +97,7 @@
 @elseif($page == 1)
 <div class="container">
     <div class="d-flex flex-column align-items-center text-center">
-        <div class="become-member-header mt-3">VOS AVANTAGES EN TANT QUE MEMBRE</div>
+        <div class="become-member-header mt-3">{!! __('words.member_your_advantages') !!}</div>
         <div class="become-member-black-line"></div>
     </div>
 </div>
@@ -110,23 +114,23 @@
                         <img src="{{ asset('img/civitas/advantage-star.png') }}" class="default-image" alt="star" />
                         <img src="{{ asset('img/civitas/advantage-star-hover.png') }}" class="hover-star" alt="star" />
                     </div>
-                    <div class="advantages-stars-content">Abonnement à la revue Civitas 4x par an, recevez votre revue directement chez vous, dans votre boîte aux lettres.</div>
+                    <div class="advantages-stars-content">{!! __('words.civitas_magazine_subscription') !!}</div>
                 </div>
-                <div class="space-100"></div>
+                <div class="space-75"></div>
                 <div class="d-flex">
                     <div class="image-container-star me-5">
                         <img src="{{ asset('img/civitas/advantage-star.png') }}" class="default-image" alt="star" />
                         <img src="{{ asset('img/civitas/advantage-star-hover.png') }}" class="hover-star" alt="star" />
                     </div>
-                    <div class="advantages-stars-content">Accès gratuit aux conférences Sur présentation de votre carte d’adhérent, vous bénéficiez d’un accès gratuit à toutes les conférences organisées par Civitas Suisse.</div>
+                    <div class="advantages-stars-content">{!! __('words.civitas_free_conference_access') !!}</div>
                 </div>
-                <div class="space-100"></div>
+                <div class="space-75"></div>
                 <div class="d-flex">
                     <div class="image-container-star me-5">
                         <img src="{{ asset('img/civitas/advantage-star.png') }}" class="default-image" alt="star" />
                         <img src="{{ asset('img/civitas/advantage-star-hover.png') }}" class="hover-star" alt="star" />
                     </div>
-                    <div class="advantages-stars-content">Accès au Cercle d’études Deux fois par mois, les mercredis soirs, vous bénéficiez d’un accès privilégié au Cercle d’étude en visioconférence.</div>
+                    <div class="advantages-stars-content">{!! __('words.civitas_study_circle_access') !!}</div>
                 </div>
             </div>
 
@@ -145,8 +149,8 @@
         <div class="last-img-position">
             <img src="{{ asset('img/civitas/advantages-last-img.png') }}" class="w-100" alt="logo" />
             <div class="advantages-buttons-position">
-                <a href="{{ route('civitas.membership') }}" class="advantages-last-button-black d-flex justify-content-center align-items-center mb-5">Oui, je deviens membre<br>de Civitas !</a>
-                <a href="{{ route('civitas.membership') }}" class="advantages-last-button-white d-flex justify-content-center align-items-center m-auto">POUR LE CHRIST-ROI !</a>
+                <a href="{{ route('civitas.membership') }}" class="advantages-last-button-black d-flex justify-content-center align-items-center mb-5">{!! __('words.member_yes_i_become_member') !!}</a>
+                <a href="{{ route('civitas.membership') }}" class="advantages-last-button-white d-flex justify-content-center align-items-center m-auto">{!! __('words.member_for_christ_king') !!}</a>
             </div>
         </div>
     </div>
@@ -159,8 +163,8 @@
                 <img src="{{ asset('img/civitas/responsive/advantage-star-hover.png') }}" class="hover-star" alt="star" />
             </div>
             <div class="d-flex flex-column">
-                <div class="advantages-stars-content-resp">Abonnement à la revue Civitas</div>
-                <div class="advantages-stars-content-small-resp">4x par an, recevez votre revue directement chez vous, dans votre boîte aux lettres.</div>
+                <div class="advantages-stars-content-resp">{!! __('words.member_magazine_subscription_title') !!}</div>
+                <div class="advantages-stars-content-small-resp">{!! __('words.member_magazine_subscription_desc') !!}</div>
             </div>
         </div>
         <div class="my-3"></div>
@@ -170,8 +174,8 @@
                 <img src="{{ asset('img/civitas/responsive/advantage-star-hover.png') }}" class="hover-star" alt="star" />
             </div>
             <div class="d-flex flex-column">
-                <div class="advantages-stars-content-resp">Accès gratuit aux conférences</div>
-                <div class="advantages-stars-content-small-resp">Sur présentation de votre carte d’adhérent, vous bénéficiez d’un accès gratuit à toutes les conférences organisées par Civitas Suisse.</div>
+                <div class="advantages-stars-content-resp">{!! __('words.member_free_conference_title') !!}</div>
+                <div class="advantages-stars-content-small-resp">{!! __('words.member_free_conference_desc') !!}</div>
             </div>
         </div>
         <div class="my-3"></div>
@@ -181,8 +185,8 @@
                 <img src="{{ asset('img/civitas/responsive/advantage-star-hover.png') }}" class="hover-star" alt="star" />
             </div>
             <div class="d-flex flex-column">
-                <div class="advantages-stars-content-resp">Accès au Cercle d’études</div>
-                <div class="advantages-stars-content-small-resp">Deux fois par mois, les mercredis soirs, vous bénéficiez d’un accès privilégié au Cercle d’étude en visioconférence.</div>
+                <div class="advantages-stars-content-resp">{!! __('words.member_study_circle_short') !!}</div>
+                <div class="advantages-stars-content-small-resp">{!! __('words.member_study_circle_desc') !!}</div>
             </div>
         </div>
     </div>
@@ -190,12 +194,12 @@
         <img src="{{ asset('img/civitas/responsive/advantage-last-img.png') }}" class="w-100" alt="star" />
         <div class="position-absolute top-50 start-50 translate-middle w-100">
             <div class="mb-5">
-                <a href="{{ route('civitas.membership') }}" class="advantages-last-button-black d-flex justify-content-center align-items-center">Oui, je deviens membre<br>de Civitas !</a>
+                <a href="{{ route('civitas.membership') }}" class="advantages-last-button-black d-flex justify-content-center align-items-center">{!! __('words.member_yes_i_become_member') !!}</a>
                 <div class="advantages-cornered-responsive"></div>
             </div>
         </div>
         <div class="advantages-buttons-position">
-            <a href="{{ route('civitas.membership') }}" class="advantages-last-button-white d-flex justify-content-center align-items-center m-auto">POUR LE CHRIST-ROI !</a>
+            <a href="{{ route('civitas.membership') }}" class="advantages-last-button-white d-flex justify-content-center align-items-center m-auto">{!! __('words.member_for_christ_king') !!}</a>
         </div>
     </div>
 </div>

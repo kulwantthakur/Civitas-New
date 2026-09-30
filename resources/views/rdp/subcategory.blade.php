@@ -2,7 +2,7 @@
 
 @section('logo')
 <div class="navbar-brand d-flex justify-content-center align-items-center">
-    <a href="{{ route('rdp.home') }} " class="absolute-logo-rdp rdp-logo-outer">
+    <a href="{{ route('rdp.home') }} " class="absolute-logo-rdp">
         <img src="{{ asset('img/logo/logo_rdp.svg') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
         <img src="{{ asset('img/logo/responsive/logo_rdp.svg') }}" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
     </a>
@@ -14,7 +14,7 @@
 @if($page == 0)
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xx-none">
     <div class="black-bg-prier d-flex align-items-center justify-content-end">
-        <div class="p-4 prier-title">Qu’est ce que le Rosaire ?</div>
+        <div class="p-4 prier-title">{!! __('words.rdp_what_is_rosary') !!}</div>
     </div>
 </div>
 <div class="space-50 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
@@ -38,9 +38,17 @@
             <div class="position-relative">
                 <img src="{{ asset('img/rdp/le_rosaire2.png') }}" class="" alt="logo" />
                 <div class="position-absolute lerosaire-absolute-center-bottom">
-                    <a href="{{ route('prier-lerosaire') }}" class="p-2 rdp-lerosare-page-orange d-flex justify-content-center align-items-center">Prier le Rosaire </a>
+                    <a href="{{ route('prier-lerosaire') }}" class="p-2 rdp-lerosare-page-orange d-flex justify-content-center align-items-center">{!! __('words.rdp_pray_rosary') !!}</a>
                     <div class="space-75"></div>
-                    <a href="{{ route('comment-lerosaire') }}" class="p-4 rdp-lerosare-page-grey d-flex justify-content-center align-items-center">Comment Prier le Rosaire</a>
+                    <a href="{{ route('comment-lerosaire') }}" class="p-4 rdp-lerosare-page-grey d-flex justify-content-center align-items-center">{!! __('words.rdp_how_pray_rosary') !!}</a>
+                    <div class="space-75"></div>
+                    <a href="{{ route('coeurImmacule') }}" class="p-4 text-white rdp-blue-box-smaller d-flex justify-content-center align-items-center text-decoration-none agir-link">
+                        {!! __('words.rdp_act') !!}
+                        <img src="{{ asset('img/rdp/agir-button-new-white.png') }}"
+                            alt="Agir" class="ms-3 agir-img agir-img-default">
+                        <img src="{{ asset('img/rdp/agir-button-new-blue.png') }}"
+                            alt="Agir" class="ms-3 agir-img agir-img-hover">
+                    </a>
                 </div>
             </div>
         </div>
@@ -55,14 +63,14 @@
     <div class="position-relative">
         <div class="cornered-lerosaire">
             <div class="position-absolute absolute-left-center">
-                <div class="cornered-content-rdp ms-5">LE ROSAIRE:<br> SON HISTOIRE ET SA PRATIQUE</div>
+                <div class="cornered-content-rdp ms-5">{!! __('words.rdp_rosary_history_practice') !!}</div>
             </div>
             <div class="absolute-center-rdp">
                 <div class="p-5 grey-box-lerosaire d-flex justify-content-between align-items-center">
                     <div class="audio-symbol d-flex justify-content-center align-items-center">
                         <img src="{{ asset('img/rdp/symbol_audio.png') }}" class="" width="40" height="41" alt="logo" />
                     </div>
-                    <div class="audio-title-reactangle">Le rosaire: son histoire et sa pratique<br>Rév. père M. DOMINIQUE O.P.</div>
+                    <div class="audio-title-reactangle">{!! __('words.rdp_rosary_audio_title') !!}</div>
                     <div class="d-flex justify-content-center ">
                         <audio id="audioPlayer" class="d-none" controls>
                             <source src="your-audio-file.mp3" type="audio/mp3">
@@ -80,21 +88,21 @@
     <div class="position-relative">
         <img src="{{ asset('img/rdp/responsive/le_rosaire2.png') }}" class="" alt="logo" />
         <div class="position-absolute lerosaire-absolute-center-bottom">
-            <a href="{{ route('prier-lerosaire') }}" class="p-2 mb-5 rdp-lerosare-page-orange d-flex justify-content-center align-items-center">Prier le Rosaire </a>
-            <a href="{{ route('comment-lerosaire') }}" class="p-4 rdp-lerosare-page-grey d-flex justify-content-center align-items-center">Comment Prier le Rosaire</a>
+            <a href="{{ route('prier-lerosaire') }}" class="p-2 mb-5 rdp-lerosare-page-orange d-flex justify-content-center align-items-center">{!! __('words.rdp_pray_rosary') !!}</a>
+            <a href="{{ route('comment-lerosaire') }}" class="p-4 rdp-lerosare-page-grey d-flex justify-content-center align-items-center">{!! __('words.rdp_how_pray_rosary') !!}</a>
         </div>
     </div>
     <div class="container custom-tweak my-5">
         {!! trans('words.lerosaire_page_content_sec') !!}
     </div>
     <div class="container custom-tweak mb-3">
-        <div class="cornered-content-rdp">LE ROSAIRE: SON HISTOIRE ET SA PRATIQUE</div>
+        <div class="cornered-content-rdp">{!! __('words.rdp_rosary_history_practice_short') !!}</div>
     </div>
     <div class="p-3 grey-box-lerosaire d-flex justify-content-between align-items-center">
         <div class="audio-symbol d-flex justify-content-center align-items-center">
             <img src="{{ asset('img/rdp/responsive/symbol_audio.png') }}" class="" alt="logo" />
         </div>
-        <div class="audio-title-reactangle">Le rosaire: son histoire et sa pratique<br>Rév. père M. DOMINIQUE O.P.</div>
+        <div class="audio-title-reactangle">{!! __('words.rdp_rosary_audio_title') !!}</div>
         <div class="d-flex justify-content-center ">
             <audio id="audioPlayer" class="d-none" controls>
                 <source src="your-audio-file.mp3" type="audio/mp3">
@@ -113,7 +121,7 @@
 <div class="my-5 text-center d-flex flex-column align-items-center">
     <img src="{{ asset('img/rdp/virgin_mary.png') }}" class="mb-5 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
     <img src="{{ asset('img/rdp/responsive/virgin_mary.png') }}" class="mb-5 d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
-    <div class="catechisme-title">CATÉCHISME</div>
+    <div class="catechisme-title">{!! __('words.rdp_catechism_title') !!}</div>
     <div class="black-line-amissfs"></div>
 </div>
 <div class="d-none d-lg-block">
@@ -134,7 +142,7 @@
                     frameborder="0"
                     allowfullscreen></iframe>
                 <div class="video-button-absolute">
-                    <a href="https://www.youtube.com/watch?v=POfum5PHPNM&list=PLd1rmdYholZMflEYxAk-T3HH__oZBKdIC&index=2" target="_blank" class="catechisme-voir-button d-flex justify-content-center align-items-center">VOIR</a>
+                    <a href="https://www.youtube.com/watch?v=POfum5PHPNM&list=PLd1rmdYholZMflEYxAk-T3HH__oZBKdIC&index=2" target="_blank" class="catechisme-voir-button d-flex justify-content-center align-items-center">{!! __('words.rdp_see_uppercase') !!}</a>
                 </div>
             </div>
             <div class="position-absolute end-0 top-50 translate-middle-y">
@@ -164,7 +172,7 @@
                     frameborder="0"
                     allowfullscreen></iframe>
                 <div class="video-button-absolute">
-                    <a href="https://www.youtube.com/watch?v=POfum5PHPNM&list=PLd1rmdYholZMflEYxAk-T3HH__oZBKdIC&index=2" target="_blank" class="catechisme-voir-button d-flex justify-content-center align-items-center">VOIR</a>
+                    <a href="https://www.youtube.com/watch?v=POfum5PHPNM&list=PLd1rmdYholZMflEYxAk-T3HH__oZBKdIC&index=2" target="_blank" class="catechisme-voir-button d-flex justify-content-center align-items-center">{!! __('words.rdp_see_uppercase') !!}</a>
                 </div>
             </div>
         </div>
@@ -217,7 +225,7 @@
                     frameborder="0"
                     allowfullscreen></iframe>
                 <div class="video-button-absolute">
-                    <a href="https://www.youtube.com/watch?v={{ $category['first_video'] }}" target="_blank" class="catechisme-voir-button d-flex justify-content-center align-items-center">VOIR</a>
+                    <a href="https://www.youtube.com/watch?v={{ $category['first_video'] }}" target="_blank" class="catechisme-voir-button d-flex justify-content-center align-items-center">{!! __('words.rdp_see_uppercase') !!}</a>
                 </div>
             </div>
         </div>
@@ -264,7 +272,7 @@
 <div class="position-relative">
     <img src="{{ asset('img/rdp/fatima.png') }}" class="w-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
     <img src="{{ asset('img/rdp/responsive/fatima.png') }}" class="w-100 d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
-    <div class="fatima-title fatima-absolute-bottom">Fatima</div>
+    <div class="fatima-title fatima-absolute-bottom">{!! __('words.rdp_fatima') !!}</div>
 </div>
 <div class="container custom-tweak">
     <div class="my-5">
@@ -279,18 +287,18 @@
         <div class="d-flex justify-content-center">
             <img src="{{ asset('img/rdp/notredame_2.png') }}" class="" alt="logo" />
         </div>
-        <div class="my-5 d-flex justify-content-center fatima-big-title">NOTRE-DAME DE FATIMA</div>
+        <div class="my-5 d-flex justify-content-center fatima-big-title">{!! __('words.rdp_our_lady_fatima_title') !!}</div>
     </div>
 </div>
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="d-flex justify-content-center">
         <img src="{{ asset('img/rdp/responsive/notredame_2.png') }}" class="w-100" alt="logo" />
     </div>
-    <div class="my-5 d-flex justify-content-center fatima-big-title">NOTRE-DAME DE FATIMA</div>
+    <div class="my-5 d-flex justify-content-center fatima-big-title">{!! __('words.rdp_our_lady_fatima_title') !!}</div>
 </div>
 <div class="position-relative">
     <div class="fatima-black-bg d-flex justify-content-center align-items-center">
-        <div class="d-flex justify-content-center fatima-title-bg">Les Apparitions</div>
+        <div class="d-flex justify-content-center fatima-title-bg">{!! __('words.rdp_apparitions') !!}</div>
     </div>
 </div>
 <div>
@@ -318,8 +326,15 @@
         </ul>
     </div>
     <div class="mt-3 d-flex justify-content-center flex-column align-items-center mt-sm-3 mt-md-3 mt-lg-5 mt-xl-5 mt-xxl-5">
-        <a href="{{ route('prier-lerosaire') }}" class="mt-5 fatima-orange-box d-flex justify-content-center align-items-center">Prier le Rosaire</a>
-        <a href="{{ route('comment-lerosaire') }}" class="p-3 mt-5 fatima-grey-box d-flex justify-content-center align-items-center p-sm-3 p-md-3 p-lg-5 p-xl-5 p-xxl-5">Comment Prier le Rosaire</a>
+        <a href="{{ route('prier-lerosaire') }}" class="mt-5 fatima-orange-box d-flex justify-content-center align-items-center">{!! __('words.rdp_pray_rosary') !!}</a>
+        <a href="{{ route('comment-lerosaire') }}" class="p-3 mt-5 fatima-grey-box d-flex justify-content-center align-items-center p-sm-3 p-md-3 p-lg-5 p-xl-5 p-xxl-5">{!! __('words.rdp_how_pray_rosary') !!}</a>
+        <a href="{{ route('coeurImmacule') }}" class="p-4 mt-5 text-white rdp-blue-box-min-height d-flex justify-content-center align-items-center text-decoration-none agir-link">
+            {!! __('words.rdp_act') !!}
+            <img src="{{ asset('img/rdp/agir-button-new-white.png') }}"
+                alt="Agir" class="ms-3 agir-img agir-img-default">
+            <img src="{{ asset('img/rdp/agir-button-new-blue.png') }}"
+                alt="Agir" class="ms-3 agir-img agir-img-hover">
+        </a>
     </div>
 </div>
 <div class="bg-black d-flex justify-content-center align-items-center">
@@ -350,17 +365,19 @@
 <div class="space-100"></div>
 <div class="container">
     <div>
-        {!! trans('words.lescapulaire_par') !!}
+       {!! __('words.lescapulaire_par', [
+            'oct13' => route('rdp-october'),
+        ]) !!}
     </div>
 </div>
 <div class="my-5 d-flex justify-content-center flex-column align-items-center">
     <img src="{{ asset('img/rdp/lescapulaire2.png') }}" class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block" alt="logo" />
     <img src="{{ asset('img/rdp/responsive/lescapulaire2.png') }}" class="w-100 d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none" alt="logo" />
-    <div class="mt-3 lescapulaire-content-small">sanctuaire de Notre-Dame de Bourguillon, Fribourg (CH).</div>
+    <div class="mt-3 lescapulaire-content-small">{!! __('words.rdp_sanctuary_bourguillon') !!}</div>
 </div>
 <div class="d-flex align-items-center lescapulaire-title-black-bg">
     <div class="container custom-tweak">
-        <div class="le-scapulaire-bg-title">Qu’est-ce que un scapulaire ?</div>
+        <div class="le-scapulaire-bg-title">{!! __('words.rdp_what_is_scapular') !!}</div>
     </div>
 </div>
 <div class="container custom-tweak">
@@ -372,7 +389,7 @@
 </div>
 <div class="d-flex align-items-center lescapulaire-title-black-bg">
     <div class="container">
-        <div class="le-scapulaire-bg-title question-big-responsive">LES PRIVILÈGES LIÉS AU SCAPULAIRE</div>
+        <div class="le-scapulaire-bg-title question-big-responsive">{!! __('words.rdp_scapular_privileges') !!}</div>
     </div>
 </div>
 <div class="container">
@@ -429,7 +446,7 @@
 </div>
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="container custom-tweak mt-5">
-        <div class="cornered-ler-samedis-title">Ce qu’il faut accomplir :</div>
+        <div class="cornered-ler-samedis-title">{!! __('words.rdp_what_to_accomplish') !!}</div>
     </div>
 </div>
 <div class="container custom-tweak my-5">
@@ -460,7 +477,7 @@
         {!! trans('words.le_secret') !!}
         <div class="d-flex align-items-center">
             <img src="{{ asset('img/rdp/secret-pdf.png') }}" class="me-3" alt="logo" />
-            <a href="https://www.focolari.fr/wp-content/uploads/2015/06/Texte-LM-Montf.-Le-Secret-de-Marie.pdf" target="_blank" class="rdp-pdf-download">Télécharger au format PDF</a>
+            <a href="https://www.focolari.fr/wp-content/uploads/2015/06/Texte-LM-Montf.-Le-Secret-de-Marie.pdf" target="_blank" class="rdp-pdf-download">{!! __('words.rdp_download_pdf') !!}</a>
         </div>
         <div class="d-flex justify-content-center my-5">
             <img src="{{ asset('img/rdp/secret_first.png') }}" class="" alt="logo" />
@@ -479,7 +496,7 @@
         {!! trans('words.le_secret') !!}
         <div class="d-flex align-items-center justify-content-center">
             <img src="{{ asset('img/civitas/civitas_logo_pdf.png') }}" class="me-3" alt="logo" />
-            <a href="https://www.focolari.fr/wp-content/uploads/2015/06/Texte-LM-Montf.-Le-Secret-de-Marie.pdf" target="_blank" class="rdp-pdf-download">Télécharger au format PDF</a>
+            <a href="https://www.focolari.fr/wp-content/uploads/2015/06/Texte-LM-Montf.-Le-Secret-de-Marie.pdf" target="_blank" class="rdp-pdf-download">{!! __('words.rdp_download_pdf') !!}</a>
         </div>
         <div class="d-flex justify-content-center my-5">
             <img src="{{ asset('img/rdp/responsive/secret_first.png') }}" class="" alt="logo" />

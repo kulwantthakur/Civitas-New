@@ -3,10 +3,10 @@
 @section('top-content')
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="grey-mobile-height">
-        <div class="civitas-grey-menu d-flex align-items-center justify-content-between p-3">
-            <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">AGENDA</a>
-            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">MOUVEMENT</a>
-            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">ACTUALITÉS</a>
+        <div class="civitas-grey-menu d-flex align-items-center justify-content-between justify-content-md-evenly p-3">
+            <a href="{{ route('civitas.agenda') }}" class="civitas-responsive-header-grey">{!! __('words.nav_agenda') !!}</a>
+            <a href="{{ route('civitas.party') }}" class="civitas-responsive-header-grey">{!! __('words.nav_movement') !!}</a>
+            <a href="{{ route('civitas.news') }}" class="civitas-responsive-header-grey">{!! __('words.nav_news') !!}</a>
         </div>
     </div>
 </div>
@@ -27,39 +27,39 @@
     <div class="mx-5">
         <div class="d-flex flex-column align-items-center text-center">
             <img src="{{ asset('/img/civitas/civitas_logo_pages.png') }}" class="" alt="logo" />
-            <div class="civitas-title-page mt-3">TOUTE L’ ACTUALITÉ</div>
+            <div class="civitas-title-page mt-3">{!! __('words.civitas_all_news') !!}</div>
             <div class="black-line-civitas"></div>
-            <div class="civitas-news-subtitle mt-3">Catégorie</div>
+            <div class="civitas-news-subtitle mt-3">{!! __('words.civitas_categories') !!}</div>
         </div>
         <div class="my-5"></div>
         <div class="d-flex flex-column">
             <a href="{{ url('suisse/actualites/analyses')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title">ANALYSES</div>
+                <div class="civitas-news-title">{!! __('words.civitas_cat_analyses') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/communiques')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title">COMMUNIQUÉS ET COMPTES RENDUS</div>
+                <div class="civitas-news-title">{!! __('words.civitas_cat_communiques') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/entretiens')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title">ENTRETIENS</div>
+                <div class="civitas-news-title">{!! __('words.civitas_cat_interviews') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/international')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title">INTERNATIONAL</div>
+                <div class="civitas-news-title">{!! __('words.civitas_cat_international') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/opinions')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title">OPINIONS</div>
+                <div class="civitas-news-title">{!! __('words.civitas_cat_opinions') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/pelerinages')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title">PÈLERINAGES DE SUISSE</div>
+                <div class="civitas-news-title">{!! __('words.civitas_cat_pilgrimages') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/votations')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title">VOTATIONS</div>
+                <div class="civitas-news-title">{!! __('words.civitas_cat_votations') !!}</div>
             </a>
         </div>
     </div>
@@ -67,8 +67,8 @@
 <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
     <div class="m-auto">
         <div class="d-flex flex-column align-items-center text-center">
-            <div class="civitas-title-page mt-3">TOUTE L’ ACTUALITÉ</div>
-            <div class="civitas-news-subtitle mt-3">Catégorie</div>
+            <div class="civitas-title-page mt-3">{!! __('words.civitas_all_news') !!}</div>
+            <div class="civitas-news-subtitle mt-3">{!! __('words.civitas_categories') !!}</div>
         </div>
         <div class="line-with-dot">
             <div class="red-dot"></div>
@@ -80,31 +80,31 @@
         <div class="d-flex flex-column">
             <a href="{{ url('suisse/actualites/analyses')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right_responsive.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title text-uppercase">ANALYSES</div>
+                <div class="civitas-news-title text-uppercase">{!! __('words.civitas_cat_analyses') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/communiques')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right_responsive.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title text-uppercase">COMMUNIQUÉS ET COMPTES RENDUS</div>
+                <div class="civitas-news-title text-uppercase">{!! __('words.civitas_cat_communiques') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/entretiens')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right_responsive.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title text-uppercase">ENTRETIENS</div>
+                <div class="civitas-news-title text-uppercase">{!! __('words.civitas_cat_interviews') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/international')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right_responsive.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title text-uppercase">INTERNATIONAL</div>
+                <div class="civitas-news-title text-uppercase">{!! __('words.civitas_cat_international') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/opinions')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right_responsive.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title text-uppercase">OPINIONS</div>
+                <div class="civitas-news-title text-uppercase">{!! __('words.civitas_cat_opinions') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/pelerinages')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right_responsive.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title text-uppercase">PÈLERINAGES DE SUISSE</div>
+                <div class="civitas-news-title text-uppercase">{!! __('words.civitas_cat_pilgrimages') !!}</div>
             </a>
             <a href="{{ url('suisse/actualites/votations')}}" class="d-flex align-items-center text-decoration-none my-3">
                 <img src="{{ asset('img/news_right_responsive.png') }}" class="me-3" alt="logo" />
-                <div class="civitas-news-title text-uppercase">VOTATIONS</div>
+                <div class="civitas-news-title text-uppercase">{!! __('words.civitas_cat_votations') !!}</div>
             </a>
         </div>
     </div>
@@ -220,7 +220,7 @@
     <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
     <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
         <div class="space-50"></div>
-        <div class="news-comment-title d-flex justify-content-center align-items-center">COMMENTAIRES</div>
+        <div class="news-comment-title d-flex justify-content-center align-items-center">{!! __('words.civitas_comments') !!}</div>
         <div class="space-50"></div>
     </div>
     <div class="comment-section">
@@ -236,7 +236,7 @@
                             @if (auth()->check())
                             <input class="form-control" type="text" id="name-1-register" name="fname" value="{{ auth()->user()->firstname }}" readonly required>
                             @else
-                            <input class="form-control" type="text" id="name-1-register" name="fname" placeholder="Nom*" required>
+                            <input class="form-control" type="text" id="name-1-register" name="fname" placeholder="{!! __('words.form_last_name') !!}*" required>
                             @endif
                         </div>
 
@@ -244,7 +244,7 @@
                             @if (auth()->check())
                             <input class="form-control" type="text" id="name-register" name="lname" value="{{ auth()->user()->lastname }}" readonly required>
                             @else
-                            <input class="form-control" type="text" id="name-register" name="lname" placeholder="Prénom*" required>
+                            <input class="form-control" type="text" id="name-register" name="lname" placeholder="{!! __('words.form_first_name') !!}*" required>
                             @endif
                         </div>
 
@@ -252,13 +252,13 @@
                             @if (auth()->check())
                             <input type="email" id="email-register" class="form-control commander-input" name="email" value="{{ auth()->user()->email }}" readonly required>
                             @else
-                            <input type="email" id="email-register" class="form-control commander-input" name="email" placeholder="Email*" required>
+                            <input type="email" id="email-register" class="form-control commander-input" name="email" placeholder="{!! __('words.form_email') !!}*" required>
                             @endif
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="d-flex justify-content-end align-items-center h-100">
-                            <button type="submit" class="news-submit-comment d-flex justify-content-center align-items-center border-0 background-none">Publier le commentaire</button>
+                            <button type="submit" class="news-submit-comment d-flex justify-content-center align-items-center border-0 background-none">{!! __('words.form_publish_comment') !!}</button>
                         </div>
                     </div>
                 </div>
@@ -304,8 +304,10 @@
                                 <option value="Analyses" data-url="analyses">ANALYSES</option>
                                 <option value="Communiqués Et Comptes Rendus" data-url="communiques">COMMUNIQUÉS ET COMPTES RENDUS</option>
                                 <option value="Entretiens" data-url="entretiens">ENTRETIENS</option>
+                                <option value="International" data-url="international">INTERNATIONAL</option>
                                 <option value="Opinions" data-url="opinions">OPINIONS</option>
-                                <option value="Pèlerinages De Suisse" data-url="legal">PÈLERINAGES DE SUISSE</option>
+                                <option value="Pèlerinages De Suisse" data-url="pelerinages">PÈLERINAGES DE SUISSE</option>
+                                <option value="Votations" data-url="votations">VOTATIONS</option>
                             </select>
                         </div>
                     </div>

@@ -16,7 +16,7 @@
 <div class="d-flex flex-column align-items-center text-center">
     <img src="{{ asset('img/home/footer-page-logo.svg') }}" class="d-none d-sm-none d-md-none d-xl-block d-xxl-block" alt="logo" />
     <img src="{{ asset('img/home/footer-page-logo-responsive.png') }}" class="d-block d-sm-block d-md-block d-xl-none d-xxl-none" alt="logo" />
-    <div class="footer-page-title mt-5">IMPESSUM</div>
+    <div class="footer-page-title mt-5">{!! __('words.footer_impressum') !!}</div>
     <div class="black-line-footer-page"></div>
 </div>
 <div class="space-100"></div>
@@ -29,13 +29,13 @@
     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div class="d-flex align-items-center">
             <img src="{{ asset('img/home/legal-logo.png') }}" class="logo" alt="logo" />
-            <div class="ms-3 legal-title">PROTECTION DES DONNÉES</div>
+            <div class="ms-3 legal-title">{!! __('words.footer_data_protection') !!}</div>
         </div>
     </div>
     <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
         <div class="d-flex flex-column align-items-center text-center my-5">
             <img src="{{ asset('img/home/footer-page-logo-responsive.png') }}" class="" alt="logo" />
-            <div class="footer-page-title mt-5">PROTECTION DES DONNÉES</div>
+            <div class="footer-page-title mt-5">{!! __('words.footer_data_protection') !!}</div>
             <div class="black-line-footer-page"></div>
         </div>
     </div>
@@ -54,7 +54,7 @@
 <div class="d-flex flex-column align-items-center text-center my-5">
     <img src="{{ asset('img/home/footer-page-logo.svg') }}" class="d-none d-sm-none d-md-none d-xl-block d-xxl-block" alt="logo" />
     <img src="{{ asset('img/home/footer-page-logo-responsive.png') }}" class="d-block d-sm-block d-md-block d-xl-none d-xxl-none" alt="logo" />
-    <div class="footer-page-title mt-5">CONTACT</div>
+    <div class="footer-page-title mt-5">{!! __('words.footer_contact') !!}</div>
     <div class="black-line-footer-page"></div>
 </div>
 <div class="space-100"></div>
@@ -70,7 +70,7 @@
 <div class="d-flex flex-column align-items-center text-center my-5">
     <img src="{{ asset('img/home/footer-page-logo.svg') }}" class="d-none d-sm-none d-md-none d-xl-block d-xxl-block" alt="logo" />
     <img src="{{ asset('img/home/footer-page-logo-responsive.png') }}" class="d-block d-sm-block d-md-block d-xl-none d-xxl-none" alt="logo" />
-    <div class="footer-page-title mt-5">CONDITIONS GÉNÉRALES</div>
+    <div class="footer-page-title mt-5">{!! __('words.footer_general_conditions') !!}</div>
     <div class="black-line-footer-page"></div>
 </div>
 <div class="space-100"></div>
@@ -78,9 +78,11 @@
     {!! trans('words.cgu') !!}
 </div>
 @endif
-<div class="black-bg-full d-flex align-items-center mt-5">
-    <marquee behavior="scroll" direction="right" scrollamount="12" class="sang-blue-regular-20 text-white">PROTECTION DES DONNÉES / DATENSCHUTZE</marquee>
-</div>
+<a href="{{ route('footer.protection') }}" class="text-decoration-none">
+    <div class="black-bg-full d-flex align-items-center mt-5">
+        <marquee behavior="scroll" direction="right" scrollamount="12" class="sang-blue-regular-20 text-white">{!! __('words.footer_marquee_data_protection') !!}</marquee>
+    </div>
+</a>
 @endsection
 
 

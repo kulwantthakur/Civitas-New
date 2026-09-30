@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Log;
 
 class SubscriptionController extends Controller
 {
+    /** @var Donation */
     protected $modelDonation;
+    /** @var Subscription */
     protected $modelSubscription;
 
     public function __construct(Donation $DonationM, Subscription $SubscriptionM)
@@ -19,6 +21,12 @@ class SubscriptionController extends Controller
         $this->modelSubscription = $SubscriptionM;
     }
 
+    /**
+     * Create payment via Payrexx.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function createPayment(Request $request)
     {
         $apiKey = config('services.payrexx.api_key');
@@ -29,7 +37,8 @@ class SubscriptionController extends Controller
             return response()->json(['error' => 'Payment gateway not configured.'], 500);
         }
 
-        if ($apiKey === 'OyZ3GxzGrrr6kBZ7PCo5tHcEaDoxS8') {
+        // Log environment mode based on app environment
+        if (app()->environment('local', 'staging')) {
             Log::info('✅ Payrexx is running in TEST mode.');
         } else {
             Log::info('🚨 Payrexx is in LIVE mode.');
@@ -46,8 +55,8 @@ class SubscriptionController extends Controller
             'status' => 'pending',
         ]);
 
-        // PUBLIC URL (use ngrok or real domain)
-        $baseUrl = 'https://e37689f52e4b.ngrok-free.app';
+        // Use APP_URL from config for proper environment handling
+        $baseUrl = config('app.url');
 
         $successUrl = $baseUrl . '/payment/success/' . $subscription->id;
         $failUrl = $baseUrl . '/payment/fail/' . $subscription->id;
@@ -110,6 +119,12 @@ class SubscriptionController extends Controller
         }
     }
 
+    /**
+     * Payment success page.
+     *
+     * @param int $id
+     * @return \Illuminate\Contracts\View\View
+     */
     public function paymentSuccess($id)
     {
         $subscription = $this->modelSubscription::findOrFail($id);
@@ -121,6 +136,12 @@ class SubscriptionController extends Controller
         return view('payment.success', compact('subscription'));
     }
 
+    /**
+     * Payment fail page.
+     *
+     * @param int $id
+     * @return \Illuminate\Contracts\View\View
+     */
     public function paymentFail($id)
     {
         $subscription = $this->modelSubscription::findOrFail($id);
@@ -132,6 +153,12 @@ class SubscriptionController extends Controller
         return view('payment.fail', compact('subscription'));
     }
 
+    /**
+     * Handle Payrexx webhook.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function handleWebhook(Request $request)
     {
         Log::info('📥 Incoming Payrexx webhook', $request->all());

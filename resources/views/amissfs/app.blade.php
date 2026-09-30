@@ -40,47 +40,47 @@
             @if(Route::is('podcasts'))
             <div class="d-flex algin-items-center ms-3">
                 <button type="button" class="btn btn-success m-0" data-bs-toggle="modal" data-bs-target="#createModal">
-                    Create New
+                    {!! __('words.admin_create_new') !!}
                 </button>
                 <div class="mx-3"></div>
                 <button type="button" class="btn btn-info m-0" data-bs-toggle="modal" data-bs-target="#editModal">
-                    Edit
+                    {!! __('words.admin_edit') !!}
                 </button>
                 <div class="mx-3"></div>
                 <button type="button" class="btn btn-danger m-0" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    Delete
+                    {!! __('words.admin_delete') !!}
                 </button>
             </div>
             @elseif(Route::is('podcast-subcategory'))
             <button type="button" class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#createModal">
-                Create New
+                {!! __('words.admin_create_new') !!}
             </button>
             @elseif(Route::is('podcast-name'))
             @yield('podcast-buttons')
 
             @elseif(Route::is('le-bulletin-archive','rom-kurier-archive'))
             <button type="button" class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#createModal">
-                Create New
+                {!! __('words.admin_create_new') !!}
             </button>
             @elseif(Route::is('le-bulletin-download','rom-kurier-download','rom-kurier-archive-past','le-bulletin-archive-past'))
             <div class="d-flex algin-items-center ms-3">
                 <button type="button" class="btn btn-info m-0" data-bs-toggle="modal" data-bs-target="#editModal">
-                    Edit
+                    {!! __('words.admin_edit') !!}
                 </button>
                 <div class="mx-3"></div>
                 <button type="button" class="btn btn-danger m-0" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    Delete
+                    {!! __('words.admin_delete') !!}
                 </button>
             </div>
             @else
             <div></div>
             @endif
             <div class="d-flex justify-content-end align-items-center">
-                <div class="admin-zone-name me-3">Hello <a href="{{ route('account')}}" class="admin-zone-name">{{ Auth::user()->name }}</a></div>
+                <div class="admin-zone-name me-3">{!! __('words.admin_hello') !!} <a href="{{ route('account')}}" class="admin-zone-name">{{ Auth::user()->name }}</a></div>
                 <div class="">
                     <a class="d-flex align-items-center admin-zone-logout me-3"
                         href="{{ route('logout') }}"
-                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa-solid fa-user me-2"></i>Logout
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa-solid fa-user me-2"></i>{!! __('words.admin_logout') !!}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
                         style="display: none;">
@@ -96,8 +96,8 @@
     @endphp
     <div class="parent-body">
         @yield('amissfs-home')
-        <nav class="top-0 navbar inverse-text">
-            <div class="d-flex {{ in_array(Route::currentRouteName(), haystack: $routesWithStartAlign) ? 'align-items-start' : 'align-items-center' }} align-items-lg-center justify-content-between">
+        <nav class="top-0 navbar inverse-text {{ Route::currentRouteName() === 'amissfs.home' ? 'bg-dark' : '' }}">
+            <div class="d-flex {{ in_array(Route::currentRouteName(), $routesWithStartAlign) ? 'align-items-start' : 'align-items-center' }} align-items-lg-center justify-content-between">
                 @yield('logo')
                 <div class="ml-auto navbar-hamburger">
                     <a class="hamburger animate @if (Route::currentRouteName() === 'amissfs.home') white-hamburger @endif"
@@ -110,19 +110,19 @@
                 <div class="collapse navbar-collapse desktop-height desktop-width">
                     <ul class="nav navbar-nav ms-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('podcasts') }}" id="podcast">PODCASTS <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('podcasts') }}" id="podcast">{!! __('words.nav_podcasts') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('amissfs.home') }}" id="amissfs">AMISSFS <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('amissfs.home') }}" id="amissfs">{!! __('words.nav_amis_sfs') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
-                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">REFUGE DES PÉCHEURS <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">{!! __('words.nav_refuge_des_pecheurs') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">RDP <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
+                            <a class="nav-link" href="{{ route('rdp.home') }}" id="rdp">{!! __('words.nav_rdp') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('civitas.home') }}" id="civitas-suisse">CIVITAS SUISSE <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></i></a>
+                            <a class="nav-link" href="{{ route('civitas.home') }}" id="civitas-suisse">{!! __('words.nav_civitas_suisse') !!} <img src="{{ asset('img/menu_next.png') }}" alt="logo" /></i></a>
                         </li>
                         <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block">
                             <div class="nav-item d-flex gap-2 align-items-center" id="language">
@@ -137,6 +137,10 @@
                                 <span class="nav-link">
                                     <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}" id="language">IT</a>
                                 </span>
+                                <span class="lang-separator" id="language">|</span>
+                                <span class="nav-link">
+                                    <a class="text-white" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}" id="language">EN</a>
+                                </span>
                             </div>
                         </div>
                         <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
@@ -146,13 +150,15 @@
                                 <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('de', route('language', [], false)) }}">DE</a>
                                 <span class="mx-2">-</span>
                                 <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('it', route('language', [], false)) }}">IT</a>
+                                <span class="mx-2">-</span>
+                                <a class="nav-link mobile-menu-new" href="{{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL('en', route('language', [], false)) }}">EN</a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block flex-grow-1 top-menu-empty">
                     <div class="d-flex align-items-center participer-height">
-                        <a class=" nav-link d-flex align-items-center justify-content-center" href="{{ route('civitas.member') }}" id="participer">PARTICIPER</a>
+                        <a class=" nav-link d-flex align-items-center justify-content-center" href="{{ route('civitas.member') }}" id="participer">{!! __('words.nav_participer') !!}</a>
                     </div>
                 </div>
             </div>
@@ -164,7 +170,7 @@
                             <a href="{{ route('amissfs.home') }}"><img src="{{ asset('img/homebutton.png') }}" class=""></a>
                         </div>
                         <li class="px-2 nav-item">
-                            <a class="nav-link navbar-submenu-ammisfs fw-bold" href="{{ route('amissfs.home') }}" id="amissfs">AMISSFS <img src="{{ asset('img/menu_next.png') }}" class=""></a>
+                            <a class="nav-link navbar-submenu-ammisfs fw-bold" href="{{ route('amissfs.home') }}" id="amissfs">{!! __('words.nav_amis_sfs') !!} <img src="{{ asset('img/menu_next.png') }}" class=""></a>
                         </li>
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu-ammisfs" href="{{route('association')}}" id="l'association">L’ ASSOCIATION <img src="{{ asset('img/menu_next.png') }}" class=""></a>
@@ -187,7 +193,7 @@
                         <li class="px-2 nav-item">
                             <a class="nav-link navbar-submenu-ammisfs" href="{{ route ('dons')}}" id="dons">DONS <img src="{{ asset('img/menu_next.png') }}" class=""></a>
                         </li>
-                        <li class="nav-item px-2">
+                        <li class="nav-item px-2" style="background-color: #d9d9d9;">
                             <div class="d-flex align-items-center" style="padding: 0 30px;">
                                 <a class="nav-link mobile-menu-new fw-bolder" href="{{ route('language') }}">FR</a>
                                 <span class="mx-2">-</span>
@@ -205,7 +211,7 @@
             <div class="d-flex justify-content-start align-items-center navbar-collapse top-menu-height top-menu ms-3">
                 <div class="d-flex align-items-center">
                     <a class="nav-link navbar-submenu-ammisfs" href="{{route('association')}}" id="l'association">L’ ASSOCIATION</a>
-                    <div class="black-border hide-on-accueil-home"></div>
+                    <div class="black-border"></div>
                 </div>
                 <div class="d-flex align-items-center ">
                     <a class="nav-link navbar-submenu-ammisfs" href="{{ route ('podcasts')}}" id="audiotheque">AUDIOTHÈQUE</a>
@@ -246,19 +252,19 @@
                 <div class="white-border d-flex mb-5">
                     <img src="{{ asset('img/home/footer-logo.svg') }}" class="mb-4 me-4" alt="logo" />
                     <div class="d-flex flex-column justify-content-center align-items-center">
-                        <a href="{{ route('home') }}" class="footer-omnia text-decoration-none">OMNIA INSTAURARE IN CHRISTO</a>
+                        <a href="{{ route('home') }}" class="footer-omnia text-decoration-none">{!! __('words.home_omnia_instaurare') !!}</a>
                         <p class="text-white suisse-light-14">UN MOUVEMENT INTERNATIONAL</p>
                     </div>
                 </div>
                 <div class="my-4 row ms-3">
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">CIVITAS SUISSE</a>
+                        <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_civitas_suisse') !!}</a>
                     </div>
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">AMIS.S.F.S</a>
+                        <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_amis_sfs') !!}</a>
                     </div>
                     <div class="col-4 d-flex align-items-center">
-                        <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">REFUGE DES PÉCHEURS</a>
+                        <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_refuge_des_pecheurs') !!}</a>
                     </div>
                 </div>
 
@@ -312,16 +318,16 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="d-flex align-items-center">
-                                <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">IMPRESSUM</a>
+                                <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">{!! __('words.footer_impressum') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">PROTECTION DES DONNÉES</a>
+                                <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">{!! __('words.footer_data_protection') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">CONTACT</a>
+                                <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">{!! __('words.footer_contact') !!}</a>
 
                                 <div class="mx-4 border-footer"></div>
-                                <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">CGU</a>
+                                <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">{!! __('words.footer_cgu') !!}</a>
                             </div>
                         </div>
                         <div class="col-4">
@@ -339,7 +345,7 @@
                 <div class="d-flex justify-content-center align-items-center flex-column">
                     <img src="{{ asset('img/logo/responsive/logo_civitas_footer.svg') }}" class="mb-4 logo" alt="logo" />
                     <div>
-                        <a href="{{ route('home') }}" class="sang-bleu-20 text-decoration-none text-dark">OMNIA INSTAURARE IN CHRISTO</a>
+                        <a href="{{ route('home') }}" class="sang-bleu-20 text-decoration-none text-dark">{!! __('words.home_omnia_instaurare') !!}</a>
                         <p class="suisse-light-14 text-dark">UN MOUVEMENT INTERNATIONAL</p>
                     </div>
                 </div>
@@ -355,43 +361,43 @@
                     </div>
                 </div>
                 <div class="mx-2 black-line"></div>
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="tablet-footer-menu">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
-                            <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">CIVITAS SUISSE</a>
+                            <a href="{{ route('civitas.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_civitas_suisse') !!}</a>
                             <a href="{{ route('political-programs') }}" class="footer-submenu text-decoration-none">POSITIONS</a>
                             <a href="{{ route('civitas.party') }}" class="footer-submenu text-decoration-none">MOUVEMENT</a>
                             <a href="{{ route('civitas.diocesains') }}" class="footer-submenu text-decoration-none">GROUPES DIOCÉSAINS</a>
                             <a href="{{ route('civitas.news') }}" class="footer-submenu text-decoration-none">ACTUALITÉS</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
-                            <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">AMIS.S.F.S</a>
+                            <a href="{{ route('amissfs.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_amis_sfs') !!}</a>
                             <a href="{{ route('podcasts') }}" class="footer-submenu text-decoration-none">AUDIOTHÈQUE</a>
                             <a href="{{ route('editions') }}" class="footer-submenu text-decoration-none">ÉDITIONS</a>
                             <a href="{{ route('bulletin') }}" class="footer-submenu text-decoration-none">BULLETIN</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="">
                         <div class="mt-4 d-flex flex-column align-items-start">
-                            <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">REFUGE DES PÉCHEURS</a>
+                            <a href="{{ route('rdp.home') }}" class="footer-title text-decoration-none">{!! __('words.nav_refuge_des_pecheurs') !!}</a>
                             <a href="{{ route('notredame') }}" class="footer-submenu text-decoration-none">NOTRE DAME DE FATIMA</a>
                         </div>
                     </div>
                 </div>
                 <div class="flex-row mt-4 d-flex justify-content-center">
                     <div class="d-flex align-items-center">
-                        <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">IMPRESSUM</a>
+                        <a href="{{ route('footer.impressum') }}" class="footer-last text-decoration-none">{!! __('words.footer_impressum') !!}</a>
 
                         <div class="mx-1 border-footer"></div>
-                        <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">PROTECTION DES DONNÉES</a>
+                        <a href="{{ route('footer.protection') }}" class="footer-last text-decoration-none">{!! __('words.footer_data_protection') !!}</a>
 
                         <div class="mx-1 border-footer"></div>
-                        <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">CONTACT</a>
+                        <a href="{{ route('footer.contact') }}" class="footer-last text-decoration-none">{!! __('words.footer_contact') !!}</a>
 
                         <div class="mx-1 border-footer"></div>
-                        <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">CGU</a>
+                        <a href="{{ route('footer.cgu') }}" class="footer-last text-decoration-none">{!! __('words.footer_cgu') !!}</a>
 
                     </div>
                 </div>
@@ -467,7 +473,7 @@
             const query = $(".podcast-search").val();
             const nextPage = $(this).data("next-page");
 
-            if(nextPage){
+            if (nextPage) {
                 $(this).text("Chargement...").prop("disabled", true);
             }
 

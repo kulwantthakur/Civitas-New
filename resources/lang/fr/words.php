@@ -24,7 +24,7 @@ return [
     'cookies' => 'Nous utilisons <a class="cookie-para-button" href=":cookiesUrl">:cookiesText</a> pour assurer certaines fonctionnalités, obtenir des statistiques et ainsi vous offrir la meilleure navigation possible sur notre site. En continuant la navigation, vous acceptez leurs utilisations. Vous pouvez <a class="cookie-para-button" href=":settingsUrl">:settingsText</a> afin de les activer ou les désactiver.',
     'cookies_text' => 'des cookies',
     'settings_text' => 'modifier les réglages',
-    'cookies_no' => 'TOUT REFUSER',
+    'cookies_no' => 'refuser',
     ////////////////////////////////////////////////////////////////
     'error_401_page' => '
         <div class="error">401</div>
@@ -140,7 +140,7 @@ return [
     '<p class="mb-0 sengager-red-bg-dots">...</p>
     <p class="mb-0 sengager-red-bg-title"><span class="ms-0 ms-sm-0 ms-md-0 ms-lg-2 ms-xl-2 ms-xxl-2">CIVITAS International.</span>
     <br class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-    <span class="ms-0 ms-sm-0 ms-md-0 ms-lg-4 ms-xl-4 ms-xxl-4">Parce que les Catholiques sont le sel de la terre.</span></p>
+    <span class="ms-0 ms-sm-0 ms-md-0 ms-lg-4 ms-xl-4 ms-xxl-4">Parce que les Catholiques sont la lumière du monde.</span></p>
     ',
     'slider_sengager_third' =>
     '<div class="m-auto sengager-width">
@@ -155,10 +155,10 @@ return [
         <p class="sengager-first-quote">.</p>
     </div>
     <br>
-    <p class="mb-0 sengager-title-red-underline">Le véritable parti du peuple</p>
+    <p class="mb-0 sengager-title-red-underline">Le véritable mouvement du peuple</p>
     <p class="sengager-red-underline-responsive"></p>
     <p class="sengager-content">La vie ne se bornant pas à cette vie ici-bas, toutes les promesses de bonheur qui ne prennent pas en compte de la réalité des choses telles qu’elles sont, ne sont autre chose que des erreurs et des utopies : libéralisme, socialisme, communisme, capitalisme, fascisme, nazisme, modernisme, écologisme, etc. </p>
-    <p class="sengager-content">Et c’est précisément parce qu’elles ne tiennent pas compte des lois de Dieu que toutes ces idéologies se sont effondrées ou s’effondreront tôt ou tard, non sans générer, au passage, des millions et des millions de morts et d’horreurs, dont l’ampleur et surtout la banalisation, auraient été inimaginables avant 1789.&nbsp;&nbsp;Avant la naissance pratique du <span class="text-decoration-underline">rationnalisme</span> politique et social, mère de l’individualisme, comme du collectivisme.</p>
+    <p class="sengager-content">Et c’est précisément parce qu’elles ne tiennent pas compte des lois de la Loi naturelle et de la Loi de Dieu que toutes ces idéologies se sont effondrées ou s’effondreront tôt ou tard, non sans générer, au passage, des millions et des millions de morts et d’horreurs, dont l’ampleur et surtout la banalisation, auraient été inimaginables avant 1789.&nbsp;&nbsp;Avant la naissance pratique du <span class="text-decoration-underline">rationnalisme</span> politique et social, mère de l’individualisme, comme du collectivisme.</p>
     <p class="sengager-content">Non, le mondialisme de type néo-communiste – cet « égout collecteur » de toutes les utopies, ces idoles modernes – n’est pas l’ami des peuples : il est en le tyran, le bourreau, l’exterminateur.</p>
     <div class="m-auto sengager-width">
         <p class="mb-0 sengager-first-quote">.</p>
@@ -174,14 +174,14 @@ return [
     <p class="sengager-red-underline-responsive"></p>
     <p class="sengager-content">Les mondialistes ont (provisoirement) gagné les grandes luttes pour le contrôle de l’ordre mondial au cours du 19ème et du 20ème siècle : 1848, Kulturkampf, 1917, 1ère guerre mondiale, 2ème guerre mondiale,<br>Concile Vatican II, 1968, … <br>D’où le fait que leur puissance semble aujourd’hui n’avoir aucune limite : contrôle du système financier mondial, des matières premières, des médias, des grandes<br> institutions mondiales, des gouvernements, des industries, du monde scientifique…
     <p class="sengager-content">Et aujourd’hui ? Nos esprits sont occupés. Nos nations sont occupées. Et mystère insondable : même l’Église est occupée.
-    <p class="sengager-content">Et pourtant ! Par-dessus tout cela, il y a Dieu, qui de Sa Toute Puissance, pourrait balayer cette bête tentaculaire en un instant. Pourquoi ne le fait-Il pas ? D’abord, parce que Dieu est Dieu et qu’Il a Ses raisons. Ensuite, parce que Dieu a toujours agi à travers des <span class="sengager-content-italic">causes instrumentales secondes</span> : c’est donc à nous, Catholiques, de combattre le mal. Et dans cette nouvelle lutte de David contre Goliath, n’oublions pas : le combat en cours est d’abord un combat entre des esprits, un combat surnaturel. Un combat dans lequel n’importe quel petit grain de sable est capable d’enrayer la machine. Et ce grain de sable, qu’est-ce ? C’est simplement une âme vivant en état de grâce. Or du fait de notre nature d’animaux sociaux et politiques, l’influence du milieu joue un rôle fondamental pour permettre la vie chrétienne et ainsi, faciliter la sanctification des âmes. Les moyens pour réaliser l’objectif sont donc très clairs : tout l’ordre social doit être restauré en vue de permettre au plus grand nombre d’âmes autour de nous de vivre en état de grâce.</p>
-    <p class="sengager-content">La multiplication – même modeste – de ces petits grains de sable enrayera la machine et celle-ci finira fatalement par se disloquer par elle-même, elle qui ne craint rien tant que Jésus-Christ et Sa Très Sainte Mère.</p>
+    <p class="sengager-content">Et pourtant ! Par-dessus tout cela, il y a Dieu, qui de Sa Toute Puissance, pourrait balayer cette bête tentaculaire en un instant. Pourquoi ne le fait-Il pas ? D’abord, parce que Dieu est Dieu et qu’Il a Ses raisons. Ensuite, parce que Dieu a toujours agi à travers des <span class="sengager-content-italic">causes instrumentales secondes</span> : c’est donc à nous, Catholiques, de combattre le mal. Et dans cette nouvelle lutte de David contre Goliath, n’oublions pas : le combat en cours est d’abord un combat entre des esprits, un combat surnaturel. Un combat dans lequel n’importe quel petit grain de sable est capable d’enrayer la machine. Et ce grain de sable, qu’est-ce ? C’est simplement une âme vivant en état de grâce. Or du fait de notre nature d’animaux sociaux et politiques, l’influence du milieu joue un rôle fondamental pour permettre la vie chrétienne et ainsi, faciliter l’élévation et la sanctification des âmes. Les moyens pour réaliser l’objectif sont donc très clairs : tout l’ordre social doit être restauré en vue de permettre au plus grand nombre d’âmes autour de nous de vivre en état de grâce.</p>
+    <p class="sengager-content">La multiplication – même modeste – des grains de sables regroupés en familles enrayera la machine et celle-ci finira fatalement par se disloquer par elle-même, elle qui ne craint rien tant que Jésus-Christ et Sa Très Sainte Mère.</p>
     ',
     'slider_sengager_fourth' =>
     '<p class="mb-0 sengager-last-title-red-underline">Notre programme : l’application de la doctrine sociale et politique de l’Église catholique romaine</p>
     <p class="sengager-red-underline-responsive"></p>
     <p class="sengager-content">Le programme de restauration de l’ordre social et politique n’est pas à inventer ; il est à réadapter relativement aux faits et aux contingences actuelles, dans l’obéissance à nos pasteurs et dans la fidélité de l’enseignement de la Tradition.</p>
-    <p class="sengager-content">Le Notre Seigneur Jésus-Christ nous offre, en ces temps douloureux, l’opportunité d’être Ses alliés et de mener ce saint combat sous Sa bannière : Notre Roi, vainqueur de l’erreur et de la mort, nous permet de partager l’honneur de la victoire triomphante et de la récompense éternelle qui l’accompagne, après avoir enduré et souffert avec Lui. </p>
+    <p class="sengager-content">Notre Seigneur Jésus-Christ nous offre, en ces temps douloureux, l’opportunité d’être Ses alliés et de mener ce saint combat sous Sa bannière : Notre Roi, vainqueur de l’erreur et de la mort, nous permet de partager l’honneur de la victoire triomphante et de la récompense éternelle qui l’accompagne, après avoir enduré et souffert avec Lui. </p>
     <p class="sengager-content">Pour le Christ-Roi, pour l’Angleterre, pour la Belgique, pour la France, pour le Mexique, pour la Suisse, engagez-vous !</p>
     ',
     //////////////////////////////////////////////////////ETUDIER//////////////////////////////////////////////////////////
@@ -235,14 +235,14 @@ return [
         <p class="mb-0 etudier-first-quote-dot">.</p>
     </div>
     <br>
-    <p class="etudier-content">Le mal du monde moderne est avant tout dans l’Église <span class="etudier-content-italic">officielle</span>, et dans celle-ci, le mal est d’abord dans les intelligences : intoxiqués par le subjectivisme et le relativisme, le troupeau et les pasteurs suivent aveuglément ces théologiens   « qui jouent aux docteurs de l’Église ».</p>
+    <p class="etudier-content">Le mal du monde moderne est entré dans l’Église avec Vatican II, et dans celle-ci, le mal est d’abord dans les intelligences :  intoxiqués par le subjectivisme et le relativisme, le troupeau et les pasteurs suivent aveuglément ces théologiens   « qui jouent aux docteurs de l’Église ».</p>
     <p class="etudier-content">Non que le mal ne serait pas dans la société civile si l’Église était débarrassée de l’hérésie moderniste, mais il serait grandement diminué et surtout, il serait dénoncé comme tel. Car n’est-ce pas là ce que les Catholiques seraient normalement en droit d’attendre de leurs Évêques?</p>
-    <p class="etudier-content">En effet, sans le rempart moral de l’Église catholique, plus rien ne peut empêcher la Synagogue de Satan de répandre ses idées fausses sur les notions essentielles de liberté, d’égalité, de fraternité, de tolérance, de paix et d’amour. Plus rien ne peut empêcher, surtout au vu de la puissance inouïe de l’appareil de propagande de la technostructure médiatique, la diffusion universelle et constante de la sous-culture et l’abrutissement accéléré de la masse des individus.</p>
+    <p class="etudier-content">En effet, sans le rempart moral et juridique de l’Église catholique, plus rien ne peut empêcher la Synagogue de Satan de répandre ses idées fausses sur les notions essentielles de liberté, d’égalité, de fraternité, de tolérance, de paix et d’amour. Plus rien ne peut empêcher, surtout au vu de la puissance inouïe de l’appareil de propagande de la technostructure médiatique, la diffusion universelle et constante de la sous-culture et l’abrutissement accéléré de la masse des individus.</p>
     ',
     'slider_etudier_fourth' =>
-    '<p class="mb-0 etudier-title-red-underline mb-sm-0 mb-md-0 mb-lg-3 mb-xl-3 mb-xxl-3">Agere secuitur esse</p>
+    '<p class="mb-0 etudier-title-red-underline mb-sm-0 mb-md-0 mb-lg-3 mb-xl-3 mb-xxl-3">Agere sequitur esse</p>
     <p class="etudier-red-underline-responsive"></p>
-    <p class="etudier-content">Parce que l’acte suit l’étant, le remède contre la barbarie se trouve dans le triptyque <span class="etudier-content-italic">prière – étude – action</span>. Le salut des âmes, la survie de nos patries et la vitalité de nos nations en dépend : plus que jamais, le monde a besoin d’hommes et de femmes droits, aux têtes bien faites – pour que tout se fasse « par amour, rien par force », selon la devise de Saint François de Sales.</p>
+    <p class="etudier-content">Parce que l’agir suit l’être, le remède contre la barbarie se trouve dans le triptyque <span class="etudier-content-italic">prière – étude – action</span>. Le salut des âmes, la survie de nos patries et la vitalité de nos nations en dépend : plus que jamais, le monde a besoin d’hommes et de femmes droits, aux têtes bien faites – pour que tout se fasse « par amour, rien par force », selon la devise de Saint François de Sales.</p>
     ',
     'slider_etudier_last_paragraph_left' =>
     '<p class="etudier-last-left-title">*Ceux de nos lecteurs (surtout les universitaires) pour lesquels les principes de la Philosophie (« pérenne » ou « aristotélico-thomiste ») resteraient douteux, peuvent en tout cas les supposer provisoirement comme postulats.</p>
@@ -260,7 +260,7 @@ return [
     <br>
     <p class="mb-0 prier-title-red-underline mb-sm-0 mb-md-0 mb-lg-3 mb-xl-3 mb-xxl-3">Pourquoi sommes-nous sur la terre ?</p>
     <p class="prier-red-underline-responsive"></p>
-    <p class="mb-0 prier-content">Tous ceux qui ont suivi les exercices * le savent : </p>
+    <p class="mb-0 prier-content">Tous ceux qui ont suivi <a href="#exercices" class="text-dark"><u>les Exercices</u></a> * le savent : </p>
     <br class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
     <div class="m-auto prier-width">
         <p class="mb-0 prier-first-quote-dot">.</p>
@@ -288,7 +288,7 @@ return [
         <p class="mb-0 prier-first-quote-dot">.</p>
     </div>
     <br class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-    <p class="mb-0 prier-content">Mais l’espèce humaine est déchue et l’homme peut se tromper, et de fait il se trompe bien souvent dans la recherche du bonheur, dans le choix de la voie qui doit l’y mener. Avec pour conséquence, non seulement l’absence de paix et de joie véritable ici-bas, mais également pour toute l’éternité.</p><br>
+    <p class="mb-0 prier-content">Mais l’espèce humaine est déchue et l’homme peut se tromper, et de fait il se trompe bien souvent dans la recherche du bonheur, dans le choix de la voie qui doit l’y mener. Avec pour conséquence, non seulement l’absence de paix profonde et de joie véritable ici-bas, mais également pour toute l’éternité.</p><br>
     <br class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
     <p class="mb-0 prier-title-red-underline mb-sm-0 mb-md-0 mb-lg-3 mb-xl-3 mb-xxl-3">Le Prince du mensonge</p>
     <p class="prier-red-underline-responsive"></p>
@@ -304,23 +304,23 @@ return [
         <p class="prier-first-quote-dot">.</p>
     </div>
     <br>
-    <p class="prier-content">Enfin, à toute cette propagande active, s’ajoute celle récente – et plus subtile et pernicieuse encore, parce que librement acceptée – de la consommation d’« informations » et de « divertissements » au moyens des différents médiums de masse classiques (internet, télévision, radio, abonnement à un journal ou une revue), dont la caractéristique commune et dominante réside dans leur antichristianisme : ni vérité, ni erreur ; donc ni bien, ni mal ; par conséquent, ni Dieu, ni maître. La route – l’autoroute ! – pour l’enfer est toute indiquée</p>
+    <p class="prier-content">Enfin, à toute cette propagande active, s’ajoute celle récente - et plus pernicieuse encore, parce que omniprésente et à laquelle on ne peut presque pas échapper - diffusée via internet directement sur son smartphone, ou celle des différents médiums de masse classiques (télévision, radio, cinéma, abonnement à un journal ou une revue), dont la caractéristique commune et dominante réside dans leur antichristianisme : ni vérité, ni erreur ; donc ni bien, ni mal ; par conséquent ni Dieu, ni autorité. La route - l’autoroute ! - pour l’enfer est toute indiquée...</p>
     ',
     'slider_prier_third' =>
     '<p class="mb-0 prier-title-red-underline mb-sm-0 mb-md-0 mb-lg-3 mb-xl-3 mb-xxl-3">Le secours et l’espoir des Chrétiens</p>
     <p class="prier-red-underline-responsive"></p>
     <p class="prier-content">En prouvant à l’homme que la vie présente n’était qu’une préparation à la vie éternelle, le Christianisme restaurait en même temps sa dignité perdue et se portait ainsi garant des véritables droits de l’homme.</p>
-    <p class="prier-content">Et que ce soit sous Néron, Hitler ou aujourd’hui, sous les néo-communistes de Davos, la politique chrétienne, parce qu’elle est d’abord et avant tout animée de la Vie surnaturelle, reste toujours soumise à Notre Seigneur Jésus-Christ, principe et fin de toutes choses, visibles et invisibles.</p>
+    <p class="prier-content">Et que ce soit sous Néron, Hitler ou aujourd’hui, sous les néo-communistes de Davos et la Haute-Finance internationale, la politique chrétienne, parce qu’elle est d’abord et avant tout animée de la Vie surnaturelle, reste toujours soumise à Notre Seigneur Jésus-Christ, principe et fin de toutes choses, visibles et invisibles.</p>
     ',
     'slider_prier_fourth' =>
-    '<p class="prier-content">Or nos temps ont été annoncés. Pour recevoir la foi et la faire grandir en nous, puiser les lumières et la force nécessaire pour la garder et la propager en cette première partie du 21ème siècle et certainement plus que jamais auparavant, après l’assistance au Saint Sacrifice de la Messe, la confession et la communion fréquente, <a href="#" class="prier-content">la dévotion à Notre Dame</a> est le secret pour persévérer dans la charité au quotidien.</p>
+    '<p class="prier-content">Or nos temps ont été annoncés. Pour recevoir la foi et la faire grandir en nous, puiser les lumières et la force nécessaire pour la garder et la propager en cette première partie du XXI ème siècle et certainement plus que jamais auparavant, après l’assistance au Saint Sacrifice de la Messe, la confession et la communion fréquente, <a href=":url" class="prier-content">la dévotion à Notre Dame</a> est le secret pour persévérer dans la charité au quotidien.</p>
     ',
     'slider_prier_box_paragraph_left' =>
     '<p class="mb-0 prier-title-grey-left-box mb-sm-0 mb-md-0 mb-lg-3 mb-xl-3 mb-xxl-3">*Les Exercices de Saint Ignace de Loyola</p>
     <p class="prier-title-grey-left-box-italic"><span class="prier-title-grey-left-box-dash">-</span> un puit de force pour les soldats du Christ-Roi</p>
     <p class="prier-red-underline-responsive d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none"></p>
     <br class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-    <p class="prier-title-grey-left-box-content">Pratiqués par des millions et des millions de catholiques depuis près de cinq siècles, les Exercices ont été donnés en 1523 dans une grotte à Saint Ignace de Loyola, par la Sainte Vierge en personne : d’où leur puissance incomparable pour quiconque y prend part et qui n’y refuse aucune grâce.
+    <p class="prier-title-grey-left-box-content">Pratiqués par des millions et des millions de Catholiques depuis près de cinq siècles, les Exercices ont été donnés en 1523 dans une grotte à Saint Ignace de Loyola, par la Sainte Vierge en personne : d’où leur puissance incomparable pour quiconque y prend part et qui n’y refuse aucune grâce.
     </p>
     ',
     'slider_prier_box_paragraph_right' =>
@@ -398,10 +398,10 @@ return [
     <p class="mb-0 agir-title-red-underline mb-sm-0 mb-md-0 mb-lg-3 mb-xl-3 mb-xxl-3">La folie généralisée n’est pas inéluctable !</p>
     <p class="agir-red-underline-responsive"></p>
     <p class="agir-content">L’existence de notre patrie est due aux vertus du Christianisme et la prospérité actuelle à la stabilité de nos institutions, au génie entrepreneurial, à l’ardeur au travail et à l’esprit d’épargne de nos aînés. Les générations présentes vivant en Suisse sont les héritières de capitaux – culturels, institutionnels et infrastructurels – incomparables, assurant le nécessaire et permettant potentiellement au plus grand nombre de s’occuper d’intérêts supérieurs.</p>
-    <p class="agir-content">Mais du fait de la faiblesse inhérente à la nature humaine et de la désertion sociale et politique de l’Église <span class="agir-content-italic">officielle</span> depuis le Concile Vatican II, voici qu’une part sans cesse croissante de la population cède aux sirènes des fabricants de l’opinion et tombe, victime de la vision matérialiste d’élites aveuglées, dans les délires et les fausses solutions les plus inquiétantes : <span class="agir-content-italic">à gauche</span>, wokisme, LGBTisme, etc. ; <span class="agir-content-italic">à droite</span>, libertarianisme, pseudoconservatisme, etc. (le "milieu" étant <span class="agir-content-italic">le néant</span> que représente l’intérêt personnel divinisé – l’esprit bourgeois égoïste).</p>
+    <p class="agir-content">Mais du fait de la faiblesse inhérente à la nature humaine et de la désertion sociale et politique de l’Église <span class="agir-content-italic">officielle</span> depuis le Concile Vatican II, voici qu’une part sans cesse croissante de la population cède aux sirènes des fabricants de l’opinion et tombe, victime de la vision matérialiste et progressiste d’élites aveuglées, dans les délires et les fausses solutions les plus inquiétantes : <span class="agir-content-italic">à gauche</span>, wokisme, LGBTisme, etc. ; <span class="agir-content-italic">à droite</span>, libertarianisme, pseudoconservatisme, etc. (le "milieu" étant <span class="agir-content-italic">le néant</span> que représente l’intérêt personnel divinisé – l’esprit bourgeois égoïste).</p>
     <p class="agir-content">L’accélération de la dissolution sociale est un fait objectif qui ne peut aujourd’hui échapper à personne, en témoigne hélas aussi le taux impressionnant de dépressions et de suicides (parmi les plus élevés au monde) - symptômes parmi d’autres du cancer moral qui ravage toute l’Europe, notre pays n’étant pas épargné.</p>
     <p class="agir-content">La cause prochaine de ce mal ? Jamais ne s’était-il vu de « civilisation » reposant sur le seul intérêt personnel et sur une hypothétique divinisation de l’espèce humaine ; jamais la passion de l’argent n’avait-il eu un tel ascendant sur notre peuple ; jamais les individus n’ont-ils été à ce point isolés les uns des autres et ainsi fragilisés.</p>
-    <p class="agir-content">Quant aux objections, parcourons-les : la <span class="agir-content-italic">majorité</span> ? est-elle riche ? est-elle jeune et en meilleur santé ? est-elle plus cultivée ? est-elle plus heureuse qu’il y a trente, cinquante, soixante ans en arrière ? est-elle enfin <span class="agir-content-italic">satisfaite</span> ?</p>
+    <p class="agir-content">Quant aux objections, parcourons-les : la <span class="agir-content-italic">majorité</span> ? est-elle riche ? est-elle jeune et en meilleur santé ? est-elle plus cultivée ? est-elle plus heureuse qu’il y a trente, cinquante, soixante ans en arrière ? est-elle vraiment <span class="agir-content-italic">satisfaite</span> ?</p>
     <p class="agir-content">Ces problèmes, la <span class="agir-content-italic">gauche</span> les voit aussi ; mais incapable de voir au-delà de l’horizontalité de ce monde et réduisant par conséquent tout aux seules dimensions économiques et politiques de la réalité, celle-ci croit sincèrement que la résolution du mal social proviendra exclusivement de César, c’est-à-dire de l’Etat...</p>
     <br class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
     <div class="m-auto agir-width">
@@ -417,7 +417,7 @@ return [
     </div>
     ',
     'slider_agir_sec' =>
-    '<p class="agir-content">… tandis que la <span class="agir-content-italic">droite</span> – tout aussi bornée dans son incapacité à transcender la matière – persiste quant à elle à croire que le salut proviendra de la seule liberté de l’individu, indépendamment de toute ordre supérieur non crée par ce dernier….</p>
+    '<p class="agir-content">… tandis que la <span class="agir-content-italic">droite</span> – tout aussi bornée dans son incapacité à transcender la matière et voir au-delà de ses sens - persiste quant à elle à croire que le salut proviendra de la seule liberté de l’individu, indépendamment de toute ordre supérieur non crée par ce dernier….</p>
     <div class="m-auto agir-width">
         <p class="mb-0 agir-quote-dot">.</p>
         <p class="mb-0 agir-quote">Ce qui vient d’être exposé n’exclut évidemment pas <br class="d-block d-lg-none">l’État et les<br class="d-none d-lg-block">
@@ -460,7 +460,7 @@ return [
     ',
     'slider_agir_fourth' =>
     '<p class="agir-content">La pauvreté, la souffrance et la mort ont toujours existé ici-bas ; les inégalités aussi. Et malgré le storytelling des illuminés de la Silicon Valley, ni la pauvreté, ni la souffrance et encore moins la mort ne pourront-elles être éradiquées par les progrès de la science et de la technologie.</p>
-    <p class="mb-0 agir-content">Il est évident que la misère (qui n’est pas la pauvreté) doit être combatue, les souffrances aténuées et les injustices empêchées. Or cela n’est véritablement possible qu’à partir de cefe seule et unique règle : celle de l’amour de Dieu et du prochain – et non pas abandonnée à elle-même, mais protégée par la loi..</p>
+    <p class="mb-0 agir-content">Il est évident que la misère (qui n’est pas la pauvreté) doit être combattue, les souffrances aténuées et les injustices empêchées. Or cela n’est véritablement possible qu’à partir d’un seul et unique principe : celui de de l’amour de Dieu et du prochain - principe non pas abandonné à lui-même, mais enseigné et encouragé par les autorités publiques et protégé par les lois.</p>
      <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
     <div class="m-auto agir-width">
         <p class="mb-0 agir-quote-dot">.</p>
@@ -474,9 +474,9 @@ return [
      <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
     <p class="mt-4 agir-content">La soif d’argent et de pouvoir, les jalousies et les médisances, les mensonges et la haine : toutes ces passions sont des fruits de l’égocentrisme, principe constitutif de la cité terrestre. Mais comment ne pas être esclave de ses propres intérêts, lorsque l’on croit que la vie se limite à la vie présente, ou que tout le monde est sauvé quoi qu’il fasse ? Comment être prêts aux sacrifices qu’exige la vie chrétienne, à se donner pour autrui, pour la patrie, pour l’Église, si l’on n’est pas convaincu que ces actes seront récompensés dans la vraie vie, celle qui commencera le jour de notre mort ?</p>
     <p class="agir-content">« Aime-toi plus que tout » chantent en chœur la <span class="agir-content-italic">gauche</span> et la <span class="agir-content-italic">droite</span>. « Aime ton prochain comme toi-même » nous dit Notre Seigneur Jésus-Christ (Mat. 22, 39 ; Marc. 12, 31 ; Luc. 10, 27).</p>
-    <p class="agir-content">Or comment être capable de persévérer dans le bien par ses seules forces naturelles, sans secours surnaturel ? Et comment croire à l’existence de la Vie surnaturelle, si toutes les autorités légales et l’immense majorité des médias l’ignorent ou la nient ? C’est impossible.</p>
-    <p class="agir-content">D’où la Révélation, d’où l’incarnation de Dieu fait homme et de Son Sacrifice pour nous ; d’où l’Église, d’où les prêtres, d’où les sacrements, d’où les missions. D’où la politique du Christ-Roi.</p>
-    <p class="agir-content">Car le Bien existe. La Vérité existe. La cité céleste existe. Et il ne tient qu’à nous, Catholiques, de la restaurer.</p>
+    <p class="agir-content">Or comment être capable de persévérer dans le bien par ses seules forces naturelles, sans secours surnaturel ? Et d’ailleurs, comment croire à l’existence même de la Vie surnaturelle, sans connaissance élémentaire de la doctrine catholique, si toutes les autorités légales et l’immense majorité des médias l’ignorent ou la nient ? C’est impossible.</p>
+    <p class="agir-content">D’où la Révélation, d’où l’incarnation de Dieu fait homme et la répétition de Son Saint Sacrifice pour nous, à chaque fois qu’une Messe, une véritable Messe catholique est dite ; d’où l’Eglise, d’où les prêtres, d’où les sacrements, d’où les missions. D’où l’action constante de la Sainte Providence, d’où la politique du Christ-Roi.</p>
+    <p class="agir-content">Car le Bien existe. La Vérité existe. La Cité céleste existe. Et il ne tient qu’à nous, Catholiques, de la restaurer.</p>
     ',
     'slider_agir_fifth' =>
     '<p class="mb-0 agir-title-red-bg">Rendons Sa couronne à Notre Roi ! </p>
@@ -508,7 +508,7 @@ return [
     ',
     'civitas_newsletter_before_red' =>
     '<p class="civitas-newsletter-last">On vous rassure, vous ne serez pas bombardés : nous limitons les envois à un tous les quinze
-    jours, en moyenne.</p>
+    jours, en moyenne.</p> 
     <p class="civitas-newsletter-last">Inscrivez-vous, vous ne le regretterez pas !</p>
     ',
     'civitas_last_newsletter' =>
@@ -922,8 +922,8 @@ return [
     <p class="mb-0 etude-content-dot">.</p>
     <p class="mb-0 etude-content-italic">"Si vous ne lisez pas, vous serez tôt ou tard des traîtres, parce que vous n’aurez pas compris la racine du mal !"</p>
     <p class="mb-0 etude-content-dot">.</p>
-    <div class="d-flex algin-items-center">
-        <p class="mb-0 etude-content-small-blue">Abbé Paul Aulagnier , <span class="etude-content-small">(FSSPX), 17 septembre 1981</span></p>
+    <div class="d-flex align-items-center">
+        <p class="mb-0 etude-content-small-blue">Abbé Paul Aulagnier (FSSPX),<span class="etude-content-small"> 17 septembre 1981</span></p>
         <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block ">
             <div class="d-flex justify-content-center align-items-center ms-4">
                 <img src="../../../../img/logo/civitas_logo_small.png" class="me-3" alt="logo" />
@@ -937,7 +937,7 @@ return [
     'civitas_etude_left' =>
     '<p class="etude-grey-title">CERCLE D’ÉTUDE (AGENDA )</p>
     <br>
-    <p class="mb-0 etude-grey-content">Deux mercredis soirs par mois, de 20h15 à 21h45 environ, des sessions d’études ont lieu en ligne, avec pour objet un ouvrage ou une thématique précise. Le but de ces sessions – réservées aux membres (et sur demande, aux amis) de Civitas Suisse est de former les intelligences aux causes de la crise contemporaine et de donner des clés théoriques en vue de la reconstruction et de la défense de nos Cités helvétiques et catholiques.</p>
+    <p class="mb-0 etude-grey-content">Deux jeudis soirs par mois, de 20h15 à 21h45 environ, des sessions d’études ont lieu en ligne, avec pour objet un ouvrage ou une thématique précise. Le but de ces sessions – réservées aux membres (et sur demande, aux amis) de Civitas Suisse est de former les intelligences aux causes de la crise contemporaine et de donner des clés théoriques en vue de la reconstruction et de la défense de nos Cités helvétiques et catholiques.</p>
     <br>
     ',
     'civitas_etude_right' =>
@@ -962,7 +962,7 @@ return [
     ',
     'civitas_action_politique_sec' =>
     '<div class="m-auto action-politique-width_sec">
-    <p class="mb-0 action-politique-title">L’EGOISME GENERALISE</p>
+    <p class="mb-0 action-politique-title">L\'ÉGOÏSME GÉNÉRALISÉ</p>
         <br>
         <p class="mb-0 action-politique-content-center">Plus que le matérialisme, la lèpre qui ronge nos vingt-six nations et annihile ses forces vives porte un nom : c’est l’individualisme, autre terme pour désigner le principe parfaitement opposé au souci du Bien commun.</p>
     </div>
@@ -1011,7 +1011,7 @@ return [
     '<p class="mb-4 new-page-title">Lettre encyclique Humanum Genus</p>
     <p class="new-page-title-small">Léon XIII</p>
     <br>
-    <p class="new-page-content">Aux Vénérables Patriarches, Primats, Archevêques, Evêques et autres ordinaires en paix et communion avec le Siège Apostolique<br>
+    <p class="new-page-content"><b>Aux Vénérables Patriarches, Primats, Archevêques, Evêques et autres ordinaires en paix et communion avec le Siège Apostolique</b><br>
     Depuis que, par la jalousie du démon, le genre  humain s’est misérablement séparé de Dieu auquel il était redevable de  son appel à l’existence et des dons surnaturels, il s’est partagé en  deux camps ennemis, lesquels ne cessent pas de combattre, l’un pour la  vérité et la vertu, l’autre pour tout ce qui est contraire à la vertu et  à la vérité. Le premier est le royaume de Dieu sur la terre, à savoir  la véritable Eglise de Jésus Christ, dont les membres, s’ils veulent lui  appartenir du fond du cœur et de manière à opérer le salut, doivent  nécessairement servir Dieu et son Fils unique, de toute leur âme, de  toute leur volonté. Le second est le royaume de Satan. Sous son empire  et en sa puissance se trouvent tous ceux qui, suivant les funestes  exemples de leur chef et de nos premiers parents, refusent d’obéir à la  loi divine et multiplient leurs efforts, ici, pour se passer de Dieu, là  pour agir directement contre Dieu.<br>
     Ces deux royaumes, saint Augustin les a vus et décrits avec une  grande perspicacité, sous la forme de deux cités opposées l’une à  l’autre, soit par les lois qui les régissent, soit par l’idéal qu’elles  poursuivent ; et, avec un ingénieux laconisme, il a mis en relief dans  les paroles suivantes le principe constitutif de chacune d’elles :  « Deux amours ont donné naissance à deux cités : la cité terrestre  procède de l’amour de soi porté jusqu’au mépris de Dieu ; la cité  céleste procède de l’amour de Dieu porté jusqu’au mépris de soi ». Dans  toute la suite des siècles qui nous ont précédés, ces deux cités n’ont  pas cessé de lutter l’une contre l’autre, en employant toutes sortes de  tactiques et les armes les plus diverses, quoique non toujours avec la  même ardeur, ni avec la même impétuosité.<br>
     A notre époque, les fauteurs du mal paraissent s’être coalisés dans  un immense effort, sous l’impulsion et avec l’aide d’une Société  répandue en un grand nombre de lieux et fortement organisée, la Société  des francs-maçons. Ceux-ci, en effet, ne prennent plus la peine de  dissimuler leurs intentions et ils rivalisent d’audace entre eux contre  l’auguste majesté de Dieu. C’est publiquement, à ciel ouvert, qu’ils  entreprennent de ruiner la sainte Eglise, afin d’arriver, si c’était  possible, à dépouiller complètement les nations chrétiennes des  bienfaits dont elles sont redevables au Sauveur Jésus Christ.</p>
@@ -1147,6 +1147,16 @@ return [
     '<p class="mb-0 membership-title">Je souhaite <span class="membership-title-red-bg">devenir membre</span> de<br>CIVITAS SUISSE</p>
     ',
     ////////////////////////////////////////////////////PAYMENT-METHODS//////////////////////////////////////////////////////////
+    'civitas_payment_cash' =>
+    '<p class="soutenir-payment-title">Madame, Monsieur,</p>
+    <br>
+    <p class="soutenir-payment-title">La monnaie liquide reste, en tant que moyen d’échange, l’un des garants les plus sûrs de notre liberté. C’est pourquoi les mondialistes font tout pour le supprimer. Nous restons cependant convaincus que la meilleure stratégie de défense pour le maintien de la monnaie liquide reste d’en faire usage au quotidien et d’éviter autant que faire se peut les moyens de paiement électroniques. Vous pouvez donc sans autre déposer le montant de votre choix dans une enveloppe et l’envoyer à l’adresse suivante :</p>
+    ',
+    'civitas_payment_cash_content' =>
+    '<p class="soutenir-payment-title">Civitas Suisse</p>
+    <p class="soutenir-payment-title">C.P. 164 </p>
+    <p class="soutenir-payment-title">CH-1951 Sion</p>
+    ',
     'civitas_payment_ebanking' =>
     '<p class="soutenir-payment-title">Madame, Monsieur,</p>
     <br>
@@ -1165,7 +1175,7 @@ return [
     ',
     'civitas_payment_ebanking_content_last' =>
     '<p class="soutenir-payment-title">Nous vous remercions d’avance pour votre précieux soutien.</p>
-    <br>
+    <div class="space-100 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
     <p class="soutenir-payment-title">Pour le Comité de Civitas Suisse,</p>
     <div class="space-200 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"></div>
     <div class="my-5 my-sm-5 my-md-5 my-lg-0 my-xl-0 my-xxl-0"></div>
@@ -1208,6 +1218,11 @@ return [
             <a href="javascript:void(0);" download class="pdf-download">Télécharger au format PDF</a>
         </div>
     </div>
+    ',
+    'civitas_bulletin_receipt' =>
+    '<p class="soutenir-payment-title">Madame, Monsieur,</p>
+    <br>
+    <p class="soutenir-payment-title">Ci-dessous, vous trouverez un bulletin de versement à télécharger en faveur de Civitas Suisse. En cas de question(s) ou si vous souhaitez recevoir un bulletin de versement physique par courrier postal, n’hésitez pas à contacter notre trésorier, qui vous répondra au plus vite :  <a href="mailto:tresorier@civitassuisse.ch" class="soutenir-payment-title-blue">tresorier@civitassuisse.ch</a>.</p>
     ',
     //////////////////////////////////////////////////////FOOTER PAGES//////////////////////////////////////////////////////////
     'cgu' =>
@@ -1483,7 +1498,7 @@ return [
     '<p class="suisse-light-20 text-start text-dark width-375">En cliquant sur VALIDER, vous consentez au traitement de vos données personnelles afin de recevoir les newsletters sélectonnées, dont vous pouvez vous désabonner à tout moment.</p>
     ',
     'amissfs_notre-mission' =>
-    '<p class="amissfs-association-page text-start">L’association des Amis de Saint François de Sales (AMISSFS) a été fondée en 1988, année du sacre des quatre évêques par Mgr Lefebvre. Depuis, la crise de l’Église se poursuit et nous continuons notre travail: le but est d’enregistrer et d’archiver la bonne doctrine, afin de la rendre accessible plus grand nombre d’âmes de bonne volonté possible.</p>
+    '<p class="amissfs-association-page text-start">L’association des Amis de Saint François de Sales (AMIS S.F.S.) a été fondée en 1988, année du sacre des quatre évêques par Mgr Lefebvre. Depuis, la crise de l’Église se poursuit et nous continuons notre travail: le but est d’enregistrer et d’archiver la bonne doctrine, afin de la rendre accessible plus grand nombre d’âmes de bonne volonté possible.</p>
     ',
     'amissfs_first-box' =>
     '<p class="assosiation-page-box-title text-uppercase">L’Audiothèque :</p>
@@ -1688,7 +1703,7 @@ return [
     <p class="le-scapulaire-small">Sœur Lucie, le 15 octobre 1950</p>
     ',
     'lescapulaire_par' =>
-    '<p class="mb-0 le-scapulaire-content">Lors de sa dernière apparition à Fatima, <a href="https://development.civitas-suisse.ch/rdp/13-october" class="le-scapulaire-content-blue">le 13 octobre 1917</a>, la Sainte Vierge se montre aux enfants, tenant dans sa main un scapulaire. SœurLucie expliquera plus tard : </p>
+    '<p class="mb-0 le-scapulaire-content">Lors de sa dernière apparition à Fatima, <a href=":oct13" class="le-scapulaire-content-blue">le 13 octobre 1917</a>, la Sainte Vierge se montre aux enfants, tenant dans sa main un scapulaire. SœurLucie expliquera plus tard : </p>
     <div class="le-scapulaire-dot">.</div>
     <p class="mb-0 le-scapulaire-content-italic">C’est parce que Notre-Dame désire que l’on porte le scapulaire.</p>
     <div class="le-scapulaire-dot">.</div>
@@ -2867,4 +2882,1326 @@ return [
         <p class="le-secret-content mb-0">Q.18. En général, que disent les hommes d’Eglise conciliaires sur le Saint Esclavage ?<br>
         Les hommes d’Eglise conciliaires, contre l’avis de tous les auteurs d’avant Vatican II, ne veulent plus parler de saint Esclavage. Ils ont même changé le texte de la consécration dans lequel ils ne parlent plus que de se consacrer « en toute soumission à Marie ». Pourtant, au dire des anciens auteurs, il n’est pas possible de modifier le vocable saint Esclavage qui définit l’essence même de la dévotion mariale montfortaine.</p>
     ',
+    ////////////////////////////////////////////////////////////////NEW PAGES/////////////////////////////////
+    'immacule-content' =>
+    '<div class="container">
+        <h2 class="black-bg-text m-plus">
+            <span>Qu’est ce que Notre-Dame demande de nous ?</span><br>
+            Que dois faire chaque catholique pour que le mondialisme soit vaincu et l’annihilation des nations évitée ?
+        </h2>
+        <h2 class="light-h2 mb-3 mb-md-4 pb-0 pb-md-3 mt-0">
+            <span>.</span> <br>
+            La Russie se convertira quand il y aura un membre de <br>l’Armée Bleu pour chaque communiste <br>
+            <span><b class="text-blue">Padre Pio,</b> à Mgr Colgan, le 21 octobre 1961 </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <p>
+            L’Armée Bleue du Cœur Immaculé se veut l’héritière de l’Armée Bleue fondé en 1947 par l’abbé Colgan et John Haffert. Ils s’unirent dans le but de répandre et de faire connaître les moyens que Notre-Dame nous a donnée à Fatima afin de combattre les erreurs que la Russie répandrait à travers le monde . “ Notre Dame n’a jamais affirmé que l’URSS répandrait le communisme dans le monde entier : seule une opinion privée de Sœur Lucie va dans ce sens. (...) Si l’on ne saurait exclure le socialisme il ne semble pouvoir à lui seul, tenir lieu de toutes les erreurs de la Russie. Il nous semble qu’il faille encore y ajouter le mondialisme et la spiritualité globale qui visent à l’anéantissement des nations et de la persécutions de l’église, conformément aux avertissements de Notre-Dame. 1 (342-343)
+            John Haffert rencontra Sœur Lucie en 1946, leur entretien dura 4 heures sur cette seule question : <span class="font-SuisseScreenItalic">Qu’est ce que Notre-Dame demande de nous ?
+                Que dois faire chaque catholique pour que le communisme soit vaincu et l’annihilation des nations évitée ?</span> <br><br>
+
+            Sœur Lucie parla de la consécration au Cœur Immaculé de Marie et de diverses pratiques mariales - le chapelet en particulier - en vue de la sanctification du devoir quotidien. <a href=":lersamedis" class="text-black">Les 1 er samedis du mois</a> sont important principalement comme moyen de se purifier chaque mois et de renouveler ses résolutions. L’exigence principale était cependant l’offrande des sacrifices demandés par notre état de vie, en employant à cette fin notre dévotion à Marie par la consécration au Cœur Immaculé de Marie et au chapelet quotidien. (254)<br><br>
+
+            Au bout de ces quatre heures d’entrevue, un texte de promesse fut formulé,
+            avec l’aide de Lucie. On y trouve le résumé des demandes de Notre-Dame,
+            toute la dévotion au Cœur Immaculé de Marie :<br><br>
+            <b>
+                Ma souveraine et tendre Mère, qui avez promis à Fatima la conversion de la
+                Russie et la conversion du monde, je promets solennellement à votre Cœur
+                Immaculé, en réparation de mes péchés et de ceux du monde entier :</b><br><br>
+
+            1) d’offrir chaque jour les sacrifices qu’exige mon devoir quotidien ;<br>
+            2) de prier quotidiennement une partie du rosaire 1 en méditant les mystères ;<br>
+            3) de porter le scapulaire du Mont-Carmel comme signe de mon engagement
+            et comme un acte de consécration à vous.
+            Je m’engage à renouveler souvent cette promesse, spécialement dans les
+            moments de tentation.<br><br>
+
+            Cette formule, qui constitue l’engagement dans ce qu’on appela ensuite
+            l’Armée Bleue, résume les obligations de ses membres. Elle fut présentée à
+            l’évêque de Fatima, qui l’approuva immédiatement et la promulgua. 1. https://www.dominicainsavrille.fr/wp-content/uploads/delightful-downloads/2005/07/SdT53%20-%20Armee%20bleue.pdf<br><br>
+
+            L’ Armée Bleue officielle a cependant suivi le mouvement conciliaire dès 1982, adoptant la nouvelle interprétation du message de Fatima.
+            Elle fut nommé ainsi pour faire front à l’Armée Rouge et la couleur bleu c’est celle de la Vierge Marie.
+        </p>
+        <div class="flexbox-center">
+            <div class="blue-boxText">
+                <a href=":historique">
+                    Les conséquences historiques de la consécration des nations au Cœur Immaculé de Marie
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="black-bg-box">
+            <img src=":logo_coeur" alt="coeur" />
+            <span>Contexte actuel </span>
+        </div>
+        <br>
+        <p>
+            De la Révolution française au Concile Vatican II, un changement radical , bien que déjà préparé par la réforme, permis une mise en place d’un nouveau monde sans Notre Seigneur Jésus-Christ. Ce système athée est concrètement en voie d’achèvement , nous pouvons citer ici à titre d’exemple : Agenda 2030, <span class="font-SuisseScreenItalic">les priorités pour la Suisse sont défini par le Conseil Fédéral</span> ou encore "La Grande Réinitialisation" dont l’annonce a été faite par S.A.R. le Prince de Galles et le professeur Schwab lors
+            d’une réunion virtuelle, suivie de déclarations du secrétaire général des Nations unies, António Guterres, et de la
+            directrice générale du FMI, Kristalina Georgieva.3 La situation géopolitique en 2025 est elle assez explicite et connu de chacun pour ne pas avoir à en parler ici. <br><br>
+
+            Depuis 1982, date à laquelle L’Armée Bleue a suivi le concile, la situation au sein de l’église et des sociétés ne s’est pas améliorée. Le Communisme s’est fondu avec ce qui pouvait sembler son contraire, le Libéralisme dans l’ordre moral, économique, etc. “ <span class="font-SuisseScreenItalic">Vous ne posséderez rien et vous serez heureux </span>” expression issue d’une vidéo de 2016 du <a href=":wikipedia" class="text-dark text-decoration-underline" target="_blank">Forum économique mondial</a> (WEF). Cette fusion de principes contraire à une société Chrétienne se nomme le Mondialisme. Dans l’ordre des idées c’est un matérialisme athée, dans l’ordre des faits c’est une société sans Dieu. Comme l’écrivait Dostoïevski dans Les Frères Karamazov : <span class="font-SuisseScreenItalic">Si Dieu n’existe pas, tout est permis.</span> Ainsi pas d’Enfer, si tout est permis pas de sanction... C’est la Liberté ! Ou l’Enfer anticipé ?.... Voilà la subversion du mot Liberté élaboré et détourné de sa vraie signification dans les loges de la Franc-maçonnerie. C’est ce principe de subversion qui fait le secret de la maçonnerie. Le sens véritable, la vérité que comporte ce mot et la suivante : <span class="font-SuisseScreenItalic">la capacité morale de choisir le bien et d’agir selon la loi naturelle et la loi divine,</span> Léon XIII encyclique "Libertas Præstantissimum" voilà l’Esprit de l’église Catholique. Et pourquoi cette définition est une vérité ? Parce que cela est juste, cela est bon, conforme à la prospérité et donc à l’ordre. Nous sommes face à deux vision de la société totalement opposés. Faisant alors la réflexion suivante : De quelle coté est notre société ? Mais surtout de quelle coté voulons nous que nos sociétés se trouvent ? <br><br>
+
+            Du coté de l’église Catholique, institué par Notre Seigneur Jésus-Christ, des ennemis opposés à Jésus de Nazareth depuis des siècles, ne cessent par de multiples attaques de la dissoudre. Cependant elle à les promesses divines , “ <span class="font-SuisseScreenItalic">les portes de l enfer ne prévaudront pas contre elle </span>“ Mathieu 16:18 . Ce qui n’empêche pas qu’elle soit aujourd’hui attaqué de l’intérieur. Les principes opposés de la franc-maçonnerie, appelé par ce fait “ la Contre-église “ , comme par exemple de n’avoir pas de dogme en opposition avec le principe dogmatique de l’église Catholique, ont gagnés l’indulgence ou même les intelligences de certains prélat haut placer déjà atteint de modernisme. Dans les faits, l’église après le Concile suite entre autres à la promulgation de la déclaration conciliaire <a href=":nostra" class="text-dark text-decoration-underline" target="_blank">Nostra aetate</a> radicalement opposé au règne social de Notre Seigneur Jésus-Christ, se voient féliciter par des organisations international pourtant en total opposition avec le principe même de notre Foi, c’est à dire Jésus-Christ. Comme le rappelait Mgr Lefebvre “ Quel que chose à changer dans l’église, chez les homme d’église...”. Cependant un petit troupeau demeure fidèle au dépôt de la Foi, à toute la vraie doctrine des Papes avant le concile, et puisent les grâces au Saint sacrifice de la Messe, ,de la messe de toujours sans ambiguïtés avec une messe protestantisé ou un simple repas ... La Croix demeure malgré les ennemis. Ceci dit nous devons aussi constater que le combat face au catholicisme libéral , qui concilie les inconciliables, semble ne plus être un problème. Ce qui engendre dans les faits un relativisme dans les principes. Prenons pour exemple le combat pour la Sainte Messe , Messe de Saint Pie V - non un rite extraordinaire comme le motu proprio Summorum pontificum de Benoit XVI le catégorise faussement - Le combat ne se limite pas à avoir la Messe, la doctrine doit elle rester pur. Nous ne pouvons nous unir à des ministres qui adhère au Concile Vatican II tout en gardant les apparences de la Tradition. Cela parce que le Concile est contre le règne de Jésus-Christ sur les sociétés en particulier. Comment pouvons nous être cohérant ? à moins d’être dans ce que l’on nomme le Libéralisme au sens large et de dire “ Une fois que nous l’avons pour le dimanche, le problème est réglé ... auprès de n’importe quel structure ... “ Nous sortons des chapelles après avoir demandé, loué et adoré le règne de Notre Seigneur Jésus-Christ puis nous reprenons nos activités dans un monde opposé en tout au règne de la Très Sainte Trinité et nous respirant les vapeurs de petits compromis , gentiment, gentiment... l’Enfer est pavé de bonnes intentions. <br><br>
+
+            A cela l’on peut se demander, si les forces sont à l’opposés du règne de Jésus-Christ , alors de qui sera ce règne ? Une sainte, la plus grande sainte des temps moderne, peut nous donner un indice....<br><br>
+
+            Sainte Thérèse de Lisieux écrivait sur son lit d’agonie : <b>Je voudrais vivre au temps de l’Antéchrist...</b><br><br>
+
+            Alors que faire ? Oui la question se pose, elle se pose car la situation est si grave que Notre Dame à montrer l’Enfer où vont les âmes des pauvres pécheurs, le <span class="text-blue">13 juillet 1917. </span>
+        </p>
+        <h2 class="light-h2 small">
+            <span>.</span> <br>
+            Pour les sauver, Dieu veut établir dans le monde la dévotion à mon Cœur Immaculé. <br>
+            <span><b class="text-blue">Notre-Dame, </b>à Fatima, le 13 juillet 1917 </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <div class="black-bg-box">
+            <img src=":logo_coeur" alt="coeur" />
+            <span>L’ESPRIT </span>
+        </div>
+        <br>
+        <p>
+            Avant de rentrer dans l’aspect positif de l’Armée Bleue du C.I. certains peuvent se demander, de quelle autorité cette initiative est elle lancée ? Question légitime et juste en soit. Nous nous permettrons de répondre ci-dessous par les propos de sœur Lucie elle-même. à quoi nous rajouterons notre souci d’<b>unité dans la vérité et la charité au sein de la Tradition</b> issue du combat de Mgr Lefebvre.
+        </p>
+        <p><b>
+                Le démon fait tout ce qu’il peut pour nous distraire et nous enlever le goût de
+                la prière ; nous nous sauverons ou nous nous damnerons ensemble. Toutefois,
+                mon père, il faut dire aux gens qu’ils ne doivent pas rester à espérer un appel à la
+                pénitence et à la prière ni du Souverain Pontife, ni des évêques, ni des curés, ni
+                des supérieurs généraux ; il est grand temps que, de sa propre initiative, chacun
+                accomplisse de bonnes et saintes œuvres et réforme sa vie selon les désirs de la
+                Madone.</b><br>
+            <span class="text-blue">sœur Lucie au père Fuentès</span>, le 26 décembre 1957
+        </p>
+        <p>
+            En temps de crise il nous faut trouver les moyens de résoudre la crise. Ces moyens peuvent être de plusieurs ordres : matériel, intellectuel, moral, etc. Ces choses ne peuvent se concevoir toutes seules. Il faut donc trouver les ou la personne compétentes de résoudre le problème donné. Nous trouvons un bon exemple en 1928 avec António de Oliveira Salazar que le général Carmona président de la République portugaise a dû chercher pour résoudre les profondes crises : insolvabilité, chômage, effondrement monétaire, inflation. En lui laissant les pleins pouvoir d’agir. L’histoire nous a prouver que cela porta ses fruits... la situation économique et sociale du Portugal se stabilise et après la seconde guerre mondiale, c’est le seul pays d’Europe à ne pas être endetté et sous emprise américaine.
+            A l’heure présente le principe est le même, nos institutions sont en voie d’effondrement car elles ont choisies la négation de leur Créateur et les instituions qui désirent vivre en union avec Notre Seigneur subissent les foudres des ennemis de Dieu . Il nous faut chercher le moyen adéquat d’agir. Nous devons donc agir en sens contraire. Choisir notre Créateur comme principe de nos institutions et si ce dernier est déjà choisi le désirer avec plus de désir. Comment aller à notre Créateur ? Et comment le désirer avec plus de désir ? Ce dernier est venu à nous par sa Mère, La Vierge Marie, qui plus qu’elle désirait Celui qui est son principe ? Elle consciente de son néant, nous conscient d’être un peu quelque chose quand même... un peu taché du péché originel. “ <span class="font-SuisseScreenItalic">Je suis l’Immaculé Conception</span> “ voilà cette vérité qu’elle nous rappelle à Lourdes face au rationalisme. C’est ce que nous ne sommes pas, allons donc à ce que nous n’avons pas. Allons à ce Cœur Immaculé, Cœur plein de doux secret et <span class="font-SuisseScreenItalic">terrible comme une armée rangée en bataille ... </span>
+        </p>
+        <p>Selon Saint Thomas d’Aquin : “la grâce est un don gratuit de Dieu, un secours surnaturel qui élève la nature humaine, la rendant capable d’atteindre sa fin ultime : la vision de l’essence divine.” Vous l’aurez compris de nos propre force nous ne pouvons rien faire, nous avons besoin de la grâce. <span class="font-SuisseScreenItalic">Je suis la vigne, vous êtes les sarments. Celui qui demeure en moi, et en qui je demeure, porte beaucoup de fruits : car, séparés de moi, vous ne pouvez rien faire.M</span> Jean 15:5,<span class="font-SuisseScreenItalic">Crampon</span>
+            <br><br>
+            L’église nous enseigne que <span class="font-SuisseScreenItalic">toute grâce nous est accordée par l’intercession de la Vierge</span>, cette médiation de Marie est une médiation subordonnée et non nécessaire par rapport à l’office de médiateur de Jésus-Christ. Dans l’orde providentiel voulu par Dieu, il n’y a aucune grâce surnaturelle qui ne soit départie aux hommes sans le concours de la Très Sainte Vierge. La médiation de toutes grâces est une vérité certaine qui fait partie de la doctrine catholique. (<span class="font-SuisseScreenItalic">proxima fidei</span>)
+        </p>
+        <p>
+            Sommes nous indignes ?<br><br>
+
+            “ Les vœux qui seraient accueillis avec moins de faveur de la part de gens indignes [sont] grâce à la recommandation de sa très sainte Mère, reçus par Dieu avec la plus grande faveur et exaucés ”. Léon XIII, Octobri mense, 22 septembre 1891
+            Oh pauvres pécheurs ! Allons au près du Refuge des pécheurs d’autant plus franchement en esprit de pénitence !
+            <span class="font-SuisseScreenItalic">Je ne suis pas venu appeler les justes, mais les pécheurs au repentir Luc 5:32, Crampon</span>
+        </p>
+        <p>
+            C’est elle qui nous a donné Jésus, La Voie, la Verité et la Vie, c’est elle qui nous a donné sa Vie, c’est elle qui nous donne la vie de la grâce, c’est la Mère de la Divine Grâce. Allons à Marie pour toute demande, avant toute action, par elle nos choses quotidienne porteront des fruits, un arbre plein de grâce dans le jardin de l’Immaculé pour les pauvres pécheurs à l’abri des vers rongeurs.<br>
+            <b>C’est déjà là que nous pratiquons la dévotion envers son Cœur Immaculé qu’elle nous demande à Fatima. </b><br><br>
+
+            Partant de ces considérations nous avons déjà trouver la personne pour résoudre nos problèmes. Il nous reste maintenant à savoir quel pouvoir nous devrons lui donner ? <br><br>
+
+            En cas de grande crise les pouvoirs législatif, exécutif, judiciaire peuvent être donné à une seule personne. L’ont remet tout entre ces mains et l’on s’applique à exécuter les demandes. Dans notre cas un soldat de l’Armée Bleu du C.I. se trouve aussi dans ce cas de figure. Notre chef, c’est L’Immaculé Conception. Elle dirige tout, elle a tout les plans de guerre, toutes les ressources, toutes les infrastructures, bref tout les pleins pouvoirs. Dans la pratique c’est très simple et c’est là ou ça peut devenir compliqué. Nous ne voyons pas tout, nous fessons de petites choses et ne savons pas à quoi elles servent pendant que le chef avec nos petit effort avance à grand pas dans sa conquête. C’est pour ça que le soldat doit se comporter en soldat, on fait confiance à son chef car on sait qu’il possède les qualités requissent et l’on accomplit son devoir malgré vent et marré, le bon chef trouve toujours les moyens pour reposer ses troupes et les comblés de joie après la lutte. <br><br>
+
+            De manière concrète toutes nos œuvres devront être offertes aux intentions du Cœur Immaculé. Cette pratique s’appuyant sur cette vérité enseigné que<span class="font-SuisseScreenItalic"> Marie est Médiatrice de toute grâce. </span> Si nous avons ces dispositions, rendons grâce et prions pour les augmenter et si nous n’avons pas encore ces dispositions, prions notre Dame de nous les donner. Et pour confirmer le besoin de cette pratique rappelons nous l’apparition de Notre-Dame à la Rue du Bac en 1830, « C’EST L’IMAGE DES GRÂCES QUE JE RÉPANDS SUR LES PERSONNES QUI ME LES DEMANDENT… » Et pour expliquer les pierres qui ne projettent pas de rayons. Elle dit : « C’EST L’IMAGE DES GRÂCES QUE L’ON OUBLIE DE ME DEMANDER. » Elle sait qui en a le plus besoin et pour quel cause, donnons lui les moyens de répandre ses grâces, elle n’attend que ça et spécialement par le Saint Sacrifice de la Messe pratique que nous allons voir plus loin..
+        </p>
+        <br>
+        <div class="flexbox-center">
+           <img src=":img_nangis" alt="coeur" />
+        </div>
+        <br>
+        <p class="f-24"><b>La spécificité de l’Armée Bleue du C.I. c’est appliquer les demandes de Fatima dans le combat actuel de tout les jours par le Saint Esclavage de Jésus par Marie selon lla pratique du Secret Saint Louis-Marie Grignon de Monfort et selon l’enseignement de M.Olier.</b> </p>
+        <div class="flexbox-center">
+            <div class="blue-boxText">
+                <a href=":lesecret">
+                    Catéchisme du Saint Esclavage de Jésus en Marie
+                </a>
+            </div>
+        </div>
+        <br>
+        <br class="hide-on-tab">
+        <br>
+        <div class="black-bg-box">
+            <img src=":logo_coeur" alt="coeur" />
+            <span>Qu’est ce que nous demandes la Sainte Vierge dans cette bataille ?</span>
+        </div>
+        <h2 class="light-h2">
+            <div class="Regular-light-font">“Priez, priez beaucoup et faites des sacrifices pour les pécheurs, car beaucoup d’âmes vont en enfer parce qu’elles n’ont personne qui se sacrifie et prie pour elles “</div>
+            <span><b class="text-blue">Notre Dame, </b>à Fatima, le 19 août 1917 </span>
+        </h2>
+        <div class="heart-list">
+            <div class="heart-num">
+                <span>1</span>
+            </div>
+            <div class="heart-list-contet">Sacrifices ; pénitence : Devoir d’état</div>
+        </div>
+        <br><br class="hide-on-tab">
+        <p>« Voici la pénitence que le bon Dieu demande aujourd’hui, explique sœur Lucie : c’est <b>le sacrifice que chacun doit s’imposer soi-même pour mener une vie de justice dans l’observance de sa loi.</b> Et il désire que l’on fasse connaître clairement cette voie aux âmes, car beaucoup donnent au mot pénitence le sens de grandes austérités, et comme elles ne se sentent ni force, ni générosité pour cela, elles se découragent et se laissent aller à une vie de tiédeur et de péché. Du jeudi au vendredi, me trouvant dans la chapelle avec la permission de mes supérieures, à minuit, Notre-Seigneur me dit : <b>« Le sacrifice qu’exige de chacun l’accomplissement de son propre devoir et l’observance de ma loi, voilà la pénitence que je demande et que j’exige maintenant ».</b> La pénitence demandée est donc celle qui résulte de l’accomplissement de nos devoirs d’état. C’est à la fois très simple et très réaliste. Nous savons que, pour bien ordonner nos vies, il faut répartir de façon équitable nos activités entre les multiples devoirs d’état qui nous incombent : devoirs d’état envers Dieu, <a href=":home" class="textred-bg">envers notre patrie</a>, envers nos parents, envers nos enfants ; devoirs d’état conjugaux ; devoirs d’état professionnels. </p>
+        <br>
+        <p>Nous savons combien il est dur et exigeant d’accomplir ses multiples devoirs d’états en cherchant à faire à chaque instant la volonté du Bon Dieu. C’est une chose impossible sans la grâce, et cette dernière il nous faut la demander. Pour la demander et se disposer à recevoir les grâces nous savons que Notre Seigneur nous demande de passer par le Cœur Immaculé afin que par lui nous puissions garder la Foi et agir en esprit et en vérité dans cette crise terrible. <br>
+            Le soldat devra employer comme arme <b>les moyens</b> exposé ci-dessous <b>afin de sanctifier son devoir d’état.</b> Cependant là encore pour être fidèle à la demande de Fatima, l’accomplissement de son devoir quotidien devra se faire par Marie, avec Marie, en Marie, pour Marie à ses intentions pour le règne du Sacré-Cœur de Jésus et Marie !En priant par exemple avant chaque travaux : “ <b>ô Marie c’est par amour pour le règne du Sacré-Cœur de Jésus, par amour pour votre Cœur Immaculé et à toutes vos intentions que j’aimerai accomplir ce travail - que je vous offre ce sacrifice, ...</b>“ </p>
+        <h2 class="light-h2 small">
+            <span>.</span> <br>
+            — Je pense que la prochaine étape sera la consécration spéciale de la Russie au
+            Cœur Immaculé de Marie par le Saint-Père et tous les évêques. <br>
+            — Et alors, ma sœur, demandais-je, la Russie se convertira-t-elle et y aura-t-il
+            la paix ?<br>
+            — Oui, répondit-elle, c’est ce que Notre-Dame a promis.<br>
+            — Et quand cela aura-t-il lieu ?<br>
+            <strong class="bold-reguler-font">— Quand un nombre suffisant de catholiques offriront leurs sacrifices et accompliront les demandes de Notre-Dame </strong><br>
+            <span><b class="text-blue">sœur Lucie à John Haffert,</b> lors d’une entrevue relatée dans The Brother and I :</span><br>
+            <span>.</span><br>
+            <span>.</span>
+            <br>
+        </h2>
+        <div class="heart-list">
+            <div class="heart-num">
+                <span>2</span>
+            </div>
+            <div class="heart-list-contet">Le Rosaire</div>
+        </div>
+        <h2 class="light-h2 small mt-0">
+            <span>.</span> <br>
+            Le rosaire est l’arme la plus efficace pour nous défendre sur le champ de bataille<br>
+            <span><b class="text-blue">sœur Lucie,</b> écrit ces lignes le 26 novembre 1970, à l’un de ses amis prêtres, don Umberto Pasquale.</span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <p>
+            “ La décadence qui existe dans le monde est sans nul doute la conséquence du
+            manque d’esprit de prière. Ce fut en prévision de cette désorientation que la
+            Vierge a recommandé avec tant d’insistance la récitation du chapelet. Et comme
+            le chapelet est, après la sainte liturgie eucharistique, la prière la plus propre à
+            conserver la foi dans les âmes, le démon a déchaîné sa lutte contre lui.” <span class="text-blue">sœur Lucie</span>, dans cette même lettre du 26 novembre. <br><br>
+
+            “Toutes les personnes de bonne volonté peuvent et doivent, chaque jour, réciter
+            le chapelet. (...) la prière du chapelet, que l’on peut faire aussi bien en commun qu’en
+            particulier, aussi bien à l’église devant le Saint-Sacrement qu’à la maison, en
+            famille ou seul, aussi bien en voyageant qu’en nous promenant tranquillement à
+            travers champs. […] La journée a vingt-quatre heures. “ <span class="text-blue">sœur Lucie </span>, Appels du Message de Fatima, ibid., ch. 12, p. 138-139.<br><br>
+
+            Le soldat de l’Armée Bleue du C.I. priera son chapelet aux intentions du Cœur Immaculé; pour la consécration de la Russie ? Pour la conversion d’un pécheur ? Pour sortir une âme du purgatoire ? Pour le Saint Père ? C’est Notre Dame qui appliquera cette grâce comme bon lui semble et le soldat sera heureux de servir sans retour sur lui-même la Mère de Dieu pour ce que Dieu a fait en elle et pour ce qu’elle est en vérité. <br>
+            Il s’appliquera pour autant que sa santé et ses dispositions intérieur lui permette de méditer les mystères par les yeux de la Sainte Vierge, en union avec son cœur pour n’en faire plus qu’un.
+        </p>
+        <div class="flexbox-center">
+            <div class="blue-boxText">
+                <a href=":comment_lerosaire">
+                    Prier le Rosaire
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="heart-list">
+            <div class="heart-num">
+                <span>3</span>
+            </div>
+            <div class="heart-list-contet">Le scapulaire</div>
+        </div>
+        <h2 class="light-h2 small mt-0">
+            <span>.</span> <br>
+            Le scapulaire et le rosaire sont inséparables<br>
+            <span><b class="text-blue">Sœur Lucie,</b> entretien avec le père Howard Rafferty </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <br>
+        <p>
+            “ Comme le scapulaire nous aide à prier, du fait qu’il nous porte à parler à la
+            sainte Vierge plus intimement, il nous est d’un grand secours en particulier dans
+            la récitation fervente du rosaire (…) la forme de prière à Notre-Dame très désirée
+            par elle de nos jours à cause de sa simplicité et de son pouvoir pour nous
+            conduire à mener une vie chrétienne intense.” <span class="text-blue">John Haffert</span><br><br>
+
+            “Si vraiment nous disons le chapelet correctement, utilisant le scapulaire
+            comme un rappel constant de la présence de Notre-Dame quand nous lui
+            parlons, nous allons rapidement de jour en jour approfondir notre intimité et
+            union avec le Cœur Immaculé de Marie. La conséquence en sera l’éloignement
+            du péché. Nous aurons aussi la puissante protection de Notre-Dame contre le
+            démon et les tentations.”<span class="text-blue"> Manuel de “ l’Armée Bleue”.</span><br><br>
+
+            Le soldat de l’Armée Bleue du C.I. portera le scapulaire du Mont-Carmel comme signe de son engagement
+            et comme un acte de consécration au Cœur Immaculé et s’efforcera au réveille et au coucher d’ embrasser son scapulaire avec une invocation comme par exemple : “ ô Notre Dame du Mont Carmel protégez nous des flammes de l’Enfer, sauvez les pauvres pécheurs “
+        </p>
+        <div class="flexbox-center">
+            <div class="blue-boxText">
+                <a href=":lescapulaire">
+                    Le scapulaire
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="heart-list">
+            <div class="heart-num">
+                <span>4</span>
+            </div>
+            <div class="heart-list-contet">Le saint sacrifice de la messe</div>
+        </div>
+        <h2 class="light-h2 small mt-0">
+            <span>.</span> <br>
+            Il est assuré d’une part que la Vierge Marie n’obtient rien dans ses demandes que par le sacrifice du corps et du sang de Jésus-Christ, première source de tous ses mérites<br>
+            <span><b class="text-blue">M.Olier,</b> Vie intérieure de la très Sainte Vierge </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <br>
+        <p>
+            « En 1929, par le moyen d’une autre apparition, Notre-Dame demanda la consécration de la Russie à son Cœur immaculé, promettant par ce moyen d’empêcher la propagation de ses erreurs et sa conversion.<br>
+            Cette communication se fit ainsi. J’avais obtenu de mes supérieures et de mon confesseur de faire l’heure sainte de onze heures à minuit, entre chaque jeudi et chaque vendredi.  Une nuit, il y avait seulement la lumière de l’unique lampe du sanctuaire (…) Tout à coup une lumière surnaturelle illumina toute la chapelle et sur l’autel apparut une croix de lumière qui arrivait jusqu’au plafond. Dans une lumière encore plus claire, on voyait dans la partie supérieure de la croix un visage humain avec le corps jusqu’à la ceinture (le Père), sur la poitrine une colombe (l’Esprit-Saint), et, cloué sur la croix, le corps d’un autre homme (le Fils).<br>
+            Un peu en-dessous de la ceinture, on voyait, suspendus en l’air, un calice et une grande hostie sur laquelle tombaient quelques gouttes de sang qui roulaient sur les joues du Crucifié et aussi d’une blessure de la poitrine. Sur le bras droit de la croix, il y avait Notre-Dame (…) (C’était Notre-Dame de Fatima avec son Cœur immaculé sur sa main gauche, sans épée ni rosés, mais avec une couronne d’épines et des flammes.) Sous le bras gauche de la croix, quelques lettres semblant faites d’eau cristalline, coulant au-dessus de l’autel, formaient ces mots : GRÂCE ET MISÉRICORDE.” <span class="text-blue"> sœur Lucie </span>, extrait d’une lettre adressé au Pape Pie XII, Tuy (Espagne) , 2 décembre 1940.<br>
+        </p>
+        <br>
+        <br class="hide-on-tab">
+        <br class="hide-on-tab">
+        <div class="flexbox-center">
+            <img src=":img_tuy" class="" alt="img">
+            <p>Apparition du 13 juin 1929 à Tuy (Espagne)</p>
+        </div>
+        <br class="hide-on-tab">
+        <br class="hide-on-tab">
+        <br>
+        <p>
+            Dans cette vision de Tuy, le mystère divin nous apparaît dans son mouvement de “ procession”, de “ descente”, puis de “ retour”, de “ remontée”, c’est-à-dire dans son double mouvement d’amour par lequel s’opère notre salut : mystère de “ Grâce et de Miséricorde”, mais aussi mystère de la conversion des âmes, de la Russie et des nations, par les pratiques de réparation et de consécration demandées envers le Cœur Immaculé de Marie.<br>
+            <b>Cette théophanie nous présente la cascade rebondissante de toutes les médiations, disposées par notre Père du Ciel pour nous faire part de sa Grâce et de sa Miséricorde </b>: Médiation du Christ notre Sauveur crucifié pour notre salut Médiation eucharistique de son Corps et de son Sang, offerts en sacrifice expiatoire et proposés en nourriture et en breuvage de communion salutaire.<br>
+            <b>La très Sainte Vierge Marie est appelée à juste titre “médiatrice”, dans le sens ascendant (en assumant nos prières et bonnes œuvres) et dans le sens descendant (en transmettant grâces et bénédictions).</b> <span class="font-SuisseScreenItalic">(proxima fidei) </span>
+        </p>
+        <h2 class="light-h2 small">
+            <span>.</span> <br>
+            En ce Temps-là, debout près de la croix de Jésus, se tenaient sa Mère .... <br>
+            <span><b class="text-blue">Saint Jean,</b> Jn 19, 25-27 </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <p>
+            M.Olier nous dit encore que : <b>“ La grâce capitale de Saint Jean avait pour fin de mettre à disposition de la très sainte Vierge le fruit du très auguste sacrifice de la croix. “</b><br>
+            à chaque messe, le sacrifice de la croix étant renouvelé sur l’autel, Notre Dame se trouve au coté de Notre Seigneur sur la croix comme au calvaire. Ce dernier peut être offert à certaines intentions particulières par le ministre du prêtre. Quel meilleur moyen de répondre aux demandes de Notre Dame que de lui offrir les fruits du sacrifice selon ses intentions tout comme le faisait Saint Jean ? <br><br>
+
+            Le soldat à ici le moyen le plus efficace de donner tous les moyens à la très sainte Vierge pour combattre le serpent car c’est par la croix qu’il a perdu et c’est par la croix que nous pouvons être sauver et c’est par la croix que Notre Dame peut répandre les grâces.... <br><br>
+
+            Le soldat de l’Armée Bleue du C.I. s’efforcera <b>d’offrir par le prêtre des messes</b> selon ses moyens : <b>AUX INTENTIONS DU COEUR IMMACULé
+                “ Ce que nous disons ici du saint sacrifice de la messe, s’applique également au fruit de la sainte communion, que les fidèles peuvent lui abandonner , pour qu’elle en dispose selon son bon plaisir.</b> “ <span class="text-blue">M.Olier</span>, Vie intérieure de la très Sainte Vierge
+        </p>
+        <br>
+        <div class="flexbox-center">
+            <iframe width="560" height="315" src=":img_video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br>
+        <div class="heart-list">
+            <div class="heart-num">
+                <span>5</span>
+            </div>
+            <div class="heart-list-contet">1 er samedi du mois</div>
+        </div>
+        <h2 class="light-h2 small mt-0">
+            <span>.</span> <br>
+            Vois, ma fille, mon Cœur entouré d’épines que les hommes ingrats m’enfoncent à chaque instant par leurs blasphèmes et leurs ingratitudes. Toi, du moins, tâche de me consoler et dis que tous ceux qui, pendant cinq mois, le premier samedi, se confesseront, recevront la sainte Communion, réciteront un chapelet, et me tiendront compagnie pendant quinze minutes en méditant sur les quinze mystères du Rosaire, en esprit de réparation, je promets de les assister à l’heure de la mort avec toutes les grâces nécessaires pour le salut de leur âme.
+            <br>
+            <span><b class="text-blue">Notre-Dame,</b> Le 10 décembre 1925 à Pontevedra </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <p>
+            Le soldat de l’Armée Bleue du C.I. s’efforcera de pratiquer en esprit de réparation et selon les conditions demandés, les cinq premier samedi du mois. Lorsque cela sera fait pour lui, qu’il le fasse pour les pauvres pécheurs pour lequel personne ne prie afin que Notre Dame puisse répandre ses grâces : pour ceux qui ne prie pas, pour ceux qui n’adore pas et pour ceux qui n’aiment pas !
+        </p>
+        <br>
+        <br>
+        <div class="flexbox-center">
+            <div class="blue-boxText">
+                <a href=":lersamedis">
+                    1er samedi du mois
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+       <div class="heart-list">
+            <div class="heart-num">
+                <span>5</span>
+            </div>
+            <div class="heart-list-contet">Prier pour le Saint Père</div>
+        </div>
+        <h2 class="light-h2 small mt-0">
+            <span>.</span> <br>
+            Jacinthe, à quoi penses-tu ?<br>
+            A la guerre qui vient et aux gens qui vont mourir et aller  en enfer ! Comme c’est horrible ! S’ils arrêtaient simplement  d’offenser Dieu, alors il n’y aurait pas de guerre, et ils n’iraient pas en enfer. Comme j’aime souffrir pour l’amour de Notre-Seigneur et  de Notre-Dame, pour leur faire plaisir ! Ils aiment beaucoup ceux qui  souffrent pour la conversion des pécheurs ».<br>
+            <span>.</span><br>
+            <span><b class="text-blue">Soeur Lucie à Jacinthe</b></span><br>
+            <span>.</span><br>
+        </h2>
+        <p>
+            “Le moment est  venu où Dieu demande au Saint-Père de faire, en union avec tous les  évêques du monde, la consécration de la Russie à mon Cœur Immaculé. Il  promet de la sauver par ce moyen. Il y a tant d’âmes que la justice de Dieu condamne pour des  péchés commis contre moi, que je viens demander réparation. Sacrifie-toi à cette intention et prie. Notre Dame à sœur Lucie Le 13 juin 1929 à Tuy
+        </p>
+        <br>
+        <br>
+        <p>
+            Pour que cette consécration soit “ valide “  il faut comme nous le rappel sœur Lucie  : <span class="font-SuisseScreenItalic">“ La Sainte Vierge  demande la consécration de la Russie au Cœur Immaculé de Marie, par le  pape, en union avec tous les évêques du monde”</span><br>
+            Pour se faire il nous faut un Pape qui puisse le faire en prenant compte de la 3 ème partie du secret de Fatima ...  En août 1931, à Rianjo, Notre-Seigneur adressera à Sœur Lucie ces paroles terribles : “Fais savoir à mes ministres, étant donné qu’ils suivent l’exemple du roi de France en retardant l’exécution de ma demande, qu’ils le suivront dans le  malheur. Le Saint-Père consacrera la Russie, mais ce sera tard.”
+        </p>
+        <p>
+            La petite Jacinthe ne priait pas seulement pour les pécheurs, mais elle offrait  aussi prières et sacrifices pour le Saint-Père. Certainement, le grand secret dut impressionner Jacinthe : non seulement la vision de l’enfer, mais aussi la deuxième et la troisième partie du secret, en  particulier ce qui concerne le pape. Suite à quoi elle disait à sœur Lucie : <span class="font-SuisseScreenItalic">“Tu ne vois pas toutes ces grandes routes et tous ces chemins  remplis de gens qui pleurent tellement ils ont faim ? Et le Saint-Père  dans une église priant devant le Cœur Immaculé de Marie ? Et tant de  gens priant avec lui ? “</span> 
+            <br>
+            <br>
+            C’est pourquoi chaque fois qu’elle offrait des sacrifices à Jésus, elle ajoutait : « ... et pour le Saint-Père ».
+        </p>
+        <br>
+        <h2 class="light-h2 small mt-0">
+            <span>.</span> <br> 
+            Comme chef mondial contre le communisme, je vous bénis et tous les membres de l’Armée Bleue<br>
+            <span>.</span> <br>
+            <span><b class="text-blue">Le Pape Pie XII,</b>au Père Colgan en mai 1947</span><br>
+            <span>.</span><br>
+            <span>.</span> <br>
+        </h2>
+        <br>
+        <br>
+    </div>
+    ',
+    'historique_content' => '
+    <div class="first-sec">
+    <div class="row">
+        <div class="col-2">
+            <img src=":img_plus" class="plus-img" alt="plus" />
+        </div>
+        <div class="col-10">
+            <h2 class="black-bg-text m-plus plus-txt">
+
+                Les conséquences historiques de la consécration des nations au Cœur Immaculé de Marie
+            </h2>
+        </div>
+    </div>
+</div>
+<div class="rdp-page-cls historic">
+    <div class="container">
+        <h2 class="light-h2">
+            <span>.</span> <br>
+            Au Portugal, on conservera toujours le dogme de la foi <br> <span class="clr-chnge"> sœur Lucie</span>,
+            <span><b>Mémoires de sœur Lucie, IV, n.5</b> </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <p>Afonso Henriquès né le 25 juillet 1109 à Guimaraes, il appartient à la dynastie de Bourgogne de la lignée de la Maison capétienne de Bourgogne. C’est un descendent de Hugues Capet (987) issu de la branche robertienne et fondateur de la dynastie capétienne. Il est le fils de Henri de Bourgogne (1066), Comte de Portugal et petit fils de Alphonse VI, Roi de Castille.
+        </p>
+        <p>
+            En 1139 eu lieu la bataille d’Ourique, dans la région de l’Alentejo au sud du Portugal. La Castille chassait alors les musulmans et faisait appelle à des croisés français qui se trouvaient sous les ordres de Alfonso Henriquès. C’est suite à la victoire de cette bataille qu’il fut acclamé par ses troupes : 1 er Roi de Portugal, marquant la transition du comté au royaume de Portugal.
+        </p>
+        <p>
+            Avant la bataille une vision miraculeuse du Christ en croix apparut à Alfonso Henriquès et aurait galvanisé ses troupes alors qu’elles étaient en nette infériorité numérique face à l’armée musulmane.
+        </p>
+        <div class="img-sec">
+            <img src=":img1" class="" alt="" />
+            <p>Les cinq écus bleus représentent les rois vaincus et, les points blancs à l’intérieur des écus symbolisent les cinq plaies du Christ, faisant référence à l’aide divine reçue lors de la bataille. Les sept châteaux d’or évoquent les conquêtes territoriales de Alfonso Henriquès. </p>
+
+            <img src=":img2" class="" alt="" />
+            <p>La vision d’Alphonse Henriques de Jésus Christ et de <span class="clr-chnge">l’Ange gardien du Portugal</span> pendant la bataille d’Ourique</p>
+        </div>
+
+
+        <p>Son grand-père, Alphonse VI protesta et Alfonso Henriquès dû faire appel à Rome et le Portugal se déclara <b>indépendant sous la souveraineté du Pape</b> Alexandre III qui reconnut officiellement ce royaume par la bulle <span class="font-SuisseScreenItalic">Manifestis Probatum.</span> Il nomma le Portugal : <span class="font-SuisseScreenItalic">La Nation très fidèle.</span>
+        </p>
+        <p>
+            Le nouveau souverain avait une très grande dévotion pour la Mère de Dieu, la Vierge Marie, qu’il choisit comme la patronne du royaume. Le Portugal fut <b>consacré à l’Immaculé dès sa fondation</b> et vêtu du manteau de la Sainte église comme le fut d’une certaine manière quelques années plus tard Saint François d’Assise....
+            Il choisit Saint Michel Archange comme protecteur de ses armées.
+        </p>
+        <p>Un autre fait historique fut la conversion d’une princesse musulmane lors de cette reconquête par les croisés. L’un des chevaliers templiers, Gonçalo Henriques, souhaitait épousé une princesse nommé Fatima. Il demanda l’autorisation au roi qui accepta si cette dernière voulu se convertir. Elle fut baptisé et pris le nom de Oureana, la localité de Fatima pris le nom d’Ourém au XVI siècle.... </p>
+        <p>L’un des descendants de Alfonso Hendriquès, Denis 1 er ( 1261-1325 ), sixième roi de Portugal ; cousin de Saint Louis, Louis IX, fut entre autre le fondateur de l’Ordre du Christ et de l’Université de Coïmbra. Il épousa élisabeth d’Aragon devenu <b>Sainte élisabeth de Portugal.</b> Fille de Pierre III d’Aragon, roi d’Aragon et de Sicile. ; nièce de Sainte élisabeth de Hongrie. Au moment où il accueillait sa jeune reine, le Portugal venait de rejeter définitivement les Sarrasins hors de son territoire et de conquérir ses limites actuelles ; il entrait dans une ère de paix et de prospérité. La part d’Elisabeth dans cette œuvre de restauration fut considérable, en particulier dans la construction et l’aménagement des églises, des hôpitaux et des orphelinats ; et si le peuple reconnaissant décerna à son roi les titres de « Roi laboureur » et de « Père de la Patrie », il salua sa reine du vocable de « Patronne des laboureurs ». La reine élisabeth de Portugal avait une très grande dévotion pour l’Immaculé et fut un exemple de sainteté après une vie toute d’œuvres héroïques, elle mourut en saluant la Très Sainte Vierge, qui lui apparut, accompagnée de sainte Claire et de quelques autres Saintes. Peut avant sa mort, elle fit le pèlerinage de Coïmbra à Saint Jacques de Compostelle oû <b>elle déposa sa couronne à la Vierge Marie.</b> Ce geste sera repris plus tard par Jean IV .... </p>
+
+        <div class="img-sec pt-3">
+            <img src=":img3" class="" alt="" />
+            <p> Sainte élisabeth de Portugal ; 4 janvier 1271 - 4 juillet 1336</p>
+
+
+        </div>
+        <div class="video-sec">
+            <iframe width="560" height="315" src=":video1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p>
+            Plus tard, lors de la conquête de l’indépendance du Portugal sur la Castille
+            espagnole, son souverain, Jean d’Avis, invoqua solennellement la protection de
+            Marie sur le plateau même de Fatima. <b>C’était le 13 août 1385. Pour la première
+                fois, le treizième jour du mois voyait Notre-Dame honorée publiquement en ce
+                lieu. </b> victoire éclatante s’ensuivit le lendemain. En reconnaissance, le roi fit
+            édifier le monastère de Bathala qu’il avait promis à la Madone s’il gagnait la
+            bataille. Il le confia aux dominicains et, de là, la dévotion au saint rosaire se répandit dans toute la contrée. <b>Ce fut aussi un 13 mai qu’à la demande du même roi, le pape Boniface IX (1355-1404) accorda que toutes les cathédrales du pays
+                soient consacrées à la sainte Vierge.<sup> 1 </sup></b>
+        </p>
+        <p>Le Portugal devint le plus grand empire colonial du monde, cette conquête apostolique mené en partie par Henri le navigateur, maître de l’Ordre du Christ, fut confié à la Vierge Marie. <b>Ce qui permis d’étendre le règne de Notre Seigneur Jésus -Christ</b> en Afrique, en Asie (Inde 1498) et en Amérique du sud (Brésil 1500). </p>
+        <p>Le 20 octobre 1646 Jean IV renouvelait le geste de Alfonso Hendriquès, proclamant la Vierge de la Conception patronne de son royaume. Il s’obligeait aussi par serment à professer et défendre, même au prix de sa vie la doctrine de l’Immaculé Conception. Ce fut aussi le dernier portugais couronné. Lors de son couronnement <b>il posa sa couronne sur la tête d’une statue de la Vierge Marie</b> et la déclara : <span class="font-SuisseScreenItalic">“ Véritable reine du Portugal “.</span>
+            <br>Aucun roi après lui ne porta une couronne. Ces dernières furent posée à coté du souverain lors de l’acclamation.
+        </p>
+        <p><b>Dès lors il est facile de comprend pourquoi la Vierge Marie
+                choisi ce pays en 1917, pour venir demander la dévotion à son Cœur
+                Immaculé : elle venait chez elle.</b></p>
+        <div class="img-sec">
+            <img src=":img4" class="" alt="" />
+            <p> Le roi Manuel II (15 novembre 1889 - 12 juillet 1932) ; sa couronne sur la table est le dernier roi de Portugal. Il règne de 1908 à 1910.</p>
+        </div>
+        <p><b>Le XVIII e siècle, qui vit l’avènement des « Lumières » en France, vit commencer la décadence du Portugal catholique.</b></p>
+        <p>A partir de 1870, une partie des francs-maçons, après avoir forcé le roi Jean VI à accepter une monarchie constitutionnelle, commença à préparer l’avènement de la république.
+            Le 1 er février 1908, le roi Charles I er qui avait tenté de reprendre les choses en
+            main, était assassiné avec le prince héritier, sur ordre de la franc-maçonnerie
+            portugaise et de la secte des carbonaristes (condamné par le Pape Pie VII dans son encyclique Ecclesiam a Jesu Christo ).
+            Manuel II, son second fils, trop faible, ne put tenir longtemps. Il fut
+            renversé, et la république proclamée le 5 octobre 1910.</p>
+        <h2 class="light-h2 small">
+            <span>.</span> <br>
+            “ Notre révolution est internationale. Nous commencerons simultanément dans la Péninsule Ibérique et en Russie, et un jour la révolution s’étendra à travers toute l’Europe.” .<br> <span class="clr-chnge"> Lénine à Trotsky</span>,
+            à Paris.<br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <div class="img-sec">
+            <img src=":img5" class="" alt="" />
+            <p> Des révolutionnaires défilent avec le drapeau de la société secrète des carbonaristes sur la La Place du Marquis de Pombal à Lisbonne le 5 octobre 1910.</p>
+        </div>
+        <p>“Le plan de ces révolutionnaires, dont le but était de détruire la foi catholique dans les âmes et aussi toute la chrétienté européenne, consistait à prendre le Vieux Continent en tenaille, en fomentant des révolutions simultanées pour s’emparer des gouvernements en même temps dans trois pays : les deux pays les plus à l’ouest de l’Europe (Espagne et Portugal) et le grand pays de l’est de l’Europe, la Russie. Ce plan ressort clairement des propos de Lénine à Trotsky, à Paris, dans les premiers jours de la conspiration marxiste : « Notre révolution est internationale. Nous commencerons simultanément dans la Péninsule Ibérique et en Russie, et un jour la révolution s’étendra à travers toute l’Europe ».<sup> 2 </sup></p>
+        <p><b>En 1910 en Russie, la situation n’était pas encore propice aux révolutionnaire, qui durent attendre 1917. Date à laquelle la Vierge Marie apparut à Fatima ... </b>
+            A cette époque on discernait nettement le “sans Dieu” bolchéviste, communistes et autres mouvements anti-chrétiens, dont le programme est de ne pas croire, ni adorer, ni espérer, ni aimer. </p>
+        <p>“Remarquez d’ailleurs les coïncidences, dit le R.P. Fonseca : le 16 avril 1917 arrivaient à Petrograd Lénine et Trotzkij et les jours suivants, ils donnaient une orientation à la révolution socialo-communiste et en prenaient le commandement. le 7 novembre de la même année, triomphait à Petrograd, puis à Moscou, la faction bolchéviste qui, dans sa lutte contre Dieu, ambitionnait de massacrer la Russie, le Mexique, la Péninsule Ibérique, puis le monde entier.
+            C’est entre ces deux dates, exactement 25 ou 27 jours après la première et autant avant la seconde, qu’eurent lieu la première et la dernière apparition de Fatima. “ <sup>3</sup> </p>
+        <p>L’effet des apparitions qui
+            bouleversèrent le pays, en particulier le grand miracle du soleil du 13 octobre 1917, devant une foule de 70 000 à 100 000 personnes , Les guérisons miraculeuses, les conversions, le pèlerinage spontané, <b>permirent le relèvement soudain du Portugal face à la révolution. </b>Effectivement les révolutionnaires, avaient conduit le Portugal dans un véritable cahot financier, moral et politique. La dette flottante de ce pays s’élevait à deux milliards d’escudos. Il n’avait plus de crédit et la Société des Nations menaçait de placer ses finances sous contrôle étranger et politiquement c’était l’anarchie.
+            Il fallut bien sûr un certain temps, et plusieurs étapes, pour que les conséquences s’en
+            fassent sentir de manière stable au niveau politique.</p>
+
+        <div class="img-sec">
+            <img src=":img6" class="" alt="" />
+            <p> le grand miracle du soleil le 13 octobre 1917</p>
+        </div>
+        <p>Les apparitions de Fatima se produisirent au moment où l’anarchie atteignait, au Portugal, un degré sans précédent. Le pouvoir appartenait à la bombe
+            et au pistolet.
+            Sidonio Bernardino Cardoso da Silva Pais, professeur à Coïmbra, commandant dans l’armée, républicain convaincu, franc-maçon avoué, ministre d’État,
+            réussit à grouper autour de lui un grand nombre de ceux qui, dans le monde
+            politique et militaire, voulaient en finir avec le terrorisme et aspiraient à un ré-gime plus modéré. Il prit le pouvoir le 8 décembre 1917, première fête de l’Immaculée Conception qui suivit les événements de la Cova da Iria. Après tant
+            d’excès, il voulait pacifier le pays, et pour cela arrêter les persécutions contre
+            l’Église. Les mesures sectaires disparurent peu à peu. L’acte le plus spectaculaire de cette nouvelle orientation fut le rétablissement des relations diplomatiques avec le Saint-Siège en juillet 1918.
+            Franc-maçon en public, il ne cachait pas à ses intimes ses désirs de conversion. L’historien Costa Brochado note : « Un officier de sa police, son dévoué
+            lieutenant Faria, nous raconta un jour que Sidonio Pais se considérait comme
+            protégé par la sainte Vierge, et que, à la fin de sa vie, il avait eu des “visions encourageantes” qui lui donnaient une force morale irrésistible. » Mais les Loges
+            le firent assassiner le 14 décembre 1918, en gare de Lisbonne. On plaça un crucifix sur sa poitrine déchirée par les balles.<sup>4</sup></p>
+        <div class="img-sec pt-3">
+            <img src=":img7" class="" alt="" />
+            <p> Sidonio Bernardino Cardoso da Silva Pais,</p>
+        </div>
+        <p><b>Salazar, le miracle de Notre Dame de Fatima</b></p>
+        <p>Le 28 mai 1926, ce fut de Braga, la capitale du bastion catholique du Nord,
+            que partit le soulèvement militaire libérateur, alors qu’un congrès marial présidé par le nonce exaltait les heureuses conséquences des apparitions de Fatima
+            pour le pays :
+            Juste au moment où, processionnellement, sortait la statue de la Vierge de
+            l’église du Populo pour se rendre au Sameiro, sortaient aussi de leur caserne,
+            contiguë à l’église, sous la bénédiction, dirait-on, de Marie, les troupes du 8e régiment d’infanterie préludant à la révolution 1. En trois jours, elle gagna le pays
+            tout entier et triompha, sans qu’ait été tiré un seul coup de fusil, ni versée une
+            seule goutte de sang : cas unique dans toute l’histoire du Portugal .
+            En 1928, le général Carmona, ayant assumé tout seul le pouvoir, fit appel
+            pour le ministère des Finances, à António de Oliveira Salazar , professeur de
+            droit à l’université de Coïmbra. Salazar demanda conseil à son ami l’abbé
+            Manuel Gonçalves Cerejeira , et au père Mateo Crawley, l’ardent apôtre du
+            Sacré-Cœur, alors de passage au Portugal. Puis il passa plusieurs heures en
+            prière dans la nuit devant le tabernacle, et enfin, après avoir servi la messe matinale du père Mateo, il accepta.</p>
+
+        <div class="history-sec">
+            <div class="history-img">
+                <img src=":img8" class="" alt="" />
+                <p> Mateo Crawley-Boevey (1875-1960) ,<br> l’Apotre du Sacré-Cœur </p>
+            </div>
+            <div class="history-img">
+                <img src=":img9" class="" alt="" />
+                <p> António de Oliveira Salazar (1889 - 1970)</p>
+            </div>
+        </div>
+        <p>Le nouveau ministre s’appliqua d’abord à relever les finances et l’économie,
+            ce qu’il réussit à faire en deux ans seulement.
+            <br>
+            C’est dans ce contexte qu’intervint un événement décisif pour le pays : <b>la
+                consécration du Portugal au Cœur Immaculé de Marie par le cardinal Cerejeira
+                et tout l’épiscopat, le 13 mai 1931.</b> Le père Alonso affirme que sœur Lucie en
+            fut l’inspiratrice . <b>En tous cas, cet acte, qui correspondait tellement aux désirs
+                du Cœur de Marie, fut l’occasion pour Notre-Dame de faire tomber sur le
+                Portugal une pluie de grâces.</b>
+            <br>
+            Le Portugal, qui était le pays d’Europe le plus troublé, va désormais en devenir le plus stable : le général Carmona demeurera président de la République
+            jusqu’à sa mort en 1951, et Salazar dirigera le gouvernement jusqu’en 1968. Le
+            pays traversera la révolution communiste espagnole et la Seconde Guerre mondiale, en restant en paix ainsi que toutes ses colonies.<sup>5</sup>
+        </p>
+        <div class="img-sec">
+            <img src=":img10" class="" alt="" />
+            <p> antonio oliveira salazar avec sœur Lucie</p>
+        </div>
+        <div class="video-sec">
+            <iframe width="560" height="315" src=":video2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p>Lénine avait essayé de prendre l’Europe en tenailles entre la Russie et la péninsule ibérique. Les apparitions de Fatima firent échouer la moitié du plan.
+            <br>
+            Pour briser la deuxième pince de la tenaille avant qu’elle n’ait répandu ses erreurs dans le monde entier, il aurait fallu que le pape consacre la Russie au
+            Cœur Immaculé de Marie, en union avec les évêques du monde entier. Cela se
+            fera un jour, le Ciel l’a promis 2. En attendant, ce qui s’est passé au Portugal est
+            l’image de ce qui arrivera en Russie lorsque le successeur de saint Pierre obéira
+            à la sainte Vierge.
+            <b>Pour récompenser les évêques portugais d’avoir consacré leur pays au Cœur
+                Immaculé de Marie le 13 mai 1931, Notre-Dame accorda en effet au Portugal les
+                trois grâces qu’elle avait promises pour la consécration de la seule Russie:</b>
+        </p>
+        <p>Un miracle de conversion se manifestant par une admirable restauration
+            de l’Église, et correspondant à la promesse de la sainte Vierge : « Beaucoup
+            d’âmes seront sauvées ».</p>
+        <p>Un miracle de rénovation politique et sociale qui laisse entrevoir ce que
+            sera la « conversion de la Russie » promise par Notre-Dame. Notons bien que la
+            Vierge Marie n’a pas dit « conversion des Russes » ; en employant le mot de
+            « Russie », elle a désigné le pays en tant qu’entité politique : il y aura donc, non
+            seulement une conversion de la majorité de la population – préalable à tout redressement comme nous l’avons vu , mais aussi une régénération de toutes les
+            institutions de la Russie qui deviendra un authentique pays de chrétienté.
+        </p>
+        <p>Enfin un miracle de paix : le Portugal fut préservé de la révolution communiste espagnole et de la Seconde Guerre mondiale. Un beau symbole en a été
+            la construction de la basilique de Fatima en pleine guerre, alors que dans tant
+            de pays du monde, les églises étaient détruites par centaines sous les bombardements. Ce miracle est l’écho de la promesse du 13 juillet 1917 : « Il sera donné
+            au monde un certain temps de paix ». Bien sûr, il ne s’agit pas ici de n’importe
+            quelle paix, mais de la paix du Christ par le règne du Christ.<sup>6</sup></p>
+        <div class="img-sec">
+            <img src=":img11" class="" alt="" />
+            <p> Sanctuaire de N.D. de Bourguillon, Fribourg</p>
+        </div>
+        <p>En Suisse c’est du coté du canton et de la ville de Fribourg que nous pouvons constater les fruits d’une pareil consécration. </p>
+        <p>Les révolutionnaires, franc-maçons et autres société secrète agissaient déjà en Suisse depuis 1792 afin de renverser l’ordre de l’ancien régime qui subsistait malgré le passage de la réforme. ( Nous ne pourrons relater ici toute cette histoire à travers nos différents cantons. Ceci dit nous vous invitons à visionner la vidéo ci-dessous, dans laquelle nous trouvons un résumé de ce processus. )
+            <br>
+            Un prêtre, le chanoine Joseph Schorderet (1840-1893) lutta contre les Catholiques libéraux et le régime radical qui avait pris le pouvoir de Fribourg. Il fonda de multiple Association Catholique, Cercle, organisa des pèlerinages, fonda le journal la Liberté, la maison d’édition Saint-Paul ou encore co-fonda l’Université de Fribourg. Tout cela dans l’optique de faire régner le Christ sur la société, autrement dit Le règne du Christ roi. Il fit ce travaille à l’aide entre autre d’une femme connu sous le nom de Marguerite Bays (1815-1879). Cette dernière fut stigmatisée et avait la même dévotion pour le règne du Sacré-Cœur de Jésus.
+        </p>
+        <div class="liberte-sec">
+            <img src=":img12" class="" alt="" />
+            <img src=":img13" class="" alt="" />
+        </div>
+        <p>En 1852 c’est la chute du régime des Radicaux à Fribourg.
+            <br>
+            En 1886 avec le soutien du Chanoine Schorderet, George Python accède au pouvoir, c’est la naissance de la République Chrétienne.
+            <br>
+            En 1889, le 30 juin, la Ville et République de Fribourg est consacré au Sacré-Cœur de Jésus avec toutes ses autorités religieuse et civil par Mgr Mermillod, qui deviendra le Cardinal Mermillod.
+        </p>
+        <p>En 1920 le Diocèse de Lausanne, Genève et Fribourg reçoit l’évêque Mgr Besson, qui fut un protégé de Saint Jean Bosco. Mgr Besson avait une grande dévotion pour Notre Dame de Fatima.<br>
+            A l’occasion d’une séance solennelle M.Quartenoud, conseiller d’Etat, prononça au Grand Conseil de Fribourg cette allocution suivante rapporté par Mgr Charrière :</p>
+        <p><b> “ Au début de la guerre, lorsque la grande menace pesait sur le pays, nous l’avons vu monter avec son peuple, prier à Bourguillon (Chapelle de Notre Dame de Bourguillon Gardienne de la Foi). En présence des autorités civiles, des chefs de l’armée et de la population, il consacrait récemment le pays de Fribourg au Cœur Immaculé de Marie. “ </b></p>
+        <p>Il semble que la consécration au Sacré-Cœur de Jésus devait donner les grâces pour que la consécration du Cœur-Immaculé puisse se faire. Sachant que nous sommes 10 ans avant la consécration au Sacré-Cœur du genre humain de Léon XIII. </p>
+        <div class="img-sec">
+            <img src=":img14" class="" alt="" />
+            <p> Mgr Besson à table avec le Général Guisan</p>
+        </div>
+        <p>Monseigneur François Charrière, évêque du diocèse de Lausanne-Genève-Fribourg, successeur de Mgr Besson approuva les statuts de la Fraternité Sacerdotale Saint Pie X et l’érigea en pia unio dans son diocèse, le 1er novembre 1970, comme le commente ici Mgr Lefebvre :</p>
+        <p>“ Il avait donc eu quatre mois pour examiner ces constitutions, et j’avoue que je me rendais à l’évêché avec quelque appréhension. Le temps était déjà bien défavorable à toute œuvre de la Tradition, c’est pourquoi je me demandais bien ce qu’allait me répondre Son Excellence Mgr Charrière. Or, à ma stupéfaction et à ma joie, évidemment, il me dit : « Mais c’est entendu, je vais signer cela immédiatement ». Il fit appeler son secrétaire, lui demanda les documents ; la lettre était prête et Monseigneur signa devant moi l’acceptation de nos statuts et de nos constitutions.”<sup>7</sup></p>
+        <p>Le tout premier séminaire de la Fraternité Sacerdotale Saint-Pie X a débuté le 13 octobre 1969 à Fribourg. Le dimanche suivant, Mgr Marcel Lefebvre et sa petite dizaine de séminaristes partaient en pèlerinage à Notre-Dame de Bourguillon, sur les hauteurs de la ville. Quelques mois plus tard, c’est dans le même sanctuaire, là ou Mgr Besson consacra le canton au Cœur Immaculé de Marie... qu’ont eu lieu les premières ordinations dans la Fraternité ! Si l’on songe au troisième secret de Fatima ....</p>
+        <h2 class="light-h2 small">
+            <span>.</span> <br>
+            Chers amis, n’oublions pas ces circonstances, la sainte Providence ne fait rien par hasard.. <br> <span class="clr-chnge"> Mgr Marcel Lefebvre</span>,
+            <span>Ecône, Toussaint – 1er novembre 1990 </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <p>“ Les Etats qui professent désormais cet athéisme officiel, basé sur la Déclaration des droits de l’homme, sont dans un état de péché mortel continuel. Ils légalisent le péché. Puisqu’ils ont rejeté la Loi divine, ils font maintenant des lois qui sont contraires à la Loi divine et qui mettent des millions d’âmes en état de péché permanent : la loi du divorce met en état de péché mortel permanent les gens qui y recourent, l’avortement met en état de péché mortel tous ceux qui concourent à l’avortement, et ainsi de suite… Nous pourrions continuer la liste des lois qui mettent en état de péché habituel des millions d’âmes, et cela dans le monde entier, partout dans le monde chrétien. Par conséquent, nous pouvons dire en vérité que ces foules se dirigent vers l’enfer. A moins qu’elles ne retrouvent la grâce avant de mourir, espérons-le, elles vont en enfer. <b>C’est bien ce que montrait Notre-Dame de Fatima aux enfants : ces foules qui descendent en enfer ! Et cela est voulu, </b> organisé par toute une révolution, une révolution qui a commencé en particulier dans les universités, parmi les esprits soi-disant éclairés qui ont remplacé la pensée de Dieu et même l’être de Dieu par leur pensée personnelle, qui ont remplacé la Loi divine par leur propre conscience. C’est le péché radical : exclure Dieu de l’esprit, des volontés et des âmes. “<sup>8</sup></p>
+        <div class="img-sec">
+            <img src=":img15" class="" alt="" />
+            <p> Mgr Lefebvre à Ecône entouré de ses séminaristes</p>
+        </div>
+        <h2 class="light-h2 small">
+            <span>.</span> <br>
+            D’une manière intime, j’ai parlé à Notre-Seigneur de ce sujet et, il y a peu de temps, je lui demandais pourquoi il ne convertirait pas la Russie sans que Sa Sainteté fasse cette consécration : « Parce que [dit Notre-Seigneur] je veux que toute mon Eglise reconnaisse cette consécration comme un triomphe du Cœur Immaculé de Marie, afin d’étendre ensuite son culte et placer, à côté de la dévotion à mon Divin Cœur, la dévotion à ce Cœur Immaculé 
+            <br> <span class="clr-chnge"> Sœur Lucie</span>,
+            <span>au printemps 1936, et révélé au Père Gonçalves, son confesseur, dans une lettre du 18 mai 1936 </span><br>
+            <span>.</span><br>
+            <span>.</span>
+        </h2>
+        <div class="video-sec">
+            <iframe width="560" height="315" src=":video3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="footnotes">
+            <hr>
+            <p><sup>1</sup> revue Sel de la terre n.53 p.309-310</p>
+            <p><sup>2</sup> M. John Haffert, page 42 « Encontro de testemunhas », Edition portugaise de l’Armée Bleue, Fatima.</p>
+            <p><sup>3</sup> Le prodige inouï de Fatima ; J.c.Castelbranco</p>
+            <p><sup>4</sup> revue sel de la terre n.53 p. 317</p>
+            <p><sup>5</sup> revue sel de la terre n.53 p. 318</p>
+            <p><sup>6</sup> revue sel de la terre n.53 p. 330</p>
+            <p><sup>7</sup> Mgr Marcel Lefebvre, Ecône, Toussaint – 1er novembre 1990 ;
+                <a href="https://fsspx.ch/fr/la-parole-notre-fondateur/fsspx-32629" target="_blank">
+                    https://fsspx.ch/fr/la-parole-notre-fondateur/fsspx-32629
+                </a>
+            </p>
+            <p><sup>8</sup> Ibid.</p>
+        </div>
+    </div>
+</div>
+    ',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // NAVIGATION - Μενού πλοήγησης
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'nav_home' => 'ACCUEIL',
+    'nav_participer' => 'PARTICIPER',
+    'nav_podcasts' => 'PODCASTS',
+    'nav_amis_sfs' => 'AMIS S.F.S.',
+    'nav_refuge_des_pecheurs' => 'REFUGE DES PÊCHEURS',
+    'nav_rdp' => 'R.D.P.',
+    'nav_civitas_suisse' => 'CIVITAS SUISSE',
+    'nav_agenda' => 'AGENDA',
+    'nav_actions' => 'ACTIONS',
+    'participer_join_button' => 'Adhérer à CIVITAS',
+    'nav_movement' => 'MOUVEMENT',
+    'nav_news' => 'ACTUALITÉS',
+    'nav_news_mobile' => 'ACTIVITÉS',
+    'nav_positions' => 'POSITIONS',
+    'nav_become_member' => 'DEVENIR MEMBRE',
+    'nav_donate' => 'FAIRE UN DON',
+    'nav_newsletter' => 'NEWSLETTER',
+    'nav_contact' => 'CONTACT',
+    'nav_events' => 'ÉVÉNEMENTS',
+    'nav_initiatives' => 'INITIATIVES',
+    'nav_program' => 'PROGRAMME',
+    'nav_catechism' => 'CATÉCHISME',
+    'nav_library' => 'BIBLIOTHÈQUE',
+    'nav_bookstore' => 'LIBRAIRIE',
+    'nav_conferences' => 'CONFÉRENCES',
+    'nav_groupes_diocesains' => 'GROUPES DIOCÉSAINS',
+    'nav_statuts' => 'STATUTS',
+    'nav_communiques' => 'COMMUNIQUÉS DE PRESSE',
+    'nav_comite_directeur' => 'COMITÉ DIRECTEUR',
+    'nav_questions_reponses' => 'QUESTIONS ET RÉPONSES',
+    'nav_activites' => 'ACTIVITÉS',
+    'nav_toute_actualite' => 'TOUTE L\'ACTUALITÉ',
+    'nav_toute_actualite_mobile' => 'ACTIONS',
+    'nav_vote_catholique' => 'LE VOTE CATHOLIQUE',
+    'nav_notre_heritage' => 'NOTRE HERITAGE',
+    'nav_notre_vote' => 'NOTRE VOTE',
+    'nav_referendums' => 'RÉFÉRENDUMS',
+    'nav_vision_generale' => 'VISION GÉNÉRALE',
+    'nav_par_themes' => 'PAR THÉMES',
+    'nav_boutique' => 'BOUTIQUE',
+    'nav_boutiques' => 'BOUTIQUES',
+    'nav_medias_culture' => 'MÉDIAS CULTURE ET PATRIMOINE',
+    'nav_editions_amis' => 'ÉDITIONS AMIS S.F.S.',
+    'nav_revue_caritas' => 'REVUE CARITAS',
+    'nav_produits_derives' => 'PRODUITS DÉRIVÉS',
+    'nav_programme_politique' => 'PROGRAMME POLITIQUE',
+    'nav_audiotheque' => 'AUDIOTHÈQUE',
+    'nav_notre_dame' => 'NOTRE DAME DE FATIMA',
+    'nav_editions' => 'ÉDITIONS',
+    'nav_bulletin' => 'BULLETIN',
+    'nav_un_mouvement' => 'UN MOUVEMENT INTERNATIONAL',
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // FORM - Φόρμες & Labels
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'form_salutation' => 'Salutation',
+    'form_mr' => 'Monsieur',
+    'form_mrs' => 'Madame',
+    'form_first_name' => 'Prénom',
+    'form_last_name' => 'Nom',
+    'form_email' => 'Email',
+    'form_email_placeholder' => 'Votre adresse e-mail',
+    'form_phone' => 'Téléphone',
+    'form_address' => 'Adresse',
+    'form_city' => 'Ville',
+    'form_postal_code' => 'Code postal',
+    'form_country' => 'Pays',
+    'form_canton' => 'Canton',
+    'form_canton_country' => 'Canton / Pays',
+    'form_message' => 'Message',
+    'form_subject' => 'Sujet',
+    'form_title' => 'Titre',
+    'form_url' => 'URL',
+    'form_event_date' => 'Date de l\'événement',
+    'form_start_date' => 'Date de début',
+    'form_end_date' => 'Date de fin',
+    'form_description' => 'Description',
+    'form_content' => 'Contenu',
+    'form_category' => 'Catégorie',
+    'form_keywords' => 'Mots-clés',
+    'form_author' => 'Auteur',
+    'form_location' => 'Lieu',
+    'form_validate' => 'VALIDER',
+    'form_submit' => 'Envoyer',
+    'form_send' => 'Envoyer',
+    'form_save' => 'Enregistrer',
+    'form_cancel' => 'Annuler',
+    'form_close' => 'Fermer',
+    'form_delete' => 'Supprimer',
+    'form_edit' => 'Modifier',
+    'form_create' => 'Créer',
+    'form_update' => 'Mettre à jour',
+    'form_search' => 'Rechercher',
+    'form_reset' => 'Réinitialiser',
+    'form_upload' => 'Télécharger',
+    'form_download' => 'Télécharger',
+    'form_browse' => 'Parcourir',
+    'form_required_fields' => 'Les champs marqués * sont obligatoires',
+    'form_data_consent' => '* Je donne mon accord au traitement des données pour cette<br>inscription.',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // COMMON - Κοινά labels & buttons
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'common_view' => 'VOIR',
+    'common_see' => 'VOIR',
+    'common_view_more' => 'VOIR PLUS',
+    'common_learn_more' => 'EN SAVOIR PLUS',
+    'common_more_info' => 'PLUS D’INFORMATIONS',
+    'common_read_more' => 'Lire la suite',
+    'common_consult' => 'CONSULTER',
+    'common_order' => 'COMMANDER',
+    'common_subscribe' => 'S’INSCRIRE',
+    'common_unsubscribe' => 'Se désabonner',
+    'common_download' => 'Télécharger',
+    'common_download_pdf' => 'Télécharger au format PDF',
+    'download_bulletin' => 'Télécharger le bulletin de versement',
+    'common_all' => 'Tout',
+    'common_yes' => 'Oui',
+    'common_no' => 'Non',
+    'common_ok' => 'OK',
+    'common_loading' => 'Chargement...',
+    'common_searching' => 'Recherche...',
+    'common_no_results' => 'Aucun résultat',
+    'common_success' => 'Succès',
+    'common_error' => 'Erreur',
+    'common_warning' => 'Avertissement',
+    'common_info' => 'Information',
+    'common_no_items' => 'Aucun élément disponible',
+    'common_no_events_this_month' => 'Aucun événement pour ce mois.',
+    'common_no_upcoming_events' => 'Aucun événement à venir.',
+    'common_no_event_available' => 'Aucun événement disponible',
+    'common_no_description' => 'Description non disponible.',
+    'common_chf' => 'CHF',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // CIVITAS - Civitas Suisse specific
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'civitas_title' => 'CIVITAS SUISSE',
+    'civitas_omnia_instaurare' => 'OMNIA INSTAURARE IN CHRISTO',
+    'civitas_international_movement' => 'UN MOUVEMENT INTERNATIONAL',
+    'civitas_articles' => 'LES ARTICLES',
+    'civitas_more_news' => 'PLUS D\'ACTUALITÉS',
+    'civitas_our_program' => 'NOTRE PROGRAMME',
+    'civitas_political_positions' => 'LES POSITIONS POLITIQUES DE CIVITAS SUISSE',
+    'civitas_view_themes' => 'VOIR LES THÈMES',
+    'civitas_join_movement' => 'ADHÉREZ AU MOUVEMENT',
+    'civitas_for_switzerland' => 'POUR LA SUISSE !',
+    'civitas_participate_events' => 'PARTICIPEZ À DES CONFÉRENCES ET ÉVÉNEMENTS',
+    'civitas_view_calendar' => 'VOIR LE CALENDRIER',
+    'civitas_initiatives_referendums' => 'INITIATIVES ET RÉFÉRENDUMS',
+    'civitas_legacy' => 'L\'HÉRITAGE DE CIVITAS SUISSE',
+    'civitas_upcoming_votes' => 'Les prochaines votations populaires fédérales et/ou cantonales',
+    'civitas_defend_freedoms' => 'Défendons nos libertés !',
+    'civitas_quote_pius_x' => '"Les vrais amis du peuple ne sont ni révolutionnaires ni novateurs, mais traditionalistes."',
+    'civitas_saint_pius_x' => 'Saint Pie X',
+
+    'civitas_become_member_title' => 'DEVENIR MEMBRE DE CIVITAS SUISSE',
+    'civitas_join_movement_title' => 'Faire partie d\'un mouvement à la fois local et international',
+    'civitas_become_member' => 'DEVENIR MEMBRE',
+    'civitas_make_donation' => 'Faire un don',
+    'civitas_member_advantages' => 'Vos avantages en tant que membre',
+    'civitas_magazine_subscription' => 'Abonnement à la Revue Caritas<br>3x par an, recevez votre revue directement<br>chez vous, dans votre boîte aux lettres.',
+    // 'civitas_free_conference_access' => 'Accès gratuit aux conférences<br>Sur présentation de votre carte d’adhérent, vous<br>bénéficiez d’un accès gratuit à toutes les<br>conférences organisées par Civitas Suisse.',
+    'civitas_free_conference_access' => 'Rabais % sur les produits dérivés,<br>ainsi que % sur des ouvrages de formation.',
+    'civitas_study_circle_access' => 'Accès au Cercle d\'études<br>Deux fois par mois, les jeudis soirs, vous<br>bénéficiez d\'un accès privilégié au Cercle<br>d\'études en visioconférence, ainsi que de <br>rabais (10 à 20% en moyenne) sur le prix<br>des ouvrages étudiés.',
+    'civitas_yes_become_member' => 'Oui, je deviens membre de Civitas !',
+    'civitas_for_christ_king' => 'Pour le Christ-Roi !',
+    'civitas_past_events' => 'ÉVÉNEMENTS PASSÉS',
+    'civitas_next_event' => 'ÉVÉNEMENT SUIVANT',
+    'civitas_next_meeting' => 'PROCHAINE RENCONTRE',
+    'civitas_view_detailed_agenda' => 'VOIR L’AGENDA DÉTAILLÉ',
+    'civitas_join_civitas' => 'ADHÉRER À CIVITAS SUISSE',
+    'civitas_subscribe_newsletter' => 'S’INSCRIRE À LA NEWSLETTER',
+    'civitas_stay_informed' => 'RESTER INFORMÉ !',
+    'civitas_book_seats' => 'JE M’INSCRIS',
+    'civitas_register' => 'S’INSCRIRE',
+    'civitas_conferences_open_to_all' => 'Les conférences sont ouvertes à tous.',
+    'civitas_analyses' => 'Analyses',
+    'civitas_press_releases' => 'Communiqués et comptes rendus',
+    'civitas_interviews' => 'Entretiens',
+    'civitas_international' => 'International',
+    'civitas_opinions' => 'Opinions',
+    'civitas_swiss_pilgrimages' => 'Pèlerinages de Suisse',
+    'civitas_votations' => 'Votations',
+    'civitas_categories' => 'Catégories',
+    'civitas_all_news_title' => 'Toute l\'actualité',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // DONATE - Δωρεές
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'donate_chf_25' => 'CHF 25',
+    'donate_chf_50' => 'CHF 50',
+    'donate_chf_120' => 'CHF 120',
+    'donate_chf_500' => 'CHF 500',
+    'donate_custom_amount' => 'MONTANT PERSONNALISÉ',
+    'donate_donation_amount' => 'Montant du don',
+    'donate_one_time' => 'Unique',
+    'donate_monthly' => 'Mensuel',
+    'donate_annual' => 'Annuel',
+    'donate_choose_payment' => 'Choisir un mode de paiement',
+    'donate_cash_payment' => 'Versement liquide',
+    'donate_electronic_transfer' => 'Transfert électronique',
+    'donate_monero_crypto' => 'Monero (cryptomonnaie)',
+    'donate_bank_transfer' => 'Virement bancaire',
+    'donate_payment_slip' => 'Bulletin de versement',
+    'donate_enter_personal_info' => 'Saisir vos informations personnelles',
+    'donate_your_donations_matter' => 'VOS DONS<br>FONT LA<br>DIFFÉRENCE !',
+    'donate_support' => 'SOUTENIR',
+    'donate_make_donation' => 'FAIRE UN DON',
+    'donate_restore' => 'Un don pour restaurer la Chrétienté !',
+    'donate_description' => 'Chaque don, quelque soit le montant, nous permet d\'engager une action concrète.',
+    'donate_thank_you' => 'Merci pour votre don !',
+    'donate_received' => 'Nous avons bien reçu votre don.',
+    'donate_failed' => 'Une erreur est survenue lors du traitement de votre don.',
+    'donate_please_try_again' => 'Veuillez réessayer.',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // RDP - Refuge des Pécheurs
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'rdp_title' => 'Refuge des Pécheurs',
+    'rdp_rosary_explained' => 'Le Saint Rosaire expliqué',
+    'rdp_notre_dame_fatima' => 'Notre-Dame de Fatima',
+    'rdp_scapular_carmel' => 'Le scapulaire de Notre-Dame du Mont-Carmel',
+    'rdp_first_saturdays' => '1ers samedis du mois',
+    'rdp_the_secret' => 'Le secret',
+    'rdp_catechism' => 'Catéchisme',
+    'rdp_pray_rosary' => 'Prier le Rosaire',
+    'rdp_how_to_pray_rosary' => 'Comment prier le Rosaire',
+    'rdp_act' => 'AGIR',
+    'rdp_joyful_mysteries' => 'Mystères joyeux',
+    'rdp_sorrowful_mysteries' => 'Mystères douloureux',
+    'rdp_glorious_mysteries' => 'Mystères glorieux',
+    'rdp_luminous_mysteries' => 'Mystères lumineux',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // AMISSFS - Amis de Saint François de Sales
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'amissfs_title' => 'Les Amis de Saint François de Sales<br>et de Notre Dame de Fatimas',
+    'amissfs_association_description' => 'Une association de laïques qui œuvrent dans le prolongement de l’apostolat sacerdotal.',
+    'amissfs_since_1988' => 'Depuis 1988.',
+    'amissfs_bulletin_title' => 'LE BULLETIN DES AMIS DE SAINT FRANÇOIS DE SALES',
+    'amissfs_rom_kurier' => 'DER ROM-KURIER',
+    'amissfs_read_german' => 'LESEN',
+    'amissfs_bookstore' => 'LA LIBRAIRIE',
+    'amissfs_newsletter_title' => 'Recevez la newsletter des Amis de Saint François de Sales',
+    'amissfs_access_audios' => 'Accéder aux audios',
+    'amissfs_your_subscriptions' => 'Vos abonnements :',
+    'amissfs_bulletin_amis' => 'Bulletin AMIS S.F.S.',
+    'amissfs_events_amis' => 'Événements AMIS S.F.S.',
+    'amissfs_omnia_instaurare' => 'Omnia instaurare in Christo',
+    'amissfs_search_placeholder' => 'Conférences, sermons, chants',
+    'amissfs_history' => 'Historique',
+    'amissfs_join_civitas' => 'Rejoignez Civitas !',
+    'amissfs_description' => 'Descriptif',
+    'amissfs_tracks' => 'Pistes',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // FOOTER - Footer content
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'footer_impressum' => 'IMPRESSUM',
+    'footer_data_protection' => 'PROTECTION DES DONNÉES',
+    'footer_contact' => 'CONTACT',
+    'footer_cgu' => 'CGU',
+    'footer_general_conditions' => 'CONDITIONS GÉNÉRALES',
+    'footer_about' => 'À PROPOS',
+    'footer_quick_links' => 'LIENS RAPIDES',
+    'footer_social_media' => 'RÉSEAUX SOCIAUX',
+    'footer_newsletter' => 'NEWSLETTER',
+    'footer_marquee_data_protection' => 'PROTECTION DES DONNÉES/DATENSCHUTZ/PROTEZIONE DEI DATI',
+    'footer_data_protection_link' => 'PROTECTION DES DONNÉES',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // SLIDER - Slider content
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'slider_the_movement' => 'Le mouvement',
+    'slider_omnia_instaurare' => 'Omnia instaurare in Christo',
+    'slider_civitas_international' => 'Civitas International',
+    'slider_civitas_international_desc' => 'Le seul et unique remède à la tyrannie mondialiste.',
+    'slider_engage' => 'S\'engager',
+    'slider_amis_sfs_title' => 'Les Amis de Saint-François de Sales (AMIS S.F.S.)',
+    'slider_amis_sfs_desc' => 'Infantiliser et abrutir le peuple par l\'américanisation.',
+    'slider_study' => 'Étudier',
+    'slider_refuge_pecheurs' => 'Refuge des Pécheurs',
+    'slider_refuge_pecheurs_desc' => 'Notre Seigneur Jésus-Christ a déjà vaincu.',
+    'slider_pray' => 'Prier',
+    'slider_civitas_suisse' => 'Civitas Suisse',
+    'slider_civitas_suisse_desc' => 'Contre le mondialisme, nos vingt-six nations.',
+    'slider_act' => 'Agir',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // ADMIN - Admin panel
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'admin_dashboard' => 'Tableau de bord',
+    'admin_pages' => 'Pages',
+    'admin_sections' => 'Sections',
+    'admin_podcasts' => 'Podcasts',
+    'admin_categories' => 'Catégories',
+    'admin_keywords' => 'Mots-clés',
+    'admin_users' => 'Utilisateurs',
+    'admin_settings' => 'Paramètres',
+    'admin_create_new' => 'Créer nouveau',
+    'admin_create_new_page' => 'Créer une nouvelle page',
+    'admin_create_new_event' => 'Créer un nouvel événement',
+    'admin_create_new_category' => 'Créer une nouvelle catégorie',
+    'admin_create_new_podcast' => 'Créer un nouveau podcast',
+    'admin_edit' => 'Modifier',
+    'admin_delete' => 'Supprimer',
+    'admin_save' => 'Enregistrer',
+    'admin_close' => 'Fermer',
+    'admin_cancel' => 'Annuler',
+    'admin_confirm' => 'Confirmer',
+    'admin_preview' => 'Aperçu',
+    'admin_import' => 'Importer',
+    'admin_export' => 'Exporter',
+    'admin_hello' => 'Bonjour',
+    'admin_logout' => 'Déconnexion',
+    'admin_profile' => 'Profil',
+    'admin_change_password' => 'Changer le mot de passe',
+    'admin_confirm_delete' => 'Êtes-vous sûr de vouloir supprimer cet élément ?',
+    'admin_delete_warning' => 'Cette action est irréversible.',
+    'admin_saved_successfully' => 'Enregistré avec succès.',
+    'admin_deleted_successfully' => 'Supprimé avec succès.',
+    'admin_error_occurred' => 'Une erreur est survenue.',
+    'admin_id' => 'ID',
+    'admin_title' => 'Titre',
+    'admin_status' => 'Statut',
+    'admin_created_at' => 'Créé le',
+    'admin_updated_at' => 'Modifié le',
+    'admin_actions' => 'Actions',
+    'admin_active' => 'Actif',
+    'admin_inactive' => 'Inactif',
+    'admin_published' => 'Publié',
+    'admin_draft' => 'Brouillon',
+    'admin_audio_files' => 'Fichiers audio',
+    'admin_upload_audio' => 'Télécharger audio',
+    'admin_no_audio_files' => 'Aucun fichier audio.',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // NEWSLETTER - Newsletter content
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'newsletter_title' => 'Newsletter',
+    'newsletter_your_newsletter' => 'Votre newsletter :',
+    'newsletter_analyses_opinions' => 'Analyses, opinions, entrevues',
+    'newsletter_upcoming_events' => 'Prochains événements',
+    'newsletter_all_news' => 'Toute l\'actualité',
+    'newsletter_unsubscribe' => 'Se désabonner de la newsletter',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // MONTHS - Μήνες
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'month_january' => 'Janvier',
+    'month_february' => 'Février',
+    'month_march' => 'Mars',
+    'month_april' => 'Avril',
+    'month_may' => 'Mai',
+    'month_june' => 'Juin',
+    'month_july' => 'Juillet',
+    'month_august' => 'Août',
+    'month_september' => 'Septembre',
+    'month_october' => 'Octobre',
+    'month_november' => 'Novembre',
+    'month_december' => 'Décembre',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // HOME PAGE - Αρχική σελίδα
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'home_participate_conferences' => 'PARTICIPER À DES CONFÉRENCES<br>ET DES ATELIERS',
+    'home_view_calendar' => 'VOIR LE CALENDRIER',
+    'home_hundreds_conferences' => 'DES CENTAINES DE CONFÉRENCES<br>ET DE SERMONS',
+    'home_access_podcasts' => 'ACCÉDER AUX PODCASTS',
+    'home_online_catechism' => 'SUIVRE DES COURS DE<br>CATÉCHISME EN LIGNE',
+    'home_get_training' => 'SE FORMER',
+    'home_omnia_instaurare' => 'OMNIA INSTAURARE IN CHRISTO',
+    'home_international_movement' => 'UN MOUVEMENT INTERNATIONAL',
+    'home_donation_restore' => 'UN DON POUR RESTAURER LA CHRÉTIENTÉ !',
+    'home_donation_description' => 'CHAQUE DON, QUELQUE SOIT LE MONTANT, NOUS PERMET D\'ENGAGER UNE ACTION CONCRÈTE.',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // PODCAST / IMPORT - Admin podcast and import
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'podcast_import_from_excel' => 'Importer des podcasts depuis Excel',
+    'podcast_existing_in_database' => 'Podcasts existants dans la base de données',
+    'podcast_upload_excel_file' => 'Télécharger le fichier Excel avec les données podcast.',
+    'podcast_limit_number_to_process' => 'Limiter le nombre de podcasts à traiter (pour les tests).',
+    'podcast_duplicate_action_help' => 'Choisissez quoi faire avec les podcasts existants (Ignorer ou Mettre à jour).',
+    'podcast_confirm_import' => 'Êtes-vous sûr de vouloir importer ces podcasts ?',
+
+    'import_pages_from_bulletins' => 'Importer des pages depuis les bulletins',
+    'import_pages_from_bulletin_files' => 'Importer des pages depuis les fichiers de bulletins',
+    'import_current_pages_in_database' => 'Pages actuelles dans la base de données',
+    'import_always_run_preview_first' => 'Toujours exécuter l\'aperçu d\'abord',
+    'import_before_importing' => 'avant d\'importer !',
+    'import_excel_file' => 'Fichier Excel',
+    'import_limit_for_testing' => 'Limite (pour les tests)',
+    'import_no_limit' => 'Pas de limite',
+    'import_duplicate_action' => 'Action pour les doublons',
+    'import_skip_duplicates' => 'Ignorer les doublons',
+    'import_update_duplicates' => 'Mettre à jour les doublons',
+    'import_preview_dry_run' => 'Aperçu d\'importation (Simulation)',
+    'import_run_import' => 'Lancer l\'importation',
+    'import_clear_output' => 'Effacer la sortie',
+    'import_command_output' => 'Sortie de la commande',
+    'import_processing_command' => 'Traitement de la commande',
+    'import_please_select_excel_file' => 'Veuillez sélectionner un fichier Excel.',
+    'import_please_run_preview_first' => 'Veuillez d\'abord exécuter l\'aperçu !',
+    'import_preview_completed' => 'Aperçu terminé avec succès !',
+    'import_completed' => 'Importation terminée ! Total :',
+    'import_source_directory' => 'Répertoire source',
+    'import_auto_detect_recommended' => 'Détection automatique (recommandé)',
+    'import_select_path_to_check' => 'Sélectionnez un chemin pour vérifier l\'état du répertoire',
+    'import_custom_path_optional' => 'Chemin personnalisé (optionnel)',
+    'import_custom_path_placeholder' => 'ex: import/mes-bulletins',
+    'import_check' => 'Vérifier',
+    'import_select_a_user' => 'Sélectionnez un utilisateur',
+    'import_user_who_will_own_pages' => 'Utilisateur propriétaire des pages importées',
+    'import_select_a_section' => 'Sélectionnez une section',
+    'import_section_where_pages_organized' => 'Section où les pages seront organisées',
+    'import_category_for_imported_pages' => 'Catégorie pour les pages importées',
+    'import_limit_number_useful_testing' => 'Limiter le nombre de pages à traiter (utile pour les tests)',
+    'import_duplicate_action_pages_help' => 'Choisissez quoi faire avec les pages existantes (Ignorer ou Mettre à jour)',
+    'import_auto_detect_will_search' => 'La détection automatique recherchera les emplacements communs',
+    'import_please_run_preview_to_see' => 'Veuillez d\'abord exécuter l\'aperçu pour voir ce qui sera importé !',
+    'import_confirm_import_pages' => 'Êtes-vous sûr de vouloir importer les pages ? Cela créera de nouveaux enregistrements dans la base de données.',
+    'import_please_select_user' => 'Veuillez sélectionner un utilisateur.',
+    'import_please_select_section' => 'Veuillez sélectionner une section.',
+    'import_found' => 'Trouvé',
+    'import_folders' => 'dossiers',
+    'import_with_bulletin_txt' => 'avec bulletin.txt',
+    'import_directory_not_found' => 'Répertoire non trouvé',
+    'import_could_not_check_directory' => 'Impossible de vérifier le répertoire',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // RDP - Refuge des Pécheurs specific (additional keys)
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'rdp_what_is_rosary' => 'Qu\'est ce que le Rosaire ?',
+    'rdp_how_pray_rosary' => 'Comment Prier le Rosaire',
+    'rdp_rosary_history_practice' => 'LE ROSAIRE:<br> SON HISTOIRE ET SA PRATIQUE',
+    'rdp_rosary_history_practice_short' => 'LE ROSAIRE: SON HISTOIRE ET SA PRATIQUE',
+    'rdp_rosary_audio_title' => 'Le rosaire: son histoire et sa pratique<br>Rév. père M. DOMINIQUE O.P.',
+    'rdp_catechism_title' => 'CATÉCHISME',
+    'rdp_see_uppercase' => 'VOIR',
+    'rdp_fatima' => 'Fatima',
+    'rdp_our_lady_fatima_title' => 'NOTRE-DAME DE FATIMA',
+    'rdp_apparitions' => 'Les Apparitions',
+    'rdp_apparitions_angel_link' => 'les Apparitions de l\'Ange',
+    'rdp_may_13_link' => 'Le 13 mai 1917',
+    'rdp_june_13_link' => 'Le 13 juin 1917',
+    'rdp_july_13_link' => 'Le 13 juillet 1917',
+    'rdp_aug_13_link' => 'Le 13 août 1917',
+    'rdp_aug_19_link' => 'Le 19 août 1917',
+    'rdp_sept_13_link' => 'Le 13 septembre 1917',
+    'rdp_oct_13_link' => 'Le 13 octobre 1917',
+    'rdp_sanctuary_bourguillon' => 'sanctuaire de Notre-Dame de Bourguillon, Fribourg (CH).',
+    'rdp_what_is_scapular' => 'Qu\'est-ce que un scapulaire ?',
+    'rdp_scapular_privileges' => 'LES PRIVILÈGES LIÉS AU SCAPULAIRE',
+    'rdp_what_to_accomplish' => 'Ce qu\'il faut accomplir :',
+    'rdp_download_pdf' => 'Télécharger au format PDF',
+    'rdp_portugal_army_1917' => 'L\'armée du Portugal au front en 1917',
+    'rdp_oct_13_1917_multiline' => 'Le 13 octobre<br>1917',
+    'rdp_sun_miracle_fatima' => 'Le miracle du<br>soleil à Fatima',
+    'rdp_article_oct_13_1917' => 'Article paru le 13 octobre 1917',
+    'rdp_historic_event' => 'Événement historique',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // AMISSFS - Additional keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'amissfs_subtitle' => 'Une association de laïques qui œuvrent dans le prolongement de l’apostolat<br>sacerdotal.',
+    'amissfs_newsletter_cta' => 'RECEVEZ LA NEWSLETTER DES AMIS<br>DE SAINT FRANÇOIS DE SALES',
+    'amissfs_rom_kurier_sisino' => 'Rom-Kurier / Sì Sì No No',
+    'amissfs_events' => 'Événements AMIS S.F.S.',
+    'amissfs_unsubscribe' => 'Se désabonner de la newsletter',
+    'amissfs_categories' => 'Catégories',
+    'amissfs_upcoming_activities' => 'Les prochaines activités de Civitas Suisse et des Amis de Saint François de Sales',
+    'amissfs_upcoming_activities_mobile' => 'Les prochaines activités<br>de Civitas Suisse',
+    'amissfs_calendar' => 'LE CALENDRIER',
+    'amissfs_description_unavailable' => 'Description non disponible.',
+    'amissfs_track' => 'Piste',
+    'amissfs_same_author' => 'Du même auteur',
+    'amissfs_upcoming_civitas' => 'Les prochaines activités de Civitas Suisse',
+    'amissfs_upcoming_civitas_mobile' => 'Les prochaines activités<br>de Civitas Suisse',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // CIVITAS CONTENT - Additional keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'civitas_quote_friends_people' => '"Les vrais amis du peuple ne sont ni révolutionnaires ni novateurs, mais traditionalistes."',
+    'civitas_conference_open_all' => 'Les conférences sont ouvertes à tous, adhérents ou non. Afin de faciliter l’organisation, nous vous serions très reconnaissants de nous informer de notre présence sur : <a class="text-white" href="mailto:event@civitassuisse.ch">event@civitassuisse.ch</a>',
+    'civitas_data_protection' => 'PROTECTION DES DONNÉES/DATENSCHUTZ/PROTEZIONE DEI DATI',
+    'civitas_all_news_short' => 'Toute l\'actualité',
+    'civitas_agenda_pdf' => 'Agenda hiver 2023 (PDF)',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // PAYMENT - Payment related
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'payment_data_protection' => 'PROTECTION DES DONNÉES/DATENSCHUTZ/PROTEZIONE DEI DATI',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // COMMON - Additional keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'common_read_de' => 'LESEN',
+    'common_see_more' => 'VOIR PLUS',
+    'common_mrs' => 'Madame',
+    'common_mr' => 'Monsieur',
+    'common_your_email' => 'Votre adresse e-mail',
+    'common_firstname' => 'Prénom',
+    'common_lastname' => 'Nom',
+    'common_canton_country' => 'Canton / Pays',
+    'common_validate' => 'VALIDER',
+    'common_processing' => 'Traitement en cours',
+    'common_unknown' => 'Inconnu',
+    'common_cancel' => 'Annuler',
+    'common_save' => 'Enregistrer',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // ADMIN - Admin panel keys (MISSING)
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'admin_account_settings' => 'Paramètres du compte',
+    'admin_home' => 'Accueil',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // AMISSFS - Additional missing keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'amissfs_data_protection' => 'PROTECTION DES DONNÉES/DATENSCHUTZ/PROTEZIONE DEI DATI',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // CIVITAS - Missing keys from blade files
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'civitas_all_news' => 'TOUTES LES ACTUALITÉS',
+    'civitas_analyses_opinions' => 'Analyses, opinions, entrevues',
+    'civitas_cat_analyses' => 'ANALYSES',
+    'civitas_cat_communiques' => 'COMMUNIQUÉS',
+    'civitas_cat_international' => 'INTERNATIONAL',
+    'civitas_cat_interviews' => 'ENTRETIENS',
+    'civitas_cat_opinions' => 'OPINIONS',
+    'civitas_cat_pilgrimages' => 'PÈLERINAGES',
+    'civitas_cat_votations' => 'VOTATIONS',
+    'civitas_comments' => 'COMMENTAIRES',
+    'civitas_no_event_available' => 'AUCUN ÉVÉNEMENT DISPONIBLE',
+    'civitas_no_event_month' => 'AUCUN ÉVÉNEMENT CE MOIS-CI',
+    'civitas_no_upcoming_event' => 'AUCUN ÉVÉNEMENT À VENIR',
+    'civitas_participate_conferences' => 'PARTICIPEZ À DES CONFÉRENCES',
+    'civitas_sample_conference' => 'Conférence d’Alain Escada - 25 juin 2021',
+    'civitas_sample_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum libero sed fermentum ultricies. Morbi in tortor tellus. ',
+    'civitas_the_articles' => 'LES ARTICLES',
+    'civitas_unsubscribe_newsletter' => 'Se désabonner de la newsletter',
+    'civitas_upcoming_events' => ' Prochains événements',
+    'civitas_your_newsletter' => 'Votre newsletter Civitas Suisse :
+    ',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // DONATE - Missing donation keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'donate_amount' => 'Montant du don',
+    'donate_christendom_not_dead' => 'La Chrétienté n\'est pas morte !',
+    'donate_for_truth_rights' => 'JE FAIS UN DON POUR LA VÉRITÉ ET LES DROITS',
+    'donate_miss_nothing' => 'POUR NE RIEN MANQUER',
+    'donate_more_info' => 'PLUS D\'INFORMATIONS',
+    'donate_newsletter' => 'NOTRE<br>NEWSLETTER',
+    'donate_protect_faith' => 'PROTÉGER<br>NOTRE FOI',
+    'donate_save_essential' => 'SAUVER L\'ESSENTIEL',
+    'donate_save_what_can_be' => 'SAUVER CE QUI<br>PEUT ENCORE L\'ÊTRE',
+    'donate_strengthen_convictions' => 'RENFORCER<br>NOS CONVICTIONS',
+    'donate_support_fundamental' => 'VOTRE SOUTIEN EST FONDAMENTAL',
+    'donate_view_statutes' => 'VOIR LES STATUTS DU PARTI',
+    'donate_what_donations_for' => 'À QUOI SERVENT<br>VOS DONS ?',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // FORM - Missing form keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'form_complement_optional' => 'Complément (optionnel)',
+    'form_confirm_new_password' => 'Confirmer le nouveau mot de passe',
+    'form_country_austria' => 'A AUTRICHE',
+    'form_country_france' => 'FR FRANCE',
+    'form_country_germany' => 'DE ALLEMAGNE',
+    'form_country_italy' => 'I ITALIE',
+    'form_country_quebec' => 'QC QUÉBEC',
+    'form_country_rest_of_world' => 'RESTE DU MONDE',
+    'form_country_switzerland' => 'CH SUISSE',
+    'form_enter_address' => 'Saisir votre adresse',
+    'form_enter_new_password' => 'Entrez le nouveau mot de passe',
+    'form_enter_old_password' => 'Entrez l\'ancien mot de passe',
+    'form_enter_personal_info' => 'Saisir vos informations personnelles',
+    'form_full_name' => 'Nom complet',
+    'form_have_question' => 'AVEZ-VOUS UNE QUESTION ?',
+    'form_national_manager' => 'Responsable national',
+    'form_new_password' => 'Nouveau mot de passe',
+    'form_notes_optional' => 'Remarques (facultatif)',
+    'form_number' => 'Numéro',
+    'form_office_hours' => 'Heures de bureau',
+    'form_old_password' => 'Ancien mot de passe',
+    'form_or_by_email' => 'Ou par e-mail',
+    'form_publish_comment' => 'Publier le commentaire',
+    'form_reenter_new_password' => 'Ressaisissez le nouveau mot de passe',
+    'form_register' => 'S’INSCRIRE',
+    'form_reserve_seats' => 'JE M’INSCRIS',
+    'form_section' => 'Section',
+    'form_street' => 'Rue',
+    'form_user' => 'Utilisateur',
+    'form_your_email' => 'Votre adresse e-mail',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // MEMBER - Missing membership keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'member_annual_family_contribution' => 'CONTRIBUTION ANNUELLE<br>FAMILIALE',
+    'member_annual_individual_contribution' => 'CONTRIBUTION ANNUELLE<br>INDIVIDUELLE',
+    'member_become_member' => 'DEVENIR MEMBRE',
+    'member_become_member_title' => 'DEVENIR MEMBRE DE CIVITAS SUISSE',
+    'member_contribution_amount' => 'Montant de la cotisation',
+    'member_diocesan_engage' => 'Envie de vous engager auprès de l’un<br>de nos groupes diocésains ?',
+    'member_five_diocesan_groups' => 'six groupes diocésains  !',
+    'member_for_christ_king' => 'POUR LE CHRIST-ROI !',
+    'member_free_conference_desc' => 'Accès gratuit à toutes nos conférences sur présentation de votre carte d\'adhérent.',
+    'member_free_conference_short' => 'Accès privilégié aux conférences',
+    'member_free_conference_title' => 'Accès conférences',
+    'member_magazine_subscription' => 'Abonnement à la revue',
+    'member_magazine_subscription_desc' => 'Recevez la revue Civitas 4x par an directement chez vous.',
+    'member_magazine_subscription_title' => 'Abonnement à la Revue "Caritas" ',
+    'member_movement_local_international' => 'FAIRE PARTIE D’UN MOUVEMENT À LA FOIS<br>LOCAL ET INTERNATIONAL',
+    'member_next_event' => 'PROCHAIN ÉVÉNEMENT',
+    'member_reduced_contribution' => 'Contribution annuelle (avec abonnement à la Revue) réduite à CHF 45',
+    'member_reduced_contribution_desc' => 'Pour les membres du Clergé, les personnes bénéficiaires de l’AVS / AI, les stagiaires, les étudiants, les personnes en difficulté financière.',
+    'member_study_circle_desc' => 'Participez au Cercle d\'études deux fois par mois.',
+    'member_study_circle_short' => 'Accès au Cercle d’études',
+    'member_thank_you' => 'Un immense MERCI pour votre confiance !<br>On se réjouit de vous revoir bientôt !',
+    'member_yes_i_become_member' => 'Oui, je deviens membre<br>de Civitas !',
+    'member_your_advantages' => 'VOS AVANTAGES EN TANT QUE MEMBRE',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // PAYMENT - Missing payment keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'payment_account_number' => 'Notre numéro de compte est le suivant:',
+    'payment_bank_transfer' => 'Virement bancaire',
+    'payment_cash' => 'Versement liquide',
+    'payment_cash_deposit' => 'Dépôt en espèces',
+    'payment_choose_method' => 'Choisir un mode de paiement',
+    'payment_confirm_secure' => 'Confirmer le don en toute sécurité',
+    'payment_confirm_secure_sec' => 'Envoyer la demande d’adhésion',
+    'payment_crypto_donations' => 'Dons en cryptomonnaie',
+    'payment_deposit_slip' => 'Bulletin de versement',
+    'payment_electronic_transfer' => 'Transfert électronique',
+    'payment_monero' => 'Monero (cryptomonnaie)',
+    'payment_no_fees_donations' => 'Dons sans frais',
+    'payment_treasurer_available' => 'Notre trésorier est à votre disposition.
+    ',
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // RDP - Missing Refuge des Pécheurs keys
+    //////////////////////////////////////////////////////////////////////////////////////////
+    'rdp_apparitions_angel' => 'Apparitions de l\'Ange',
+    'rdp_apparitions_angel_multiline' => 'Apparitions<br>de l\'Ange',
+    'rdp_aug_13_1917' => 'Le 13 août 1917',
+    'rdp_aug_13_1917_multiline' => 'Le 13 août<br>1917',
+    'rdp_aug_19_1917' => 'Le 19 août 1917',
+    'rdp_aug_19_1917_multiline' => 'Le 19 août<br>1917',
+    'rdp_glorious_mysteries_days' => 'Mercredi et dimanche',
+    'rdp_holy_rosary_explained' => 'Le Saint Rosaire expliqué',
+    'rdp_how_pray_rosary_question' => 'Comment prier le Rosaire ?',
+    'rdp_joyful_mysteries_days' => 'Lundi et samedi',
+    'rdp_july_13_1917' => 'Le 13 juillet 1917',
+    'rdp_july_13_1917_multiline' => 'Le 13 juillet<br>1917',
+    'rdp_june_13_1917' => 'Le 13 juin 1917',
+    'rdp_june_13_1917_multiline' => 'Le 13 juin<br>1917',
+    'rdp_little_jacinta' => 'La petite Jacinthe',
+    'rdp_may_13_1917' => 'Le 13 mai 1917',
+    'rdp_may_13_1917_multiline' => 'Le 13 mai<br>1917',
+    'rdp_more_info_rosary' => 'Plus d\'informations sur le Rosaire',
+    'rdp_our_lady_fatima' => 'Notre-Dame de Fatima',
+    'rdp_pacelli_consecration' => 'La consécration du Cardinal Pacelli',
+    'rdp_pray_rosary_question' => 'Prier le Rosaire ?',
+    'rdp_scapular_mount_carmel' => 'Le scapulaire de Notre-Dame du Mont-Carmel',
+    'rdp_see' => 'VOIR',
+    'rdp_seers_after_july' => 'Les voyants après juillet',
+    'rdp_seers_after_july_responsive' => 'Les voyants<br>après juillet',
+    'rdp_sept_13_1917_multiline' => 'Le 13 septembre<br>1917',
+    'rdp_sorrowful_mysteries_days' => 'Mardi et vendredi',
+    'rdp_the_mysteries' => 'Les Mystères',
+    'donate_limit_message' => "Votre soutien nous touche profondément. Pour un don supérieur à CHF :amount, merci de nous écrire à :email — notre équipe se chargera de votre contribution avec soin.",
+    'close' => 'Fermer',
 ];

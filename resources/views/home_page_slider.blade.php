@@ -1,5 +1,5 @@
 <div class="space-50"></div>
-<div class="d-none d-xxl-block">
+<div class="d-none d-xl-block">
     <div class="red-bg-slider height-407 d-flex justify-content-center align-items-center">
         <div class="container custom-tweak">
             <div class="d-flex align-items-start flex-column mb-2">
@@ -9,11 +9,11 @@
             <div class="d-flex justify-content-between align-items-center gap-4">
                 <div class="white-box-slider d-flex flex-column justify-content-between align-items-start px-3 py-4">
                     <div class="slider-title">CIVITAS INTERNATIONAL</div>
-                    <div class="slider-content">Le seul et unique remède à la dictature mondialiste qui s’abat sur nous ? <br>Le retour au véritable ordre mondial multiséculaire, le retour à nos racines, le retour à la <span class="slider-content-black">Civilisation Chrétienne .</span></div>
+                    <div class="slider-content">Le seul et unique remède à la tyrannie mondialiste qui s'abat sur nous ? <br>Le retour au véritable ordre mondial multiséculaire, le retour à nos racines, le retour à la <span class="slider-content-black">Civilisation Chrétienne .</span></div>
                     <a href="{{route ('slider.sengager')}}" class="d-flex align-items-center justify-content-center text-decoration-none slider-buttons width-112 height-39 grey-box hover-blue">S’ENGAGER</a>
                 </div>
                 <div class="white-box-slider-big d-flex flex-column justify-content-between align-items-start px-3 py-4">
-                    <div class="slider-title">LES AMIS DE SAINT-FRANÇOIS<br>DE SALES (AMIS S.F.S.)</div>
+                    <div class="slider-title ">LES AMIS DE SAINT-FRANÇOIS<br>DE SALES (AMIS S.F.S.)</div>
                     <div class="slider-content">Infantiliser et abrutir le peuple par l’américanisation de <span class="slider-content-black">notre culture</span> et le dédain pour les humanités classiques ? <br>Ne nous laissons pas gagner par l’esprit <br>faux, mais séducteur du mondialisme !</div>
                     <a href="{{route ('slider.etudier')}}" class="d-flex align-items-center justify-content-center text-decoration-none slider-buttons width-98 height-39 grey-box hover-blue">ÉTUDIER</a>
                 </div>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="">
                         <div class="white-box-slider d-flex flex-column justify-content-between align-items-start px-3 py-4">
-                            <div class="slider-title">LES AMIS DE SAINT-FRANÇOIS<br>DE sALES (AMIS S.F.S.)</div>
+                            <div class="slider-title">LES AMIS DE SAINT-FRANÇOIS<br>DE SALES (AMIS S.F.S.)</div>
                             <div class="slider-content">Infantiliser et abrutir le peuple par l’américanisation de <span class="slider-content-black">notre culture</span> et le dédain pour les humanités classiques ? <br>Ne nous laissons pas gagner par l’esprit <br>faux, mais séducteur du mondialisme !</div>
                             <a href="{{route ('slider.etudier')}}" class="d-flex align-items-center justify-content-center text-decoration-none slider-buttons width-98 height-39 grey-box hover-blue">ÉTUDIER</a>
                         </div>
