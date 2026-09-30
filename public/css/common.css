@@ -178,7 +178,7 @@ body {
     font-family: "RivieraNightsBlack";
     font-size: 16px;
     background: #fff;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 .font-body {
@@ -8857,6 +8857,6 @@ input:checked + .slider:before {
 .logo_size {
     height: 90px;
 }
-.rdp-logo-outer img{
+/* .rdp-logo-outer img{
     height: 90px;
-}
+} */

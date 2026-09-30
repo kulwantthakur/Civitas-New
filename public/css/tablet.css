@@ -19,16 +19,3 @@
         transform: unset;
     }
 }
-
-/* Tablet landscape / bigger Android tablets */
-/* @media (min-width: 1024px) and (max-width: 1279.98px) and (orientation: landscape) {
-    .navbar {
-        height: auto;
-    }
-    .navbar-brand {
-        margin: 0;
-    }
-    .logo-absolute {
-        position: unset;
-    }
-} */

@@ -934,6 +934,19 @@
 .party-img-zoom:hover img {
     transform: scale(1.15); /* zoom in */
 }
+
+.party-img-zoom-small {
+    overflow: hidden;
+    display: block; /* make sure it wraps properly */
+}
+
+.party-img-zoom-small img {
+    transition: transform 0.4s ease;
+}
+
+.party-img-zoom-small:hover img {
+    transform: scale(1.04); /* zoom in */
+}
 .civitas-home-article-opacity {
     background-color: rgba(0, 0, 0, 0.66);
     height: 74px;
@@ -1168,6 +1181,11 @@
 .civitas-home-new-gradient {
     background: linear-gradient(90deg, #666666 27%, #000000 54.5%);
     height: 260px;
+    overflow: hidden;
+}
+@keyframes civitas-diagonal-float {
+    0%   { transform: translate(-80px, -50px); }
+    100% { transform: translate(80px, 50px); }
 }
 .civitas-marquee-new {
     font-family: "Euclid";
@@ -1182,6 +1200,7 @@
     line-height: 25px;
     letter-spacing: -0.015em;
     color: #fff;
+    animation: civitas-diagonal-float 5s ease-in-out infinite alternate;
 }
 .civitas-slider-first {
     font-family: "Euclid";
@@ -1451,7 +1470,8 @@
 }
 .civitas-news-title:hover {
     color: #000;
-    font-weight: bolder;
+    /* font-weight: bolder; */
+    font-size: 45px;
 }
 
 .civitas-news-title-content {
@@ -1790,7 +1810,7 @@
 .red-bg-themes {
     background-color: #e10b17;
     height: 229px;
-     width: 100%;
+    width: 100%;
     max-width: 369px;
     margin: auto;
 }
@@ -2463,12 +2483,12 @@
     text-align: right;
     color: #fff;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .party-cornered-button:hover {
     color: #fff;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .party-width-third {
@@ -2659,7 +2679,7 @@
 
 .black-bg-map {
     background-color: #000;
-   padding: 42px 0px;
+    padding: 42px 0px;
 }
 
 #regions_div {
@@ -2671,7 +2691,7 @@
     border-radius: 40px;
 }
 .map-bg {
-background-color: #fff;
+    background-color: #fff;
     width: 100%;
     max-width: 618px;
     height: auto;
@@ -2679,7 +2699,7 @@ background-color: #fff;
     position: relative;
     margin: auto;
 }
-.map-bg svg{
+.map-bg svg {
     width: 100%;
 }
 .position-first {
@@ -3693,7 +3713,7 @@ background-color: #fff;
 
 .action-politique-white-border {
     border: 1px solid #fff;
-    height: 100%;
+    height: 390px;
     margin: auto;
 }
 
@@ -3718,6 +3738,37 @@ background-color: #fff;
     color: #fff;
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+#donation-form .radio-circle {
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+#donation-form .custom-radio input[type="radio"]:checked ~ .radio-circle {
+    background: radial-gradient(circle 4px at center, #0275ff 100%, transparent 100%);
+}
+
+#donation-form .custom-radio input[type="radio"]:checked ~ .radio-circle::after {
+    display: none;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    font-family: "SuisseScreenRegular";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: background-color 0.2s;
+}
+.step-circle.completed {
+    background-color: #e10b17;
 }
 
 .table-title {
@@ -5177,73 +5228,81 @@ body.coire .coire:not(.text),
 body.sion .sion:not(.text) {
     fill: red;
 }
-.map-bg svg path{
+body.sion .sion:not(.text):not(.sion-exempt) {
+    fill: red !important;
+}
+
+body.sion .sion.sion-exempt {
+    fill: #f57179 !important;
+}
+
+.map-bg svg path {
     cursor: pointer;
 }
 
 @media only screen and (max-width: 1400px) {
-.referendum-cornered {
-    width: 85%;
-}
+    .referendum-cornered {
+        width: 85%;
+    }
 }
 @media only screen and (max-width: 991px) {
-.status-page-content-blue {
-    font-size: 30px;
-    line-height: 30px;
-}
-.party-cornered {
-    width: 50%;
-}
-.goal-support-content-underline {
-    text-underline-offset: 4px;
-}
-.goal-support-cornered {
-    width: 95%;
-    border-bottom: 118px solid #e10b17;
-    border-left: 118px solid transparent;
-}
-.red-bg-themes {
-    max-width: 100%;
-}
+    .status-page-content-blue {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .party-cornered {
+        width: 50%;
+    }
+    .goal-support-content-underline {
+        text-underline-offset: 4px;
+    }
+    .goal-support-cornered {
+        width: 95%;
+        border-bottom: 118px solid #e10b17;
+        border-left: 118px solid transparent;
+    }
+    .red-bg-themes {
+        max-width: 100%;
+    }
 
-.grey-bg-themes {
-    max-width: 100%;
-}
-.themes-width {
-    width: 100%;
-}
-.referendum-black-subtitle {
-    color: #000;
-    font-size: 40px;
-}
-.referendum-black-title {
-    color: #000;
-    font-size: 26px;
-    text-align: left;
-}
-.civitas-vote-title-form {
-    line-height: 0.99;
-    text-underline-offset: 3px;
-}
-.civitas-news-title-content {
-    font-size: 25px;
-    line-height: 1;
-}
-.map-outer {
-overflow-x: auto;
-}
-.join-title {
-    margin-bottom: 1rem;
-}
-.civitas-news-title {
+    .grey-bg-themes {
+        max-width: 100%;
+    }
+    .themes-width {
+        width: 100%;
+    }
+    .referendum-black-subtitle {
+        color: #000;
+        font-size: 40px;
+    }
+    .referendum-black-title {
+        color: #000;
+        font-size: 26px;
+        text-align: left;
+    }
+    .civitas-vote-title-form {
+        line-height: 0.99;
+        text-underline-offset: 3px;
+    }
+    .civitas-news-title-content {
+        font-size: 25px;
+        line-height: 1;
+    }
+    .map-outer {
+        overflow-x: auto;
+    }
+    .join-title {
+        margin-bottom: 1rem;
+    }
+    .civitas-news-title {
         font-size: 30px;
         line-height: 1;
     }
 }
 @media only screen and (max-width: 767px) {
-.region-box-title {
-     color: #000;
-}
+    .region-box-title {
+        color: #000;
+    }
     .news-form-width {
         width: 100%;
     }
@@ -6990,5 +7049,53 @@ overflow-x: auto;
         font-size: 20px;
         line-height: 25px;
         margin-bottom: 0.5rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .md-alt-red {
+        background-color: #e10b17 !important;
+    }
+    .md-alt-grey {
+        background-color: #808183 !important;
+    }
+}
+.newsletter-option {
+    cursor: pointer;
+    border-radius: 8px;
+}
+.newsletter-option:hover {
+    background: rgba(225, 11, 23, 0.04);
+}
+.civitas-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #e10b17;
+}
+@media (min-width: 1200px) {
+    .membership-col-content {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 1199.98px) {
+    .second-collapse.show {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1055 !important;
+        background-color: #fff;
+    }
+    .second-collapse.show .nav-link,
+    .second-collapse.show .navbar-submenu-ammisfs {
+        color: #000 !important;
+        mix-blend-mode: normal !important;
+    }
+    .second-collapse.show .responsive-menu-back {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        z-index: 1;
     }
 }

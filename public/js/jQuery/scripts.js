@@ -273,3 +273,26 @@ $(document).ready(function () {
         }
     }
 });
+
+(function () {
+    const bar = document.querySelector(".civitas-grey-menu");
+    const menu = document.querySelector(".second-collapse");
+    const gapEl = document.querySelector(".grey-mobile-height");
+    if (!bar || !menu) return;
+
+    function updateTop() {
+        bar.style.top = window.scrollY > 0 ? "0" : "1rem";
+    }
+    updateTop();
+    window.addEventListener("scroll", updateTop, { passive: true });
+    menu.addEventListener("show.bs.collapse", () => {
+        bar.style.zIndex = "0";
+        bar.style.top = "0";
+        if (gapEl) gapEl.style.height = "0px";
+    });
+    menu.addEventListener("hidden.bs.collapse", () => {
+        bar.style.zIndex = "9999";
+        if (gapEl) gapEl.style.height = "60px";
+        updateTop();
+    });
+})();

@@ -81,7 +81,6 @@
         align-items: center;
     }
 
-
     .responsive-none {
         display: none;
     }
@@ -115,8 +114,6 @@
         /* transform: translate(100%, -50%); */
         transform: translate(100%, 0);
     }
-
-
 
     .text-box-left-title {
         font-family: "SangBleuBold";
@@ -1312,7 +1309,6 @@
         letter-spacing: -0.015em;
     }
 
-
     .get-inform-black {
         font-size: 16px;
         font-weight: 900;
@@ -2364,9 +2360,11 @@
     }
 
     .amissfs-black-bg-association {
-        background: linear-gradient(180.45deg,
-                rgba(0, 0, 0, 0.5) 42.87%,
-                rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(
+            180.45deg,
+            rgba(0, 0, 0, 0.5) 42.87%,
+            rgba(0, 0, 0, 0) 100%
+        );
     }
 
     .amissfs-overlay-home-absolute-bottom {
@@ -2531,7 +2529,10 @@
     .navbar-header {
         background-color: #fff;
     }
-
+    .tablet-footer-menu{
+        width: fit-content;
+        margin: auto;
+    }
     .language-selection a {
         font-family: "RivieraNightsBlack";
         font-size: 12px;
@@ -3828,7 +3829,6 @@
         letter-spacing: -0.015em;
     }
 
-
     .get-inform-black {
         font-size: 16px;
         font-weight: 900;
@@ -4880,9 +4880,11 @@
     }
 
     .amissfs-black-bg-association {
-        background: linear-gradient(180.45deg,
-                rgba(0, 0, 0, 0.5) 42.87%,
-                rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(
+            180.45deg,
+            rgba(0, 0, 0, 0.5) 42.87%,
+            rgba(0, 0, 0, 0) 100%
+        );
     }
 
     .amissfs-overlay-home-absolute-bottom {
@@ -5051,7 +5053,6 @@
     .inner {
         width: 100%;
     }
-
     .footer-menu {
         color: #fff;
         font-family: "SuisseScreenRegular";
@@ -5154,7 +5155,8 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
 
 @media only screen and (min-width: 1025px) {
     .responsive-block {

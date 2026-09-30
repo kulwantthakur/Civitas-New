@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
-
 .rdp-submenu {
     font-family: "EuclidMono";
     font-size: 20px;
@@ -11,7 +9,7 @@
 .absolute-logo-rdp {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-25%);
 }
 
 .rdp-submenu:hover,
@@ -169,6 +167,43 @@
     width: 666px;
     height: 182px;
     background-color: #c4c4c4;
+}
+.agir-link .agir-img-hover {
+    display: none;
+}
+.agir-link:hover .agir-img-default {
+    display: none;
+}
+.agir-link:hover .agir-img-hover {
+    display: inline-block;
+}
+.agir-link {
+    font-family: "EuclidMono";
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+.agir-link:hover {
+    background-color: #ffffff !important;
+    color: #2563eb !important;
+}
+
+.rdp-blue-box {
+    width: 666px;
+    height: 182px;
+    background-color: #0600ff;
+}
+
+.rdp-blue-box-min-height {
+    width: 666px;
+    height: 133px;
+    background-color: #0600ff;
+}
+.rdp-blue-box-smaller {
+    width: 575px;
+    height: 115px;
+    background-color: #0600ff;
 }
 
 .rdp-home-content-last-img {
@@ -543,14 +578,12 @@
     color: #fff;
     width: 480px;
 }
-
 .absolute-center-rdp {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-30%, -50%);
 }
-
 .absolute-left-center {
     top: 50%;
     left: 0;
@@ -584,12 +617,10 @@
     height: 104px;
     top: 50%;
 }
-
 .black-bullets {
     list-style-type: disc;
     color: #000;
 }
-
 .catechisme-title {
     font-family: "SangBleuOGBold";
     font-size: 30px;
@@ -597,7 +628,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .catechisme-title-specific {
     font-family: "EuclidMono";
     font-size: 30px;
@@ -605,7 +635,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .catechisme-content-title {
     font-family: "SuisseScreenLight";
     font-size: 30px;
@@ -618,31 +647,25 @@
     background-color: #ff9900;
     height: 70px;
 }
-
 .cornered-catechsime {
     background-color: unset;
     border-bottom: 70px solid #ff9900;
     border-right: 70px solid transparent;
 }
-
 .catechisme-title-category {
     height: 70px;
     margin: auto;
 }
-
 .header-catechisme-title {
     font-family: "EuclidMono";
-    font-size: 13px;
-    /*16*/
+    font-size: 13px; /*16*/
     line-height: 25px;
     letter-spacing: -0.015em;
     color: #fff;
 }
-
 .catechisme-bg-light-yellow {
     background-color: rgba(255, 153, 0, 0.36);
 }
-
 .header-catechisme-title-specific {
     font-family: "EuclidMono";
     font-size: 15px;
@@ -695,7 +718,6 @@
     letter-spacing: -0.015em;
     color: #fff;
 }
-
 .fatima-content-new {
     font-family: "SuisseScreenLight";
     font-size: 25px;
@@ -703,7 +725,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .fatima-content {
     font-family: "SuisseScreenLight";
     font-size: 20px;
@@ -861,7 +882,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .le-scapulaire-bg-content-new {
     font-family: "SuisseScreenLight";
     font-size: 24px;
@@ -869,7 +889,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .lescapulaire-title-black-bg {
     background-color: #000;
     height: 68px;
@@ -1636,7 +1655,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .september-content-small-orange {
     font-family: "SuisseIntl";
     font-size: 15px;
@@ -1644,7 +1662,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .september-dark-blue-bg {
     background-color: #222145;
 }
@@ -1941,13 +1958,11 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .rdp-october-fifth-image {
     position: absolute;
     width: 100%;
     transform: translateY(-20%);
 }
-
 .change-color {
     color: #fff;
 }
@@ -1956,7 +1971,6 @@
 .change-color:focus {
     color: #fff;
 }
-
 .secret-title {
     font-family: "SuisseScreenRegular";
     font-size: 30px;
@@ -1964,7 +1978,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .rdp-pdf-download {
     font-family: "SuisseScreenRegular";
     font-size: 30px;
@@ -1973,12 +1986,10 @@
     text-decoration: underline;
     color: #000;
 }
-
 .rdp-pdf-download:hover,
 .rdp-pdf-download:focus {
     color: #000;
 }
-
 .le-secret-title-bold {
     font-family: "RivieraNightsBlack";
     font-size: 30px;
@@ -1986,7 +1997,6 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
 .le-secret-link {
     font-family: "SuisseIntl";
     font-size: 30px;
@@ -1995,12 +2005,10 @@
     color: #000;
     text-decoration: none;
 }
-
 .le-secret-link:hover,
 .le-secret-link:focus {
     color: #000;
 }
-
 .le-secret-content {
     font-family: "SuisseScreenRegular";
     font-size: 20px;
@@ -2008,444 +2016,31 @@
     letter-spacing: -0.015em;
     color: #000;
 }
-
-/* New css */
-.rdp-banner img {
-    height: 194px;
-    object-fit: cover;
+#participer.agir-mode {
+    font-family: "EuclidMono";
 }
 
-.m-plus {
-    font-family: "M PLUS 1", sans-serif;
-}
-
-.black-bg-text span {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 2px 70px 6px 0px;
-    line-height: 1.3;
-    display: inline-block;
-    position: relative;
-}
-
-.black-bg-text span:after {
-    content: '';
-    background-color: #000;
-    right: 100%;
-    height: 100%;
-    top: 0px;
-    width: 100vw;
-    position: absolute;
-}
-
-h2.black-bg-text {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 1.5;
-    letter-spacing: -1.5px;
-    margin-top: -15px;
-    color: #000;
-}
-
-.rdp-page-cls .light-h2 {
-    color: #000;
-    font-family: "SuisseScreenItalic";
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: -0.015em;
-    font-weight: 275;
-    margin: 50px 0;
-}
-
-.rdp-page-cls .light-h2 .Regular-light-font {
-    font-family: "SuisseScreenRegular";
-    font-size: 36px;
-}
-
-.rdp-page-cls .light-h2 span {
-    font-family: "M PLUS 1", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.4;
-    letter-spacing: -0.24px;
-}
-
-.rdp-page-cls p {
-    color: #000;
-    font-family: "SuisseScreenLight";
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: -0.3px;
-}
-
-.font-SuisseScreenItalic {
-    font-family: "SuisseScreenItalic";
-}
-
-.rdp-page-cls p b {
-    font-weight: 700;
-}
-
-.blue-boxText {
-    padding: 16px 20px 8px 20px;
-    background-color: #000BFF;   
-}
-.blue-boxText a{
- color: #fff;
-     font-family: "SuisseScreenRegular";
-    font-size: 30px;
-    line-height: 1.33em;
-    letter-spacing: -0.45px;
-}
-
-.black-bg-box img {
-    width: 38px;
-}
-
-.black-bg-box {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    background-color: #000;
-    max-width: max-content;
-    padding: 8px 70px 8px 30px;
-    font-family: "SuisseScreenRegular";
-    font-size: 30px;
-    line-height: 1.33em;
-    letter-spacing: -0.45px;
-    color: #fff;
-    position: relative;
-}
-
-.black-bg-box:after {
-    content: '';
-    right: 100%;
-    background-color: #000;
-    height: 100%;
-    width: 100vw;
-    top: 0px;
-    position: absolute;
-}
-
-.black-bg-box span {
-    line-height: 1;
-}
-
-.black-bg-box:before {
-    content: "";
-    border-width: 59px 0px 0px 40px;
-    border-color: #ffffff transparent transparent transparent;
-    border-style: solid;
-    right: 0px;
-    position: absolute;
-    height: 100%;
-}
-
-.text-blue {
-    color: #0600FF;
-}
-
-.rdp-page-cls .light-h2 span b {
-    font-weight: 400 !important;
-}
-
-.flexbox-center {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.f-24 {
-    font-size: 24px !important;
-}
-
-.heart-list {
-    background-image: url("../img/rdp/heart-bg.png");
-    background-size: auto 43px;
-    background-repeat: no-repeat;
-    background-position: left center;
-    position: relative;
-    height: 43px;
-    display: flex;
-    align-items: center;
-}
-
-.heart-num {
-    position: absolute;
-    left: 13px;
-    top: 14px;
-}
-
-.heart-num span {
-    color: #ffff;
-    font-size: 20px;
-    font-family: "SuisseScreenLight";
-}
-
-.heart-list-contet {
-    padding-left: 40px;
-    color: #204B9B;
-    font-family: "SuisseScreenLight";
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: -0.3px;
-    margin-top: 10px;
-}
-
-span.textred-bg {
-    background-color: red;
-}
-
-.rdp-page-cls .light-h2 .bold-reguler-font {
-    font-weight: 400 !important;
-    font-family: "SuisseScreenRegular";
-}
-
-.rdp-page-cls .light-h2.small {
-    font-size: 36px;
-}
-
-.rdp-logo-outer img {
-    max-width: 100%;
-}
-
-.rdp-banner-header {
+#participer.agir-mode:hover {
     background-color: #fff;
-    height: -webkit-fill-available;
-    padding-left: 10px;
+    color: #0600ff;
 }
-
-.first-sec {
-    margin-top: 37px;
+#participer.agir-mode .agir-img-hover {
+    display: none;
 }
-
-h2.plus-txt {
-    margin-top: 19px !important;
+#participer.agir-mode:hover .agir-img-default {
+    display: none;
 }
-
-span.clr-chnge {
-    color: #0600FF;
+#participer.agir-mode:hover .agir-img-hover {
+    display: inline-block;
 }
-
-.img-sec img {
-    margin: 12px 0;
-}
-
-.img-sec {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 710px;
-    margin: 30px auto;
-    /* padding-bottom: 50px; */
-}
-
-.video-sec {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 72px;
-}
-
-
-.history-sec {
-    display: flex;
-    justify-content: center;
-    gap: 250px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.history-img {
-    text-align: center;
-}
-
-.history-img p {
-    margin-top: 13px;
-    text-align: left;
-}
-
-.liberte-sec {
-    display: flex;
-}
-
-.liberte-sec {
-    display: flex;
-    justify-content: center;
-    gap: 142px;
-    margin-top: 59px;
-    margin-bottom: 59px;
-}
-
-
-/* add margin as per figma design  */
-.rdp-page-cls .light-h2 {
-    margin: 50px 0;
-}
-
-.footnotes {
-    max-width: 800px;
-    line-height: 1.8;
-    margin-bottom: 50px;
-}
-
-.footnotes hr {
-    border: none;
-    border-top: 1px solid #000;
-    margin-top: 128px;
-    background: none;
-    margin-bottom: 0;
-    padding-top: 0;
-}
-
-.footnotes p {
-    margin: 8px 0;
-    line-height: 30px !important;
-    text-align: left;
-    font-size: 15px !important;
-}
-
-.footnotes sup {
-    font-size: 0.65em;
-    vertical-align: top;
-    position: relative;
-    top: 1em;
-    margin-right: 2px;
-}
-
-.footnotes a {
-    color: #000;
-    text-decoration: none;
-    word-break: break-word;
-}
-
-/* New css end*/
-@media (max-width: 1199.98px) {
-    .history-sec {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .liberte-sec {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h2.plus-txt {
-        margin-top: 0px !important;
-    }
-
-    .img-sec {
-        padding-bottom: 0px;
-    }
-}
-
 @media only screen and (max-width: 991.98px) {
-    .hide-on-tab {
-        display: none;
-    }
-
-    .f-24 {
-        font-size: 20px !important;
-    }
-
-    .black-bg-box:before {
-        border-width: 115px 0px 0px 60px;
-    }
-
-    .black-bg-text span {
-        padding: 2px 0px 6px 0px;
-    }
-
-    nav.navbar.inverse-text.padding-top-rdp {
-        height: auto;
-    }
-
-    .img-sec {
-        margin: 10px auto;
-        padding-bottom: 10px;
-    }
-
-    h2.plus-txt {
-        margin-top: 0px !important;
-    }
-
-    .history-sec {
-        display: block;
-    }
-
-    .liberte-sec {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .history-img p {
-        margin-top: 13px;
-        text-align: center;
-    }
-
-    .rdp-banner-header {
-        padding: 0px;
-    }
-
-    .rdp-banner-header img {
-        max-width: 170px;
-        height: auto;
-    }
-
-    h2.black-bg-text {
-        font-size: 30px;
-        line-height: 1.3;
-    }
-
-    .rdp-page-cls .light-h2 {
-        font-size: 30px;
-        line-height: 1.3;
-        margin: 20px 0px;
-    }
-
-    .rdp-page-cls p {
-        font-size: 18px;
-    }
-
-    .blue-boxText a {
-        font-size: 24px;
-    }
-
-    .black-bg-box {
-        font-size: 24px;
-        padding: 8px 50px 8px 20px;
-    }
-
-    .heart-list-contet {
-        font-size: 18px;
-    }
-
-    .rdp-page-cls .light-h2 .Regular-light-font {
-        font-size: 26px;
-        line-height: 1.3;
-    }
-
-    .rdp-page-cls .light-h2.small {
-        font-size: 26px;
-    }
-
     .cusotm-video-iframe {
         height: 400px;
     }
-
     .fatima-title {
         font-size: 100px;
         line-height: 1;
     }
-
     .rdp-home-top-subtitle,
     .rdp-home-top-title {
         color: #000;
@@ -2457,31 +2052,26 @@ span.clr-chnge {
     .cusotm-video-iframe {
         height: 225px;
     }
-
     .rdp-par-home {
         font-family: "SuisseScreenRegular";
         font-size: 12px;
         line-height: 25px;
     }
-
     .catechisme-absolute-first {
         position: absolute;
         top: 1rem;
         left: 50%;
         transform: translateX(-50%);
     }
-
     .le-secret-title-bold,
     .le-secret-link {
         font-size: 12px;
         line-height: 25px;
     }
-
     .rdp-pdf-download {
         font-size: 20px;
         line-height: 25px;
     }
-
     .absolute-logo-rdp {
         position: unset;
         transform: unset;
@@ -2500,11 +2090,9 @@ span.clr-chnge {
         color: #000;
         width: 100%;
     }
-
     .catechisme-title-specific {
         font-size: 16px;
     }
-
     .rdp-news-more {
         font-family: "RivieraNightsBlack";
         font-size: 12px;
@@ -2578,11 +2166,9 @@ span.clr-chnge {
         font-size: 48px;
         color: #000;
     }
-
     .prier-title-big-new {
         font-size: 26px !important;
     }
-
     .prier-quote {
         width: 100%;
     }
@@ -2740,12 +2326,10 @@ span.clr-chnge {
     .le-secret {
         height: 18px;
     }
-
     .secret-title {
         font-size: 12px;
         line-height: 25px;
     }
-
     .le-secret-content {
         font-size: 12px;
         line-height: 25px;
@@ -2754,12 +2338,10 @@ span.clr-chnge {
     .catechisme-title {
         font-size: 24px;
     }
-
     .cornered-catechsime {
         border: none;
         background-color: #ff9900;
     }
-
     .catechisme-content-title {
         font-family: "SuisseScreenRegular";
         font-size: 16px;
@@ -2818,7 +2400,13 @@ span.clr-chnge {
         height: 93px;
         font-size: 26px;
     }
-
+    .rdp-blue-box,
+    .rdp-blue-box-min-height,
+    .rdp-blue-box-smaller {
+        width: 340px;
+        height: 69px;
+        font-size: 26px !important;
+    }
     .le-scapulaire-title {
         font-family: "SuisseIntl";
         font-size: 16px;
@@ -2831,13 +2419,11 @@ span.clr-chnge {
         line-height: 25px;
         margin: 0;
     }
-
     .le-scapulaire-bg-content-new {
         font-family: "SuisseScreenRegular";
         font-size: 16px;
         line-height: 25px;
     }
-
     .le-scapulaire-content {
         font-family: "SuisseScreenRegular";
         font-size: 16px;
@@ -3074,11 +2660,9 @@ span.clr-chnge {
         font-size: 12px;
         line-height: 20px;
     }
-
     .may-center-content-smaller {
         font-size: 11px;
     }
-
     .may-center-content-small {
         font-size: 11px;
         line-height: 20px;
@@ -3186,11 +2770,9 @@ span.clr-chnge {
         height: 400px;
         width: 90%;
     }
-
     .width-90 {
         width: 90%;
     }
-
     .june-video-responsive {
         left: 50%;
         bottom: 3.5rem;
@@ -3343,11 +2925,9 @@ span.clr-chnge {
         font-size: 8px;
         line-height: 25px;
     }
-
     .august-19-white-box {
         width: 90%;
     }
-
     .august-19-title-bg {
         font-size: 16px;
         line-height: 25px;
@@ -3382,7 +2962,6 @@ span.clr-chnge {
         font-size: 11px;
         line-height: 25px;
     }
-
     .september-title-big {
         font-size: 25px;
     }
@@ -3400,7 +2979,6 @@ span.clr-chnge {
         line-height: 25px;
         margin-bottom: 0;
     }
-
     .september-white-box-1,
     .september-white-box-2 {
         border-radius: 8px;
@@ -3434,12 +3012,10 @@ span.clr-chnge {
         font-size: 11px;
         line-height: 25px;
     }
-
     .october-content-big {
         font-size: 12px;
         line-height: 25px;
     }
-
     .october-content-small {
         font-size: 8px;
         line-height: 25px;
@@ -3459,18 +3035,15 @@ span.clr-chnge {
         font-size: 12px;
         line-height: 25px;
     }
-
     .october-orange-white-box,
     .october-grey-white-box {
         width: 100%;
     }
-
     .october-orange-white-box-content {
         font-size: 11px;
         line-height: 25px;
         margin-bottom: 1rem;
     }
-
     .full-width-image-wrapper {
         position: relative;
         width: 100vw;
@@ -3479,7 +3052,6 @@ span.clr-chnge {
         margin-left: -50vw;
         margin-right: -50vw;
     }
-
     .october-white-box-responsive-small {
         font-family: "SuisseIntl";
         font-size: 8px;
@@ -3585,4 +3157,840 @@ span.clr-chnge {
         transform: translate(-50%, -10%);
         width: 85%;
     }
+}
+
+* New css */ .rdp-banner img {
+    height: 194px;
+    object-fit: cover;
+}
+
+.m-plus {
+    font-family: "M PLUS 1", sans-serif;
+}
+
+.black-bg-text span {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2px 70px 6px 0px;
+    line-height: 1.3;
+    display: inline-block;
+    position: relative;
+}
+
+.black-bg-text span:after {
+    content: "";
+    background-color: #000;
+    right: 100%;
+    height: 100%;
+    top: 0px;
+    width: 100vw;
+    position: absolute;
+}
+
+h2.black-bg-text {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.5;
+    letter-spacing: -1.5px;
+    margin-top: -15px;
+    color: #000;
+}
+
+.rdp-page-cls .light-h2 {
+    color: #000;
+    font-family: "SuisseScreenItalic";
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    font-weight: 275;
+    margin: 50px 0;
+}
+
+.rdp-page-cls .light-h2 .Regular-light-font {
+    font-family: "SuisseScreenRegular";
+    font-size: 36px;
+}
+
+.rdp-page-cls .light-h2 span {
+    font-family: "M PLUS 1", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.24px;
+}
+
+.rdp-page-cls p {
+    color: #000;
+    font-family: "SuisseScreenLight";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+}
+
+.font-SuisseScreenItalic {
+    font-family: "SuisseScreenItalic";
+}
+
+.rdp-page-cls p b {
+    font-weight: 700;
+}
+
+.blue-boxText {
+    padding: 16px 20px 8px 20px;
+    background-color: #000bff;
+}
+
+.blue-boxText a {
+    display: block;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 1.33em;
+    letter-spacing: -0.45px;
+    text-decoration: none;
+}
+
+.blue-boxText:hover,
+.blue-boxText:focus-within {
+    background-color: #fff;
+}
+
+.blue-boxText:hover a,
+.blue-boxText:focus-within a {
+    color: #000bff;
+}
+
+.black-bg-box img {
+    width: 38px;
+}
+
+.black-bg-box {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    background-color: #000;
+    max-width: max-content;
+    padding: 8px 70px 8px 30px;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 1.33em;
+    letter-spacing: -0.45px;
+    color: #fff;
+    position: relative;
+}
+
+.black-bg-box:after {
+    content: "";
+    right: 100%;
+    background-color: #000;
+    height: 100%;
+    width: 100vw;
+    top: 0px;
+    position: absolute;
+}
+
+.black-bg-box span {
+    line-height: 1;
+}
+
+.black-bg-box:before {
+    content: "";
+    border-width: 59px 0px 0px 40px;
+    border-color: #ffffff transparent transparent transparent;
+    border-style: solid;
+    right: 0px;
+    position: absolute;
+    height: 100%;
+}
+
+.text-blue {
+    color: #0600ff;
+}
+
+.rdp-page-cls .light-h2 span b {
+    font-weight: 400 !important;
+}
+
+.flexbox-center {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.f-24 {
+    font-size: 24px !important;
+}
+
+.heart-list {
+    background-image: url("../img/rdp/heart-bg.png");
+    background-size: auto 43px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: relative;
+    height: 43px;
+    display: flex;
+    align-items: center;
+}
+
+.heart-num {
+    position: absolute;
+    left: 13px;
+    top: 14px;
+}
+
+.heart-num span {
+    color: #ffff;
+    font-size: 20px;
+    font-family: "SuisseScreenLight";
+}
+
+.heart-list-contet {
+    padding-left: 40px;
+    color: #204b9b;
+    font-family: "SuisseScreenLight";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    margin-top: 10px;
+}
+
+a.textred-bg {
+    background-color: red;
+    text-decoration: none;
+    color: #000;
+}
+
+.rdp-page-cls .light-h2 .bold-reguler-font {
+    font-weight: 400 !important;
+    font-family: "SuisseScreenRegular";
+}
+
+.rdp-page-cls .light-h2.small {
+    font-size: 36px;
+}
+
+.rdp-logo-outer img {
+    max-width: 100%;
+}
+
+.rdp-banner-header {
+    background-color: #fff;
+    height: -webkit-fill-available;
+    padding-left: 10px;
+}
+
+.first-sec {
+    margin-top: 37px;
+}
+
+h2.plus-txt {
+    margin-top: 19px !important;
+}
+
+span.clr-chnge {
+    color: #0600ff;
+}
+
+.img-sec img {
+    margin: 12px 0;
+}
+
+.img-sec {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 710px;
+    margin: 30px auto;
+    /* padding-bottom: 50px; */
+}
+
+.video-sec {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
+.history-sec {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.history-img {
+    text-align: center;
+}
+
+.history-img p {
+    margin-top: 13px;
+    text-align: left;
+}
+
+.liberte-sec {
+    display: flex;
+}
+
+.liberte-sec {
+    display: flex;
+    justify-content: center;
+    gap: 142px;
+    margin-top: 59px;
+    margin-bottom: 59px;
+}
+
+/* add margin as per figma design  */
+.rdp-page-cls .light-h2 {
+    margin: 50px 0;
+}
+
+.footnotes {
+    max-width: 800px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+.footnotes hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin-top: 128px;
+    background: none;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+
+.footnotes p {
+    margin: 8px 0;
+    line-height: 30px !important;
+    text-align: left;
+    font-size: 15px !important;
+}
+
+.footnotes sup {
+    font-size: 0.65em;
+    vertical-align: top;
+    position: relative;
+    top: 1em;
+    margin-right: 2px;
+}
+
+.footnotes a {
+    color: #000;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+/* New css end*/
+@media (max-width: 1199.98px) {
+    .history-sec {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .liberte-sec {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2.plus-txt {
+        margin-top: 0px !important;
+    }
+
+    .img-sec {
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .hide-on-tab {
+        display: none;
+    }
+
+    .f-24 {
+        font-size: 20px !important;
+    }
+
+    .black-bg-box:before {
+        border-width: 115px 0px 0px 60px;
+    }
+
+    .black-bg-text span {
+        padding: 2px 0px 6px 0px;
+    }
+
+    nav.navbar.inverse-text.padding-top-rdp {
+        height: auto;
+    }
+
+    .img-sec {
+        margin: 10px auto;
+        padding-bottom: 10px;
+    }
+
+    h2.plus-txt {
+        margin-top: 0px !important;
+    }
+
+    .history-sec {
+        display: block;
+    }
+
+    .liberte-sec {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .history-img p {
+        margin-top: 13px;
+        text-align: center;
+    }
+
+    .rdp-banner-header {
+        padding: 0px;
+    }
+
+    .rdp-banner-header img {
+        max-width: 170px;
+        height: auto;
+    }
+
+    h2.black-bg-text {
+        font-size: 30px;
+        line-height: 1.3;
+        margin-top: 0;
+    }
+    .h2.black-bg-text-responsive {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+    .rdp-page-cls .light-h2 {
+        font-size: 30px;
+        line-height: 1.3;
+        margin: 20px 0px;
+    }
+
+    .rdp-page-cls p {
+        font-size: 18px;
+    }
+
+    .blue-boxText a {
+        font-size: 24px;
+    }
+
+    .black-bg-box {
+        font-size: 24px;
+        padding: 8px 50px 8px 20px;
+    }
+
+    .heart-list-contet {
+        font-size: 18px;
+    }
+
+    .rdp-page-cls .light-h2 .Regular-light-font {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .rdp-page-cls .light-h2.small {
+        font-size: 26px;
+    }
+}
+
+.heading_part h2 {
+    font-family: "SangBleuOGBold";
+    font-size: 40px;
+    line-height: 1.5;
+    text-align: center;
+    color: #000;
+    max-width: 900px;
+    margin: auto;
+}
+.heading_part {
+    margin: 60px 0px 60px 0px;
+    position: relative;
+}
+
+.heading_part:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    transform: translateX(-50%);
+}
+.heading-second {
+    color: #000;
+    font-size: 35px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 50px 0 0px 0;
+    font-family: "SuisseScreenLight";
+        font-weight: 400;
+}
+.heading-second p {
+    font-size: 16px;
+    font-family: "M PLUS 1", sans-serif;
+}
+.star-top-part img {
+    width: 80px !important;
+    margin-right: 90px;
+    min-width: 80px;
+    height: min-content;
+}
+.star-top-part {
+    display: flex;
+    position: relative;
+    margin-bottom: 50px;
+    padding-top: 70px;
+}
+.star-top-part h2 {
+    font-family: "SuisseScreenRegular";
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+ /* nav.navbar {
+        background-color: #000;
+ } */
+ .star-top-part:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 4px;
+    width: 93%;
+    background-color: #EAC102;
+}
+
+.star-top-part:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: -100vw;
+    height: 4px;
+    width: 100vw;
+    background-color: #EAC102;
+}
+.star_text img {
+    width: 80px !important;
+    margin-right: 30px;
+    min-width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.star_text {
+    padding: 40px;
+    max-width: 75%;
+    margin-left: auto;
+    background-color: #000;
+    position: relative;
+}
+
+.star_text:after {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    right: calc(-100vh - -1px);
+    height: 100%;
+    width: 100vh;
+    top: 0px;
+}
+.half-bg-sec {
+    position: relative;
+    z-index: 1;
+}
+
+.half-bg-sec:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 55%;
+    background-image: url(../img/blue-army/Frame147.png);
+    z-index: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.half-bg-sec:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 55%;
+    background-image: url(../img/blue-army/Frame148.png);
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.half-bg-sec-blue-part {
+    position: absolute;
+    right: 0px;
+    width: 60%;
+    bottom: -45px;
+    z-index: 3;
+}
+.star_text p {
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    font-family: "SuisseScreenLight";
+    font-weight: 400;
+    padding-right: 60px;
+    text-transform: uppercase;
+    z-index: 3;
+}
+.star_text>div {
+    margin-bottom: 40px;
+}
+.star-section {
+    background-image: url(../img/blue-army/logo_groups.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 70px;
+    overflow: hidden;
+}
+.star-section:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    background-color: #ffffff;
+    bottom: 0px;
+    left: 0px;
+}
+.gray-bg-sec img {
+    width: 80px !important;
+    margin-right: 30px;
+    min-width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.gray-bg-sec {
+    padding: 40px 0px 40px 40px;
+    max-width: 75%;
+    margin-left: auto;
+    position: relative;
+        z-index: 2;
+}
+.ce-que {
+    position: relative;
+    margin-bottom: 50px;
+}
+.ce-que:before {
+    content: '';
+    position: absolute;
+    background-color: #E5E5E5CC;
+    right: 0px;
+    width: 67%;
+    top: 0px;
+    z-index: 1;
+    height: 100%;
+}
+.gray-part h3 {
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #000;
+}
+.gray-part>h3 {
+    margin-bottom: 30px;
+}
+.gray-part p {
+    color: #000;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+    font-family: "SuisseScreenLight";
+    font-weight: 400;
+}
+.gray-bg-sec .italic {
+     margin-bottom: 0px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "SuisseScreenItalic";
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+    color: #000000;
+    margin-top: 70px;
+    padding-left: 60px;
+}
+.gray-bg-sec .blue-qus-img {
+    color: red;
+    width: 38px !important;
+    min-width: 38px;
+    margin: 0px;
+}
+.ce-que:after {
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    background-image: url(../img/blue-army/Backgroundss.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-48%);
+    z-index: -1;
+}
+img.transparent-bg {
+    position: absolute;
+    top: -20px;
+}
+.video-section{
+     margin: 180px 0px 130px 0px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.video-section:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: -55vw;
+    height: 102px;
+    background-color: #000;
+    width: 100%;
+    z-index: -1;
+}
+.pera-font p {
+    color: #000;
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 50px 0 50px 0;
+    font-family: "SuisseScreenLight";
+    font-weight: 400;
+}
+.my-78{
+    margin: 78px 0px;
+}
+.img-with-text p{
+    color: #000;
+    font-size: 20px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 20px 0px 0px 0px;
+    font-family: "SuisseScreenLight";
+    font-weight: 400;
+}
+.Envoyer-la {
+    background-color: #D9D9D9;
+    padding: 10px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 46px;
+    border: none;
+}
+.Envoyer-la span {
+    font-family: "SangBleuOGBold";
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: #000;
+    text-decoration: underline;
+}
+.full-bg-bar-sec {
+    background-color: #000;
+    padding: 17px 0px;
+}
+.full-bg-bar-sec-text {
+    text-align: center;
+    color: #fff;
+    font-family: "SuisseScreenRegular";
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: -0.015em;
+}
+.protection-ses {
+    margin-bottom: 145px;
+}
+.h-100px {
+    height: 100px;
+}
+.form-section {margin: 100px 0px 50px 0px;}
+.form-section_cls label,
+.form-section_cls select{
+    color: #000;
+    letter-spacing: -0.015em;
+    font-family: "SuisseScreenLight";
+    font-size: 23px;
+}
+.form-section_cls input::placeholder{
+ color: #000;
+    letter-spacing: -0.015em;
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+}
+.form-section_cls input:not([type="radio"]) {
+    padding: 24px 35px;
+    height: auto;
+    line-height: 1.4;
+    border: 1px solid #000;
+    border-radius: 0;
+    color: #000;
+    letter-spacing: -0.015em;
+    font-family: "SuisseScreenLight";
+    font-size: 18px;
+}
+.select-section-cls label {
+    white-space: nowrap;
+}
+.select-section-cls label {
+    white-space: nowrap;
+}
+.select-section-cls select {
+    border: none;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    font-size: 0px;
+    background-image: url(../img/blue-army/top-bottom-arrow.png);
+    background-size: 12px;
+    background-position: center;
+}
+.select-section-cls {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.select-section-cls select:focus {
+    box-shadow: none;
+}
+.advantage-star-hover{
+    display: none;
+}
+.star-top-part:hover .advantage-star-hover,
+.star_text>div:hover .advantage-star-hover,
+.gray-bg-sec>div:hover .advantage-star-hover {
+    display: block;
+}
+.star-top-part:hover .white-star-img,
+.star_text>div:hover .white-star-img,
+.gray-bg-sec>div:hover .white-star-img {
+    display: none;
 }

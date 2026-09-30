@@ -1,0 +1,4 @@
+
+git rm -r --cached public/img
+git add .gitignore
+git commit -m "Stop tracking img"

@@ -1,10 +1,9 @@
-
 let currentPage = 1;
 let isLoading = false;
 let hasMore = true;
 
 function loadResults() {
-    const sectionId = $(".results-filter-amissfs").data("section-id");
+    const sectionId = $('.results-filter-amissfs').data('section-id');
     const selectedYear = $(".annee").val();
     const searchText = $(".filter-amissfs").val();
     const perPage = $(".afficher").val();
@@ -12,8 +11,7 @@ function loadResults() {
     if (isLoading || !hasMore) return;
 
     isLoading = true;
-    $(".loadMore").hide();
-    $(".loadingSpinner").show();
+    $(".loadMore").show();
 
     $.ajax({
         url: `/filter-results/${sectionId}`,
@@ -30,27 +28,41 @@ function loadResults() {
             } else {
                 $(".results-filter-amissfs").append(response.html);
             }
-
             hasMore = response.hasMore;
-
-            if (hasMore) {
-                $(".loadMore").show();
-            } else {
-                $(".loadMore").hide();
+            if (!hasMore) {
+                detachScrollListener();
             }
-
-            $(".loadingSpinner").hide();
             isLoading = false;
+            $(".loadMore").hide();
         },
-        error: function () {
-            $(".loadingSpinner").hide();
-            $(".loadMore").show();
+        error: function (error) {
             isLoading = false;
+            $(".loadMore").hide();
         },
     });
 }
 
-// When filters change, reset to first page
+function handleScroll() {
+    const nearBottom =
+        $(window).scrollTop() + $(window).height() >=
+        $(document).height() - 500;
+
+    if (nearBottom && hasMore) {
+        detachScrollListener();
+        currentPage++;
+        loadResults();
+        attachScrollListener();
+    }
+}
+
+function attachScrollListener() {
+    $(window).on("scroll", handleScroll);
+}
+
+function detachScrollListener() {
+    $(window).off("scroll", handleScroll);
+}
+
 $(".annee, .afficher, .filter-amissfs").on("change keyup", function () {
     currentPage = 1;
     hasMore = true;
@@ -58,17 +70,7 @@ $(".annee, .afficher, .filter-amissfs").on("change keyup", function () {
     loadResults();
 });
 
-// On button click, load next page
-$(".loadMore").on("click", function () {
-    if (!isLoading && hasMore) {
-        currentPage++;
-        loadResults();
-    }
-});
-
-// Initial load
 $(document).ready(function () {
-    $(".loadMore").hide();
-    $(".loadingSpinner").hide();
+    attachScrollListener();
     loadResults();
 });

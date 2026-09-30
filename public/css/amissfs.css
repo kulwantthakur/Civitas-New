@@ -164,12 +164,19 @@
     color: #fff;
     margin-bottom: 2rem;
 }
-.amissfs-home-new-subtitle{
+.amissfs-home-new-subtitle {
     font-family: "SangBleuBold";
     font-size: 50px;
     line-height: 65px;
     letter-spacing: -0.015em;
     color: #fff;
+}
+.amissfs-home-sec-subtitle {
+    font-family: "SuisseScreenItalic";
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
 }
 .amissfs-home-depuis {
     font-family: "RivieraNightsBlack";
@@ -221,7 +228,7 @@
     right: 0;
     bottom: 3.5rem;
 }
-.amissfs-box-podcast{
+.amissfs-box-podcast {
     width: 152px;
     height: 67px;
 }
@@ -355,12 +362,12 @@
     position: absolute;
     bottom: 2rem;
 }
-.dons-red-button{
+.dons-red-button {
     width: 201px;
     height: 36px;
-    background-color: #E10B17;
+    background-color: #e10b17;
 }
-.dons-red-button-content{
+.dons-red-button-content {
     font-family: "SuisseScreenRegular";
     font-size: 18px;
     line-height: 25px;
@@ -369,7 +376,7 @@
     text-decoration: none;
 }
 .dons-red-button-content:hover,
-.dons-red-button-content:focus{
+.dons-red-button-content:focus {
     color: #fff;
 }
 .amissfs-depuis {
@@ -536,7 +543,7 @@
     letter-spacing: -0.015em;
     color: #fff;
 }
-.podcast-location-specific{
+.podcast-location-specific {
     font-family: "SuisseScreenItalic";
     font-size: 24px;
     line-height: 25px;
@@ -1197,75 +1204,75 @@
     color: #000;
 }
 
-.ts-control{
+.ts-control {
     padding: 0 15px !important;
 }
 @media only screen and (max-width: 2600px) {
- .position-top-img {
-    width: 75.4%;
-}
+    .position-top-img {
+        width: 75.4%;
+    }
 }
 @media only screen and (max-width: 2500px) {
- .position-top-img {
-       width: 75%;
-}
+    .position-top-img {
+        width: 75%;
+    }
 }
 @media only screen and (max-width: 2400px) {
- .position-top-img {
-       width: 74.7%;
-}
+    .position-top-img {
+        width: 74.7%;
+    }
 }
 @media only screen and (max-width: 2300px) {
- .position-top-img {
-    width: 74.2%;
-}
+    .position-top-img {
+        width: 74.2%;
+    }
 }
 @media only screen and (max-width: 2200px) {
- .position-top-img {
+    .position-top-img {
         width: 73.8%;
-}
+    }
 }
 @media only screen and (max-width: 2100px) {
- .position-top-img {
+    .position-top-img {
         width: 73.3%;
-        }
-        .left-img {
-    left: -30% !important;
-}
+    }
+    .left-img {
+        left: -30% !important;
+    }
 }
 @media only screen and (max-width: 2000px) {
- .position-top-img {
+    .position-top-img {
         width: 72.7%;
-}
+    }
 }
 @media only screen and (max-width: 1900px) {
- .position-top-img {
+    .position-top-img {
         width: 72.1%;
-}
+    }
 }
 
 @media only screen and (max-width: 1800px) {
- .position-top-img {
+    .position-top-img {
         width: 71.5%;
-}
-.left-img {
-     left: -35% !important;
-}
+    }
+    .left-img {
+        left: -35% !important;
+    }
 }
 @media only screen and (max-width: 1700px) {
- .position-top-img {
+    .position-top-img {
         width: 70.7%;
-        }
+    }
 }
 @media only screen and (max-width: 1600px) {
- .position-top-img {
+    .position-top-img {
         width: 69.9%;
-        }
+    }
 }
 @media only screen and (max-width: 1500px) {
- .position-top-img {
-       width: 68.7%;
-        }
+    .position-top-img {
+        width: 68.7%;
+    }
     .left-img {
         left: -40% !important;
     }
@@ -1274,79 +1281,79 @@
     .left-img {
         left: -45% !important;
     }
-.left-img img{
-    max-width: 80%;
-}
+    .left-img img {
+        max-width: 80%;
+    }
 }
 @media only screen and (max-width: 1200px) {
-.amissfs-logo-title {
-    color: #000000;
-}
-.amissfs-depuis {
-    right: auto;
-    left: 64px;
-}
-.amissfs-home-depuis {
-    font-size: 35px;
-}
+    .amissfs-logo-title {
+        color: #000000;
+    }
+    .amissfs-depuis {
+        right: auto;
+        left: 64px;
+    }
+    .amissfs-home-depuis {
+        font-size: 35px;
+    }
 }
 
 @media only screen and (max-width: 991px) {
-.amissfs-title-logo-responsive {
-    font-family: "SangBleuOGBold";
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: -0.015em;
-    color: #000;
-}
-.amissfs-construction {
-    line-height: 1;
-}
-.amissfs-depuis {
-    left: 1rem;
-    bottom: 1rem;
-}
-.amissfs-home-depuis {
-    font-size: 20px;
-    color: #fff;
-}
-.amissfs-home-new-subtitle{
-    font-size: 14px;
-    line-height: 20px;  
-    color: #000;
-    text-align: center;
-}
-.amissfs-home-sec-subtitle{
-    font-family: "SuisseScreenItalic";
-    font-size: 14px;
-    line-height: 20px;
-    color: #000;
-    text-align: center;
-}
- .amissfs-black-op {
+    .amissfs-title-logo-responsive {
+        font-family: "SangBleuOGBold";
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #000;
+    }
+    .amissfs-construction {
+        line-height: 1;
+    }
+    .amissfs-depuis {
+        left: 1rem;
+        bottom: 1rem;
+    }
+    .amissfs-home-depuis {
+        font-size: 20px;
+        color: #fff;
+    }
+    .amissfs-home-new-subtitle {
+        font-size: 14px;
+        line-height: 20px;
+        color: #000;
+        text-align: center;
+    }
+    .amissfs-home-sec-subtitle {
+        font-family: "SuisseScreenItalic";
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        text-align: center;
+    }
+    .amissfs-black-op {
         background-color: rgba(255, 255, 255, 0.57);
         height: fit-content;
         top: 55%;
         bottom: 0;
     }
-.w-100-tab{
-    width: 100%;
-}
- .amissfs-home-specific-height {
+    .w-100-tab {
+        width: 100%;
+    }
+    .amissfs-home-specific-height {
         height: 900px;
         object-fit: cover;
-}
-.amissfs-img-height {
-    height: 800px;
-}
-.position-top-img {
-    width: 100%;
-}
-.amissfs-logo-title {
+    }
+    .amissfs-img-height {
+        height: 800px;
+    }
+    .position-top-img {
+        width: 100%;
+    }
+    .amissfs-logo-title {
         font-size: 20px;
         line-height: 25px;
         color: #fff;
-}
+    }
 }
 @media only screen and (max-width: 767px) {
     .navbar .navbar-brand {
@@ -1360,7 +1367,7 @@
         color: #000;
         text-decoration: none;
     }
-    .load-more-btn{
+    .load-more-btn {
         font-size: 18px;
         width: 200px;
         height: 38px;
@@ -1692,7 +1699,7 @@
         font-size: 14px;
         line-height: 15px;
     }
-    .podcast-location-specific{
+    .podcast-location-specific {
         font-size: 14px;
         line-height: 15px;
     }
@@ -1771,10 +1778,28 @@
         letter-spacing: -0.015em;
         color: #000;
     }
-    .scale-podcast{
-            transform: scale(0.7);
+    .scale-podcast {
+        transform: scale(0.7);
     }
     .specific-height {
         height: 785px;
     }
+}
+
+.amissfs-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    outline: none;
+    margin: 0 !important;
+}
+
+.amissfs-radio:checked {
+    background: #fff;
 }

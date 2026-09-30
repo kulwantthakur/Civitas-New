@@ -59,35 +59,46 @@
     justify-content: center;
     align-items: center;
 }
-.owl-dot {
+
+/* the button wrapper (no bg here) */
+.owl-dots .owl-dot {
     width: 12px;
     height: 12px;
-    background-color: #939597 !important;
-    border-radius: 50%;
-    border: none;
     margin: 0 5px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s;
     margin-top: 1rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
 }
 
-.owl-dot:nth-child(1).active {
-    background-color: gold !important;
-}
-.owl-dot.active + .owl-dot {
-    background-color: white !important;
-}
-.owl-dot:nth-child(2).active {
-    background-color: #0b3ae1 !important;
-}
-
-.owl-dot:nth-child(3).active {
-    background-color: #ff9900 !important;
+/* the actual dot */
+.owl-dots .owl-dot span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff; /* base = previous = grey */
+    transition: background-color 0.3s;
 }
 
-.owl-dot:nth-child(4).active {
-    background-color: #000 !important;
+/* all dots after the active one = white */
+.owl-dots .owl-dot.active ~ .owl-dot span {
+    background: #939597;
+}
+
+/* active colors per index */
+.owl-dots .owl-dot:nth-child(1).active span {
+    background: gold;
+}
+.owl-dots .owl-dot:nth-child(2).active span {
+    background: #0b3ae1;
+}
+.owl-dots .owl-dot:nth-child(3).active span {
+    background: #ff9900;
+}
+.owl-dots .owl-dot:nth-child(4).active span {
+    background: #000;
 }
 
 /* .owl-dot.active {
@@ -128,7 +139,7 @@
     transform: translate(-50%, -50%);
     z-index: 111;
 }
-.initiative-slider .owl-nav button.owl-prev{
+.initiative-slider .owl-nav button.owl-prev {
     left: 50px;
 }
 

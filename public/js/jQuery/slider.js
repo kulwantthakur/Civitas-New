@@ -3,13 +3,13 @@ $(".recommended").owlCarousel({
     dots: true,
     // center: true,
     items: 2,
-    loop: true,
+    loop: false,
     margin: 20,
     responsive: {
         0: { items: 1 },
         768: { items: 2 },
-        1200: { items: 3 }
-    }
+        1200: { items: 3 },
+    },
 });
 
 function updateNavButtons(event) {
@@ -30,7 +30,6 @@ function updateNavButtons(event) {
     }
 }
 
-
 $(".initiative-slider").owlCarousel({
     nav: true,
     dots: false,
@@ -41,20 +40,17 @@ $(".initiative-slider").owlCarousel({
     responsive: {
         0: { items: 1 },
         600: { items: 2 },
-        1000: { items: 3 }
+        1000: { items: 3 },
     },
     onInitialized: function (event) {
         $(".owl-prev span, .owl-next span").remove();
         $(".owl-prev").addClass("custom-prev");
         $(".owl-next").addClass("custom-next");
 
-        updateNavButtons(event); 
+        updateNavButtons(event);
     },
     onChanged: function (event) {
         updateNavButtons(event);
-    }
+    },
 });
-
-
-
 
