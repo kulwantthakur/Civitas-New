@@ -30,25 +30,15 @@
 
     <div class="col-md-6">
         <label for="page-type-select" class="form-label">Type de contenu</label>
-        @if ($page)
-            @php $typeInfo = $types[$type] ?? ['label' => $type, 'description' => '', 'icon' => 'fa-file-alt']; @endphp
-            <div class="d-flex align-items-center gap-2 py-2">
-                <span class="badge bg-secondary-subtle text-secondary-emphasis border fs-6">
-                    <i class="fas {{ $typeInfo['icon'] }} me-1"></i>{{ $typeInfo['label'] ?? $type }}
-                </span>
-                <span class="text-muted small">{{ $typeInfo['description'] ?? '' }}</span>
-            </div>
-        @else
-            <select id="page-type-select" class="form-select">
-                <option value="">— Choisir un type —</option>
-                @foreach ($types as $slug => $definition)
-                    <option value="{{ $slug }}" {{ old('type', $type ?? '') === $slug ? 'selected' : '' }}>
-                        {{ $definition['label'] }}
-                    </option>
-                @endforeach
-            </select>
-            <div class="form-text">Le type est ajusté automatiquement selon la section choisie.</div>
-        @endif
+        <select id="page-type-select" class="form-select" @if ($page) disabled @endif>
+            <option value="">— Choisir un type —</option>
+            @foreach ($types as $slug => $definition)
+                <option value="{{ $slug }}" {{ old('type', $type ?? '') === $slug ? 'selected' : '' }}>
+                    {{ $definition['label'] }}
+                </option>
+            @endforeach
+        </select>
+        <div class="form-text">Le type est ajusté automatiquement selon la section choisie.</div>
     </div>
 </div>
 

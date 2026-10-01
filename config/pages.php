@@ -19,7 +19,7 @@
 return [
 
     /*
-    | The content types available to an admin when creating a page.
+    | The content types available to an admin when creating or editing a page.
     | Keys are stable slugs stored nowhere in the DB; the mapping to
     | sections is done through section titles.
     */

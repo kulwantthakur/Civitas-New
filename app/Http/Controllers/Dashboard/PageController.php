@@ -95,6 +95,7 @@ class PageController extends Controller
     public function edit(Page $page)
     {
         $data = $this->pageService->editData($page);
+        $data['sectionTypeMap'] = $this->pageService->sectionTypeMap();
 
         return view('dashboard.pages.edit', $data);
     }
